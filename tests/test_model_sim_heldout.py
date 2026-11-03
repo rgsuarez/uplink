@@ -1,9 +1,7 @@
 """Bounded local fake-kernel tests; no model, provider, network or host commands."""
 
-import ast
 import json
 import sys
-from decimal import Decimal
 from pathlib import Path
 
 import pytest
@@ -169,54 +167,3 @@ def test_changed_fixture_bytes_fail_manifest(tmp_path):
     (tmp_path / "fixture.txt").write_text("tampered")
     with pytest.raises(h.c.Refused, match="frozen_input_changed"):
         h.verify_frozen(tmp_path)
-
-
-def budget_function():
-    source = ast.parse((ROOT / "modal/model_sim_heldout_app.py").read_text())
-    names = {"FUNCTION_SECONDS", "STARTUP_SECONDS", "SCALEDOWN_SECONDS", "COST_CAP", "RESERVE"}
-    nodes = [
-        n
-        for n in source.body
-        if isinstance(n, ast.FunctionDef)
-        and n.name == "budget"
-        or isinstance(n, ast.Assign)
-        and any(isinstance(t, ast.Name) and t.id in names for t in n.targets)
-    ]
-    scope = {"Decimal": Decimal}
-    exec(compile(ast.Module(body=nodes, type_ignores=[]), "heldout_budget", "exec"), scope)
-    return scope["budget"]
-
-
-def test_budget_happy_path_has_hard_reserve():
-    ceiling = budget_function()(
-        {"gpu_hour_cost_a10g": "1.1", "cpu_hour_cost": "0.04730", "mem_gib_hour_cost": "0.00800"},
-        {"billed_cost": "0", "metered_cost": "0.87005469"},
-    )
-    assert Decimal("0.43") < ceiling < Decimal("0.50")
-
-
-@pytest.mark.parametrize(
-    "rates,billing",
-    [
-        ({}, {"billed_cost": "0", "metered_cost": "1"}),
-        (
-            {"gpu_hour_cost_a10g": "9", "cpu_hour_cost": "0.05", "mem_gib_hour_cost": "0.008"},
-            {"billed_cost": "0", "metered_cost": "1"},
-        ),
-        (
-            {"gpu_hour_cost_a10g": "1.1", "cpu_hour_cost": "0.05", "mem_gib_hour_cost": "0.008"},
-            {"billed_cost": "0.01", "metered_cost": "1"},
-        ),
-        (
-            {"gpu_hour_cost_a10g": "1.1", "cpu_hour_cost": "0.05", "mem_gib_hour_cost": "0.008"},
-            {"billed_cost": "0", "metered_cost": "29.51"},
-        ),
-        (
-            {"gpu_hour_cost_a10g": "1.1", "cpu_hour_cost": "-1", "mem_gib_hour_cost": "0.008"},
-            {"billed_cost": "0", "metered_cost": "1"},
-        ),
-    ],
-)
-def test_budget_denies_paid_exhausted_expensive_or_missing_state(rates, billing):
-    with pytest.raises(ValueError, match="cost_cap_refused"):
-        budget_function()(rates, billing)

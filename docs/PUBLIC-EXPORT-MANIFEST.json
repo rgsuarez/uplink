@@ -1,4 +1,17 @@
 {
+  "base_release_cleanup": {
+    "parent_clean_commit": "8cb696eb4ad6dff821e5048aefd696c4a2d326a7",
+    "preserved_base_harness_files": 102,
+    "preserved_evidence_files": 369,
+    "removed_cloud_launchers": [
+      "modal/model_sim_app.py",
+      "modal/model_sim_base_fix_app.py",
+      "modal/model_sim_heldout_app.py",
+      "modal/model_sim_proxy_fix_app.py"
+    ],
+    "removed_unused_window_option": true,
+    "scope": "Remove obsolete cloud execution surfaces from the on-device base release. Original run evidence and the complete base recovery harness retain their original bytes."
+  },
   "files": [
     {
       "candidate_path": ".gitignore",
@@ -41,7 +54,7 @@
     },
     {
       "candidate_path": "Makefile",
-      "candidate_sha256": "90ab3fd14237f887f56721898bf20a75a34a4ed818d81022be9f0c999bce4ec3",
+      "candidate_sha256": "14e96659f7ca4d7b078a17d733c406816d1c61923f4d021c2c3cd36a508ddd7b",
       "changed": true,
       "source_sha256": "21c6c689682529e24e91eba730bf502975c765d4513754c4dd7e6515fd9e8ca1"
     },
@@ -232,8 +245,8 @@
     },
     {
       "candidate_path": "configs/faults-v1-model.window.template.json",
-      "candidate_sha256": "1ab74f76a4b6876465464630b71330da5d8bc39a4cb0e0e16018b1f23716bbe3",
-      "changed": false,
+      "candidate_sha256": "37ee8ddbebc85a9de5c08f2dab2454e0e1c91776a6ac0c6962440783725cfaeb",
+      "changed": true,
       "source_sha256": "1ab74f76a4b6876465464630b71330da5d8bc39a4cb0e0e16018b1f23716bbe3"
     },
     {
@@ -4421,32 +4434,8 @@
       "source_sha256": "02b3ef21ab4637a0208c0ffe042ebe8339f813544c9bef20ed7d4182d999fe89"
     },
     {
-      "candidate_path": "modal/model_sim_app.py",
-      "candidate_sha256": "6be85dc93e7bb6e2dd57d10adca553f375d20c789cd8701c93be27860d5b89ff",
-      "changed": true,
-      "source_sha256": "e7b877b088153d35c8ae44da1e60f27dce5b97c59a112b2761a8f1d477c5ebe5"
-    },
-    {
-      "candidate_path": "modal/model_sim_base_fix_app.py",
-      "candidate_sha256": "2fbab88072ff5c84b63ce2a36ebbd094eca8e3584360bf0a6236845e498abdfd",
-      "changed": true,
-      "source_sha256": "5ac3dc62d705fb0af41abf63800e9b9afa61e0d24b1c86228df6d7dca46f35e7"
-    },
-    {
-      "candidate_path": "modal/model_sim_heldout_app.py",
-      "candidate_sha256": "dde7ea6cb9a8d4660329b74e1991272923cadccdcadc6a07b2af37bfee64593e",
-      "changed": true,
-      "source_sha256": "6481c10844cc5583891699f84c77b3fb0a5612e61fd75ac5e07ec04969fe554a"
-    },
-    {
-      "candidate_path": "modal/model_sim_proxy_fix_app.py",
-      "candidate_sha256": "7c2a02a3adf6de65e357dc13c19ac36bf9e1c086f27fc9ce6a54cdd1f9784685",
-      "changed": true,
-      "source_sha256": "467cfd2f75ced2b66170b72c2f37e46add620422084891208273ef89cc328d2e"
-    },
-    {
       "candidate_path": "pyproject.toml",
-      "candidate_sha256": "454248fd2ef8a7e19ef34c34bfe8221d1194af98201b13c3f4097eef39d7395d",
+      "candidate_sha256": "1b92188b8132fd9de0b98ee97553c60cda75bd3b5249c8c50b0a3e60a25c4418",
       "changed": true,
       "source_sha256": "a8c52d8fb51882cd6367b92b631ac537baf29a5ad1bb9880dc3a619a5f6e1b99"
     },
@@ -5485,8 +5474,8 @@
     },
     {
       "candidate_path": "tests/test_model_sim_heldout.py",
-      "candidate_sha256": "0e9ea517509646783381d402afe2c29cc95a128fa78a6a82cdcc3e77ad6d3fa0",
-      "changed": false,
+      "candidate_sha256": "e4eaf3d45fb0e3f7680be29df416ee2feb2c0e41b328a35f4a394d104bab318a",
+      "changed": true,
       "source_sha256": "0e9ea517509646783381d402afe2c29cc95a128fa78a6a82cdcc3e77ad6d3fa0"
     },
     {
@@ -5962,7 +5951,7 @@
     }
   },
   "public_release_inventory": {
-    "file_count": 985,
+    "file_count": 981,
     "result_top10_classification": "First-party historical abort report; exact Apache-2.0 rule and source commit recorded in licenses/manifest.json.",
     "scope": "Every tracked and non-ignored candidate file; no filename exclusions."
   },
@@ -6054,6 +6043,62 @@
         "pytest_duration_seconds": 131.74,
         "skipped": 24
       }
+    },
+    {
+      "fake_kernel": {
+        "false_online": 0,
+        "held_slots": 9,
+        "host_contacts": 0,
+        "model_calls": 0,
+        "recorded_trials": 21,
+        "recovered": 21,
+        "safety_gate_passed": true
+      },
+      "guard_scope": "Existing in-process CPU guard; all sandbox-required cases and fake-kernel smoke additionally run under the existing OS network-denial profile.",
+      "limits": [
+        "No model inference",
+        "No native host execution",
+        "No Linux qualification",
+        "Original private packages and receipts omitted",
+        "Historical source/evidence hashes do not authorize or validate sanitized runtime bytes"
+      ],
+      "platform": "macOS ARM64",
+      "python": "3.12.13",
+      "qualification_input_inventory_sha256": "8a6fd0ab8c8c5afc3dccdb8afa149f69cb8c2bb94ed83cf0269b3e3c6cf79aea",
+      "qualified_at": "2026-11-03T22:40:55.685601+00:00",
+      "quickstart_scope": "Standard-library live-ledger recomputation and saved simulation view; no private recordings or model required.",
+      "runs": [
+        {
+          "errors": 0,
+          "failures": 0,
+          "label": "cpu",
+          "skipped": 246,
+          "tests": 1486
+        },
+        {
+          "errors": 0,
+          "failures": 0,
+          "label": "top10_sandbox",
+          "skipped": 4,
+          "tests": 161
+        },
+        {
+          "errors": 0,
+          "failures": 0,
+          "label": "bench_sandbox",
+          "skipped": 10,
+          "tests": 77
+        }
+      ],
+      "status": "Prior revision; current qualification follows the cloud-launcher removal.",
+      "test_count_note": "Legacy experiment implementation and its paired tests were omitted. Seven new base-only serving pins were added; collection is 463 lower than the previous 1949-test snapshot.",
+      "unit_tests": {
+        "collected": 1486,
+        "errors": 0,
+        "failed": 0,
+        "passed": 1464,
+        "skipped": 22
+      }
     }
   ],
   "runtime_qualification_scope": {
@@ -6066,26 +6111,25 @@
       "recovered": 21,
       "safety_gate_passed": true
     },
-    "guard_scope": "Existing in-process CPU guard; all sandbox-required cases and fake-kernel smoke additionally run under the existing OS network-denial profile.",
+    "guard_scope": "Existing CPU network/host-tool/real-weight guard; required TOP10 and bench cases plus fake-kernel smoke additionally run under the existing OS network-denial profile.",
     "limits": [
       "No model inference",
-      "No native host execution",
+      "No live host or native host execution",
+      "No GPU execution",
       "No Linux qualification",
-      "Original private packages and receipts omitted",
-      "Historical source/evidence hashes do not authorize or validate sanitized runtime bytes"
+      "Original private packages and receipts omitted"
     ],
     "platform": "macOS ARM64",
     "python": "3.12.13",
-    "qualification_input_inventory_sha256": "8a6fd0ab8c8c5afc3dccdb8afa149f69cb8c2bb94ed83cf0269b3e3c6cf79aea",
-    "qualified_at": "2026-11-03T22:40:55.685601+00:00",
-    "quickstart_scope": "Standard-library live-ledger recomputation and saved simulation view; no private recordings or model required.",
+    "qualification_input_inventory_sha256": "4b027a8bfeab1d35a8d79a77db68f19ae6d9f05a4a93887489e1d7dce57aa92b",
+    "qualified_at": "2026-11-03T23:39:15.893085+00:00",
     "runs": [
       {
         "errors": 0,
         "failures": 0,
         "label": "cpu",
         "skipped": 246,
-        "tests": 1486
+        "tests": 1480
       },
       {
         "errors": 0,
@@ -6102,12 +6146,12 @@
         "tests": 77
       }
     ],
-    "test_count_note": "Legacy experiment implementation and its paired tests were omitted. Seven new base-only serving pins were added; collection is 463 lower than the previous 1949-test snapshot.",
+    "test_count_note": "Six checks belonging only to the removed cloud-budget code were removed; the base-run, replay, authority and safety checks remain.",
     "unit_tests": {
-      "collected": 1486,
+      "collected": 1480,
       "errors": 0,
       "failed": 0,
-      "passed": 1464,
+      "passed": 1458,
       "skipped": 22
     }
   },

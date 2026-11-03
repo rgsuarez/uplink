@@ -1,6 +1,5 @@
 {
   "action_mode": "open",
-  "adapter_path": null,
   "arm": "base",
   "authorized": false,
   "exclusive": false,

@@ -13,7 +13,7 @@ lint:
 	$(UV) ruff format --check .
 
 typecheck:
-	$(UV) mypy src tests scripts modal
+	$(UV) mypy src tests scripts
 
 test:
 	$(UV) pytest
