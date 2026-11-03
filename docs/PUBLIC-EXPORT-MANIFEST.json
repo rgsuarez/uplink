@@ -8,7 +8,7 @@
     },
     {
       "candidate_path": "DEMO-SCRIPT.md",
-      "candidate_sha256": "c7571d4a674e7473ec59509b8b30c60fce26a7e421a810fa8757685094c41cd3",
+      "candidate_sha256": "f6178e320c96f9da60f5fe77e05210018950ece9052c52992c0f144ea60afdf3",
       "changed": true,
       "source_commit": "952dbf59048c51999fe6fd46d29efc89e1b7e8db",
       "source_sha256": "9cae1f75737a9976b6af0efcc44d81e99bd408f08a10753908a61fdffcf5bea4"
@@ -47,13 +47,13 @@
     },
     {
       "candidate_path": "PROVENANCE.md",
-      "candidate_sha256": "91a3767f869b29e691c18f6d6a49238869776560316b3a898ab32896e880edf0",
+      "candidate_sha256": "6204d68cf5561bacde467135d10866744298557d2834952c9d4b425816423fb4",
       "changed": true,
       "source_sha256": "ac7384c36a21909942e2b72495b116f4f8ac67d2472d5c82e19b60fda0c413a8"
     },
     {
       "candidate_path": "README.md",
-      "candidate_sha256": "61a024e408f88f25593f87edea568457f123b6c9befef3b84ca0bef01877fd82",
+      "candidate_sha256": "077dfa579e1acbc9193d13163250bc6304359359760d08c6ec1857fa3576a43f",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "README.md",
@@ -79,37 +79,37 @@
     },
     {
       "candidate_path": "REPORT-U1-LIVE.md",
-      "candidate_sha256": "880ede8074a5f985f851e44ab44b87f7d3d2e511dfbd0a9bd10f137f54091d5e",
+      "candidate_sha256": "b2acbe29e059db6119e067f046f4f2d9bc793cba5dd9d1800bcc5379cd6c7098",
       "changed": true,
       "source_sha256": "6f71f0e1f631f290dd8b902c7522aded331d3441b8e82b82198893d76ea348c8"
     },
     {
       "candidate_path": "REPORT-U1.md",
-      "candidate_sha256": "3eb774c90487c8e93a6a49a8c59b73299c1eb03d79c052c059d00084ad557156",
+      "candidate_sha256": "88447d1d72a208e6e2d9e6e717e3d905f28caf1fa743fa940a7bed5271b3c53d",
       "changed": true,
       "source_sha256": "49a779259accf975222d1b3c5bc7c5cb398fa0533bf0d5e6b9f6440632646000"
     },
     {
       "candidate_path": "RESULT-HELDOUT-EVAL-SUN.md",
-      "candidate_sha256": "abea26348a8479114d9d7f9f88d1d59635bce65bed3ad63b4082e835621e5107",
+      "candidate_sha256": "d02212b41ff0940e20bb0a1b3efa6b429b94787570adde2fa99e31294e1cf88e",
       "changed": true,
       "source_sha256": "dfde1a4075b4182062849432a24a6a0cf7c8ab8e9c2c62213c35c7b87c0dc5dc"
     },
     {
       "candidate_path": "RESULT-MODEL-SIM-BASE-FIX-SUN.md",
-      "candidate_sha256": "d8df9069b4fd63fa87dc54bb53adcbf402daf6c61d7c813e54e0d8e0a4671be0",
+      "candidate_sha256": "eb79b533e3ddcb0b32592d5d967d47af354a4eac098c7d9d63d0b6fb78d96b03",
       "changed": true,
       "source_sha256": "d30da614a11bd46e19ccf575718243290b7531557f69c25ba0fb5fa28b18ddcc"
     },
     {
       "candidate_path": "RESULT-MODEL-SIM-PROXY-FIX-SUN.md",
-      "candidate_sha256": "1d5b7cbde198e3ed095c3e247ae54b1ee2046441573bd9e18a2840ff83e912a3",
+      "candidate_sha256": "7939e30c6e0c2d0ffd66d3b1bc2bd5bdce8b449bfa6f45174b75fc605fc8e2a6",
       "changed": true,
       "source_sha256": "d71a976e2d7cff3a51961094cd17b1c1fba0f1368c4c51eeb4cca9eb7aef1484"
     },
     {
       "candidate_path": "RESULT-MODEL-SIM-SUN.md",
-      "candidate_sha256": "290db95ee369f7401a4e6e3d1539676fdc853106167f3418c89acd39a8173740",
+      "candidate_sha256": "473a643537432c1ab9a958c0dd558ef9e248e280db253be0eaac8643bb3e3d41",
       "changed": true,
       "source_sha256": "27107563252c4475f75a0736cb8850b5a050eb9e3cd12ced4900296ebf503729"
     },
@@ -121,7 +121,7 @@
     },
     {
       "candidate_path": "RESULT-SPARK-VS-GLIMMER-MON.md",
-      "candidate_sha256": "5b35426a5587ab93807dcff3143a09716d9601f48829693103bb7145b327cfd1",
+      "candidate_sha256": "b2a66c644fd3110858bf462aa493cb633a46f1386ca435d8ac8d2eb8ca10a928",
       "changed": true,
       "source_commit": "952dbf59048c51999fe6fd46d29efc89e1b7e8db",
       "source_sha256": "ad575551620083c4a4c19ac7d2329e9a1a88900252dc4a7160d8e64dfce3678f"
@@ -140,7 +140,7 @@
     },
     {
       "candidate_path": "SUBMISSION-CHECKLIST.md",
-      "candidate_sha256": "c7475ef0589f31423f1c41bbef0bb0c62d4ef8ff2b7a58ec7b281a21c3c0e63b",
+      "candidate_sha256": "0a72463c0a2c36e91e38a1c4b5310bc8a03decd531c7bad4a2634a5483e4e119",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "SUBMISSION-CHECKLIST.md",
@@ -1816,13 +1816,13 @@
     },
     {
       "candidate_path": "docs/GRAMMAR-THINKING.md",
-      "candidate_sha256": "f382ef524e69bb38a9f21d887391591fcb8ca02e03520feff6b5610cae3cf5e6",
-      "changed": false,
+      "candidate_sha256": "61b0fd326ea82346ffdaeb3be868caddfd51723caa142d77955f12fbb74a4111",
+      "changed": true,
       "source_sha256": "f382ef524e69bb38a9f21d887391591fcb8ca02e03520feff6b5610cae3cf5e6"
     },
     {
       "candidate_path": "docs/LAB-F10.md",
-      "candidate_sha256": "29f7f80ed9e006c9a71a2daad69a5239265cdf8f5ad7c8b454fb6c95919d1310",
+      "candidate_sha256": "b5dcc93ece46fe0dadb1d8a0be0b692455e7e3f5df7fce14c76937a2f9a894f7",
       "changed": true,
       "source_sha256": "ef39a7ec841312a56e0374935aa255de3dee782ee7eeb16459d1e65765d88468"
     },
@@ -1882,8 +1882,8 @@
     },
     {
       "candidate_path": "docs/UPLINK-FAULTS.md",
-      "candidate_sha256": "70b27c1d1396c0443665cbae2cb848a8396d096374e1c6d2200f082debf650f6",
-      "changed": false,
+      "candidate_sha256": "2623eb41fafab3af6ca115e3950488c99b59155fedd32ec5eb58a72c7f7f52e8",
+      "changed": true,
       "source_sha256": "70b27c1d1396c0443665cbae2cb848a8396d096374e1c6d2200f082debf650f6"
     },
     {
@@ -1906,13 +1906,13 @@
     },
     {
       "candidate_path": "docs/UPLINK-REAL-RECOVERY.md",
-      "candidate_sha256": "bc6fcaa005d0d55687463b6b62ccbcdeace1f8fe7eba38b946702cfbbe41f73b",
+      "candidate_sha256": "37f39cefd379d80efaa047c0c90052f79410f7f4c3990e39cbf2e19415cbab49",
       "changed": true,
       "source_sha256": "1024ec0091979def894eece229c169912ad91d42a346aea7cf715a8b1d650eae"
     },
     {
       "candidate_path": "docs/UPLINK.md",
-      "candidate_sha256": "3977693e4f1b8a35207c2964d207385ba210332dfa75d7219d0fe51bfdb22267",
+      "candidate_sha256": "11d5f0e5a1d283dab26e3d9e7818d937e01b484e02d8baa46983a82513e7b105",
       "changed": true,
       "source_sha256": "84e3d52f37a729e0ad69fa0d21a9096d0e923e5c998b77b6148e42fe0730d61b"
     },
@@ -4266,7 +4266,7 @@
     },
     {
       "candidate_path": "harness/bench/README.md",
-      "candidate_sha256": "2bf6701529d901bee2ce52c6a8853b3ef40f46ac1ffdd1742b912e76a3e94601",
+      "candidate_sha256": "450a97b2eecd47ba1d90f68026602c8c2722d1ea19494beace22883828d2c123",
       "changed": true,
       "source_sha256": "b52c16159ed6827730190750277e93af387edeb2aa206acbc760e564713cebde"
     },
@@ -5896,7 +5896,7 @@
   "generated_files": [
     {
       "path": "PUBLIC-EXPORT-NOTES.md",
-      "sha256": "4be1bf35be33f1ea3f7811728ea9262795d6f19867a58a96eca130ed27d86562"
+      "sha256": "6f5b88a6c23540b38d7b862e12297d896d7a5f886aa8fd72fced7676aeaabd94"
     },
     {
       "path": "RUN-LOG-GLIMMER.md",
@@ -5965,6 +5965,13 @@
     "file_count": 985,
     "result_top10_classification": "First-party historical abort report; exact Apache-2.0 rule and source commit recorded in licenses/manifest.json.",
     "scope": "Every tracked and non-ignored candidate file; no filename exclusions."
+  },
+  "readme_polish": {
+    "base_clean_commit": "5416a2b6ece00d1f19e4409b5bd1ee7a0c0db4d8",
+    "pending_rows": 3,
+    "runtime_and_test_inputs_unchanged": true,
+    "scope": "Documentation-only consistency polish. DNS and proxy headline; explicit pre-model exclusions; current control outcomes; model uses base, unmodified open weights.",
+    "source_note": "Original source hashes identify earlier committed inputs; new public derivative hashes identify this wording revision."
   },
   "repo_gate_sync": {
     "base_export_commit": "96a5d43c7749cf81d3bcc645c6862830fcbfa30d",

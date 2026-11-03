@@ -1,6 +1,6 @@
 # Uplink: an on-device agent that gets a broken computer back online
 
-> **Pre-existing work, stated up front:** Meta's open Muse Glimmer 30B weights, llama.cpp
+> **Pre-existing work, stated up front:** Meta Muse Glimmer 30B, base, unmodified open weights, llama.cpp
 > (`llama-server`, build b10353) and the open-source Python libraries in `uv.lock` existed
 > before the hackathon. A private pre-kickoff prototype and design notes were used as
 > reference only; none of their code was ported. All Uplink code in this repository
@@ -9,26 +9,28 @@
 > Details: [PROVENANCE.md](PROVENANCE.md).
 
 When your connection breaks, every cloud assistant breaks with it, at the exact moment
-you need help. Uplink keeps the help on the machine. **Base Meta Muse Glimmer 30B runs
+you need help. Uplink keeps the help on the machine. **Meta Muse Glimmer 30B (base, unmodified open weights) runs
 on-device through `llama-server` on localhost**, reads the measured network state,
 compares it with a known-good snapshot and picks one typed, reversible fix. An
 independent checker, not the model, decides whether the computer is back ONLINE.
 
 **Model:** base `Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf`, SHA-256
-`4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e`, unmodified. Uplink
-uses the base model only: there is no fine-tuning, no adapter and no custom model upload.
+`4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e`.
+Uplink uses base, unmodified open weights.
 
-**Headline (committed evidence):** in the live F04 DNS series on a real Mac, Uplink
-recovered **10 of 10 trials that reached the model**, **median 15.319 s** from fault to
-verified recovery, **0 false ONLINE**. See [Results](#results) for every attempt,
-including the four that stopped before the model.
+**Headline (committed evidence):** on a real Mac, Meta Muse Glimmer 30B
+recovered **10/10 model-reached DNS trials** (median **15.319 s**) and
+**5/5 model-reached proxy trials** (median **10.4 s**, exactly 10.395 s, across
+two segments). Both observed **0 false ONLINE**. Pre-model stops: **DNS 4,
+proxy 6, not counted** in those denominators. See [Results](#results) for
+the segment policies, all exclusions and the failed no-change controls.
 
 ## What it does
 
 1. **Observe.** Read-only probes collect interfaces, DNS, proxy and route facts.
 2. **Compare.** Facts are diffed against the snapshot captured when the machine was last
    known to be healthy.
-3. **Decide.** Base Glimmer, constrained by a GBNF grammar built from a closed 13-action
+3. **Decide.** Meta Muse Glimmer 30B (base, unmodified open weights), constrained by a GBNF grammar built from a closed 13-action
    schema, returns one typed JSON action (for example `restore_dns` or `restore_proxy`),
    or `report` / `give_up` when no safe repair is established.
 4. **Act.** A bounded executor applies only snapshot-bound restores. The model has no
@@ -53,8 +55,8 @@ and 2.2 billion people are still offline, with rural connectivity far behind urb
 ([ITU, 2025](https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx)).
 
 It is also exactly when modern help disappears. Cloud assistants need the network you
-just lost. Help for getting back online has to run on the device, so Uplink runs Meta's
-open Muse Glimmer locally, on a laptop-class machine, and lets it propose **one** typed,
+just lost. Help for getting back online has to run on the device, so Uplink runs
+Meta Muse Glimmer 30B locally (base, unmodified open weights), on a laptop-class machine, and lets it propose **one** typed,
 reversible fix. The network itself, through six independent checks, decides whether the
 fix worked. The model proposes; the network decides. A false "online" is treated as worse
 than an honest "I can't fix this".
@@ -78,7 +80,7 @@ and the [Results](#results) count every trial, including the ones it failed.
 
 | Piece | What Uplink does with it |
 | --- | --- |
-| Muse Glimmer 30B (base, open weights, Apache-2.0) | Chooses the recovery action on the device. Unmodified Q4_K_M GGUF, pinned by SHA-256 `4cc57c0f…f60e` |
+| Meta Muse Glimmer 30B (base, unmodified open weights, Apache-2.0) | Chooses the recovery action on the device. Unmodified Q4_K_M GGUF, pinned by SHA-256 `4cc57c0f…f60e` |
 | `llama-server` (llama.cpp b10353, `f8def7fe1`, Metal) | Serves the model on `localhost` only, on an Apple M4 Max MacBook Pro with 36 GB |
 | Glimmer native chat template | Rendered verbatim from `meta-models/Muse-Glimmer-30B` revision `cec94fc…`, hash-pinned in [templates/manifest.json](templates/manifest.json) |
 | Grammar-constrained tool use | A GBNF grammar generated from the typed action schema makes every model turn a valid, closed action |
@@ -93,9 +95,11 @@ no results (provider upload failure), so no comparison is claimed
 
 ## Architecture
 
+Meta Muse Glimmer 30B uses base, unmodified open weights in this bounded loop.
+
 ```text
  Read-only probes ──► measured facts ─┐
-                                      ├─► base Muse Glimmer (llama-server, localhost)
+                                      ├─► Glimmer (llama-server, localhost)
  Known-good snapshot ─────────────────┘            │  one typed JSON action (GBNF)
                                                    ▼
                           parser + authority + state gates (held actions refused)
@@ -141,7 +145,9 @@ Every trial that reached the model is counted, pass or fail. Attempts that stopp
 any model request are listed and excluded from the denominator. Only committed evidence
 appears here.
 
-### Live, real Mac, base Glimmer on-device
+### Live, real Mac, Meta Muse Glimmer 30B on-device
+
+Model: base, unmodified open weights.
 
 | Fault (series) | Expected action | Passes / model-reached | Median recovery | False ONLINE | Evidence |
 | --- | --- | ---: | ---: | ---: | --- |
@@ -181,7 +187,7 @@ series above.
 
 ### Simulation (separate, labeled MODEL_IN_LOOP_SIM)
 
-The same base GGUF, served by `llama-server` on a Modal A10G GPU, chose actions against
+Meta Muse Glimmer 30B (base, unmodified open weights), served by `llama-server` on a Modal A10G GPU, chose actions against
 simulated faults. These rows are not live recoveries and not on-device timings.
 
 | Run | Recovered | Honest reports | False ONLINE | Note |
@@ -196,6 +202,9 @@ Two rejected description variants (6/21 each, 0 false ONLINE) are kept in
 [RESULT-HELDOUT-EVAL-SUN.md](RESULT-HELDOUT-EVAL-SUN.md).
 
 ## How to reproduce
+
+Meta Muse Glimmer 30B uses base, unmodified open weights. The ledger and saved-view
+commands below only read committed evidence; they do not run the model.
 
 **Recompute the live-series numbers from committed ledgers** (Python 3.12+, no model,
 no network, no credentials):
@@ -266,8 +275,7 @@ python3 -c "from pathlib import Path; print(Path('demo/model-sim/adopted-F04.md'
 
 Saved, sanitized replay views are in [demo/model-sim/](demo/model-sim/README.md).
 Original private recordings and receipt bundles are not distributed. Public ledgers
-retain the original evidence hashes and carry separate export hashes;
-see [export notes](PUBLIC-EXPORT-NOTES.md).
+retain the original evidence hashes and carry separate public derivative hashes.
 
 **Run the model yourself** (any 24 GB+ Apple Silicon or GPU machine):
 
@@ -291,7 +299,7 @@ Storyboard: [DEMO-SCRIPT.md](DEMO-SCRIPT.md).
 | Criterion | Where to look |
 | --- | --- |
 | Impact (30%) | [Why it matters](#why-it-matters-impact): a clear user, a real outage-time job, honest limits |
-| Use of Meta AI tooling (25%) | [How it uses Meta AI](#how-it-uses-meta-ai): base Glimmer on-device via `llama-server`, native template, grammar-constrained typed tools, hash-pinned weights |
+| Use of Meta AI tooling (25%) | [How it uses Meta AI](#how-it-uses-meta-ai): Meta Muse Glimmer 30B (base, unmodified open weights) on-device via `llama-server`, native template, grammar-constrained typed tools, hash-pinned weights |
 | Technical depth (20%) | [Architecture](#architecture), [Safety model](#safety-model), preregistered evidence in `evidence/` |
 | Demo (25%) | [Demo video](#demo-video) and the reproducible results above |
 | Bonus: Best Build on Meta Open Weights | Unmodified open Glimmer weights on our own hardware, pinned by SHA-256, served locally with no cloud |
@@ -299,16 +307,16 @@ Storyboard: [DEMO-SCRIPT.md](DEMO-SCRIPT.md).
 
 ## Honest caveats
 
-- Live recovery coverage is F04 DNS and F06 stale proxy. Healthy and misleading-status
-  controls held network safety but failed the required health-report reason check.
-  Live validation of other fault classes is future work.
+- Live coverage includes F04 DNS, F06 proxy and healthy/misleading-status controls.
+  Control safety held, but all six health reports failed the required reason check.
+  F05 wrong gateway, site-only outage and F01 radio-off remain pending, only if
+  committed before the Wednesday 11:00 AM CT freeze.
 - Ten passes on one fault class show the loop works on real hardware; they do not
   establish general field reliability.
 - The F04 aggregate spans three policy segments, and timings are warm (three warm-ups).
 - "0 false ONLINE" is what we observed, not a guarantee.
 - The 21/21 simulation result was tuned post hoc; the held-out simulation result is 4/14.
-- Uplink uses the base Glimmer model only. No fine-tuned or adapted model is part of
-  this submission or its results.
+- Model: Meta Muse Glimmer 30B, base, unmodified open weights.
 
 ## License and provenance
 

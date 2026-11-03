@@ -55,7 +55,7 @@ Undo: Restore both independent pre-injection snapshots. Re-probe between plans; 
 
 ### lease_loss
 
-Mac: Future isolated test adapter with an expired lease or isolated DHCP source; no command run in U1.
+Mac: Future isolated test bridge with an expired lease or isolated DHCP source; no command run in U1.
 
 Linux: Stop the namespace DHCP responder, expire the test lease, and remove only the client namespace address.
 
@@ -63,7 +63,7 @@ Undo: Restore the exact address/route/resolver checkpoint or recreate the dispos
 
 ### bad_default_route
 
-Mac: Future isolated test adapter with a wrong gateway; never edit the workstation default route in U1.
+Mac: Future isolated test bridge with a wrong gateway; never edit the workstation default route in U1.
 
 Linux: Replace only the client namespace default route with an unreachable gateway.
 
@@ -71,11 +71,11 @@ Undo: Restore namespace route from the harness checkpoint. No model-facing route
 
 ### interface_down
 
-Mac: Future spare adapter disabled by the operator; never down/up this workstation interface in U1.
+Mac: Future spare bridge disabled by the operator; never down/up this workstation interface in U1.
 
 Linux: Bring only the client namespace veth down.
 
-Undo: Restore the original link state. cycle_interface is admitted only for an initially-up snapshot; an already-down adapter needs human enablement.
+Undo: Restore the original link state. cycle_interface is admitted only for an initially-up snapshot; an already-down bridge needs human enablement.
 
 ### captive_portal
 

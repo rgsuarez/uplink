@@ -7,7 +7,7 @@ This script authorizes no model run, host probe, network change, rendering or up
 
 > Uplink runs Meta's unmodified base Muse Glimmer on the device. In our live DNS
 > series, all ten trials that reached the model recovered. Median recovery was
-> 15.319 seconds, with zero observed false ONLINE. No fine-tuning was used.
+> 15.319 seconds, with zero observed false ONLINE. It uses base, unmodified open weights.
 
 On-screen results card:
 

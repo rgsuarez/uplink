@@ -13,8 +13,8 @@ export tree, with one initial commit and no inherited history.
 ## Model and evidence scope
 
 The submission uses only unmodified base Muse Glimmer 30B Q4_K_M on-device,
-through llama.cpp (GGUF runtime). No fine-tuning, model modification, custom model
-upload, weights or native binaries are included. Legacy model experiments, launch
+through llama.cpp (GGUF runtime), using base, unmodified open weights.
+Weights and native binaries are not bundled. Legacy model experiments, launch
 paths, comparisons and model cards are omitted. Only the base serving identity is
 accepted, with positive evidence of an empty model-modification set. Original
 native tokenizer metadata stays byte-for-byte unchanged; its upstream special

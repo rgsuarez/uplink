@@ -26,7 +26,7 @@ target/window coordinates first, then bind Richard's document, then place its ra
 file hash in the window. This binds every target coordinate without a hash cycle.
 
 Review the exact model PID/start time, one idle server slot, context (4096 to 8192),
-empty adapter set, BASE file hash/size/build, physical host identity, private-config
+empty model-modification set, BASE file hash/size/build, physical host identity, private-config
 hash, owner release, thirty-minute window and physical-console/manual-recovery
 plan. The existing server is never restarted or reconfigured. Each decision may
 make one read-only `/tokenize` request before its one completion; both share the

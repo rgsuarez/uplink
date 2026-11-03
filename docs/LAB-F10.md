@@ -22,7 +22,7 @@ Provider errors, missing evidence and green-at-expiry do not become give-ups or 
 Raw F9 traces remain untouched; separate `*.policy-v2.json` receipts retain verifier
 output and bind the original trace. Final verification is outside the model budget.
 
-All other F9 knobs are unchanged: base Q4_K_M, no adapter, native_gbnf, low reasoning,
+All other F9 knobs are unchanged: base Q4_K_M, base, unmodified open weights, native_gbnf, low reasoning,
 16 steps, 65,536 aggregate tokens, 2,048 output tokens/action, 3 s/tests, seed 0,
 temperature 0, 8,192 context, one slot, append-only history, prompt caching, no retries
 or compaction. The runner checks the committed F10 registration SHA-256, original

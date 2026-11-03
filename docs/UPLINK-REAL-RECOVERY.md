@@ -192,7 +192,7 @@ Live preflight requires:
 ## Detached rollback
 
 Prepare copies only the stdlib worker, its closed protocol, the fleet gates, the private
-config and its stdlib reader, and the native adapter into
+config and its stdlib reader, and the native bridge into
 `/var/db/uplink-real/runs/<12-hex-id>/`, owned by root with directory mode 0700 and private
 files. The snapshot contains the exact Wi-Fi DNS and proxy property lists and power state.
 It never includes keychain data. Root audit rows contain only timestamps, operations, and
@@ -261,7 +261,7 @@ under a killed agent or real network recovery. Those remain live acceptance chec
 
 Apple's SystemConfiguration SDK documents `SCNetworkProtocolSetConfiguration` with a
 nullable configuration and `SCPreferencesCommitChanges`/`SCPreferencesApplyChanges` for
-transactional persistence. The native adapter uses these APIs to preserve absent and
+transactional persistence. The native bridge uses these APIs to preserve absent and
 empty proxy fields that `networksetup -setwebproxy` cannot faithfully reconstruct.
 The watchdog follows Apple's [launchd job model](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html).
 

@@ -82,7 +82,7 @@ F01/F02/F08 remain outside the 21-trial population. Three deterministic-seed tri
 - Historical proof reconciliation: artifacts/uplink/mil-base-fix-20261101-132128/reconciliation.json (private source artifact omitted).
 - Input contract: [configs/model-sim-base-fix.v1.json](configs/model-sim-base-fix.v1.json), SHA-256 `b5eab09c3643887e21095901005aee996b7d8b875ee8912c11635fa4e5802f1d`.
 - Prompt: [harness/model-sim/authorized-repair-v1.txt](harness/model-sim/authorized-repair-v1.txt), SHA-256 `f68fac36a29da410753ba66e6507f70dbc251b324e76ee86f6befb0f7aa03949`.
-- Q4 model: `Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf`, 16,756,683,904 bytes, SHA-256 `4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e`; no adapter.
+- Q4 model: `Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf`, 16,756,683,904 bytes, SHA-256 `4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e`; base, unmodified open weights.
 
 The original 173 frozen local files remained byte-identical. The worker verified 150 relevant frozen runtime inputs and reused the cached multi-architecture image. The original system safety instructions remain the prefix of the revised prompt. Grammar, parser, fact projection, scorer, ONLINE oracle, watchdog and cleanup behavior were unchanged.
 
@@ -97,4 +97,4 @@ Result: no issues found.
 Result: all checks passed.
 ```
 
-Checks covered prompt-only projection parity, unchanged grammar/budget, valid repair output, invalid/unknown/truncated outputs, missing measurements, transport failure, local-inference refusal and rejection of unsupported ONLINE claims. There was one new BASE Q4 job, no adapter run, no host contact, no push and no publication.
+Checks covered prompt-only projection parity, unchanged grammar/budget, valid repair output, invalid/unknown/truncated outputs, missing measurements, transport failure, local-inference refusal and rejection of unsupported ONLINE claims. There was one new BASE Q4 job,  no host contact, no push and no publication.

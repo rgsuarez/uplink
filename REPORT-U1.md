@@ -2,7 +2,7 @@
 
 Uplink core, the trace/display addenda, and queued items (j)-(m) are implemented. Lint,
 strict typechecking and all **820 tests** pass. The Linux worker is staged and verified
-inside the existing Lima VM; the bench native adapter compiles and passes its pure
+inside the existing Lima VM; the bench native bridge compiles and passes its pure
 self-test. **No live fault injection or model inference was run.** Real Linux trials and
 the three consecutive Mac recoveries are the separately authorized follow-on run.
 
@@ -39,7 +39,7 @@ Publication is limited to `feat/u1-uplink-core` at the verified private
 | NEXT (j), F10 summary | `budget_exhausted` is accepted as a diagnostic event. Results regenerate from unchanged captured data; scoring and green-at-expiry treatment are unchanged. |
 | NEXT (k), Linux | All twelve fault inject/undo paths, DHCP, TLS/proxy/portal/application fixtures, alternate route qualification, watchdog, owned cleanup and paired model/baseline controller. Source transfer is verified because the VM has no shared host mount. |
 | NEXT (l), provenance | New Uplink traces and evaluation receipts carry model name, GGUF filename/hash, source repo, llama.cpp build, chip and explicit expected/file/server/fixture verification states. Historical F10 receipts remain immutable. |
-| NEXT (m), bench | `uplink-real`, default simulation, OOB checks, exact Wi-Fi snapshots, native SystemConfiguration adapter, detached launchd rollback, four fault types, typed snapshot-only repairs, independent Wi-Fi-bound verification and disarm. |
+| NEXT (m), bench | `uplink-real`, default simulation, OOB checks, exact Wi-Fi snapshots, native SystemConfiguration bridge, detached launchd rollback, four fault types, typed snapshot-only repairs, independent Wi-Fi-bound verification and disarm. |
 
 The source package is `src/offline_agent/uplink/`. Usage and contracts are in
 `docs/UPLINK.md`, `docs/UPLINK-LINUX-HARNESS.md` and `docs/UPLINK-REAL-RECOVERY.md`.
@@ -62,7 +62,7 @@ produce server-verified inference evidence.
 | Paired Linux dry matrix | 12 faults times 2 arms, 24 MOCK cases. |
 | Mac recovery dry gate | 3 synthetic consecutive DNS-plus-proxy trials; real gate correctly remains false. |
 | Trace/replay/privacy checks | All 27 new dry traces parse, replay, pass privacy validation and resolve to the canonical inbox as the same file. |
-| Native bench adapter | Compiled on bench; self-test passes with zero network reads/writes. Exact empty/disabled proxy round trips and stable digests verified. |
+| Native bench bridge | Compiled on bench; self-test passes with zero network reads/writes. Exact empty/disabled proxy round trips and stable digests verified. |
 | Real read-only bench oracle | ONLINE, all 6 checks passed through Wi-Fi, with 6 redacted raw transport receipts retained. This was not a recovery trial. |
 | VM placement | Lima copies and verifies the four stdlib worker files plus wrapper. The staged worker's no-effect probe passes without root. |
 | Source and runtime status | Lab staged source hashes match the validated code. At 2026-10-27 16:54:14 UTC, localhost model server was unavailable and `/var/db/uplink-real` did not exist. |
@@ -146,7 +146,7 @@ that masks an injected fault aborts the trial; it cannot earn combined-fault cre
 
 Saved hotspot/USB feasibility, broad Mac recovery outside this bounded runner, native
 GBNF model sampling and interrupted-cloud-request resumption still require live work.
-No new LoRA, paid API usage, Modal spend or training was introduced.
+No paid API usage, Modal spend or training was introduced.
 
 No workstation network setting or model load occurred. Lab received unprivileged
 source/build artifacts and read-only checks; the VM received verified source files and

@@ -137,7 +137,6 @@ H-F09-B:
 | Median call latency | 5.389502 seconds |
 | Calls over the eight-second cap | 0/39 |
 | Model SHA-256 | `4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e` |
-| Adapter / fine-tune | None |
 | Modal app | `PROVIDER_ACCOUNT_REMOVED` |
 | Modal Function | `PROVIDER_ACCOUNT_REMOVED` |
 | Cached image | `im-SCX0LIf6ErRaTfpEQCG06W`, identical to the adopted run |

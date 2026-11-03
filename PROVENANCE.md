@@ -51,8 +51,7 @@ authored here. `data/v2/sources.json` lists source URLs, exact commits, licenses
 hashes. F1 frozen history remains unchanged.
 
 
-The submission uses only the unmodified base Muse Glimmer GGUF. No fine-tuning,
-model modification or custom model upload is included. The native tokenizer metadata
+The submission uses Meta Muse Glimmer 30B: base, unmodified open weights. The native tokenizer metadata
 is preserved byte for byte, including its upstream special-token vocabulary.
 Original runtime, safety checks, watchdog, oracle and evidence tooling were authored
 during the hackathon. Source-specific hashes in the export manifest distinguish

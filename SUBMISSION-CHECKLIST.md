@@ -5,8 +5,8 @@ Meta Global AI Developer Hackathon (Cerebral Valley). Team **Uplink**, Indie tra
 grace period.** The form stays editable until the deadline; there is one submitter.
 
 Model: **base Meta Muse Glimmer 30B**, unmodified Q4_K_M GGUF (SHA-256 prefix
-`4cc57c0f`), served on-device by `llama-server` (llama.cpp b10353) on localhost. No
-fine-tuning, no adapter.
+`4cc57c0f`), served on-device by `llama-server` (llama.cpp b10353) on localhost. The model uses
+base, unmodified open weights.
 
 ## Rubric coverage
 

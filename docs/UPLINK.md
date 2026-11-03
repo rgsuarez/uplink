@@ -34,7 +34,7 @@ The Uplink tests are hermetic: their default fixture blocks process creation and
 
 Keep tests in the `tests/uplink` Python package so their module names cannot collide with the frozen coding tests. Postpone runtime evaluation of generic argparse type annotations: typing stubs describe generics the runtime class does not implement. Treat abbreviated numeric routes as networks, not private identifier strings, and distinguish proxy IP literals from hostnames so privacy scans do not reject permitted address evidence. Never place credential-shaped URL literals in fixtures: even synthetic examples remain in historical secret scans after later edits.
 
-The implemented isolated Linux worker and paired evaluation runner are described in `docs/UPLINK-LINUX-HARNESS.md`; the catalog is `docs/UPLINK-FAULTS.md`. The bench Wi-Fi runner, native configuration adapter and detached launchd watchdog are described in `docs/UPLINK-REAL-RECOVERY.md`. Dry runs and native compilation are preparation, not measured recovery evidence. Live model sampling, real fault trials, rollback under agent death, hotspot/USB feasibility and interrupted-cloud-request resumption remain separate acceptance work. Generic ONLINE is not application resumption.
+The implemented isolated Linux worker and paired evaluation runner are described in `docs/UPLINK-LINUX-HARNESS.md`; the catalog is `docs/UPLINK-FAULTS.md`. The bench Wi-Fi runner, native configuration bridge and detached launchd watchdog are described in `docs/UPLINK-REAL-RECOVERY.md`. Dry runs and native compilation are preparation, not measured recovery evidence. Live model sampling, real fault trials, rollback under agent death, hotspot/USB feasibility and interrupted-cloud-request resumption remain separate acceptance work. Generic ONLINE is not application resumption.
 
 ## Run journal
 
@@ -119,7 +119,7 @@ repeated cases are not held-out evaluation.
 ## Approved primary Wi-Fi trials (trace version 4)
 
 The live runner's DNS/proxy profile permits only restoring captured DNS and web/secure
-proxy settings on the explicitly allowlisted device. The native adapter preserves other
+proxy settings on the explicitly allowlisted device. The native bridge preserves other
 DNS keys during injection. All other managed devices and fault types remain refused.
 The trace records the exact scoped approval and clearance-file digest; replay validates
 that record using only the standard library and does not authorize any operation.

@@ -34,7 +34,7 @@ North Star Check: obtain model-selected proxy repairs without losing existing re
 | CPU / memory | 4 CPUs / 32 GiB | 2 CPUs / 32 GiB, hard limits |
 | Job compute cost | $0.07240661 | $0.05318870 |
 
-The CPU allocation and diagnostic counts differ, so the timing/cost columns are descriptive, not a matched speed comparison. The model file, quantization, template, context 8192, seed 0, temperature 0, token limit 192, full 13-action grammar and eight-second call limit are unchanged. No adapter was loaded.
+The CPU allocation and diagnostic counts differ, so the timing/cost columns are descriptive, not a matched speed comparison. The model file, quantization, template, context 8192, seed 0, temperature 0, token limit 192, full 13-action grammar and eight-second call limit are unchanged. The base weights were used unchanged.
 
 Recovery credit came from the frozen verifier after the selected repair and before controller/watchdog cleanup. All 21 historical recovery proofs replayed at their recorded verification timestamps. No separate model ONLINE declaration was needed for recovery credit. Every final reason code was `snapshot_repair`; that enum is not proof of a reliable natural-language diagnosis. `restore_gateway` uses the existing IPv4 restore/DHCP primitives, which also resolve this simulator's F10 variant.
 
@@ -104,8 +104,8 @@ Success: no issues found in 1 source file.
 All checks passed.
 ```
 
-Tests preserve the original system text, facts, checks, history, tool admission, grammar and call budget; cover valid repair, invalid/empty responses, transport failure, non-sandbox refusal and rejection of unsupported ONLINE. The exploratory tests were narrowed with the implementation; the final suite has nine new tests, not the thirteen used during ablation. No frozen test or safety gate changed.
+Tests preserve the original system text, facts, checks, history, tool admission, grammar and call budget; cover valid repair, invalid/empty responses, transport failure, non-sandbox refusal and rejection of unsupported ONLINE. The investigative tests were narrowed with the implementation; the final suite has nine new tests, not the thirteen used during ablation. No frozen test or safety gate changed.
 
 The 14:33 decision packet (private source artifact omitted) was first read after the final run. It permits at most one further variant after the two 6/21 runs, with an unchanged `authorized-repair-v1` text and **only an added narrowly scoped `restore_proxy` line**. The final run satisfies its numeric gates (>=17/21, no fault below baseline, zero false ONLINE), its one-more-run limit and the cumulative cost cap, but changes six descriptions rather than one proxy line. Adoption was held until the operator reviewed that exact difference and explicitly selected the 21/21 balanced candidate. That direct approval resolves the one-line scope restriction for this candidate. The adoption event (private source artifact omitted) records the selection; NEEDS-AMANDA.md (private source artifact omitted) is resolved. The 15/21 run remains the historical baseline.
 
-No push, publication, Bench/Relay contact, live package binding, adapter/FT run, credential creation, GitHub authentication change or source/evidence deletion occurred. No new model job remains active. The queued live-package work has not started.
+No push, publication, Bench/Relay contact, live package binding,  credential creation, GitHub authentication change or source/evidence deletion occurred. No new model job remains active. The queued live-package work has not started.

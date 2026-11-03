@@ -67,7 +67,7 @@ Latency is the median of the calls within that case. Tokens are generated tokens
 
 ## Spark execution and the evidence boundary
 
-The fixed candidate is the base 816B-A42B Q4_K_S artifact, 22 shards totaling 470,069,227,350 bytes. All shard sizes and SHA-256 values verified before GPU dispatch. No adapter or fine-tune was used. Runtime and weights were reused after preflight-only setup stops; no test case was repeated by those continuations.
+The fixed candidate is the base 816B-A42B Q4_K_S artifact, 22 shards totaling 470,069,227,350 bytes. All shard sizes and SHA-256 values verified before GPU dispatch. The base weights were used unchanged. Runtime and weights were reused after preflight-only setup stops; no test case was repeated by those continuations.
 
 The final invocation used four H200 GPUs, two CPU cores and 32 GiB, with a 1,000-second provider timeout, 1,120-second client deadline, zero retries and at most one container. It ran from 18:07:14 UTC for **954.323946 seconds**. The last retained live observation, **2026-11-02T18:18:11.132974+00:00**, showed weight loading and zero case-output files. All four GPUs had allocated model buffers; that allocation did not establish inference readiness.
 

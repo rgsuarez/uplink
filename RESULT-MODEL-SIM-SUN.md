@@ -9,7 +9,7 @@ North Star Check: measure the frozen model-driven recovery path honestly, preser
 | Metric | Recorded value |
 | --- | --- |
 | Evaluation interval | 2026-11-01 12:02:33 CST to 2026-11-01 12:04:25 CST |
-| Model | Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf, no adapter |
+| Model | Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf, base, unmodified open weights |
 | Trial population | F03-F07, F09, F10; 3 trials each; 21/21 recorded |
 | Recovered / honest report / failed / blocked | 0 / 21 / 0 / 0 |
 | False-ONLINE claims | 0 in 21 recorded trials |
