@@ -1,0 +1,69 @@
+{
+  "number": 7,
+  "fault": "stale_proxy",
+  "arm": "scripted",
+  "run_id": "6417d1983d35",
+  "source": "e8ad2578b7da771667392c1065036ad468ab66cd",
+  "elapsed_s": 10.04079308314249,
+  "failure": null,
+  "receipt": {
+    "version": 1,
+    "kind": "uplink-lab-eval",
+    "profile": "uplink-linux-lab-v1",
+    "fault": "stale_proxy",
+    "arm": "baseline",
+    "action_mode": null,
+    "comparison_arm": "scripted",
+    "model": {
+      "name": "Muse Glimmer 30B",
+      "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+      "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+      "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "host_chip": "Apple M4 Max",
+      "provider": null,
+      "active_model_name": null,
+      "verification": "server_verified",
+      "verified_at": 1793149372.388174,
+      "model_used": false
+    },
+    "model_calls_attempted": 0,
+    "evidence_kind": "linux_namespace",
+    "outcome": "recovered",
+    "failure": null,
+    "failure_details": null,
+    "probe_scripts": false,
+    "probe_episodes": [],
+    "oracle": "ONLINE",
+    "app_resumed": true,
+    "changes": [
+      "restore_proxy"
+    ],
+    "restore_retries": [],
+    "attempt_keys": [
+      {
+        "action": "restore_proxy",
+        "target_path": "[\"ul-6417d1983d35-c\",\"u6417d198c0\",\"ADDRESS_REMOVED\"]",
+        "state_sha256": "680b28004cd819e0a3269621fb19db6f6a0166acd073177e7ac30ef04bb7e066"
+      }
+    ],
+    "trace": "uplink-7f11b5b2480b4d2caf4bff824d84d26c.jsonl",
+    "catalog_sha256": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91"
+  },
+  "cleanup": {
+    "status": "closed",
+    "cleanup_failure": null,
+    "host_fingerprint_matches": true,
+    "owned_namespaces": 0,
+    "all_uplink_namespaces": 0
+  },
+  "traces": [
+    {
+      "name": "uplink-7f11b5b2480b4d2caf4bff824d84d26c.jsonl",
+      "records": 11,
+      "verdict": "ONLINE",
+      "model_emissions": 0
+    }
+  ],
+  "finished_at": "2026-10-28T01:03:02.519986+00:00"
+}

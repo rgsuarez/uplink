@@ -1,0 +1,15 @@
+{"ts": 1793159903.3027382, "event": "intent", "operation": "up"}
+{"ts": 1793159907.283484, "event": "complete", "operation": "sealed_snapshot_persisted"}
+{"ts": 1793159907.2883646, "event": "complete", "operation": "up"}
+{"ts": 1793159907.3466613, "event": "intent", "operation": "arm"}
+{"ts": 1793159907.5179946, "event": "intent", "operation": "apply"}
+{"ts": 1793159907.5250192, "event": "complete", "operation": "apply"}
+{"ts": 1793159907.5885582, "event": "intent", "operation": "undo"}
+{"ts": 1793159907.6483843, "event": "complete", "operation": "undo"}
+{"ts": 1793159907.649259, "event": "intent", "operation": "arm"}
+{"ts": 1793159907.8259885, "event": "intent", "operation": "inject"}
+{"ts": 1793159907.861235, "event": "complete", "operation": "inject"}
+{"ts": 1793159907.922992, "event": "intent", "operation": "undo"}
+{"ts": 1793159907.9865947, "event": "complete", "operation": "undo"}
+{"ts": 1793159908.0556471, "event": "intent", "operation": "down"}
+{"ts": 1793159908.063224, "event": "complete", "operation": "down"}

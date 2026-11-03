@@ -1,0 +1,115 @@
+{
+  "version": 2,
+  "sources": [
+    {
+      "id": "inflection",
+      "repository": "jpvanhal/inflection",
+      "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+      "license": "MIT",
+      "split": "train",
+      "source": "data/upstream/inflection/module.py",
+      "assets": {
+        "data/upstream/inflection/module.py": {
+          "url": "https://raw.githubusercontent.com/jpvanhal/inflection/88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1/inflection/__init__.py",
+          "sha256": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+        },
+        "data/upstream/inflection/LICENSE": {
+          "url": "https://raw.githubusercontent.com/jpvanhal/inflection/88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1/LICENSE",
+          "sha256": "9e9f9b4b2e7543ad1486f1328bf9ec50e5a5e2bb9caceb59652496dd61e64133"
+        }
+      }
+    },
+    {
+      "id": "stringcase",
+      "repository": "okunishinishi/python-stringcase",
+      "revision": "57aae96649f5cf7fc98e50b1d62479456d492715",
+      "license": "MIT",
+      "split": "heldout",
+      "source": "data/upstream/stringcase/module.py",
+      "assets": {
+        "data/upstream/stringcase/module.py": {
+          "url": "https://raw.githubusercontent.com/okunishinishi/python-stringcase/57aae96649f5cf7fc98e50b1d62479456d492715/stringcase.py",
+          "sha256": "227026f2583455ee69ef6ea59e2afaee45061b94033a671b7bf8603c03fe5f1b"
+        },
+        "data/upstream/stringcase/LICENSE": {
+          "url": "https://raw.githubusercontent.com/okunishinishi/python-stringcase/57aae96649f5cf7fc98e50b1d62479456d492715/LICENSE",
+          "sha256": "b8c493354463583e0e8958c2bc6bdec4ebfcb653b39e4ed5522f641689da9ea0"
+        }
+      }
+    },
+    {
+      "id": "boltons",
+      "repository": "mahmoud/boltons",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "license": "BSD-3-Clause",
+      "split": "train",
+      "source": "data/v2/upstream/boltons/module.py",
+      "assets": {
+        "data/v2/upstream/boltons/module.py": {
+          "url": "https://raw.githubusercontent.com/mahmoud/boltons/d31d821d56c8f7756af9c30a864077f2e5855321/boltons/mathutils.py",
+          "sha256": "f832235006d1a1fac34ff0d83f0f9819d00a3086cfb4df6169212b4d8d31d4fe"
+        },
+        "data/v2/upstream/boltons/LICENSE": {
+          "url": "https://raw.githubusercontent.com/mahmoud/boltons/d31d821d56c8f7756af9c30a864077f2e5855321/LICENSE",
+          "sha256": "c301912653a8d8c99eab6212aa3aea8d164ea249d8ad53c941e0558a0a5ac1e3"
+        }
+      }
+    },
+    {
+      "id": "numeric-v2",
+      "repository": "synthetic:numeric-v2",
+      "split": "train",
+      "revision": "36b501f11803ae03633c794812873632db02253419d0f41019b4fa447005cae3",
+      "license": "CC0-1.0",
+      "source": "data/v2/synthetic/numeric.py",
+      "assets": {
+        "data/v2/synthetic/numeric.py": {
+          "sha256": "36b501f11803ae03633c794812873632db02253419d0f41019b4fa447005cae3",
+          "url": "original-synthetic"
+        }
+      }
+    },
+    {
+      "id": "sequence-v2",
+      "repository": "synthetic:sequence-v2",
+      "split": "train",
+      "revision": "5dad96dcdb14b90a227b8e46d77ed6a43591f06f8d941da6d9221e1483dd00b3",
+      "license": "CC0-1.0",
+      "source": "data/v2/synthetic/sequence.py",
+      "assets": {
+        "data/v2/synthetic/sequence.py": {
+          "sha256": "5dad96dcdb14b90a227b8e46d77ed6a43591f06f8d941da6d9221e1483dd00b3",
+          "url": "original-synthetic"
+        }
+      }
+    },
+    {
+      "id": "text-v2",
+      "repository": "synthetic:text-v2",
+      "split": "heldout",
+      "revision": "116279213230970b88e4c0c7b5e321a3d4c1d46f36092b74e20ed35c06acaf0e",
+      "license": "CC0-1.0",
+      "source": "data/v2/synthetic/text.py",
+      "assets": {
+        "data/v2/synthetic/text.py": {
+          "sha256": "116279213230970b88e4c0c7b5e321a3d4c1d46f36092b74e20ed35c06acaf0e",
+          "url": "original-synthetic"
+        }
+      }
+    },
+    {
+      "id": "records-v2",
+      "repository": "synthetic:records-v2",
+      "split": "heldout",
+      "revision": "8cc54199c41057f8dd5c4cf89108d075339c2a82c2fd5534e6c1821003283a46",
+      "license": "CC0-1.0",
+      "source": "data/v2/synthetic/records.py",
+      "assets": {
+        "data/v2/synthetic/records.py": {
+          "sha256": "8cc54199c41057f8dd5c4cf89108d075339c2a82c2fd5534e6c1821003283a46",
+          "url": "original-synthetic"
+        }
+      }
+    }
+  ]
+}

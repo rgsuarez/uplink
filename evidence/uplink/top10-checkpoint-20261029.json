@@ -1,0 +1,153 @@
+{
+  "base_model_calls": 0,
+  "containment": {
+    "connect_errno": 1,
+    "modules_imported": [
+      "offline_agent.uplink.top10_contract",
+      "offline_agent.uplink.top10_engine",
+      "offline_agent.uplink.top10_harness",
+      "offline_agent.uplink.top10_injectors",
+      "offline_agent.uplink.top10_kernel",
+      "offline_agent.uplink.top10_model",
+      "offline_agent.uplink.top10_portal",
+      "offline_agent.uplink.top10_score",
+      "offline_agent.uplink.top10_worker"
+    ],
+    "network_connect_denied": true,
+    "note": "Creating a socket is allowed; outbound use must be denied by the sandbox."
+  },
+  "evidence_files_sha256": {
+    "checkpoint-containment/containment-result.json": "4c7927f82784c2308b2f5c110659074d4042f65fc12ad610528db81cdbe0b046",
+    "checkpoint-injectors/checkpoint-result.json": "784f448ac5f190727c95a903f13d2167ae8d4d5f949bc936c46a346ef212fbcd",
+    "checkpoint-smoke.py": "b86449f739b473a2757d46ed4a4f1b91e2359622c4c60227da8aa624c21948c7"
+  },
+  "fake_injector_self_test": {
+    "base_calls": 0,
+    "frozen_inputs_verified": true,
+    "host_network_mutations": 0,
+    "kind": "checkpoint-fake-injector-selftest",
+    "passed": true,
+    "socket_creation_denied": false,
+    "trials": [
+      {
+        "closed": true,
+        "fault_id": "F01",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      },
+      {
+        "closed": true,
+        "fault_id": "F02",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      },
+      {
+        "closed": true,
+        "fault_id": "F03",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      },
+      {
+        "closed": true,
+        "fault_id": "F04",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      },
+      {
+        "closed": true,
+        "fault_id": "F05",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      },
+      {
+        "closed": true,
+        "fault_id": "F06",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      },
+      {
+        "closed": true,
+        "fault_id": "F07",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      },
+      {
+        "closed": true,
+        "fault_id": "F08",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      },
+      {
+        "closed": true,
+        "fault_id": "F09",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      },
+      {
+        "closed": true,
+        "fault_id": "F10",
+        "negative_control": true,
+        "restored": true,
+        "watchdog_exited": true
+      }
+    ]
+  },
+  "final_runtime_manifest_present": false,
+  "frozen_prompt_sha256": "bab956b281eb061c4bf5410e1d40ad477dbf72e69ebaeb42f1a42eb0824f8ecf",
+  "frozen_registry_sha256": "224f6a2f9a78be29449d3d52b75f5d2c8ce203efd581bab455f2cb21097c7061",
+  "native_self_test": {
+    "binary_sha256": "74ef448369b1b161b2e05145eaefbd12a9bc8d7e05271fa6769e188ef8621538",
+    "build_target": "local compiler default; target deployment compatibility not yet bound",
+    "keychain_reads": 0,
+    "network_reads": 0,
+    "network_writes": 0,
+    "passed": true
+  },
+  "not_run": [
+    "BASE completions",
+    "live macOS injection",
+    "full pytest suite",
+    "strict typecheck",
+    "full lint",
+    "target-host preflight"
+  ],
+  "pid_19904_touched": false,
+  "push": false,
+  "python_syntax_files": 10,
+  "ready_packet_complete": false,
+  "recorded_at": "2026-10-29T09:03:04.671181+00:00",
+  "source_files_sha256": {
+    "harness/macos/Top10Network.swift": "6d41c71523b07ebd82a15b7cec432e72c289e1e49952f895421d15f81d82a13d",
+    "scripts/top10_local_sandbox.py": "7b93acc5babf0bba134da20eb61619e9db0c8cd82f504010e26fdc5e27b078a4",
+    "src/offline_agent/uplink/top10_contract.py": "4e90357782ac931cd3f2cf38c80d17990405997a6620d145b15c6939e0a11e6c",
+    "src/offline_agent/uplink/top10_engine.py": "8fa5abc5264806ec7b392d7bc47148c55ed38f33a17253bbfaa6a9c0ba4d9d33",
+    "src/offline_agent/uplink/top10_harness.py": "450559a761a1e003da7031ae64e70dc327c0bdf13943b72a0fa6c56d13f9a0cb",
+    "src/offline_agent/uplink/top10_injectors.py": "81e0f02f97131851e0837cfe69cc644cbdf2defc8b909540d0573048ac634d42",
+    "src/offline_agent/uplink/top10_kernel.py": "bae2da7fc68af23f606d70dbf707ab81244413e006fb6f455b38569a271c7cce",
+    "src/offline_agent/uplink/top10_model.py": "7df55f58221bb87acf03b133ebd234989a1099400731a78a8f91d9921a347668",
+    "src/offline_agent/uplink/top10_portal.py": "fa7155b93a12882179cee179f51343e412a64086caae361a0e279fd6543371ae",
+    "src/offline_agent/uplink/top10_score.py": "3ca434c08f894f85ec950cb29adaf11b4b158ee021468d6c80d96ee5c4bd67aa",
+    "src/offline_agent/uplink/top10_worker.py": "8ff77ece82ec1e366c107b5637d36f47fd979de4bb36c385c8e763d8ef5f9b79"
+  },
+  "source_parent_commit": "49c5caa534aa24bccc63db28dd02d65e161b4932",
+  "status": "incomplete_implementation_checkpoint_not_live_ready",
+  "target_host_contacts": 0,
+  "unchanged_baseline_checks": {
+    "all_24_frozen_dependencies": true,
+    "configs/f10-ondevice.json": true,
+    "configs/f10-ondevice.sha256": true,
+    "src/offline_agent/uplink/lab.local.json": true,
+    "src/offline_agent/uplink/oracle.py": true,
+    "tests/uplink/test_oracle.py": true
+  },
+  "version": 1
+}

@@ -1,0 +1,28 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "P07",
+  "catalog_id": "proxy_env_override_dead",
+  "role": "fault",
+  "baseline": {
+    "http_proxy": "configured",
+    "https_proxy": "configured",
+    "alternate": false,
+    "ipv6": "disabled"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "TTFFFF",
+      "verdict": "DEGRADED",
+      "app": false
+    }
+  ],
+  "terminal": {
+    "tool": "give_up",
+    "layer": "upstream",
+    "component": "",
+    "step": "",
+    "reason": "needs_human",
+    "citation": "probe-1"
+  }
+}

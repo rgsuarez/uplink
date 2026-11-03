@@ -1,0 +1,1354 @@
+{
+  "number": 6,
+  "fault": "stale_proxy",
+  "arm": "glimmer-open",
+  "run_id": "92a625f7744e",
+  "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+  "elapsed_s": 62.85982591705397,
+  "failure": "lab_evaluation_stopped_see_receipt",
+  "receipt": {
+    "action_mode": "open",
+    "app_resumed": false,
+    "arm": "uplink",
+    "attempt_keys": [],
+    "catalog_sha256": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91",
+    "changes": [],
+    "comparison_arm": "glimmer-open",
+    "evidence_kind": "linux_namespace",
+    "failure": "watchdog_ended_trial_no_recovery_credit",
+    "failure_details": null,
+    "fault": "stale_proxy",
+    "kind": "uplink-lab-eval",
+    "model": {
+      "active_model_name": "Muse Glimmer 30B",
+      "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+      "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+      "host_chip": "Apple M4 Max",
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "model_used": true,
+      "name": "Muse Glimmer 30B",
+      "provider": "llama_cpp",
+      "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+      "verification": "server_verified",
+      "verified_at": 1793148568.5359292
+    },
+    "model_calls_attempted": 12,
+    "oracle": "DEGRADED",
+    "outcome": "refused_LabWatchdogRestored",
+    "probe_episodes": [
+      {
+        "action": {
+          "args": {},
+          "tool": "read_proxy",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"action\": {\"version\": 1, \"tool\": \"read_proxy\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "restore_proxy"
+        ],
+        "alternate_qualified": false,
+        "decision_ms": 8845.211667008698,
+        "execution": {
+          "after_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "before_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "budget": {
+            "attempted": 1,
+            "elapsed_ms": 35.7645420008339,
+            "reserved_ms": 1000
+          },
+          "elapsed_ms": 35.7645420008339,
+          "finished_at": 1793148578.5804265,
+          "profile": "linux_lab",
+          "requested": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [
+            {
+              "elapsed_ms": 0.029999995604157448,
+              "finished_at": 1793148578.5753758,
+              "index": 0,
+              "ok": true,
+              "probe": {
+                "op": "read_state",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148578.5753467,
+              "state": {
+                "addresses": [
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "lo",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 8,
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 128,
+                        "protocol": "kernel_lo",
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-c0cc6f707cf32e1d9098032a",
+                    "broadcast": "mac-c0cc6f707cf32e1d9098032a",
+                    "flags": [
+                      "LOOPBACK",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 1,
+                    "ifname": "lo",
+                    "link_type": "loopback",
+                    "mtu": 65536,
+                    "operstate": "UNKNOWN",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c0",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-4eff6bb3d9319b6943606f90",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 738,
+                    "ifname": "u92a625f7c0",
+                    "link_index": 737,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c1",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-187e58da925dfa7907c9dd31",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 740,
+                    "ifname": "u92a625f7c1",
+                    "link_index": 739,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  }
+                ],
+                "proxy": "url-d638cf54344d7a1dc1165695",
+                "resolver": "nameserver ADDRESS_REMOVED\noptions timeout:1 attempts:1\n",
+                "routes": [
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "default",
+                    "flags": [],
+                    "gateway": "ADDRESS_REMOVED"
+                  },
+                  {
+                    "dev": "u92a625f7c1",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  },
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  }
+                ]
+              },
+              "status": "completed",
+              "stdout": "{\"addresses\": [{\"ifindex\": 1, \"ifname\": \"lo\", \"flags\": [\"LOOPBACK\", \"UP\", \"LOWER_UP\"], \"mtu\": 65536, \"qdisc\": \"noqueue\", \"operstate\": \"UNKNOWN\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"loopback\", \"address\": \"mac-c0cc6f707cf32e1d9098032a\", \"broadcast\": \"mac-c0cc6f707cf32e1d9098032a\", \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 8, \"scope\": \"host\", \"label\": \"lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 128, \"scope\": \"host\", \"protocol\": \"kernel_lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 738, \"link_index\": 737, \"ifname\": \"u92a625f7c0\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-4eff6bb3d9319b6943606f90\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c0\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 740, \"link_index\": 739, \"ifname\": \"u92a625f7c1\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-187e58da925dfa7907c9dd31\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c1\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}], \"routes\": [{\"dst\": \"default\", \"gateway\": \"ADDRESS_REMOVED\", \"dev\": \"u92a625f7c0\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c1\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c0\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}], \"resolver\": \"nameserver ADDRESS_REMOVED\\noptions timeout:1 attempts:1\\n\", \"proxy\": \"url-d638cf54344d7a1dc1165695\"}"
+            }
+          ],
+          "settings_unchanged": true,
+          "started_at": 1793148578.5446608,
+          "status": "completed",
+          "uid": 65534,
+          "validated": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "program": {
+          "probes": [
+            {
+              "op": "read_state",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"read_state\", \"timeout_ms\": 1000}]}}"
+      },
+      {
+        "action": {
+          "args": {},
+          "tool": "read_proxy",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"action\": {\"version\": 1, \"tool\": \"read_proxy\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "restore_proxy"
+        ],
+        "alternate_qualified": false,
+        "decision_ms": 7925.8034999947995,
+        "execution": {
+          "after_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "before_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "budget": {
+            "attempted": 2,
+            "elapsed_ms": 71.63083399791503,
+            "reserved_ms": 2000
+          },
+          "elapsed_ms": 35.866291997081134,
+          "finished_at": 1793148588.4098294,
+          "profile": "linux_lab",
+          "requested": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [
+            {
+              "elapsed_ms": 0.03083300543949008,
+              "finished_at": 1793148588.4048462,
+              "index": 0,
+              "ok": true,
+              "probe": {
+                "op": "read_state",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148588.4048166,
+              "state": {
+                "addresses": [
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "lo",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 8,
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 128,
+                        "protocol": "kernel_lo",
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-c0cc6f707cf32e1d9098032a",
+                    "broadcast": "mac-c0cc6f707cf32e1d9098032a",
+                    "flags": [
+                      "LOOPBACK",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 1,
+                    "ifname": "lo",
+                    "link_type": "loopback",
+                    "mtu": 65536,
+                    "operstate": "UNKNOWN",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c0",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-4eff6bb3d9319b6943606f90",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 738,
+                    "ifname": "u92a625f7c0",
+                    "link_index": 737,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c1",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-187e58da925dfa7907c9dd31",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 740,
+                    "ifname": "u92a625f7c1",
+                    "link_index": 739,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  }
+                ],
+                "proxy": "url-d638cf54344d7a1dc1165695",
+                "resolver": "nameserver ADDRESS_REMOVED\noptions timeout:1 attempts:1\n",
+                "routes": [
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "default",
+                    "flags": [],
+                    "gateway": "ADDRESS_REMOVED"
+                  },
+                  {
+                    "dev": "u92a625f7c1",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  },
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  }
+                ]
+              },
+              "status": "completed",
+              "stdout": "{\"addresses\": [{\"ifindex\": 1, \"ifname\": \"lo\", \"flags\": [\"LOOPBACK\", \"UP\", \"LOWER_UP\"], \"mtu\": 65536, \"qdisc\": \"noqueue\", \"operstate\": \"UNKNOWN\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"loopback\", \"address\": \"mac-c0cc6f707cf32e1d9098032a\", \"broadcast\": \"mac-c0cc6f707cf32e1d9098032a\", \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 8, \"scope\": \"host\", \"label\": \"lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 128, \"scope\": \"host\", \"protocol\": \"kernel_lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 738, \"link_index\": 737, \"ifname\": \"u92a625f7c0\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-4eff6bb3d9319b6943606f90\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c0\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 740, \"link_index\": 739, \"ifname\": \"u92a625f7c1\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-187e58da925dfa7907c9dd31\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c1\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}], \"routes\": [{\"dst\": \"default\", \"gateway\": \"ADDRESS_REMOVED\", \"dev\": \"u92a625f7c0\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c1\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c0\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}], \"resolver\": \"nameserver ADDRESS_REMOVED\\noptions timeout:1 attempts:1\\n\", \"proxy\": \"url-d638cf54344d7a1dc1165695\"}"
+            }
+          ],
+          "settings_unchanged": true,
+          "started_at": 1793148588.3739624,
+          "status": "completed",
+          "uid": 65534,
+          "validated": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "program": {
+          "probes": [
+            {
+              "op": "read_state",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"read_state\", \"timeout_ms\": 1000}]}}"
+      },
+      {
+        "action": {
+          "args": {},
+          "tool": "read_proxy",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"action\": {\"version\": 1, \"tool\": \"read_proxy\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "restore_proxy"
+        ],
+        "alternate_qualified": false,
+        "decision_ms": 8397.558167111129,
+        "execution": {
+          "after_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "before_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "budget": {
+            "attempted": 3,
+            "elapsed_ms": 109.29112799931318,
+            "reserved_ms": 3000
+          },
+          "elapsed_ms": 37.66029400139814,
+          "finished_at": 1793148597.3671882,
+          "profile": "linux_lab",
+          "requested": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [
+            {
+              "elapsed_ms": 0.0314170029014349,
+              "finished_at": 1793148597.3615217,
+              "index": 0,
+              "ok": true,
+              "probe": {
+                "op": "read_state",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148597.3614917,
+              "state": {
+                "addresses": [
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "lo",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 8,
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 128,
+                        "protocol": "kernel_lo",
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-c0cc6f707cf32e1d9098032a",
+                    "broadcast": "mac-c0cc6f707cf32e1d9098032a",
+                    "flags": [
+                      "LOOPBACK",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 1,
+                    "ifname": "lo",
+                    "link_type": "loopback",
+                    "mtu": 65536,
+                    "operstate": "UNKNOWN",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c0",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-4eff6bb3d9319b6943606f90",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 738,
+                    "ifname": "u92a625f7c0",
+                    "link_index": 737,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c1",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-187e58da925dfa7907c9dd31",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 740,
+                    "ifname": "u92a625f7c1",
+                    "link_index": 739,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  }
+                ],
+                "proxy": "url-d638cf54344d7a1dc1165695",
+                "resolver": "nameserver ADDRESS_REMOVED\noptions timeout:1 attempts:1\n",
+                "routes": [
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "default",
+                    "flags": [],
+                    "gateway": "ADDRESS_REMOVED"
+                  },
+                  {
+                    "dev": "u92a625f7c1",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  },
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  }
+                ]
+              },
+              "status": "completed",
+              "stdout": "{\"addresses\": [{\"ifindex\": 1, \"ifname\": \"lo\", \"flags\": [\"LOOPBACK\", \"UP\", \"LOWER_UP\"], \"mtu\": 65536, \"qdisc\": \"noqueue\", \"operstate\": \"UNKNOWN\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"loopback\", \"address\": \"mac-c0cc6f707cf32e1d9098032a\", \"broadcast\": \"mac-c0cc6f707cf32e1d9098032a\", \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 8, \"scope\": \"host\", \"label\": \"lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 128, \"scope\": \"host\", \"protocol\": \"kernel_lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 738, \"link_index\": 737, \"ifname\": \"u92a625f7c0\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-4eff6bb3d9319b6943606f90\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c0\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 740, \"link_index\": 739, \"ifname\": \"u92a625f7c1\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-187e58da925dfa7907c9dd31\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c1\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}], \"routes\": [{\"dst\": \"default\", \"gateway\": \"ADDRESS_REMOVED\", \"dev\": \"u92a625f7c0\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c1\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c0\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}], \"resolver\": \"nameserver ADDRESS_REMOVED\\noptions timeout:1 attempts:1\\n\", \"proxy\": \"url-d638cf54344d7a1dc1165695\"}"
+            }
+          ],
+          "settings_unchanged": true,
+          "started_at": 1793148597.329527,
+          "status": "completed",
+          "uid": 65534,
+          "validated": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "program": {
+          "probes": [
+            {
+              "op": "read_state",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"read_state\", \"timeout_ms\": 1000}]}}"
+      },
+      {
+        "action": {
+          "args": {},
+          "tool": "read_proxy",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"action\": {\"version\": 1, \"tool\": \"read_proxy\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "restore_proxy"
+        ],
+        "alternate_qualified": false,
+        "decision_ms": 8329.773084027693,
+        "execution": {
+          "after_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "before_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "budget": {
+            "attempted": 4,
+            "elapsed_ms": 145.32154499465832,
+            "reserved_ms": 4000
+          },
+          "elapsed_ms": 36.03041699534515,
+          "finished_at": 1793148606.7792914,
+          "profile": "linux_lab",
+          "requested": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [
+            {
+              "elapsed_ms": 0.0301670006592758,
+              "finished_at": 1793148606.7742274,
+              "index": 0,
+              "ok": true,
+              "probe": {
+                "op": "read_state",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148606.7741985,
+              "state": {
+                "addresses": [
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "lo",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 8,
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 128,
+                        "protocol": "kernel_lo",
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-c0cc6f707cf32e1d9098032a",
+                    "broadcast": "mac-c0cc6f707cf32e1d9098032a",
+                    "flags": [
+                      "LOOPBACK",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 1,
+                    "ifname": "lo",
+                    "link_type": "loopback",
+                    "mtu": 65536,
+                    "operstate": "UNKNOWN",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c0",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-4eff6bb3d9319b6943606f90",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 738,
+                    "ifname": "u92a625f7c0",
+                    "link_index": 737,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c1",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-187e58da925dfa7907c9dd31",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 740,
+                    "ifname": "u92a625f7c1",
+                    "link_index": 739,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  }
+                ],
+                "proxy": "url-d638cf54344d7a1dc1165695",
+                "resolver": "nameserver ADDRESS_REMOVED\noptions timeout:1 attempts:1\n",
+                "routes": [
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "default",
+                    "flags": [],
+                    "gateway": "ADDRESS_REMOVED"
+                  },
+                  {
+                    "dev": "u92a625f7c1",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  },
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  }
+                ]
+              },
+              "status": "completed",
+              "stdout": "{\"addresses\": [{\"ifindex\": 1, \"ifname\": \"lo\", \"flags\": [\"LOOPBACK\", \"UP\", \"LOWER_UP\"], \"mtu\": 65536, \"qdisc\": \"noqueue\", \"operstate\": \"UNKNOWN\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"loopback\", \"address\": \"mac-c0cc6f707cf32e1d9098032a\", \"broadcast\": \"mac-c0cc6f707cf32e1d9098032a\", \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 8, \"scope\": \"host\", \"label\": \"lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 128, \"scope\": \"host\", \"protocol\": \"kernel_lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 738, \"link_index\": 737, \"ifname\": \"u92a625f7c0\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-4eff6bb3d9319b6943606f90\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c0\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 740, \"link_index\": 739, \"ifname\": \"u92a625f7c1\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-187e58da925dfa7907c9dd31\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c1\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}], \"routes\": [{\"dst\": \"default\", \"gateway\": \"ADDRESS_REMOVED\", \"dev\": \"u92a625f7c0\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c1\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c0\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}], \"resolver\": \"nameserver ADDRESS_REMOVED\\noptions timeout:1 attempts:1\\n\", \"proxy\": \"url-d638cf54344d7a1dc1165695\"}"
+            }
+          ],
+          "settings_unchanged": true,
+          "started_at": 1793148606.7432604,
+          "status": "completed",
+          "uid": 65534,
+          "validated": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "program": {
+          "probes": [
+            {
+              "op": "read_state",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"read_state\", \"timeout_ms\": 1000}]}}"
+      },
+      {
+        "action": {
+          "args": {},
+          "tool": "read_proxy",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"action\": {\"version\": 1, \"tool\": \"read_proxy\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "restore_proxy"
+        ],
+        "alternate_qualified": false,
+        "decision_ms": 8433.072250103578,
+        "execution": {
+          "after_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "before_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "budget": {
+            "attempted": 5,
+            "elapsed_ms": 181.83008699998027,
+            "reserved_ms": 5000
+          },
+          "elapsed_ms": 36.50854200532194,
+          "finished_at": 1793148616.1219258,
+          "profile": "linux_lab",
+          "requested": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [
+            {
+              "elapsed_ms": 0.039792001189198345,
+              "finished_at": 1793148616.1167557,
+              "index": 0,
+              "ok": true,
+              "probe": {
+                "op": "read_state",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148616.1167169,
+              "state": {
+                "addresses": [
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "lo",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 8,
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 128,
+                        "protocol": "kernel_lo",
+                        "scope": "host",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-c0cc6f707cf32e1d9098032a",
+                    "broadcast": "mac-c0cc6f707cf32e1d9098032a",
+                    "flags": [
+                      "LOOPBACK",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 1,
+                    "ifname": "lo",
+                    "link_type": "loopback",
+                    "mtu": 65536,
+                    "operstate": "UNKNOWN",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c0",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-4eff6bb3d9319b6943606f90",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 738,
+                    "ifname": "u92a625f7c0",
+                    "link_index": 737,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  },
+                  {
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "label": "u92a625f7c1",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "valid_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "preferred_life_time": 4294967295,
+                        "prefixlen": 64,
+                        "protocol": "kernel_ll",
+                        "scope": "link",
+                        "valid_life_time": 4294967295
+                      }
+                    ],
+                    "address": "mac-187e58da925dfa7907c9dd31",
+                    "broadcast": "mac-1487d87763790daff3b18221",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "group": "default",
+                    "ifindex": 740,
+                    "ifname": "u92a625f7c1",
+                    "link_index": 739,
+                    "link_netnsid": 1,
+                    "link_type": "ether",
+                    "mtu": 1500,
+                    "operstate": "UP",
+                    "qdisc": "noqueue",
+                    "txqlen": 1000
+                  }
+                ],
+                "proxy": "url-d638cf54344d7a1dc1165695",
+                "resolver": "nameserver ADDRESS_REMOVED\noptions timeout:1 attempts:1\n",
+                "routes": [
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "default",
+                    "flags": [],
+                    "gateway": "ADDRESS_REMOVED"
+                  },
+                  {
+                    "dev": "u92a625f7c1",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  },
+                  {
+                    "dev": "u92a625f7c0",
+                    "dst": "ADDRESS_REMOVED/24",
+                    "flags": [],
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "protocol": "kernel",
+                    "scope": "link"
+                  }
+                ]
+              },
+              "status": "completed",
+              "stdout": "{\"addresses\": [{\"ifindex\": 1, \"ifname\": \"lo\", \"flags\": [\"LOOPBACK\", \"UP\", \"LOWER_UP\"], \"mtu\": 65536, \"qdisc\": \"noqueue\", \"operstate\": \"UNKNOWN\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"loopback\", \"address\": \"mac-c0cc6f707cf32e1d9098032a\", \"broadcast\": \"mac-c0cc6f707cf32e1d9098032a\", \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 8, \"scope\": \"host\", \"label\": \"lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 128, \"scope\": \"host\", \"protocol\": \"kernel_lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 738, \"link_index\": 737, \"ifname\": \"u92a625f7c0\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-4eff6bb3d9319b6943606f90\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c0\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 740, \"link_index\": 739, \"ifname\": \"u92a625f7c1\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-187e58da925dfa7907c9dd31\", \"broadcast\": \"mac-1487d87763790daff3b18221\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u92a625f7c1\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}], \"routes\": [{\"dst\": \"default\", \"gateway\": \"ADDRESS_REMOVED\", \"dev\": \"u92a625f7c0\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c1\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u92a625f7c0\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}], \"resolver\": \"nameserver ADDRESS_REMOVED\\noptions timeout:1 attempts:1\\n\", \"proxy\": \"url-d638cf54344d7a1dc1165695\"}"
+            }
+          ],
+          "settings_unchanged": true,
+          "started_at": 1793148616.085416,
+          "status": "completed",
+          "uid": 65534,
+          "validated": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "program": {
+          "probes": [
+            {
+              "op": "read_state",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"read_state\", \"timeout_ms\": 1000}]}}"
+      },
+      {
+        "action": {
+          "args": {},
+          "tool": "read_proxy",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"action\": {\"version\": 1, \"tool\": \"read_proxy\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "restore_proxy"
+        ],
+        "alternate_qualified": false,
+        "decision_ms": 8409.856082871556,
+        "execution": {
+          "after_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "before_sha256": "0f198961de1fc5ef34c6a5cf87ab6a589971c2a52db329ea254205d38cd9d73d",
+          "budget": {
+            "attempted": 6,
+            "elapsed_ms": 182.2028800015687,
+            "reserved_ms": 6000
+          },
+          "elapsed_ms": 0.372793001588434,
+          "finished_at": 1793148625.5749958,
+          "profile": "linux_lab",
+          "reason": "probe_episode_time_budget_exceeded",
+          "requested": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [],
+          "settings_unchanged": true,
+          "started_at": 1793148625.5746224,
+          "status": "refused",
+          "stderr": "probe_episode_time_budget_exceeded",
+          "validated": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "snapshot-proxy"
+          ],
+          "layer": "proxy"
+        },
+        "program": {
+          "probes": [
+            {
+              "op": "read_state",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"proxy\", \"evidence\": [\"snapshot-proxy\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"read_state\", \"timeout_ms\": 1000}]}}"
+      }
+    ],
+    "probe_scripts": true,
+    "profile": "uplink-linux-lab-v1",
+    "restore_retries": [],
+    "trace": "uplink-906ee2544ccb43eca0006516ea296ca6.jsonl",
+    "version": 1
+  },
+  "cleanup": {
+    "status": "closed",
+    "cleanup_failure": null,
+    "host_fingerprint_matches": true,
+    "owned_namespaces": 0,
+    "all_uplink_namespaces": 0
+  },
+  "traces": [
+    {
+      "name": "uplink-906ee2544ccb43eca0006516ea296ca6.jsonl",
+      "records": 30,
+      "verdict": "ERROR",
+      "model_emissions": 12
+    }
+  ],
+  "finished_at": "2026-10-28T00:50:31.489929+00:00"
+}

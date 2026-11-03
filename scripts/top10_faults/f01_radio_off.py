@@ -1,0 +1,6 @@
+"""Frozen F01: Wi-Fi radio off. Plan-only by default."""
+
+from offline_agent.uplink.top10_cli import fault_main
+
+if __name__ == "__main__":
+    fault_main("F01")

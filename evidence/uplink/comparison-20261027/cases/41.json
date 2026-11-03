@@ -1,0 +1,237 @@
+{
+  "number": 41,
+  "fault": "mtu_black_hole",
+  "arm": "glimmer-forced",
+  "run_id": "791f71346c35",
+  "source": "b784277c487939d7ea67683cbd6ea20d9f5b3116",
+  "elapsed_s": 35.30742466705851,
+  "failure": null,
+  "receipt": {
+    "version": 1,
+    "kind": "uplink-lab-eval",
+    "profile": "uplink-linux-lab-v1",
+    "fault": "mtu_black_hole",
+    "arm": "uplink",
+    "action_mode": "forced",
+    "comparison_arm": "glimmer-forced",
+    "model": {
+      "name": "Muse Glimmer 30B",
+      "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+      "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+      "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "host_chip": "Apple M4 Max",
+      "provider": "llama_cpp",
+      "active_model_name": "Muse Glimmer 30B",
+      "verification": "server_verified",
+      "verified_at": 1793151544.2704,
+      "model_used": true
+    },
+    "model_calls_attempted": 2,
+    "evidence_kind": "linux_namespace",
+    "outcome": "recovered",
+    "failure": null,
+    "failure_details": null,
+    "probe_scripts": true,
+    "probe_episodes": [
+      {
+        "hypothesis_before": {
+          "layer": "dns",
+          "evidence": [
+            "dns-1"
+          ]
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"ping_gateway\", \"path\": \"alternate\", \"count\": 1, \"interval_ms\": 200, \"timeout_ms\": 1000}, {\"op\": \"dns_query\", \"name\": \"one\", \"resolver\": \"alternate\", \"timeout_ms\": 1000}]}}",
+        "program": {
+          "version": 1,
+          "probes": [
+            {
+              "op": "ping_gateway",
+              "path": "alternate",
+              "count": 1,
+              "interval_ms": 200,
+              "timeout_ms": 1000
+            },
+            {
+              "op": "dns_query",
+              "name": "one",
+              "resolver": "alternate",
+              "timeout_ms": 1000
+            }
+          ]
+        },
+        "execution": {
+          "version": 1,
+          "requested": {
+            "probes": [
+              {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "started_at": 1793151569.7126694,
+          "rows": [
+            {
+              "index": 0,
+              "probe": {
+                "op": "ping_gateway",
+                "path": "alternate",
+                "count": 1,
+                "interval_ms": 200,
+                "timeout_ms": 1000
+              },
+              "started_at": 1793151569.7438605,
+              "argv": [
+                "/usr/bin/ping",
+                "-n",
+                "-c",
+                "1",
+                "-i",
+                "0.2",
+                "-I",
+                "ADDRESS_REMOVED",
+                "ADDRESS_REMOVED"
+              ],
+              "stdout": "PING ADDRESS_REMOVED (ADDRESS_REMOVED) from ADDRESS_REMOVED : 56(84) bytes of data.\n64 bytes from ADDRESS_REMOVED: icmp_seq=1 ttl=64 time=0.021 ms\n\n--- ADDRESS_REMOVED ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 0.021/0.021/0.021/0.000 ms\n",
+              "stderr": "",
+              "exit_code": 0,
+              "ok": true,
+              "status": "completed",
+              "elapsed_ms": 1.8180859988206066,
+              "finished_at": 1793151569.7456775
+            },
+            {
+              "index": 1,
+              "probe": {
+                "op": "dns_query",
+                "name": "one",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793151569.74568,
+              "argv": [
+                "/usr/bin/dig",
+                "@ADDRESS_REMOVED",
+                "host-4aa475318395ffd7596ce05f",
+                "A",
+                "+short",
+                "+tries=1",
+                "+time=1",
+                "-b",
+                "ADDRESS_REMOVED"
+              ],
+              "stdout": "ADDRESS_REMOVED\n",
+              "stderr": "",
+              "exit_code": 0,
+              "ok": true,
+              "answers": [
+                "ADDRESS_REMOVED"
+              ],
+              "status": "completed",
+              "elapsed_ms": 4.327214999648277,
+              "finished_at": 1793151569.7500064
+            }
+          ],
+          "status": "completed",
+          "profile": "linux_lab",
+          "validated": {
+            "version": 1,
+            "probes": [
+              {
+                "op": "ping_gateway",
+                "path": "alternate",
+                "count": 1,
+                "interval_ms": 200,
+                "timeout_ms": 1000
+              },
+              {
+                "op": "dns_query",
+                "name": "one",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ]
+          },
+          "uid": 65534,
+          "elapsed_ms": 43.082438001874834,
+          "finished_at": 1793151569.755753,
+          "budget": {
+            "attempted": 2,
+            "reserved_ms": 2000,
+            "elapsed_ms": 43.082438001874834
+          },
+          "settings_unchanged": true,
+          "before_sha256": "1784a34acbcf0b3a8e31373f8af46c8f2b871a69f99dddaac6bb3eabe549ff5a",
+          "after_sha256": "1784a34acbcf0b3a8e31373f8af46c8f2b871a69f99dddaac6bb3eabe549ff5a"
+        },
+        "alternate_qualified": true,
+        "action_mode": "forced",
+        "admitted_tools": [
+          "reroute"
+        ],
+        "hypothesis_after": {
+          "layer": "dns",
+          "evidence": [
+            "dns-1"
+          ]
+        },
+        "action": {
+          "version": 1,
+          "tool": "reroute",
+          "args": {
+            "snapshot_id": "checkpoint-7d73e78b3b234b44aaf9bb75d5f2e82d",
+            "why": "alternate_route",
+            "evidence_ids": [
+              "dns-1"
+            ],
+            "candidate_id": "candidate-5b6a6520df74938053253220"
+          }
+        },
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"action\": {\"version\": 1, \"tool\": \"reroute\", \"args\": {\"snapshot_id\": \"checkpoint-7d73e78b3b234b44aaf9bb75d5f2e82d\", \"why\": \"alternate_route\", \"evidence_ids\": [\"dns-1\"], \"candidate_id\": \"candidate-5b6a6520df74938053253220\"}}}",
+        "decision_ms": 15683.098417008296
+      }
+    ],
+    "oracle": "ONLINE",
+    "app_resumed": true,
+    "changes": [
+      "reroute"
+    ],
+    "restore_retries": [],
+    "attempt_keys": [
+      {
+        "action": "reroute",
+        "target_path": "[\"ul-791f71346c35-c\",\"u791f7134c0\",\"ADDRESS_REMOVED\"]",
+        "state_sha256": "ec107e908cacbe095aaea81bf79e6c639ad79ed2b12900f588c74ca57c687201"
+      }
+    ],
+    "trace": "uplink-34f3f33287f348d68b4483be676a2803.jsonl",
+    "catalog_sha256": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91"
+  },
+  "cleanup": {
+    "status": "closed",
+    "cleanup_failure": null,
+    "host_fingerprint_matches": true,
+    "owned_namespaces": 0,
+    "all_uplink_namespaces": 0
+  },
+  "traces": [
+    {
+      "name": "uplink-34f3f33287f348d68b4483be676a2803.jsonl",
+      "records": 14,
+      "verdict": "ONLINE",
+      "model_emissions": 2
+    }
+  ],
+  "finished_at": "2026-10-28T01:39:39.663671+00:00"
+}

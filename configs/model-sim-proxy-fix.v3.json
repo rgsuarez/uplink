@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "model": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+  "model_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+  "model_bytes": 16756683904,
+  "adapter_enabled": false,
+  "frozen_manifest_sha256": "856d66142767432191caae850ddafa860db8d6ca06b5d5e56e26665cf880924e",
+  "planned_trials": 21,
+  "false_online_max": 0,
+  "profile_id": "snapshot-restore-descriptions-v1",
+  "diagnostic_calls": 0,
+  "diagnostic_variants": [],
+  "parent_contract_sha256": "b5eab09c3643887e21095901005aee996b7d8b875ee8912c11635fa4e5802f1d",
+  "baseline_result_sha256": "06859b248badb41a6070bfbe024375017cb0c88feef88e2315284a73afc71455",
+  "cost_cap_usd": "0.21721983",
+  "files": {
+    "harness/model-sim/authorized-repair-v1.txt": "f68fac36a29da410753ba66e6507f70dbc251b324e76ee86f6befb0f7aa03949",
+    "src/offline_agent/uplink/model_sim_proxy_profile.py": "a994d50e8a0fb2e36b5626061145eeba140183775827aaea369664a739fa76a5",
+    "src/offline_agent/uplink/model_sim_profile.py": "e75e2762983033798e542c793c4478967d47f4fb3d8868b0da9a623f91f4ba5a",
+    "scripts/model_in_loop_proxy_fix.py": "0b5e02de523ba27d7d67f6e2eb57d13401bb015d2fffd85c28d60da8af6346d1",
+    "scripts/model_in_loop_sim.py": "01c75d27dcc25a9ab3692b2826f7b9837cca34d1c17f48220e65e4482d95948a",
+    "data/model-sim-proxy-fix/probes-v1.json": "410eb5f03e282b8e915a9127fc55f100fcb4eacad8077d534777028b821d76ee",
+    "modal/model_sim_base_fix_app.py": "5ac3dc62d705fb0af41abf63800e9b9afa61e0d24b1c86228df6d7dca46f35e7"
+  },
+  "scored_variant": "balanced_concise_descriptions",
+  "prior_mission_cost_usd": "0.15074343",
+  "rejected_combined_source_sha256": "ee25f372da39f47838783cedf4951535bace1d6cc077d7d7a8308c32cd2902b9",
+  "system_prompt_changed": false,
+  "held_tool_descriptions_changed": false,
+  "rejected_description_source_sha256": "05e969c633701ece1ab98b604e04df1f74233becfd0682e175442db46ab1a2fb"
+}

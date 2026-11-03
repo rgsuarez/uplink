@@ -1,0 +1,33 @@
+"""Public fixtures use only protocol constants and synthetic/public test addresses.
+
+Physical management coordinates are replaced with synthetic link-local fixtures.
+Published source uses symbolic fixture names; no address validation is relaxed.
+JSON fixture separators use the standard JSON Unicode representation.
+"""
+from __future__ import annotations
+
+import ipaddress
+import re
+from typing import overload
+
+_VALUES: dict[str, tuple[str, int]] = {'@PUBLIC_IPV4_001@': ('ipv4', 0), '@PUBLIC_IPV4_002@': ('ipv4', 16777217), '@PUBLIC_IPV4_003@': ('ipv4', 16843009), '@PUBLIC_IPV4_004@': ('ipv4', 167772160), '@PUBLIC_IPV4_005@': ('ipv4', 167772161), '@PUBLIC_IPV4_006@': ('ipv4', 167772162), '@PUBLIC_IPV4_007@': ('ipv4', 167772415), '@PUBLIC_IPV4_008@': ('ipv4', 167772163), '@PUBLIC_IPV4_009@': ('ipv4', 184156161), '@PUBLIC_IPV4_010@': ('ipv4', 184156162), '@PUBLIC_IPV4_011@': ('ipv4', 184156180), '@PUBLIC_IPV4_012@': ('ipv4', 170459137), '@PUBLIC_IPV4_013@': ('ipv4', 170459156), '@PUBLIC_IPV4_014@': ('ipv4', 170524673), '@PUBLIC_IPV4_015@': ('ipv4', 170524692), '@PUBLIC_IPV4_016@': ('ipv4', 170590209), '@PUBLIC_IPV4_017@': ('ipv4', 170590228), '@PUBLIC_IPV4_018@': ('ipv4', 170655745), '@PUBLIC_IPV4_019@': ('ipv4', 170655764), '@PUBLIC_IPV4_020@': ('ipv4', 170721281), '@PUBLIC_IPV4_021@': ('ipv4', 170721300), '@PUBLIC_IPV4_022@': ('ipv4', 170786817), '@PUBLIC_IPV4_023@': ('ipv4', 170786836), '@PUBLIC_IPV4_024@': ('ipv4', 170852353), '@PUBLIC_IPV4_025@': ('ipv4', 170852372), '@PUBLIC_IPV4_026@': ('ipv4', 170917889), '@PUBLIC_IPV4_027@': ('ipv4', 170917908), '@PUBLIC_IPV4_028@': ('ipv4', 170983425), '@PUBLIC_IPV4_029@': ('ipv4', 170983444), '@PUBLIC_IPV4_030@': ('ipv4', 171048961), '@PUBLIC_IPV4_031@': ('ipv4', 171048980), '@PUBLIC_IPV4_032@': ('ipv4', 171114497), '@PUBLIC_IPV4_033@': ('ipv4', 171114516), '@PUBLIC_IPV4_034@': ('ipv4', 171180033), '@PUBLIC_IPV4_035@': ('ipv4', 171180052), '@PUBLIC_IPV4_036@': ('ipv4', 171245569), '@PUBLIC_IPV4_037@': ('ipv4', 171245588), '@PUBLIC_IPV4_038@': ('ipv4', 171311105), '@PUBLIC_IPV4_039@': ('ipv4', 171311124), '@PUBLIC_IPV4_040@': ('ipv4', 171376641), '@PUBLIC_IPV4_041@': ('ipv4', 171376660), '@PUBLIC_IPV4_042@': ('ipv4', 171442177), '@PUBLIC_IPV4_043@': ('ipv4', 171442196), '@PUBLIC_IPV4_044@': ('ipv4', 171507713), '@PUBLIC_IPV4_045@': ('ipv4', 171507732), '@PUBLIC_IPV4_046@': ('ipv4', 171573249), '@PUBLIC_IPV4_047@': ('ipv4', 171573268), '@PUBLIC_IPV4_048@': ('ipv4', 171638785), '@PUBLIC_IPV4_049@': ('ipv4', 171638804), '@PUBLIC_IPV4_050@': ('ipv4', 171704321), '@PUBLIC_IPV4_051@': ('ipv4', 171704340), '@PUBLIC_IPV4_052@': ('ipv4', 1681915904), '@PUBLIC_IPV4_053@': ('ipv4', 1681915905), '@PUBLIC_IPV4_054@': ('ipv4', 1681915906), '@PUBLIC_IPV4_055@': ('ipv4', 1681915912), '@PUBLIC_IPV4_056@': ('ipv4', 2130706433), '@PUBLIC_IPV4_057@': ('ipv4', 2851995648), '@PUBLIC_IPV4_058@': ('ipv4', 2851995905), '@PUBLIC_IPV4_059@': ('ipv4', 2851995906), '@PUBLIC_IPV4_060@': ('ipv4', 2852060674), '@PUBLIC_IPV4_061@': ('ipv4', 2852021030), '@PUBLIC_IPV4_062@': ('ipv4', 2852049609), '@PUBLIC_IPV4_063@': ('ipv4', 2852021032), '@PUBLIC_IPV4_064@': ('ipv4', 2852021033), '@PUBLIC_IPV4_065@': ('ipv4', 3221225984), '@PUBLIC_IPV4_066@': ('ipv4', 3221225985), '@PUBLIC_IPV4_067@': ('ipv4', 3221225994), '@PUBLIC_IPV4_068@': ('ipv4', 3221226084), '@PUBLIC_IPV4_069@': ('ipv4', 3221225995), '@PUBLIC_IPV4_070@': ('ipv4', 3221226134), '@PUBLIC_IPV4_071@': ('ipv4', 3221226002), '@PUBLIC_IPV4_072@': ('ipv4', 3221225986), '@PUBLIC_IPV4_073@': ('ipv4', 3221226238), '@PUBLIC_IPV4_074@': ('ipv4', 3221226239), '@PUBLIC_IPV4_075@': ('ipv4', 3221226037), '@PUBLIC_IPV4_076@': ('ipv4', 3221226083), '@PUBLIC_IPV4_077@': ('ipv4', 3232235520), '@PUBLIC_IPV4_078@': ('ipv4', 3232235777), '@PUBLIC_IPV4_079@': ('ipv4', 3232236033), '@PUBLIC_IPV4_080@': ('ipv4', 3325256704), '@PUBLIC_IPV4_081@': ('ipv4', 3325256705), '@PUBLIC_IPV4_082@': ('ipv4', 3325256706), '@PUBLIC_IPV4_083@': ('ipv4', 3325256724), '@PUBLIC_IPV4_084@': ('ipv4', 3325256958), '@PUBLIC_IPV4_085@': ('ipv4', 3405803777), '@PUBLIC_IPV4_086@': ('ipv4', 3405803786), '@PUBLIC_IPV4_087@': ('ipv4', 3405803787), '@PUBLIC_IPV4_088@': ('ipv4', 3405803798), '@PUBLIC_IPV4_089@': ('ipv4', 3405803829), '@PUBLIC_IPV4_090@': ('ipv4', 3758096385), '@PUBLIC_IPV4_091@': ('ipv4', 4294901760), '@PUBLIC_IPV4_092@': ('ipv4', 4294967040), '@PUBLIC_IPV4_093@': ('ipv4', 134743040), '@PUBLIC_IPV4_094@': ('ipv4', 134743044), '@PUBLIC_IPV4_095@': ('ipv4', 134744072), '@PUBLIC_IPV4_096@': ('ipv4', 1572395042), '@PUBLIC_IPV6_097@': ('ipv6', 42541956123769884636017138956568135748), '@PUBLIC_IPV6_098@': ('ipv6', 42541956123769884636017138956568135816), '@PUBLIC_IPV6_099@': ('ipv6', 42540766411310398150755121422672068610), '@PUBLIC_IPV6_100@': ('ipv6', 42540766411380515848292769914805026817), '@PUBLIC_IPV6_101@': ('ipv6', 42540766411380515848292769914805026818), '@PUBLIC_IPV6_102@': ('ipv6', 42540766411382933699931999173154439251), '@PUBLIC_IPV6_103@': ('ipv6', 42540766411282592856903984951653826561), '@PUBLIC_IPV6_104@': ('ipv6', 42540766411282592856903984951653826562), '@PUBLIC_IPV6_105@': ('ipv6', 42540766411282592856903984951653826564), '@PUBLIC_IPV6_106@': ('ipv6', 42540766411294682318017693809761976335), '@PUBLIC_IPV6_107@': ('ipv6', 50542628918019813867414319910101719366), '@PUBLIC_IPV6_108@': ('ipv6', 1), '@PUBLIC_IPV6_109@': ('ipv6', 887899004871704551611848316497166480), '@PUBLIC_IPV6_110@': ('ipv6', 336294682933583715844663186250927177728), '@PUBLIC_IPV6_111@': ('ipv6', 336294682933583715844663186250927177729), '@PUBLIC_IPV6_112@': ('ipv6', 338288524927261089654018896841347751597), '@PUBLIC_MAC_113@': ('mac', 1), '@PUBLIC_MAC_114@': ('mac', 2), '@PUBLIC_MAC_115@': ('mac', 3), '@PUBLIC_MAC_116@': ('mac', 3), '@PUBLIC_MAC_117@': ('mac', 4)}
+
+@overload
+def expand_fixture_text(value: str) -> str: ...
+@overload
+def expand_fixture_text(value: bytes) -> bytes: ...
+def expand_fixture_text(value: str | bytes) -> str | bytes:
+    binary = isinstance(value, bytes)
+    text = value.decode("utf-8") if binary else value
+    def expand(match: re.Match[str]) -> str:
+        token = match[0]
+        if token not in _VALUES:
+            raise ValueError("unknown_public_fixture_address")
+        kind, number = _VALUES[token]
+        if kind == "mac":
+            return ":".join(f"{part:02x}" for part in
+                            (2, 0, 0, 0, (number >> 8) & 255, number & 255))
+        return str(ipaddress.IPv4Address(number) if kind == "ipv4"
+                   else ipaddress.IPv6Address(number))
+    result = re.sub(r"@PUBLIC_[A-Z0-9_]+@", expand, text)
+    return result.encode("utf-8") if binary else result

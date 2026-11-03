@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "f9_snapshot": "20261027-054149-5716",
+  "f9_observed": {
+    "relaxed": {
+      "source": "docs/f9/source-receipts.json#run/eval-relaxed/evaluation-receipt.json",
+      "source_sha256": "6e4379a896e05dd51296fa99ef7a5c61231e8737b3430cba7e11aafc6778ca13",
+      "tasks": 15,
+      "mean_seconds_per_task": 47.20312817778128,
+      "max_seconds_per_task": 120.00878608296625,
+      "extrapolated_50_task_minutes": 39.33594014815107,
+      "source_note": "Raw receipt is private; source_sha256 identifies the raw receipt in the retained index."
+    },
+    "parity": {
+      "source": "docs/f9/source-receipts.json#run/eval-parity/evaluation-receipt.json",
+      "source_sha256": "a34c4b0ac9d8ab5f650913092d19e1c1ebda39d1da63e759be0ae310a5f1d434",
+      "tasks": 15,
+      "mean_seconds_per_task": 29.60751177223089,
+      "max_seconds_per_task": 30.18259641691111,
+      "extrapolated_50_task_minutes": 24.672926476859075,
+      "source_note": "Raw receipt is private; source_sha256 identifies the raw receipt in the retained index."
+    }
+  },
+  "estimation_only": true,
+  "measured_f10_results": false,
+  "primary_task_budget_minutes": 100,
+  "secondary_task_budget_minutes": 25,
+  "final_verification_minutes_both": 5,
+  "setup_allowance_minutes": 30,
+  "cleanup_allowance_minutes": 5,
+  "required_minutes_primary_only": 140,
+  "required_minutes_both": 165,
+  "default_MAX_MINUTES": 165,
+  "default_WINDOW_START": "21:00",
+  "default_HARD_STOP": "22:20",
+  "window_policy": "Defaults cannot admit this full run. the operator must explicitly override the approved window; no inferred extension. --skip-secondary (alias --skip-relaxed) omits only the non-primary 30 s arm."
+}

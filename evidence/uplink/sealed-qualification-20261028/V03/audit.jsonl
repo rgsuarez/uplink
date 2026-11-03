@@ -1,0 +1,10 @@
+{"ts": 1793159914.175458, "event": "intent", "operation": "up"}
+{"ts": 1793159918.3659923, "event": "complete", "operation": "sealed_snapshot_persisted"}
+{"ts": 1793159918.3696258, "event": "complete", "operation": "up"}
+{"ts": 1793159918.429157, "event": "intent", "operation": "arm"}
+{"ts": 1793159918.6079013, "event": "intent", "operation": "inject"}
+{"ts": 1793159918.639273, "event": "complete", "operation": "inject"}
+{"ts": 1793159918.7010303, "event": "intent", "operation": "undo"}
+{"ts": 1793159918.7585347, "event": "complete", "operation": "undo"}
+{"ts": 1793159918.8329751, "event": "intent", "operation": "down"}
+{"ts": 1793159918.8401825, "event": "complete", "operation": "down"}

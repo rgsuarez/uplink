@@ -1,0 +1,79 @@
+{
+  "additional_stop_gate": "host_memory_exceeded_24GiB",
+  "base_server_lifecycle_unchanged": true,
+  "checks": {
+    "all_eight_getters_match": true,
+    "all_probe_settings_unchanged": true,
+    "all_repair_decisions_forced": true,
+    "current_serial_absent_from_trial_outputs": true,
+    "protected_services_unchanged": true,
+    "returned_non_read_state": 0,
+    "returned_probes": 2,
+    "rollback_verified": true,
+    "trace_schema_valid": true,
+    "trial_failed_probe_gate": true,
+    "watchdog_jobs_retired": true
+  },
+  "completed_trials": 1,
+  "handback_sha256": "4f859d1c6d75552b2c8b8799113e2a6c6926e41f2cab8da9ed78f5f538c32689",
+  "independent_between_trial_shasum": {
+    "expected_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+    "reason": "batch_stopped_after_trial_1_no_successful_between_trial_interval",
+    "status": "NOT_RUN"
+  },
+  "kind": "uplink-v4-handback",
+  "metrics": {
+    "errors": 0,
+    "first_memory_limit_crossing": 1793184269.5242271,
+    "max_swap_mib": 333.25,
+    "memory_limit_crossed": true,
+    "peak_active_wired_compressed_bytes": 27471790080,
+    "peak_load": [
+      2.5146484375,
+      1.9091796875,
+      1.4697265625
+    ],
+    "samples": 83,
+    "stopped": true
+  },
+  "model": {
+    "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+    "llama_cpp_build": "10353 (f8def7fe1)",
+    "verification": "server_verified",
+    "verified_at": 1793184222.0122938
+  },
+  "model_calls_confirmed": 4,
+  "network_recovered": true,
+  "no_vm_contact": true,
+  "oracle": "ONLINE",
+  "oracle_version": "uplink-online-v1",
+  "owned_processes_left": 0,
+  "owned_watchdog_jobs": 0,
+  "private_config_restored_byte_identical": true,
+  "probe_enabled": false,
+  "published": false,
+  "push": false,
+  "recorded_at": "2026-10-28T05:49:12.311695-05:00",
+  "requested_trials": 3,
+  "restore_seconds": 34.63990100007504,
+  "retry_count": 0,
+  "root_snapshots_and_audit_retained": true,
+  "run_id": "7051399913d9",
+  "runner_invocations": 1,
+  "source_branch": "fix/u1-linux-recovery",
+  "source_commit": "0bfd810c79d548607a73932da22ab3064b828e3d",
+  "staging_files_verified_then_removed": 129,
+  "status": "STOPPED_VERIFIED_HANDBACK",
+  "stop_reason": "no_returned_non_read_state_probe_rows",
+  "trace_sha256": "988c058b4f6ea6b2055ee582616fa426a3ee0610e72f8ede1348395dbd18cc1d",
+  "trial_passed": false,
+  "trial_receipt_sha256": "d489bb28f9b02da265a73d76e0f6d921948d4378ab9c874ad311ac470aa99f1d",
+  "trials_not_run": [
+    2,
+    3
+  ],
+  "version": 1,
+  "window_hard_stop": "2026-10-28T06:05:00-05:00",
+  "window_settings_exact": true,
+  "window_start": "2026-10-28T05:30:00-05:00"
+}

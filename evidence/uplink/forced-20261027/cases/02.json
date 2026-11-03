@@ -1,0 +1,67 @@
+{
+  "number": 2,
+  "fault": "wrong_dns",
+  "arm": "baseline",
+  "run_id": "4942b73f724a",
+  "source": "2f88b595098244da4d753e9bbef4a768cee35e63",
+  "elapsed_s": 11.917619499843568,
+  "failure": null,
+  "receipt": {
+    "version": 1,
+    "kind": "uplink-lab-eval",
+    "profile": "uplink-linux-lab-v1",
+    "fault": "wrong_dns",
+    "arm": "baseline",
+    "model": {
+      "name": "Muse Glimmer 30B",
+      "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+      "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+      "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "host_chip": "Apple M4 Max",
+      "provider": null,
+      "active_model_name": null,
+      "verification": "server_verified",
+      "verified_at": 1793144823.354031,
+      "model_used": false
+    },
+    "model_calls_attempted": 0,
+    "evidence_kind": "linux_namespace",
+    "outcome": "recovered",
+    "failure": null,
+    "failure_details": null,
+    "probe_scripts": false,
+    "probe_episodes": [],
+    "oracle": "ONLINE",
+    "app_resumed": true,
+    "changes": [
+      "set_dns"
+    ],
+    "restore_retries": [],
+    "attempt_keys": [
+      {
+        "action": "set_dns",
+        "target_path": "[\"ul-4942b73f724a-c\",\"u4942b73fc0\",\"ADDRESS_REMOVED\"]",
+        "state_sha256": "f3448bbc3d66153e513765f47f8ea0f3a825842c7affa95df6e8848570c47458"
+      }
+    ],
+    "trace": "uplink-64aea8ef02394310989ec9d8f2fff9e7.jsonl",
+    "catalog_sha256": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91"
+  },
+  "cleanup": {
+    "status": "closed",
+    "cleanup_failure": null,
+    "host_fingerprint_matches": true,
+    "owned_namespaces": 0,
+    "all_uplink_namespaces": 0
+  },
+  "traces": [
+    {
+      "name": "uplink-64aea8ef02394310989ec9d8f2fff9e7.jsonl",
+      "records": 11,
+      "verdict": "ONLINE",
+      "model_emissions": 0
+    }
+  ],
+  "finished_at": "2026-10-27T23:47:15.355472+00:00"
+}

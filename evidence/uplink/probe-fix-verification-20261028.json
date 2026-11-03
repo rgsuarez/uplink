@@ -1,0 +1,39 @@
+{
+  "candidate_manifest_sha256": "007cc8624d26cdb703f0c7c9c6d288a4db3f403660f7acc107d196cc9d35ad9f",
+  "live_probe_trials_run": 0,
+  "next_gate": "new live window and native staging qualification",
+  "source_receipt": "artifacts/uplink/p1-probe-fix-20261028/verification-receipt.json",
+  "source_receipt_sha256": "7b91dc0f23957b20788e1050c3eccdfdcfd9ca742f87524baf27d072eab584c6",
+  "status": "desk_verified_live_pending",
+  "tested_source_sha256": {
+    "src/offline_agent/uplink/privacy.py": "2c5e495f70b4cce4b5036dd5c688b6de27933965f346cacbbc8c335fe2f23daf",
+    "src/offline_agent/uplink/probe_evidence.py": "0db297a6b747a162609b727d1844aee5ba01f833adf4b109f4bcb5209b8aca46",
+    "src/offline_agent/uplink/probe_execution.py": "5518303d9d8c3d6831d664055024e42c9a49145f282b4a9f0810bcee995d0cf2",
+    "src/offline_agent/uplink/probe_overlay.py": "3fbad9fecea4fed0b5645dd4d6088fd913346af39febb6ad48129092c7dfe995",
+    "src/offline_agent/uplink/real_bridge.py": "a9a85f6c2108bf0ec13ffabb145f1d8e5572070967dbcf51d7e1c5cfbb46b068",
+    "src/offline_agent/uplink/real_preflight.py": "8abc4792c34b4050fe77e33c89cd9369cf51f04a8cc4878e6a2ec1fb25f78a9f",
+    "src/offline_agent/uplink/real_preflight_worker.py": "62025bcee507f6431314a725576fea8099aecbdd985792a467414a3a1bef0137",
+    "src/offline_agent/uplink/real_probe_scripts.py": "0eaed674a9970eabf058dd7b77c84e8b0202940070baeedc6466b46554edff7e",
+    "src/offline_agent/uplink/real_runner.py": "c4f3fd33a55975fc6ff0a764413c63879022e74c080208d790340cfba891f001",
+    "src/offline_agent/uplink/real_simulator.py": "7f76011ad055eb1a9a441987bcd5634ef10a210d20e2888f054621f02e606c5d",
+    "src/offline_agent/uplink/trace.py": "a530741e6290143fabc2605f4033c2d991f150ab02e82cbaca246eac74a1ee97",
+    "tests/uplink/probe_receipts.py": "30aa08a22b7b8e9ba9e09c8d4a239a07dde39a967067473662f212ad2997f97f",
+    "tests/uplink/test_device_privacy.py": "5bba6f98679c4cac93b9c3b578c5ad7cc28d9dcf21caf09f36e06089192b1794",
+    "tests/uplink/test_probe_evidence.py": "de69b90fa5b15e8ae00a3b83cc818880fc2d31a5d8db74b3ff1ade2a9f529a00",
+    "tests/uplink/test_probe_policy.py": "86c537e6c8b4fc4425d8ac3e1bb2c8b7b565519527546697656543ad5312229e",
+    "tests/uplink/test_real_preflight.py": "4f2dc5697c715d344b8949279079c2ffb8b7c58b697f1831e4f12a9e5ff091e7",
+    "tests/uplink/test_real_safety.py": "ce58dd1c00b256bb2cb20ddfd1f44dcffc1c253fa6a2408d42a5d270cd509c58"
+  },
+  "validation": {
+    "focused_test_files": 13,
+    "focused_tests_passed": 339,
+    "mypy_strict_source_files": 195,
+    "placement": "authorized remote temporary checkout",
+    "receipt_hashes_verified": 11,
+    "ruff_check": "passed",
+    "ruff_format_files": 258,
+    "source_unchanged": true,
+    "temporary_checkout_removed": true
+  },
+  "version": 1
+}

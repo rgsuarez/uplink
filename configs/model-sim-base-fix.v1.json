@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "profile_id": "authorized-repair-v1",
+  "model": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+  "model_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+  "model_bytes": 16756683904,
+  "adapter_enabled": false,
+  "frozen_manifest_sha256": "856d66142767432191caae850ddafa860db8d6ca06b5d5e56e26665cf880924e",
+  "diagnostic_calls": 4,
+  "planned_trials": 21,
+  "false_online_max": 0,
+  "files": {
+    "harness/model-sim/authorized-repair-v1.txt": "f68fac36a29da410753ba66e6507f70dbc251b324e76ee86f6befb0f7aa03949",
+    "src/offline_agent/uplink/model_sim_profile.py": "e75e2762983033798e542c793c4478967d47f4fb3d8868b0da9a623f91f4ba5a",
+    "scripts/model_in_loop_base_fix.py": "8a3eaf38e499d82cac2448209e24f396c715aa3061c1aa215120c678dac91ef6",
+    "scripts/model_in_loop_sim.py": "01c75d27dcc25a9ab3692b2826f7b9837cca34d1c17f48220e65e4482d95948a",
+    "data/model-sim-base-fix/probes-v1.json": "d8f22dc1faec7c32f1dc696366b0e0f3c1f355a901a3b5bda19d6189cd4c429d"
+  }
+}

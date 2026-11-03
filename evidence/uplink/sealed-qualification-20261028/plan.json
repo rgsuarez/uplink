@@ -1,0 +1,93 @@
+{
+  "source_commit": "f263071f93370c22a2e23483f6182dc6375d5acd",
+  "slot_release": "2026-10-27T22:52:00-05:00",
+  "vm_bundle": "/tmp/uplink-worker-5b4c78804f0c12499b567792",
+  "worker_hashes": {
+    "lab_protocol.py": "0550af2741de3b8984bc354e4e2a0678198ab04d5d04c475cfd5ce2ef1f49b23",
+    "lab_worker.py": "56cc17995cc78d95c8ad2389965417c4fcf152c3e8381b4c4f8b92155764491b",
+    "lab_servers.py": "66281e51dff4d4da887afd8f50f4d6bf63f76122f0644f871ee4aeb7ae147c43",
+    "lab_setup.py": "23fd838c4abcd7d6bb2e62b90bcc2b7964f3d01199f08ac063552540e97266ff",
+    "probe_protocol.py": "405eedefa49161db7ad708f46fd1ae51153303551995ff1057abf39ecf8c3fc4",
+    "probe_execution.py": "ca6afbcdfb9a1a7e25cf7ce78e22cdad678418f9168a3be882c810edce6e4ac1",
+    "setup.sh": "30706d6680e8f20c8e37bf4a55875beb4c3d882b9c1f039386bb8ef538e6d95e",
+    "sealed_registry.py": "4297efc9b0d75fddee5334b35e2d1112bb11e4f9ec50f43b5421e66199ca9192",
+    "sealed_linux.py": "66e2a3e91853f7640ebb1139059454efb68d833847ca7f670a02ddfe3977320f",
+    "sealed_qualify.py": "a888bc03d729c5d6b033aca8caf96418f903daf49aa277af72b156b5064fb77f",
+    "P04.json": "5b367489bdf2b7b711facb5863144445e764a92fb61713123ab701d90e5b77f9",
+    "D09.json": "cf748815f6bb67c5ddc02615e08b7df51b1f75c30ece44d2a991e24435371b27",
+    "X02.json": "bec4d878cb848be3b917177cf4114db20fbb45b25c592c5d304b6eb80c090db6",
+    "G02.json": "70258f214ad9cb47ccee24b6affb86d07ae853ae1e57b49c0a38b745c7015db8",
+    "I04.json": "8fcff55b306481534144e04c4f2a41e39e5efdf9129c179ac151b1359f2d3865",
+    "I02.json": "7d0f2e139ca613256c736d6f70d8fa3a86551aea409bb8c886d9ebfaf1fcc584",
+    "X03.json": "377a8a34693c6919a35a2342095cff67568b6bc0750beb19a6aa88d4a5c5b34d",
+    "X04.json": "0e8af42a13b5d991d70cde267c4b030bf60a505168d7892d5d536dde82b274a2",
+    "C04.json": "bd190be049dd833317723e34522039ec7f68e3d2ed16bcba3a34121f6bb3cca0",
+    "P07.json": "e2942bfad5be8374b0c92acc13709f1921339c8af7ebb4a393bc53edaf4e930e",
+    "F05.json": "89ede4264bda2d26b2370a643df1cfa5a410188c790c3c7d24c51b2c1065b339",
+    "V03.json": "b7889b493581feecc70cf19e926b7279e520e52785816dea6f9bb747dfbbbd1a"
+  },
+  "cases": [
+    {
+      "fixture": "P04",
+      "sha256": "5b367489bdf2b7b711facb5863144445e764a92fb61713123ab701d90e5b77f9",
+      "run_id": "4cee26fdf832"
+    },
+    {
+      "fixture": "D09",
+      "sha256": "cf748815f6bb67c5ddc02615e08b7df51b1f75c30ece44d2a991e24435371b27",
+      "run_id": "423b6668f732"
+    },
+    {
+      "fixture": "X02",
+      "sha256": "bec4d878cb848be3b917177cf4114db20fbb45b25c592c5d304b6eb80c090db6",
+      "run_id": "c743e73cfec1"
+    },
+    {
+      "fixture": "G02",
+      "sha256": "70258f214ad9cb47ccee24b6affb86d07ae853ae1e57b49c0a38b745c7015db8",
+      "run_id": "f423eff337f8"
+    },
+    {
+      "fixture": "I04",
+      "sha256": "8fcff55b306481534144e04c4f2a41e39e5efdf9129c179ac151b1359f2d3865",
+      "run_id": "6407dbb57d7f"
+    },
+    {
+      "fixture": "I02",
+      "sha256": "7d0f2e139ca613256c736d6f70d8fa3a86551aea409bb8c886d9ebfaf1fcc584",
+      "run_id": "6bc6d781e046"
+    },
+    {
+      "fixture": "X03",
+      "sha256": "377a8a34693c6919a35a2342095cff67568b6bc0750beb19a6aa88d4a5c5b34d",
+      "run_id": "73ede385929d"
+    },
+    {
+      "fixture": "X04",
+      "sha256": "0e8af42a13b5d991d70cde267c4b030bf60a505168d7892d5d536dde82b274a2",
+      "run_id": "fb05df9ac07a"
+    },
+    {
+      "fixture": "C04",
+      "sha256": "bd190be049dd833317723e34522039ec7f68e3d2ed16bcba3a34121f6bb3cca0",
+      "run_id": "1533f934dba7"
+    },
+    {
+      "fixture": "P07",
+      "sha256": "e2942bfad5be8374b0c92acc13709f1921339c8af7ebb4a393bc53edaf4e930e",
+      "run_id": "0d1cb48ff40d"
+    },
+    {
+      "fixture": "F05",
+      "sha256": "89ede4264bda2d26b2370a643df1cfa5a410188c790c3c7d24c51b2c1065b339",
+      "run_id": "ab43d29190d8"
+    },
+    {
+      "fixture": "V03",
+      "sha256": "b7889b493581feecc70cf19e926b7279e520e52785816dea6f9bb747dfbbbd1a",
+      "run_id": "467e8a021848"
+    }
+  ],
+  "model_calls": 0,
+  "rule": "one attempt per candidate; serial; stop on failed revert, diff mismatch or indeterminate cleanup"
+}

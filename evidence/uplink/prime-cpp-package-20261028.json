@@ -1,0 +1,50 @@
+{
+  "actual_compilations": 0,
+  "archive_sha256": "f313dec9777e84a6cbec63e8caf7964bc0148b290f99ed6cf86ac69a3a60e35a",
+  "budget": {
+    "max_action_tokens": 2048,
+    "max_seconds": 120.0,
+    "max_steps": 16,
+    "max_tokens": 65536,
+    "test_seconds": 3.0
+  },
+  "bytes": 1187840,
+  "compilations": 0,
+  "execution_authorized": false,
+  "fake_tests_run": false,
+  "files": 108,
+  "frozen_inputs_unchanged": 24,
+  "host_contacts": 0,
+  "live_host_contacts": 0,
+  "live_model_requests": 0,
+  "model_calls": 0,
+  "not_before": "2026-10-28T21:00:00-05:00",
+  "original_failure_preserved": true,
+  "original_task_oracle_unchanged": true,
+  "package_manifest_sha256": "2b9af596afe10d7be797e58b6ba433f685a0c4193e21215a943da01b37f7bec1",
+  "private_config_packaged": false,
+  "readback_verified": true,
+  "sandbox_overlay": {
+    "original_sha256": "9f97f75cc46a368cdb07f6a4ab0de4c93ca86e2ecd7798cc33d84a0e2f5188bc",
+    "packaged_sha256": "90ea2f86a4d17c8653ba7daa3e1f0feae217bed75ac9b73a7b166db2f97991c1",
+    "path": "src/offline_agent/sandbox.py",
+    "scope": "read_existing_CommandLineTools_only"
+  },
+  "sandbox_overlay_exact": true,
+  "source_commit": "457db0222701ac1e191df1ffd583d9f1da526915",
+  "source_overlay_exact": true,
+  "static_worker_verified": true,
+  "validation": {
+    "fake_tests": "11_prepared_not_run_no_current_fleet_permission",
+    "mypy_strict_files": 3,
+    "python_ast": true,
+    "ruff_check": true,
+    "ruff_format": true
+  },
+  "workspace_overlay": {
+    "original_sha256": "9cb5a428e28b80f7e7b1a42f4fe8816349fc27949151ee3316ab64378373241f",
+    "packaged_sha256": "e116db2f26760e62b0aba3dd7fe3f8da0a308aa9825b9877f2e24d8f619dd19d",
+    "path": "src/offline_agent/workspace.py",
+    "scope": "only_original_primes_cpp_editable"
+  }
+}

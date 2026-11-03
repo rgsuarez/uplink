@@ -1,0 +1,86 @@
+{
+  "attempts": [
+    {
+      "action_chosen": [
+        "restore_proxy"
+      ],
+      "false_online": 0,
+      "finished_at": "2026-11-03T16:27:21.254180-06:00",
+      "index": 1,
+      "model_reached": true,
+      "model_requests": 1,
+      "outcome": "PASS",
+      "previous_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "reason": "strict_recovered",
+      "recording_path": "PRIVATE_HOME/uplink-branchout-runs/f06cont-series-15a6104a9685/attempts/01-f5764c8787fc/terminal.typescript",
+      "recording_sha256": "ec487bb021d28db838837986db59f21d99c77285eb8c14083f9aaebc15c21e8b",
+      "recovery_seconds": 12.389,
+      "result_sha256": "8cd63ed534e76dd38346921991b7bf246a5b9e1cec952d1d78e6b3ca2255f1e5",
+      "retry": false,
+      "row_sha256": "ad503a2cf920c30a36a6ef0151e613d526cc0cbddfea3c9b6d4227bfbd242985",
+      "run_id": "f5764c8787fc",
+      "strict_reader_verdict": "VALIDATED",
+      "strict_result_sha256": "cb6954f5bd9cb5d5c59e145909208b372649ef0735e00994bcb9ea8ef4186738"
+    },
+    {
+      "action_chosen": [
+        "restore_proxy"
+      ],
+      "false_online": 0,
+      "finished_at": "2026-11-03T16:30:13.691211-06:00",
+      "index": 2,
+      "model_reached": true,
+      "model_requests": 1,
+      "outcome": "PASS",
+      "previous_sha256": "ad503a2cf920c30a36a6ef0151e613d526cc0cbddfea3c9b6d4227bfbd242985",
+      "reason": "strict_recovered",
+      "recording_path": "PRIVATE_HOME/uplink-branchout-runs/f06cont-series-15a6104a9685/attempts/02-f75e9f6e235e/terminal.typescript",
+      "recording_sha256": "b85123329aca578f6157b5d026d462dab203e6957c68360f02ca16ddd09afc9f",
+      "recovery_seconds": 10.39,
+      "result_sha256": "9819975be2bea1d759b0dc5da3d15ef12adaf7a045c167f41b72af83f0964405",
+      "retry": false,
+      "row_sha256": "7e3b0d7fcd5f961a8b586cc28dca39bfc3e2184ba026d557a87a613958fa68f0",
+      "run_id": "f75e9f6e235e",
+      "strict_reader_verdict": "VALIDATED",
+      "strict_result_sha256": "5e31d498992b5cc310eeb7ecf9f27a9f740860bc43bc563eb4eebbaf68115b5a"
+    },
+    {
+      "action_chosen": [
+        "restore_proxy"
+      ],
+      "false_online": 0,
+      "finished_at": "2026-11-03T16:33:07.318569-06:00",
+      "index": 3,
+      "model_reached": true,
+      "model_requests": 1,
+      "outcome": "PASS",
+      "previous_sha256": "7e3b0d7fcd5f961a8b586cc28dca39bfc3e2184ba026d557a87a613958fa68f0",
+      "reason": "strict_recovered",
+      "recording_path": "PRIVATE_HOME/uplink-branchout-runs/f06cont-series-15a6104a9685/attempts/03-9f606d90a98b/terminal.typescript",
+      "recording_sha256": "8deadcb7e7ee422a51f73479e3b35710c055d68dde7b9b7662c0f656e5c49dbb",
+      "recovery_seconds": 10.34,
+      "result_sha256": "b9a6df3ee5ee7606eeb99db4cbc64151cc4827969134dd62493a64bca4b23e6f",
+      "retry": false,
+      "row_sha256": "18e16646b2d5e5b08c44287ce8fd2c926a98835cf49ca47d61a12098f6d4a914",
+      "run_id": "9f606d90a98b",
+      "strict_reader_verdict": "VALIDATED",
+      "strict_result_sha256": "205a43bbffca08cd15ebf00e30d86ceaca6220e1e8e4231ea84cb150c72d20e1"
+    }
+  ],
+  "series_id": "15a6104a9685",
+  "state": "COMPLETED",
+  "summary": {
+    "aborts": 0,
+    "attempts": 3,
+    "denominator_complete": true,
+    "failures": 0,
+    "false_online_complete": true,
+    "false_online_total": 0,
+    "median_population": "strictly validated recovered trials only",
+    "median_recovery_seconds": 10.39,
+    "model_reached": 3,
+    "passes": 3,
+    "passes_over_model_reached": "3/3",
+    "refused_before_model": 0
+  }
+}

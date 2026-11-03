@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "status": "STATIC ONLY; UNVERIFIED UNTIL DEVICE SPIKE",
+  "source_revision": "f8def7fe168bab245fbf15d3f18b26dbb1ef73c8",
+  "sources_verified": [
+    {
+      "file": "server-common.cpp",
+      "cache_sha256": "fc75ddcbd6b1c3a1cb4db1236f398cb38f98107291859e2d94f5444a55d25c5b",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/tools/server/server-common.cpp",
+      "upstream_sha256": "fc75ddcbd6b1c3a1cb4db1236f398cb38f98107291859e2d94f5444a55d25c5b",
+      "selected_lines": null
+    },
+    {
+      "file": "server-readme.md",
+      "cache_sha256": "b699c8944051b7fbd512aef56a353f717a2e7614402630015793e69d12a60e75",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/tools/server/README.md",
+      "upstream_sha256": "1591a7745de600b6043afd40062524455784e43ac2a10fb7e88f414e64d402ea",
+      "selected_lines": [
+        [
+          145,
+          156
+        ],
+        [
+          225,
+          236
+        ],
+        [
+          495,
+          510
+        ],
+        [
+          1245,
+          1258
+        ],
+        [
+          1370,
+          1384
+        ]
+      ]
+    },
+    {
+      "file": "chat.cpp",
+      "cache_sha256": "2524aecdc576e87b7b3a8cbe03eb8cf847b17924459ec546045efc0bb53adaba",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/common/chat.cpp",
+      "upstream_sha256": "b906c88d2b2918a1abe32f2d5c434eb18103aa8f16a0f4b317f714356a12a129",
+      "selected_lines": [
+        [
+          1350,
+          1447
+        ],
+        [
+          3096,
+          3270
+        ],
+        [
+          3380,
+          3506
+        ],
+        [
+          3556,
+          3575
+        ]
+      ]
+    },
+    {
+      "file": "chat.h",
+      "cache_sha256": "fe4f9ff8ebd9b1fb6696f19175acf6501300c8eb1aca9a1141fc215df749050e",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/common/chat.h",
+      "upstream_sha256": "fe4f9ff8ebd9b1fb6696f19175acf6501300c8eb1aca9a1141fc215df749050e",
+      "selected_lines": null
+    },
+    {
+      "file": "sampling.cpp",
+      "cache_sha256": "5d6a2080684120c2413bf3a83b4170b9e1c0235f778854733e762446c5ef91bd",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/common/sampling.cpp",
+      "upstream_sha256": "5d6a2080684120c2413bf3a83b4170b9e1c0235f778854733e762446c5ef91bd",
+      "selected_lines": null
+    },
+    {
+      "file": "llama-sampler.cpp",
+      "cache_sha256": "8d1ce20b59e1bbbd93f41ad0aa7e09ca7e07a06cd6d472da1fd49161445f3682",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/src/llama-sampler.cpp",
+      "upstream_sha256": "8d1ce20b59e1bbbd93f41ad0aa7e09ca7e07a06cd6d472da1fd49161445f3682",
+      "selected_lines": null
+    },
+    {
+      "file": "llama-grammar.cpp",
+      "cache_sha256": "09c1399e92807addaa925404d1eec8f3f4668305cf29a5949983e979b15ab4ac",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/src/llama-grammar.cpp",
+      "upstream_sha256": "09c1399e92807addaa925404d1eec8f3f4668305cf29a5949983e979b15ab4ac",
+      "selected_lines": null
+    },
+    {
+      "file": "grammar-readme.md",
+      "cache_sha256": "c96b7df7ffc03181e91e88ed5a6fd095afc497c4dc9916e1896fc1d44c1af404",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/grammars/README.md",
+      "upstream_sha256": "c96b7df7ffc03181e91e88ed5a6fd095afc497c4dc9916e1896fc1d44c1af404",
+      "selected_lines": null
+    },
+    {
+      "file": "llama.h",
+      "cache_sha256": "db39eaf53de25f88d0803f5a1eb77206ee86d4e3c968dd54a83690cb021b8cda",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/include/llama.h",
+      "upstream_sha256": "db39eaf53de25f88d0803f5a1eb77206ee86d4e3c968dd54a83690cb021b8cda",
+      "selected_lines": null
+    },
+    {
+      "file": "server-schema.cpp",
+      "cache_sha256": "ca6db259fadf6a8bfc182407d539398c803e4db4e288cabec9891990a875b946",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/tools/server/server-schema.cpp",
+      "upstream_sha256": "ca6db259fadf6a8bfc182407d539398c803e4db4e288cabec9891990a875b946",
+      "selected_lines": null
+    },
+    {
+      "file": "autoparser-generator.cpp",
+      "cache_sha256": "431ec29f7cd61a7cad80c9596918eda04e3e37ca25b7fcb1a6d424ff3c0cad7b",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/common/chat-auto-parser-generator.cpp",
+      "upstream_sha256": "431ec29f7cd61a7cad80c9596918eda04e3e37ca25b7fcb1a6d424ff3c0cad7b",
+      "selected_lines": null
+    }
+  ],
+  "model_weights_loaded": false,
+  "native_library_loaded": false,
+  "device_runtime_verified": false,
+  "grammar_syntax_checked": false,
+  "inferences": {
+    "native_nonlazy_grammar_covers_entire_generated_output": true,
+    "lazy_grammar_does_not_constrain_before_trigger": true,
+    "response_format_is_not_a_universal_thinking_constraint": true,
+    "muse_specialized_grammar_requires_tools": true,
+    "muse_specialized_handler_consumes_json_schema": false,
+    "current_json_action_chat_route_has_schema_enforcement_risk": true,
+    "explicit_gbnf_chat_route_has_native_framing_risk": true
+  },
+  "harness": {
+    "executes_reasoning_content": false,
+    "executes_only_schema_valid_actions": true,
+    "empty_final_content": "provider_error:missing_completion",
+    "non_json_or_thinking_in_content": "invalid action; never executed",
+    "non_stop_completion": "provider_error:incomplete_completion",
+    "unsafe_fixed_claim": "fixed_requires_current_green_tests",
+    "strips_thinking_or_retries_unconstrained": false,
+    "live_compatibility": "UNVERIFIED; device spike must resolve both route risks"
+  },
+  "documentation": "docs/GRAMMAR-THINKING.md"
+}

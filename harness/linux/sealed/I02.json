@@ -1,0 +1,34 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "I02",
+  "catalog_id": "dhcp_server_down",
+  "role": "fault",
+  "baseline": {
+    "http_proxy": "configured",
+    "https_proxy": "configured",
+    "alternate": true,
+    "ipv6": "disabled"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "FFFFFF",
+      "verdict": "OFFLINE",
+      "app": false
+    },
+    {
+      "after": "reroute",
+      "flags": "TTTTTT",
+      "verdict": "ONLINE",
+      "app": true
+    }
+  ],
+  "terminal": {
+    "tool": "recovered",
+    "layer": "upstream",
+    "component": "",
+    "step": "",
+    "reason": "",
+    "citation": "dns-1"
+  }
+}

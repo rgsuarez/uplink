@@ -1,0 +1,173 @@
+{
+  "revision": "f8def7fe168bab245fbf15d3f18b26dbb1ef73c8",
+  "files": [
+    {
+      "file": "server-common.cpp",
+      "path": "tools/server/server-common.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/tools/server/server-common.cpp",
+      "sha256": "fc75ddcbd6b1c3a1cb4db1236f398cb38f98107291859e2d94f5444a55d25c5b",
+      "size": 57082,
+      "required_markers": [
+        "Handle \"response_format\" field",
+        "inputs.json_schema",
+        "chat_params.grammar"
+      ]
+    },
+    {
+      "file": "server-readme.md",
+      "path": "tools/server/README.md",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/tools/server/README.md",
+      "sha256": "b699c8944051b7fbd512aef56a353f717a2e7614402630015793e69d12a60e75",
+      "size": 9537,
+      "required_markers": [
+        "reasoning_content",
+        "response_format",
+        "--reasoning-format"
+      ],
+      "upstream_sha256": "1591a7745de600b6043afd40062524455784e43ac2a10fb7e88f414e64d402ea",
+      "upstream_size": 100824,
+      "selected_lines": [
+        [
+          145,
+          156
+        ],
+        [
+          225,
+          236
+        ],
+        [
+          495,
+          510
+        ],
+        [
+          1245,
+          1258
+        ],
+        [
+          1370,
+          1384
+        ]
+      ]
+    },
+    {
+      "file": "chat.cpp",
+      "path": "common/chat.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/common/chat.cpp",
+      "sha256": "2524aecdc576e87b7b3a8cbe03eb8cf847b17924459ec546045efc0bb53adaba",
+      "size": 20457,
+      "required_markers": [
+        "common_chat_params_init_muse_glimmer",
+        "auto include_grammar = has_tools",
+        "p.reasoning"
+      ],
+      "upstream_sha256": "b906c88d2b2918a1abe32f2d5c434eb18103aa8f16a0f4b317f714356a12a129",
+      "upstream_size": 162740,
+      "selected_lines": [
+        [
+          1350,
+          1447
+        ],
+        [
+          3096,
+          3270
+        ],
+        [
+          3380,
+          3506
+        ],
+        [
+          3556,
+          3575
+        ]
+      ]
+    },
+    {
+      "file": "chat.h",
+      "path": "common/chat.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/common/chat.h",
+      "sha256": "fe4f9ff8ebd9b1fb6696f19175acf6501300c8eb1aca9a1141fc215df749050e",
+      "size": 15690,
+      "required_markers": [
+        "grammar_lazy"
+      ]
+    },
+    {
+      "file": "sampling.cpp",
+      "path": "common/sampling.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/common/sampling.cpp",
+      "sha256": "5d6a2080684120c2413bf3a83b4170b9e1c0235f778854733e762446c5ef91bd",
+      "size": 34070,
+      "required_markers": [
+        "static bool grammar_should_apply",
+        "params.grammar_lazy",
+        "llama_sampler_init_grammar"
+      ]
+    },
+    {
+      "file": "llama-sampler.cpp",
+      "path": "src/llama-sampler.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/src/llama-sampler.cpp",
+      "sha256": "8d1ce20b59e1bbbd93f41ad0aa7e09ca7e07a06cd6d472da1fd49161445f3682",
+      "size": 139919,
+      "required_markers": [
+        "llama_sampler_grammar_apply"
+      ]
+    },
+    {
+      "file": "llama-grammar.cpp",
+      "path": "src/llama-grammar.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/src/llama-grammar.cpp",
+      "sha256": "09c1399e92807addaa925404d1eec8f3f4668305cf29a5949983e979b15ab4ac",
+      "size": 56224,
+      "required_markers": [
+        "if (grammar.awaiting_trigger)"
+      ]
+    },
+    {
+      "file": "grammar-readme.md",
+      "path": "grammars/README.md",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/grammars/README.md",
+      "sha256": "c96b7df7ffc03181e91e88ed5a6fd095afc497c4dc9916e1896fc1d44c1af404",
+      "size": 18275,
+      "required_markers": [
+        "entire output must match"
+      ]
+    },
+    {
+      "file": "llama.h",
+      "path": "include/llama.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/include/llama.h",
+      "sha256": "db39eaf53de25f88d0803f5a1eb77206ee86d4e3c968dd54a83690cb021b8cda",
+      "size": 82866,
+      "required_markers": [
+        "llama_sampler_init_grammar"
+      ]
+    },
+    {
+      "file": "server-schema.cpp",
+      "path": "tools/server/server-schema.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/tools/server/server-schema.cpp",
+      "sha256": "ca6db259fadf6a8bfc182407d539398c803e4db4e288cabec9891990a875b946",
+      "size": 32832,
+      "required_markers": [
+        "COMMON_GRAMMAR_TYPE_OUTPUT_FORMAT",
+        "COMMON_GRAMMAR_TYPE_USER"
+      ]
+    },
+    {
+      "file": "autoparser-generator.cpp",
+      "path": "common/chat-auto-parser-generator.cpp",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/f8def7fe168bab245fbf15d3f18b26dbb1ef73c8/common/chat-auto-parser-generator.cpp",
+      "sha256": "431ec29f7cd61a7cad80c9596918eda04e3e37ca25b7fcb1a6d424ff3c0cad7b",
+      "size": 23979,
+      "required_markers": [
+        "ctx.reasoning_parser"
+      ]
+    }
+  ],
+  "version": 1,
+  "repository": "ggml-org/llama.cpp",
+  "tag": "b10353",
+  "status": "STATIC ONLY; UNVERIFIED UNTIL DEVICE SPIKE",
+  "cache_note": "Selected complete source regions retain original line anchors; full upstream hashes are verified in memory before extraction."
+}

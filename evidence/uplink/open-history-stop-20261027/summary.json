@@ -1,0 +1,461 @@
+{
+  "cases": [
+    {
+      "accepted_false_success": false,
+      "application_handshake": true,
+      "arm": "glimmer-forced",
+      "blocked_application_completion": 0,
+      "changes": [
+        "set_dns"
+      ],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "dns",
+      "failure": null,
+      "false_online_attempts": 0,
+      "fault": "wrong_dns",
+      "final_oracle": "ONLINE",
+      "healthy_noop": false,
+      "hypotheses": [
+        {
+          "action": "set_dns",
+          "after": "dns",
+          "before": "dns"
+        }
+      ],
+      "initial_label_correct": true,
+      "model_calls_attempted": 2,
+      "number": 1,
+      "outcome": "recovered",
+      "outcome_original": "recovered",
+      "post_probe_label_correct": true,
+      "recovered": true,
+      "recovery_category": "Repair",
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 14,
+      "trace_sha256": "da0e52487d724db4e0c7d41f0484dfc58d782643d1af8349d31b311256dfd72f"
+    },
+    {
+      "accepted_false_success": false,
+      "application_handshake": false,
+      "arm": "glimmer-open",
+      "blocked_application_completion": 0,
+      "changes": [],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "dns",
+      "failure": "watchdog_ended_trial_no_recovery_credit",
+      "false_online_attempts": 0,
+      "fault": "wrong_dns",
+      "final_oracle": "DEGRADED",
+      "healthy_noop": false,
+      "hypotheses": [
+        {
+          "action": "read_vitals",
+          "after": "dns",
+          "before": "dns"
+        },
+        {
+          "action": "read_vitals",
+          "after": "dns",
+          "before": "dns"
+        },
+        {
+          "action": "read_vitals",
+          "after": "dns",
+          "before": "dns"
+        },
+        {
+          "action": "read_vitals",
+          "after": "dns",
+          "before": "dns"
+        }
+      ],
+      "initial_label_correct": true,
+      "model_calls_attempted": 8,
+      "number": 2,
+      "outcome": "refused_LabWatchdogRestored",
+      "outcome_original": "refused_LabWatchdogRestored",
+      "post_probe_label_correct": true,
+      "recovered": false,
+      "recovery_category": null,
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 22,
+      "trace_sha256": "d3040572526b282bef9b8a0409f8fa196771c0a6ccdcb7f958af1929e0c1dba8"
+    },
+    {
+      "accepted_false_success": false,
+      "application_handshake": true,
+      "arm": "scripted",
+      "blocked_application_completion": 0,
+      "changes": [
+        "set_dns"
+      ],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "dns",
+      "failure": null,
+      "false_online_attempts": 0,
+      "fault": "wrong_dns",
+      "final_oracle": "ONLINE",
+      "healthy_noop": false,
+      "hypotheses": [],
+      "initial_label_correct": null,
+      "model_calls_attempted": 0,
+      "number": 3,
+      "outcome": "recovered",
+      "outcome_original": "recovered",
+      "post_probe_label_correct": null,
+      "recovered": true,
+      "recovery_category": "Repair",
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 11,
+      "trace_sha256": "1919466f9b7dd7fc1bf32eb2ff292dc78472d5092e9dc34513e137618fe75904"
+    },
+    {
+      "accepted_false_success": false,
+      "application_handshake": true,
+      "arm": "scripted-strong",
+      "blocked_application_completion": 0,
+      "changes": [
+        "set_dns"
+      ],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "dns",
+      "failure": null,
+      "false_online_attempts": 0,
+      "fault": "wrong_dns",
+      "final_oracle": "ONLINE",
+      "healthy_noop": false,
+      "hypotheses": [],
+      "initial_label_correct": null,
+      "model_calls_attempted": 0,
+      "number": 4,
+      "outcome": "recovered",
+      "outcome_original": "recovered",
+      "post_probe_label_correct": null,
+      "recovered": true,
+      "recovery_category": "Repair",
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 11,
+      "trace_sha256": "0eb33b51bc9840169323a45544372c011e938cdbc7e865ea57edc918a680402d"
+    },
+    {
+      "accepted_false_success": false,
+      "application_handshake": true,
+      "arm": "glimmer-forced",
+      "blocked_application_completion": 0,
+      "changes": [
+        "restore_proxy"
+      ],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "proxy",
+      "failure": null,
+      "false_online_attempts": 0,
+      "fault": "stale_proxy",
+      "final_oracle": "ONLINE",
+      "healthy_noop": false,
+      "hypotheses": [
+        {
+          "action": "restore_proxy",
+          "after": "proxy",
+          "before": "proxy"
+        }
+      ],
+      "initial_label_correct": true,
+      "model_calls_attempted": 2,
+      "number": 5,
+      "outcome": "recovered",
+      "outcome_original": "recovered",
+      "post_probe_label_correct": true,
+      "recovered": true,
+      "recovery_category": "Repair",
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 14,
+      "trace_sha256": "3df59fad1f658db080199bb60f1e666aae0bf0dbe4b310f3fa0923a8893a260c"
+    },
+    {
+      "accepted_false_success": false,
+      "application_handshake": false,
+      "arm": "glimmer-open",
+      "blocked_application_completion": 0,
+      "changes": [],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "proxy",
+      "failure": "watchdog_ended_trial_no_recovery_credit",
+      "false_online_attempts": 0,
+      "fault": "stale_proxy",
+      "final_oracle": "DEGRADED",
+      "healthy_noop": false,
+      "hypotheses": [
+        {
+          "action": "read_proxy",
+          "after": "proxy",
+          "before": "proxy"
+        },
+        {
+          "action": "read_proxy",
+          "after": "proxy",
+          "before": "proxy"
+        },
+        {
+          "action": "read_proxy",
+          "after": "proxy",
+          "before": "proxy"
+        },
+        {
+          "action": "read_proxy",
+          "after": "proxy",
+          "before": "proxy"
+        },
+        {
+          "action": "read_proxy",
+          "after": "proxy",
+          "before": "proxy"
+        },
+        {
+          "action": "read_proxy",
+          "after": "proxy",
+          "before": "proxy"
+        }
+      ],
+      "initial_label_correct": true,
+      "model_calls_attempted": 12,
+      "number": 6,
+      "outcome": "refused_LabWatchdogRestored",
+      "outcome_original": "refused_LabWatchdogRestored",
+      "post_probe_label_correct": true,
+      "recovered": false,
+      "recovery_category": null,
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 30,
+      "trace_sha256": "6685e8f1630ce7cc2c8c713fb04bc7749ec2633030fff96d6bf3c2f636fb2c90"
+    },
+    {
+      "accepted_false_success": false,
+      "application_handshake": true,
+      "arm": "scripted",
+      "blocked_application_completion": 0,
+      "changes": [
+        "restore_proxy"
+      ],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "proxy",
+      "failure": null,
+      "false_online_attempts": 0,
+      "fault": "stale_proxy",
+      "final_oracle": "ONLINE",
+      "healthy_noop": false,
+      "hypotheses": [],
+      "initial_label_correct": null,
+      "model_calls_attempted": 0,
+      "number": 7,
+      "outcome": "recovered",
+      "outcome_original": "recovered",
+      "post_probe_label_correct": null,
+      "recovered": true,
+      "recovery_category": "Repair",
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 11,
+      "trace_sha256": "bc1a143f40e5fb33bee7b8d41c8659b214cc545d88a119b3a93019ec65706b99"
+    },
+    {
+      "accepted_false_success": false,
+      "application_handshake": true,
+      "arm": "scripted-strong",
+      "blocked_application_completion": 0,
+      "changes": [
+        "restore_proxy"
+      ],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "proxy",
+      "failure": null,
+      "false_online_attempts": 0,
+      "fault": "stale_proxy",
+      "final_oracle": "ONLINE",
+      "healthy_noop": false,
+      "hypotheses": [],
+      "initial_label_correct": null,
+      "model_calls_attempted": 0,
+      "number": 8,
+      "outcome": "recovered",
+      "outcome_original": "recovered",
+      "post_probe_label_correct": null,
+      "recovered": true,
+      "recovery_category": "Repair",
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 11,
+      "trace_sha256": "18451a6a7bd573a2b696deb75689370fbc235812fcdeacca81d567bfb8ee0d0d"
+    },
+    {
+      "accepted_false_success": false,
+      "application_handshake": true,
+      "arm": "glimmer-forced",
+      "blocked_application_completion": 0,
+      "changes": [
+        "set_dns",
+        "restore_proxy"
+      ],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "dns",
+      "failure": null,
+      "false_online_attempts": 0,
+      "fault": "dns_plus_proxy",
+      "final_oracle": "ONLINE",
+      "healthy_noop": false,
+      "hypotheses": [
+        {
+          "action": "set_dns",
+          "after": "dns",
+          "before": "dns"
+        },
+        {
+          "action": "restore_proxy",
+          "after": "proxy",
+          "before": "proxy"
+        }
+      ],
+      "initial_label_correct": true,
+      "model_calls_attempted": 4,
+      "number": 9,
+      "outcome": "recovered",
+      "outcome_original": "recovered",
+      "post_probe_label_correct": true,
+      "recovered": true,
+      "recovery_category": "Repair",
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 22,
+      "trace_sha256": "9e5018b9138529e1af3cbef748d39f35f19afdfe7b94fe2c9242f70fe0516807"
+    },
+    {
+      "accepted_false_success": false,
+      "application_handshake": false,
+      "arm": "glimmer-open",
+      "blocked_application_completion": 0,
+      "changes": [],
+      "cleanup_verified": true,
+      "control": false,
+      "expected_initial_label": "dns",
+      "failure": "watchdog_ended_trial_no_recovery_credit",
+      "false_online_attempts": 0,
+      "fault": "dns_plus_proxy",
+      "final_oracle": "OFFLINE",
+      "healthy_noop": false,
+      "hypotheses": [
+        {
+          "action": "read_vitals",
+          "after": "dns",
+          "before": "dns"
+        },
+        {
+          "action": "read_vitals",
+          "after": "dns",
+          "before": "dns"
+        },
+        {
+          "action": "read_vitals",
+          "after": "dns",
+          "before": "dns"
+        },
+        {
+          "action": "read_vitals",
+          "after": "dns",
+          "before": "dns"
+        },
+        {
+          "action": "read_vitals",
+          "after": "dns",
+          "before": "dns"
+        }
+      ],
+      "initial_label_correct": true,
+      "model_calls_attempted": 10,
+      "number": 10,
+      "outcome": "refused_LabWatchdogRestored",
+      "outcome_original": "refused_LabWatchdogRestored",
+      "post_probe_label_correct": true,
+      "recovered": false,
+      "recovery_category": null,
+      "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+      "trace_records": 26,
+      "trace_sha256": "1bae305c413071c2dc636d1b67a86debe763aeec784461141113b532f2c17436"
+    }
+  ],
+  "development_exposed": true,
+  "diagnosis_metric": "first-decision-layer-v1",
+  "oracle": "uplink-linux-lab-v1",
+  "rollup": [
+    {
+      "accepted_false_success": 0,
+      "arm": "glimmer-forced",
+      "blocked_application_completion": 0,
+      "cells": 3,
+      "failures": 0,
+      "false_online_attempts": 0,
+      "faults": 3,
+      "healthy_noops": 0,
+      "labels_scored": 3,
+      "post_probe_labels_correct": 3,
+      "recoveries": 3,
+      "repair_and_reroute": 0,
+      "repairs": 3,
+      "reroutes": 0
+    },
+    {
+      "accepted_false_success": 0,
+      "arm": "glimmer-open",
+      "blocked_application_completion": 0,
+      "cells": 3,
+      "failures": 3,
+      "false_online_attempts": 0,
+      "faults": 3,
+      "healthy_noops": 0,
+      "labels_scored": 3,
+      "post_probe_labels_correct": 3,
+      "recoveries": 0,
+      "repair_and_reroute": 0,
+      "repairs": 0,
+      "reroutes": 0
+    },
+    {
+      "accepted_false_success": 0,
+      "arm": "scripted",
+      "blocked_application_completion": 0,
+      "cells": 2,
+      "failures": 0,
+      "false_online_attempts": 0,
+      "faults": 2,
+      "healthy_noops": 0,
+      "labels_scored": 0,
+      "post_probe_labels_correct": null,
+      "recoveries": 2,
+      "repair_and_reroute": 0,
+      "repairs": 2,
+      "reroutes": 0
+    },
+    {
+      "accepted_false_success": 0,
+      "arm": "scripted-strong",
+      "blocked_application_completion": 0,
+      "cells": 2,
+      "failures": 0,
+      "false_online_attempts": 0,
+      "faults": 2,
+      "healthy_noops": 0,
+      "labels_scored": 0,
+      "post_probe_labels_correct": null,
+      "recoveries": 2,
+      "repair_and_reroute": 0,
+      "repairs": 2,
+      "reroutes": 0
+    }
+  ],
+  "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+  "version": 1
+}

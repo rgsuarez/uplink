@@ -1,0 +1,103 @@
+{
+  "all_ref_snapshot_unchanged": true,
+  "archive_bytes": 20111360,
+  "archive_path": "artifacts/uplink/desk-prepublish-20261028/repo-package/candidate.tar",
+  "archive_sha256": "73345fc0bc9f0ee9a322c4045d4be08e1547b33d6a8d07abd1216a2f8d178808",
+  "checks_sha256": "af0010ae01e27b3bcd893a6052e4d838321d4dbe30489e936d18061cc924f2da",
+  "current_export_scan_passed": true,
+  "file_count": 887,
+  "frozen_inputs_verified": 24,
+  "history_included": false,
+  "history_rewritten": false,
+  "independent_readback": {
+    "all_hashes_match": true,
+    "configured_serial_occurrences": 0,
+    "credential_or_restricted_name_findings": 0,
+    "file_count": 887,
+    "local_clearance_unchanged": true,
+    "original_prime_archive_unchanged": true,
+    "private_configuration_unchanged_mode_0600": true
+  },
+  "license_scan_passed": true,
+  "manifest_sha256": "7705aac8e0a0ee39db8116be589f2665a193840ec9dc53cbfd4047ba23b86a51",
+  "omitted_local_records": [
+    "HANDOFF-BUILD.md",
+    "KAYLIN-OK.md"
+  ],
+  "publication_ready": false,
+  "published": false,
+  "remaining_gates": [
+    "Review this exact source export and its retained frozen/compatibility exceptions.",
+    "Choose clean-export publication or separately authorized sanitized history.",
+    "Privately adjudicate historical credential-signature findings.",
+    "Authorize the exact publication destination and action separately."
+  ],
+  "remote_calls": 0,
+  "retained_scan_exceptions": [
+    {
+      "line": 1,
+      "path": "bench/lab/common.py",
+      "reason": "unchanged_frozen_f10_input",
+      "rule": "lab_identity"
+    },
+    {
+      "line": 157,
+      "path": "configs/f10-ondevice.json",
+      "reason": "unchanged_frozen_f10_input",
+      "rule": "lab_identity"
+    },
+    {
+      "line": 158,
+      "path": "configs/f10-ondevice.json",
+      "reason": "unchanged_frozen_f10_input",
+      "rule": "lab_identity"
+    },
+    {
+      "line": 159,
+      "path": "configs/f10-ondevice.json",
+      "reason": "unchanged_frozen_f10_input",
+      "rule": "lab_identity"
+    },
+    {
+      "line": 252,
+      "path": "src/offline_agent/f10_results.py",
+      "reason": "historical_receipt_compatibility",
+      "rule": "lab_identity"
+    },
+    {
+      "line": 164,
+      "path": "src/offline_agent/native_protocol.py",
+      "reason": "unchanged_frozen_f10_input",
+      "rule": "lab_identity"
+    },
+    {
+      "line": 167,
+      "path": "src/offline_agent/native_protocol.py",
+      "reason": "unchanged_frozen_f10_input",
+      "rule": "lab_identity"
+    },
+    {
+      "line": 169,
+      "path": "src/offline_agent/native_protocol.py",
+      "reason": "unchanged_frozen_f10_input",
+      "rule": "lab_identity"
+    },
+    {
+      "line": 227,
+      "path": "tests/test_f9.py",
+      "reason": "frozen_provider_test_fixture",
+      "rule": "lab_identity"
+    },
+    {
+      "line": 141,
+      "path": "tests/uplink/test_trace.py",
+      "reason": "synthetic_privacy_regression",
+      "rule": "personal_path"
+    }
+  ],
+  "source_commit": "9d9deb17224c1364971fab24a3f8d290da32b76a",
+  "source_git_objects_written": 0,
+  "source_refs_written": 0,
+  "status": "private_candidate_prepared",
+  "version": 1
+}

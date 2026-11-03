@@ -1,0 +1,19 @@
+{
+  "aborts": 0,
+  "attempts": 3,
+  "denominator_complete": true,
+  "failures": 0,
+  "false_online_complete": true,
+  "false_online_total": 0,
+  "median_population": "strictly validated recovered trials only",
+  "median_recovery_seconds": 10.39,
+  "model_reached": 3,
+  "passes": 3,
+  "passes_over_model_reached": "3/3",
+  "prereg_sha256": "9200d5dd8835990e49a03565376b14ba64fc4960e5fd8e9ae8ad132b211940b9",
+  "refused_before_model": 0,
+  "series_id": "15a6104a9685",
+  "state": "COMPLETED",
+  "stop_reason": "THREE_MODEL_REACHED",
+  "target_model_reached": 3
+}

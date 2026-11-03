@@ -1,0 +1,252 @@
+{
+  "arm": "BASE",
+  "attempt_cap": 30,
+  "attempts": [
+    {
+      "index": 1,
+      "manifest_sha256": "5302002e039b83fef894114f4525bc89be76444e15e515c7d67d30ec311d795a",
+      "package_sha256": "3be903ecbf6fae9000300affd0598b9e15ebe41ff152aa7ab4d82ebb766d59cb",
+      "run_id": "edc3c02c085b"
+    },
+    {
+      "index": 2,
+      "manifest_sha256": "5410341d95489d6a7b0848eaf7ab5f5a0db112727c6e12c5cc793c53339cc429",
+      "package_sha256": "5b7c7280727367edb1c9ae800ae3960ed2b8fcfd3cf7e6843572fc0dad9523e7",
+      "run_id": "a435d119fad8"
+    },
+    {
+      "index": 3,
+      "manifest_sha256": "de6f7b13c82975bfd7787dc2b4ebea2b4fe7dd5233c4e9f5eb547e9d8fe14635",
+      "package_sha256": "4fa95ce66618fe25560fd16148b9a58c0660c3391d34752859a01dd4c098ae5f",
+      "run_id": "38eb55e41fd4"
+    },
+    {
+      "index": 4,
+      "manifest_sha256": "27aedcc88a4b55202614397375912e71fb1fefe6f6ccb69dacb44ea0f3b282d2",
+      "package_sha256": "c130cb1996b49b44a765d7a3f6afff55a9579a6015ff174a2f48dc83f87a5484",
+      "run_id": "31c2e5498229"
+    },
+    {
+      "index": 5,
+      "manifest_sha256": "8bd5d474a5d7bb690c174a6f34e6bc6caf4e36522a5281d2c3fd46e49cde60c4",
+      "package_sha256": "3f5e9a428438e6d18da72752509de4960eb77e680d434e99cd0909ae76e9bb75",
+      "run_id": "1bce56a2568d"
+    },
+    {
+      "index": 6,
+      "manifest_sha256": "cb1ef156dcf81189dd0254920b2dcfdafef4eb6ad805383c7f2bf422681cfd5a",
+      "package_sha256": "35ebc093c804956dee504182652337885f5f4b08b3c80a9d54c7fc4382cedf20",
+      "run_id": "81fac6ce1a00"
+    },
+    {
+      "index": 7,
+      "manifest_sha256": "19b1a9c37b7a7c227133940c01239412b812781a274f166e6847cada4b399b9d",
+      "package_sha256": "5f81f64da1ab9931dcd3a53d97a34860e7a2565f53a1c14bd6b9389d018777b2",
+      "run_id": "aa2b7f7e898f"
+    },
+    {
+      "index": 8,
+      "manifest_sha256": "7c119c3cf7cde440bfdc2cea3b0e5b52f6bc6ad6298332a23988ac7af0b5ec45",
+      "package_sha256": "fb4539ed53ddde4618a5300322891f972d08c25df91f42aeef0d963f04b27302",
+      "run_id": "4346de118bf0"
+    },
+    {
+      "index": 9,
+      "manifest_sha256": "515a7121540fe257a30b7e69961af47002fade69687f782c15712bcfe09d4549",
+      "package_sha256": "5b1b7bce66ad9f6951af1a33f9800aeaf8fc67d7cb6b200fc4939cb9c7d9d718",
+      "run_id": "202107e20aaf"
+    },
+    {
+      "index": 10,
+      "manifest_sha256": "5764e812dbe3df4825f4df59b492841a3d0b12684c82f70c091c6bc05cec5df4",
+      "package_sha256": "43af343b1bb8492319e2044781bce28a049707c05d624e8485e2af2fe9282420",
+      "run_id": "a7f05beb95f6"
+    },
+    {
+      "index": 11,
+      "manifest_sha256": "453fc0cdf66b03e10076e2ce88fe537fb9672875e674250deb8505e106a22e36",
+      "package_sha256": "c192e56e19413ab9ae28615460f027a0b4463279007108820589ae50b9947e7e",
+      "run_id": "b4b521ab9a60"
+    },
+    {
+      "index": 12,
+      "manifest_sha256": "e657fa0373f1f992fd8ae7d97716b3663599a40e254d32b41cd259fa6b3ae90e",
+      "package_sha256": "89bd424a10ee0fec84e96a14a8263458506e9f39a141262e4f15628810c8ede5",
+      "run_id": "1a12c345e293"
+    },
+    {
+      "index": 13,
+      "manifest_sha256": "75538243f6fde55eb30eb27635ff17d042286a7e1850e977430e5bd006266f1a",
+      "package_sha256": "a274e1fc3d530203f8e232f943082c9c59cce7a35e3ba7d62e8d0cef3876fbf6",
+      "run_id": "29361430ced7"
+    },
+    {
+      "index": 14,
+      "manifest_sha256": "11b3c7e881fcf5a83a8383ba33dd64aeddbbdc91991513bd424d6769337f347f",
+      "package_sha256": "c047a704a07abaa44dabc01862339528b6f718ee2938478acb4a9b43d4f5bc66",
+      "run_id": "5d4851b38ca9"
+    },
+    {
+      "index": 15,
+      "manifest_sha256": "148a45d0a4e473ef8d7a63b0e5620aa9643dcf532336be0a697f6c43aeeace43",
+      "package_sha256": "4e551e07d5c217e852645feed56d1f6959e2f09cc879e58742263b2fc78b2304",
+      "run_id": "36fefdd4b71a"
+    },
+    {
+      "index": 16,
+      "manifest_sha256": "fa95705c837d62a0b91e62ca09c8a11b60e1e344e3dd8ba63a89b74340c99325",
+      "package_sha256": "8c6c733d8fab18a1731eff33f76621e9214c86af78127c44a83d3bcf0a279bba",
+      "run_id": "fe1608b5b8b6"
+    },
+    {
+      "index": 17,
+      "manifest_sha256": "5ca5b24830bcc5d1d2863f2ea1de1e7c8fc40c6145b321f065f48b67c3080353",
+      "package_sha256": "c8bb96099cf70be477aa6128fc045ea91f176c082faa53e315acf204f90740de",
+      "run_id": "199f19835690"
+    },
+    {
+      "index": 18,
+      "manifest_sha256": "ec097b048e769bdec9474190b33cf160f3168a8fdba0b16735252412d121ed03",
+      "package_sha256": "21cff7ec8c0687f9bae3c6ad08ede41ed0ae030cc57a7556f589d667c26fdb9c",
+      "run_id": "d06a895ed70d"
+    },
+    {
+      "index": 19,
+      "manifest_sha256": "4237e8da0a1c0b9e0e4327f736a00fc8d161b0e93a22b24623c6c32d1cbd59e9",
+      "package_sha256": "5446db5840ed0908e4ebdb31e7fb45638bad6944ac20b0e90b390c0b24ccc450",
+      "run_id": "593f016c3ec7"
+    },
+    {
+      "index": 20,
+      "manifest_sha256": "0989a9d590880547973e4eb021cba4e98ba409df6a20b169604e9da60936e5ca",
+      "package_sha256": "6070edb88bb5c363242c760e5bb15f734ae50ed2e695aad82e8eb00cb8472228",
+      "run_id": "aa83e294c6ea"
+    },
+    {
+      "index": 21,
+      "manifest_sha256": "c6a50c6d3045c7d63ffcfd22d8b863f2f35ebbafe6eb4578068fe4185fabd16f",
+      "package_sha256": "02d7b3333c5811ae8a6a2c2585156e06e7cca75dfafcd6582419611ae9be5dbf",
+      "run_id": "8328ee96e4f1"
+    },
+    {
+      "index": 22,
+      "manifest_sha256": "603f77e3926ad7bef23b920e0d821044bb4ad5d510d5f654b3d37d20fe3dd07c",
+      "package_sha256": "d08306865a43bfe9bd7461b48218cb443b21fd00fed8d9b6d290e74ae8626b5f",
+      "run_id": "a4e6a26e03ca"
+    },
+    {
+      "index": 23,
+      "manifest_sha256": "4d005d7a11ea39d849fb541e5d99d9224857eb43c8f8a5cc65569ca05c188d41",
+      "package_sha256": "9555d61d619ec9b4a91a0f6f6e52f0e7fda41c91213340846cc578c850a1ff1e",
+      "run_id": "23376df045b7"
+    },
+    {
+      "index": 24,
+      "manifest_sha256": "cdbfdd8187f828bebd020a171035b7cdaa2a9b090a4e5d88e892d4d9c56345fe",
+      "package_sha256": "56f80d5059c642c6e42122e8e9c99e2ef8ac917177a28c086a2e802e5a0ba52e",
+      "run_id": "1b7da151f172"
+    },
+    {
+      "index": 25,
+      "manifest_sha256": "aeb51b704a4cd3fa710ad0f7e7a50a9ba34ad74e9f7bf78fe5279d4e2a7d1eb4",
+      "package_sha256": "77f536b9d772671154d0e0095fd31ce816fcb9c944ba34f7279d5c1d2e8da97b",
+      "run_id": "d949c193f27e"
+    },
+    {
+      "index": 26,
+      "manifest_sha256": "3855e26edef5c3d20847324f0fe5ec8ac91bbb0b8d7061f53a59b519e9313c06",
+      "package_sha256": "253a90780d524f525177c95b251bed5b078f6af3c584d25febb98859a1c1c04c",
+      "run_id": "cedc062aaff7"
+    },
+    {
+      "index": 27,
+      "manifest_sha256": "d3f8f346587f6ac75004659cc86fb5d7a41039855cd372d4c1580845be39154f",
+      "package_sha256": "2deded722bdea29a667a9135317424f1f33da79a50882a04a7284893164f1aa3",
+      "run_id": "f2fc45f2af22"
+    },
+    {
+      "index": 28,
+      "manifest_sha256": "381cf3d3c1604ca1b63d461bd1f7185e55af063f89668b93838d0f6de1e54994",
+      "package_sha256": "8310a78dcacee011937a8ab377924b2db19842e5a9168d388551dbc3adddc5b5",
+      "run_id": "9ffc75d8bd0f"
+    },
+    {
+      "index": 29,
+      "manifest_sha256": "38256fc08d31e228af49414f1f8953b631be483cac095c9007b7bbc395517afc",
+      "package_sha256": "4f1317f1cd563195399d91bff68b5b7decd23f9df92d8ef6170057ef603e4952",
+      "run_id": "d8175b9896e1"
+    },
+    {
+      "index": 30,
+      "manifest_sha256": "1f8c45232bec4a1c819777843c90ad6960cde7e657a3eec4da122a15ec4f8137",
+      "package_sha256": "19d7709d4e558940f6d4aa91a96c8a7382d78315af2cd3833d480d9b9b6f51b0",
+      "run_id": "6c3ddd1b6e19"
+    }
+  ],
+  "baseline_evidence_commit": "b6aa7ea20a7937142995634f0fa2d322a31db583",
+  "baseline_in_denominator": false,
+  "baseline_run": "1ec5c6c66f0a",
+  "capture_rule": "Capture completion means the recorded wrapper finalized; it never means model success. Preserve original runner exit code, all failed/refused recordings, exact authority and strict verdict for every attempt.",
+  "consecutive_refusal_cap": 3,
+  "continuation": {
+    "aggregate_target_model_reached": 10,
+    "continuation_policy": "relay-load-policy-v2",
+    "origin_files": {
+      "DIAG-F04-SERIES-ABORT.md": "9f8e889ec229b8735ccf3c298e3e124c418b5e666fc9237ff6c242051c6f505c",
+      "PREREG.json": "b55d4a72afa51fc21b62b028509ae7d65bcbf96c263ec4e08c6453ed2e36460f",
+      "SERIES-LEDGER.json": "07813756af9b82f20564ddc927ff22c2b738277ddd4684353574e5d856e57eb4",
+      "SERIES-LEDGER.jsonl": "7f836d7284a16566a544055d5a2316a5679069ecb748ef88a83c865ac7767b3b",
+      "f04-series-54b5899ccb66.tar": "9987a8b7cf5f96e21cd5c87d80f008b772ecf4fa2cc66af91feab1852761a711"
+    },
+    "origin_policy": "relay-load-policy-v1",
+    "origin_series_id": "54b5899ccb66",
+    "rule": "Preserve original series 54b5899ccb66 as STOPPED/ABORT with all three rows. Run nine new model-reached DNS trials with fresh IDs under relay-load-policy-v2. Report the original relay-load-policy-v1 segment (1/1) and the continuation segment separately, plus a clearly labeled mixed-policy aggregate toward ten model-reached trials. Count every confirmed model-reached trial, including failures and aborts; retain pre-model refusals and aborts without counting them. Unknown reach remains unknown. No reopened output, reused ID, dropped row or rerun-to-replace; stop on any ABORT. The aggregate measures progress toward the owner objective, not one unchanged-policy experiment.",
+    "schema": "f04-dns-continuation-v1"
+  },
+  "cooldown_seconds": 60,
+  "created_at": "2026-11-03T13:01:04.811135-06:00",
+  "deadline": "2026-11-04T16:00:00-06:00",
+  "deadline_rule": "Do not start an attempt with 40 minutes or less remaining to 2026-11-04 16:00 CT. Recheck the original 30-minute authority reserve before invoking the runner. Finish existing safety cleanup; never extend a window.",
+  "entry_max_gib": 24.5,
+  "failure_rule": "A model-reached ordinary non-recovery is FAIL and remains in the denominator. Continuation requires unchanged strict VALIDATED, verified cleanup/OOB/protected state, no runtime resource violation, no false ONLINE and verified revert before the existing 45-second watchdog deadline. Unknown completion is ABORT with an incomplete-denominator flag.",
+  "fast_tier": false,
+  "fault": "F04 DNS",
+  "fixed_exporter_commit": "2f87f193c365864cea77b1394334bae9a7073bee",
+  "fixed_exporter_sha256": "55be8b977d721f5dfe741a24410232d9ad3bd3462a02e18582fb25fca4e91a21",
+  "ledger_rule": "Append a durable hash-chained JSONL outcome before updating JSON/Markdown projections after each attempt. Every attempt has an exclusive intent and unique preallocated run ID. No rerun-to-replace, no automatic resume, no discarded failures.",
+  "max_model_calls_per_trial": 4,
+  "minimum_start_reserve_seconds": 2400,
+  "oob_load_policy": "relay-load-policy-v2",
+  "oracle_sha256": "8ada6a245ee5929d08b393d5f9077ba46712aa9302e31109d443f035a7755d42",
+  "reconciliation_sha256": "d0bc8bf3ff5c9efe3d73350430029ab3dedce9c1809283d8de20c4c5d1b5e95c",
+  "recording": true,
+  "refusal_rule": "Only parsed pre-reservation resource/headroom refusal is retryable under policy v2. Retain every refusal and pre-model abort outside the model-reached denominator. Every confirmed model-reached trial counts, including FAIL or ABORT. Stop on uncertainty, unproven handback or any safety breach.",
+  "reserve_gib": 1.0,
+  "runtime_ceiling_gib": 25.5,
+  "schema": "f04-dns-series-prereg-v1",
+  "series_id": "075540cb0307",
+  "server_pid": 96367,
+  "stop_rule": "Stop after 9 confirmed model-reached trials, any ABORT/safety breach/failed or unproven revert, three consecutive safe admission refusals, exhaustion of the 30 fresh attempt IDs, or the deadline reserve. Never stop early merely because of PASS or ordinary model FAIL.",
+  "strict_reader_baseline_sha256": "15eb1c3516124bbf6564a5061da19355a03aa0bf0735dc1228716079ba8b1f14",
+  "summary_rule": "Preserve original series 54b5899ccb66 as STOPPED/ABORT with all three rows. Run nine new model-reached DNS trials with fresh IDs under relay-load-policy-v2. Report the original relay-load-policy-v1 segment (1/1) and the continuation segment separately, plus a clearly labeled mixed-policy aggregate toward ten model-reached trials. Count every confirmed model-reached trial, including failures and aborts; retain pre-model refusals and aborts without counting them. Unknown reach remains unknown. No reopened output, reused ID, dropped row or rerun-to-replace; stop on any ABORT. The aggregate measures progress toward the owner objective, not one unchanged-policy experiment.",
+  "target_model_reached": 9,
+  "unchanged_rules": [
+    "swap equality including decreases",
+    "pressure exactly 1",
+    "disk at least 50 GiB",
+    "three entry samples over at least ten seconds after warm-up",
+    "OOB identity/nonce/route/streak/freshness/timeout/failure checks; Relay load recorded under explicit v2 waiver",
+    "snapshot plus exact restore/diff",
+    "revert within 60 seconds and tighter existing watchdog/restore budgets",
+    "en7",
+    "Thunderbolt Bridge",
+    "sshd",
+    "firewall",
+    "VPN",
+    "Keychain",
+    "MDM",
+    "locations",
+    "model/prompt/profile/seed and temperature"
+  ],
+  "warmup_calls_per_attempt": 3
+}

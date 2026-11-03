@@ -1,0 +1,35 @@
+{
+  "protocol_id": "f9-ondevice-v1",
+  "base_commit": "878aa1efaffe889cc94db8c76684e014b2accfd6",
+  "history_mode": "append-only-v1",
+  "history_compaction": false,
+  "bos_owner": "llama.cpp /completion",
+  "cache_prompt": true,
+  "id_slot": 0,
+  "llama_build": "b10353 (f8def7fe)",
+  "parity_budget": {
+    "max_steps": 16,
+    "max_tokens": 65536,
+    "max_action_tokens": 2048,
+    "max_seconds": 30.0,
+    "test_seconds": 3.0
+  },
+  "relaxed_budget": {
+    "max_steps": 16,
+    "max_tokens": 65536,
+    "max_action_tokens": 2048,
+    "max_seconds": 120,
+    "test_seconds": 3.0
+  },
+  "primary_fixed_rule": "accepted fixed terminal AND independent final oracle green",
+  "green_at_expiry_rule": "diagnostic only; never fixed in primary metric",
+  "f8_policy_applied": false,
+  "protected_freezes": {
+    "data/train.sha256": "b701d29f7d9b466d73aeca3179af9694f3d7353ca30154d31b88f2eae19edd22",
+    "data/v2/train.sha256": "2167737a98c91c540440c89c128a37843255f95c89f4bdd377970aad48da8205",
+    "eval/heldout.sha256": "bff54733a55855687c2cf5610d6250e026386193cf6c3898a6acbf7e5f56f282",
+    "eval/v2/heldout.sha256": "e3eac088e21c230162b2748d158c15b457d8a0ffc2bb53605c33df489ca907f1"
+  },
+  "changes": "BOS correction, append-only history, explicit serial KV slot, typed timeout, call telemetry",
+  "live_inference_performed": false
+}

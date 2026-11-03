@@ -1,0 +1,71 @@
+{
+  "approval_nonce": null,
+  "approved_by": "Kaylin",
+  "arm": "BASE",
+  "authorized": false,
+  "end": null,
+  "kind": "KAYLIN-OK-BENCH-REDUCED-v1",
+  "latest_start": null,
+  "limits": {
+    "controller_seconds": 110,
+    "cooldown_seconds": 40,
+    "decision_seconds": 8,
+    "model_decisions": 4,
+    "restore_seconds": 30,
+    "slot_seconds": 150,
+    "tokenize_requests_per_decision": 1,
+    "trials": 1,
+    "unscored_completions": 0,
+    "watchdog_seconds": 45,
+    "window_seconds": 1800
+  },
+  "manifest_sha256": null,
+  "manual_recovery_confirmed": false,
+  "model_sha256": null,
+  "oob_client_ipv4": null,
+  "oob_interface": null,
+  "oob_server_ipv4": null,
+  "owner_handback_sha256": null,
+  "package_sha256": null,
+  "private_config_sha256": null,
+  "privileged_write_set": {
+    "cleanup": [
+      "same captured-state restores",
+      "native:verify_profiles (read-only)"
+    ],
+    "fault": [
+      "native:bad_dns"
+    ],
+    "forbidden": [
+      "radio",
+      "interface cycling",
+      "saved networks",
+      "Keychain",
+      "model server",
+      "management network",
+      "other fault injections"
+    ],
+    "model_restore": [
+      "native:restore_ipv4",
+      "ipconfig:dhcp",
+      "native:restore_dns",
+      "native:restore_proxy",
+      "ifconfig:snapshot_mtu"
+    ],
+    "root_files": [
+      "/private/var/db/uplink-bench-reduced/** (one registered attempt)"
+    ],
+    "watchdog": [
+      "bootstrap and retire only system/com.uplink.bench-reduced.<run_id>"
+    ]
+  },
+  "profile_sha256": null,
+  "prompt_sha256": null,
+  "registration_nonce": null,
+  "richard_approval_sha256": null,
+  "run_id": null,
+  "server_birth": null,
+  "server_context": null,
+  "server_pid": null,
+  "start": null
+}

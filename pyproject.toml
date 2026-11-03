@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "offline-agent"
+version = "0.1.0"
+description = "A bounded, tool-only offline coding agent"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "Apache-2.0"
+authors = [{name = "Richard Suarez", email = "rgsuarez@gmail.com"}]
+dependencies = [
+    "jsonschema>=4.23,<5",
+    "jinja2>=3.1.6,<4",
+    "rich==14.2.0",
+]
+
+[project.scripts]
+offline-agent = "offline_agent.cli:main"
+uplink-real = "offline_agent.uplink.real_runner:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3,<9",
+    "ruff>=0.11,<1",
+    "mypy==1.15.0",
+    "types-jsonschema>=4.23",
+]
+
+[tool.uv]
+cache-dir = ".cache/uv"
+python-downloads = "never"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["data/upstream", "data/oracles", "data/synthetic", "data/v2/upstream", "data/v2/oracles", "data/v2/synthetic"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src", "tests", "scripts", "modal"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --import-mode=importlib -p tests.public_cpu"
+tmp_path_retention_count = 1

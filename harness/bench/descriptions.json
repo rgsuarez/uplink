@@ -1,0 +1,8 @@
+{
+  "renew_lease": "Request a fresh DHCP lease using captured IPv4 policy when dhcp_lease_present is false.",
+  "restore_dns": "Restore only captured DNS configuration when dns_matches_snapshot is false.",
+  "restore_gateway": "Restore captured IPv4 routing configuration when gateway_matches_snapshot is false.",
+  "restore_ipv4": "Restore captured IPv4 configuration and request DHCP when ipv4_usable is false or ipv4_linklocal is true.",
+  "restore_mtu": "Restore the captured interface MTU when mtu_matches_snapshot is false.",
+  "restore_proxy": "Restore only captured web and secure proxy configuration when proxy_matches_snapshot is false."
+}

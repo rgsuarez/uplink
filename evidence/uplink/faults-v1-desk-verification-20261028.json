@@ -1,0 +1,53 @@
+{
+  "base_commit": "b5025ff8b7bb7a2db3d2cc94187c75d27b39beeb",
+  "frozen_dependency_hashes_unchanged": 24,
+  "limitations": [
+    "Original Oct 27 16:47 allowance not present in this worktree; the direct assignment supplies category scope, not a live window.",
+    "Remote fakes and VM execution await a new explicit released window.",
+    "Mac command syntax checked against installed manuals; kernel behavior remains unqualified.",
+    "Automatic IPv6 restoration may fail exact dynamic-state equality; failure must stop, not weaken the diff."
+  ],
+  "linux_vm_cases_run": 0,
+  "local_tests": {
+    "errors": 0,
+    "failed": 0,
+    "junit_sha256": "72805d71349a79c3abcb4a0ba23b014abcd68a8bc008a0fbbc55c20deeff9cfd",
+    "new_linux_tests": 16,
+    "new_mac_tests": 45,
+    "new_tests": 61,
+    "passed": 910,
+    "skipped": 0
+  },
+  "mac_live_faults_run": 0,
+  "model_calls": 0,
+  "recorded_at": "2026-10-28T14:02:35.831652+00:00",
+  "remote_contact": false,
+  "remote_fake_tests_run": false,
+  "source_sha256": {
+    "configs/faults-v1-packages.json": "3af900a848b79b2f786d770b990cc4534961019caa57bf745e108333d5f4a550",
+    "scripts/run_faults_v1_linux.py": "0541d587a4d8d4b9cc615fd82a150cda840f65b089f63d74fbb176216162b052",
+    "src/offline_agent/uplink/faults_v1.py": "b47dd3ed90670aff1bc9d78d5f1b83f7a1e3a6796a7f688ce65a1683829ac927",
+    "src/offline_agent/uplink/faults_v1_linux.py": "360832c5903a37275159ad778ab56ba566d941ac95cd8caa1d5e5a292d1fce23",
+    "src/offline_agent/uplink/faults_v1_worker.py": "09a774ed88f87ae3a3c2e272029b5b5073a3dbb372243c5789d4a7896838b0b7",
+    "src/offline_agent/uplink/lab_protocol.py": "4ff2de76b85d1335cfa698a0e32a77b7b9cb5443dc1dbb9efe36345af2f1763b",
+    "src/offline_agent/uplink/lab_servers.py": "830308c27b0e5dc21f7ab281b05278af1a45618baeaac1b8db577aeba6947e49",
+    "src/offline_agent/uplink/lab_stage.py": "c79422f36a52f3346a0e7cbc5ddf0cc305f132f02f40b855e589b777dd81693a",
+    "src/offline_agent/uplink/lab_worker.py": "bb7d24d954060f558ca7c5e4cb936c74ae6e2c2f0aac71f07d4e714dc8166765",
+    "tests/uplink/test_faults_v1.py": "db3ab61aec4336ddf7964f913268c7daf8c2f36b4856347effe36c37fd6c9d3e",
+    "tests/uplink/test_faults_v1_linux.py": "d88f1424159c313d4f21414eb65a479a481544ee9646e0cab73d1e0eba4b9f8f"
+  },
+  "static_checks": {
+    "ruff_check": true,
+    "strict_mypy_files": 97
+  },
+  "status": "desk_qualified_remote_validation_pending",
+  "unchanged_contract_sha256": {
+    "configs/f10-ondevice.json": "ff41ad3c71823a67c4abc4834c06c4adf08af5cc4e5ab3bc5e642b8f4b24ce53",
+    "configs/f10-ondevice.sha256": "8f565dfcf316ceabefd7d2599ce0e85fed184cb24f47974b9efb63eb52cbf230",
+    "docs/UPLINK-FAULTS.json": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91",
+    "src/offline_agent/uplink/oracle.py": "8ada6a245ee5929d08b393d5f9077ba46712aa9302e31109d443f035a7755d42",
+    "src/offline_agent/uplink/real_fleet.py": "e0945f6a2d623b8eb4887f98f566499032cd72c6b19c629c5a1555a3889fbfdb",
+    "src/offline_agent/uplink/real_worker.py": "2e44a1ad1b001d16124cbd325dd646e0b771b9f1ac29eeae9151246df2a5a80b"
+  },
+  "version": 1
+}

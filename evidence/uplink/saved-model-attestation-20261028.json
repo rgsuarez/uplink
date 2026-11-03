@@ -1,0 +1,47 @@
+{
+  "all_saved_attestations_match": true,
+  "attestations": [
+    {
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "matches_expected": true,
+      "run_id": "a95a8ff88ace",
+      "source_receipt": "artifacts/uplink/real-probe-trials-20261028/a95a8ff88ace-preflight.json",
+      "source_receipt_sha256": "3265658b00f85e76f4a9d4c445f39d5355afbf527f5ffbe7dc840e90acd943f0",
+      "verification": "server_verified",
+      "verified_at": 1793168916.64253,
+      "verified_at_utc": "2026-10-28T06:28:36.642530+00:00",
+      "verified_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e"
+    },
+    {
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "matches_expected": true,
+      "run_id": "bb80b459dbc6",
+      "source_receipt": "artifacts/uplink/real-probe-trials-20261028/bb80b459dbc6-preflight.json",
+      "source_receipt_sha256": "4c3640ce2ae10680fa62c345fce836560ec8b29f4602c48586016045d5398be2",
+      "verification": "server_verified",
+      "verified_at": 1793169103.178272,
+      "verified_at_utc": "2026-10-28T06:31:43.178272+00:00",
+      "verified_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e"
+    },
+    {
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "matches_expected": true,
+      "run_id": "9cfc8b5dd427",
+      "source_receipt": "artifacts/uplink/real-probe-trials-20261028/9cfc8b5dd427-preflight.json",
+      "source_receipt_sha256": "98dcf6e01be9dd3df2b64a815bc22bdbeddaaf545d057b946f1511119139b7c3",
+      "verification": "server_verified",
+      "verified_at": 1793169288.842937,
+      "verified_at_utc": "2026-10-28T06:34:48.842937+00:00",
+      "verified_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e"
+    }
+  ],
+  "expected_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+  "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+  "kind": "saved_model_attestation_record",
+  "new_model_hash_reads": 0,
+  "new_remote_calls": 0,
+  "recorded_at": "2026-10-28T07:22:01.266331+00:00",
+  "scope": "Checksum provenance only; trial execution claims are corrected separately in CORRECTION-TRIALS-11-13.md.",
+  "source_commit": "10228ee7fce02d02029ca058438305e2e9dde6fd",
+  "version": 1
+}

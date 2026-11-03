@@ -1,0 +1,34 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "X04",
+  "catalog_id": "dns_drift_plus_captive",
+  "role": "fault",
+  "baseline": {
+    "http_proxy": "direct",
+    "https_proxy": "configured",
+    "alternate": false,
+    "ipv6": "disabled"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "FFTTFF",
+      "verdict": "DEGRADED",
+      "app": true
+    },
+    {
+      "after": "set_dns",
+      "flags": "TTTTFF",
+      "verdict": "CAPTIVE",
+      "app": true
+    }
+  ],
+  "terminal": {
+    "tool": "report",
+    "layer": "captive",
+    "component": "portal",
+    "step": "open_portal",
+    "reason": "",
+    "citation": "portal-apple"
+  }
+}

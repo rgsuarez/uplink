@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "provider": "modal_llamacpp",
+  "app": "modal/eval_app.py",
+  "mode": "teacher",
+  "model": "meta-models/Muse-Glimmer-30B",
+  "model_revision": "cec94fcfd6512f2cfe708138c32533b346ea4f69",
+  "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+  "reasoning_strength": "high",
+  "corpus_version": 2,
+  "split": "train",
+  "attempts": 20,
+  "seed": 0,
+  "default_spend_cap_usd": "0",
+  "requires_flags": ["--allow-remote", "--allow-model-load"],
+  "requires_existing_volume": true,
+  "runtime_verified": false
+}

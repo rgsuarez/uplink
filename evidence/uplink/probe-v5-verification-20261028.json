@@ -1,0 +1,53 @@
+{
+  "action_admission_changed": false,
+  "actual_sandbox_launches": 0,
+  "baseline_commit": "6758477acb4a68080f2d6354489417485c972198",
+  "before_fix_control": {
+    "expected_assertion_failure": true,
+    "original_probe_policy_commit": "6758477acb4a68080f2d6354489417485c972198",
+    "test": "tests/uplink/test_probe_choices.py::test_v4_state_only_output_is_refused_without_executing_it"
+  },
+  "cleanup": {
+    "fixture_symlinks_unlinked_without_following": 396,
+    "owned_processes": 0,
+    "removed": true,
+    "result_files_verified": 20,
+    "source_files_verified": 865,
+    "timestamp": 1793185307.4012952
+  },
+  "format_passed": true,
+  "implementation_commit": "068fe9aea0460a0a6e205ed946690a7281a21bd3",
+  "kind": "uplink-v5-fake-qualification",
+  "limitations": [
+    "Fake qualification does not establish generated live probe return, correct independent diagnosis or model-selected repair.",
+    "V4 memory exceeded 24 GiB; any new live window must satisfy its stated resource gate.",
+    "New live approval and native-qualified staging are required."
+  ],
+  "lint_passed": true,
+  "live_trials": 0,
+  "model_calls": 0,
+  "mypy_sources": 197,
+  "new_tests": 25,
+  "oracle_changed": false,
+  "packages_installed": 0,
+  "pc1_changed": false,
+  "private_configuration_copied": false,
+  "push": false,
+  "qualification_sha256": "e0f8cecef7b0d582fa6a5263ab76f6b58f4643f623a95c2e2936e17e82b082b5",
+  "recorded_at": "2026-10-28T06:03:15.955156-05:00",
+  "scope": "Wi-Fi decision prompt and schema only",
+  "tested_file_sha256": {
+    "src/offline_agent/uplink/probe_choices.py": "21c39c86819c2327737ef241208008a03e246150e5f685ed281bf406183c3697",
+    "src/offline_agent/uplink/probe_policy.py": "4d2c19e53de844ed7c15bd6e6ae738c6ee24bc7497791149505d7847e130508f",
+    "tests/uplink/test_probe_choices.py": "d4a31bb63b6ff6664e4a48bc52ae5c0b5d451b3c8cd0e8fe1f0083cc6ac357ab"
+  },
+  "tested_source_files": 865,
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 438
+  },
+  "version": 1,
+  "watchdog_changed": false
+}

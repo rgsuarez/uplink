@@ -1,0 +1,28 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "V03",
+  "catalog_id": "ipv6_rogue_default_route",
+  "role": "control",
+  "baseline": {
+    "http_proxy": "configured",
+    "https_proxy": "configured",
+    "alternate": false,
+    "ipv6": "static_primary"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "TTTTTT",
+      "verdict": "ONLINE",
+      "app": true
+    }
+  ],
+  "terminal": {
+    "tool": "declare_online",
+    "layer": "upstream",
+    "component": "",
+    "step": "",
+    "reason": "",
+    "citation": ""
+  }
+}

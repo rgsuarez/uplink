@@ -1,0 +1,75 @@
+{
+  "number": 12,
+  "fault": "dns_plus_proxy",
+  "arm": "scripted-strong",
+  "run_id": "64e49de4d6c5",
+  "source": "e8ad2578b7da771667392c1065036ad468ab66cd",
+  "elapsed_s": 13.452655874891207,
+  "failure": null,
+  "receipt": {
+    "version": 1,
+    "kind": "uplink-lab-eval",
+    "profile": "uplink-linux-lab-v1",
+    "fault": "dns_plus_proxy",
+    "arm": "scripted-strong",
+    "action_mode": null,
+    "comparison_arm": "scripted-strong",
+    "model": {
+      "name": "Muse Glimmer 30B",
+      "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+      "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+      "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "host_chip": "Apple M4 Max",
+      "provider": null,
+      "active_model_name": null,
+      "verification": "server_verified",
+      "verified_at": 1793149527.260128,
+      "model_used": false
+    },
+    "model_calls_attempted": 0,
+    "evidence_kind": "linux_namespace",
+    "outcome": "recovered",
+    "failure": null,
+    "failure_details": null,
+    "probe_scripts": false,
+    "probe_episodes": [],
+    "oracle": "ONLINE",
+    "app_resumed": true,
+    "changes": [
+      "set_dns",
+      "restore_proxy"
+    ],
+    "restore_retries": [],
+    "attempt_keys": [
+      {
+        "action": "set_dns",
+        "target_path": "[\"ul-64e49de4d6c5-c\",\"u64e49de4c0\",\"ADDRESS_REMOVED\"]",
+        "state_sha256": "b0baf92efd9d3ae87b4484ec05298dbf1f4c3c8c42a5b369e44e4fb4d392bc48"
+      },
+      {
+        "action": "restore_proxy",
+        "target_path": "[\"ul-64e49de4d6c5-c\",\"u64e49de4c0\",\"ADDRESS_REMOVED\"]",
+        "state_sha256": "680b28004cd819e0a3269621fb19db6f6a0166acd073177e7ac30ef04bb7e066"
+      }
+    ],
+    "trace": "uplink-7d0338000cb148a6b931453de37739ab.jsonl",
+    "catalog_sha256": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91"
+  },
+  "cleanup": {
+    "status": "closed",
+    "cleanup_failure": null,
+    "host_fingerprint_matches": true,
+    "owned_namespaces": 0,
+    "all_uplink_namespaces": 0
+  },
+  "traces": [
+    {
+      "name": "uplink-7d0338000cb148a6b931453de37739ab.jsonl",
+      "records": 16,
+      "verdict": "ONLINE",
+      "model_emissions": 0
+    }
+  ],
+  "finished_at": "2026-10-28T01:05:40.807852+00:00"
+}

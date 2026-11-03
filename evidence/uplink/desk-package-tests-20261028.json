@@ -1,0 +1,62 @@
+{
+  "attempt_notes": [
+    "Initial invocation lacked the parent temporary directory: 14 passed, five setup errors. The bounded output parent was created and all 19 pending tests then passed.",
+    "Archive tests exposed the default Git tar mode mask: pinned tar.umask=0022 and verified regular/executable file modes. Final focused suite: 50 passed."
+  ],
+  "base_commit": "e91cdee9e2f25724520c596592a563e6dc9739b0",
+  "evidence_integrity": {
+    "original": {
+      "all_match": true,
+      "files_checked": 18,
+      "receipt_sha256": "eaf7f72e6c1dd7e2711b9158b48cfce585da6f793c67840ec425b38643be8ecf"
+    },
+    "v4": {
+      "all_match": true,
+      "files_checked": 20,
+      "receipt_sha256": "4f859d1c6d75552b2c8b8799113e2a6c6926e41f2cab8da9ed78f5f538c32689"
+    },
+    "v5": {
+      "all_match": true,
+      "files_checked": 28,
+      "receipt_sha256": "d568f6890c87a70154283fdafd1e7599fa6a5e095b118aa087d38c66f1c5b57c"
+    }
+  },
+  "history_rewritten": false,
+  "live_host_contacts": 0,
+  "local_tests": {
+    "errors": 0,
+    "failed": 0,
+    "junit_sha256": "1fa1411273a04cd98b7acc0126986995c42c9fb6ccc26643aa2061c1c9b9e90e",
+    "new_tests": 18,
+    "passed": 50,
+    "prime_gate_tests": 11,
+    "release_tests": 10,
+    "repo_export_tests": 15,
+    "scrub_scanner_tests": 5,
+    "serial_history_tests": 9,
+    "skipped": 0
+  },
+  "model_calls": 0,
+  "prime_live_attempts": 0,
+  "published": false,
+  "pushed": false,
+  "recorded_at": "2026-10-28T12:59:34.899775+00:00",
+  "source_hashes": {
+    "scripts/prepare_prime_cpp.py": "faa11d4d346e98761ef4c0d78aab73ef8f00b8500fc75cd56c26920e87f47419",
+    "scripts/prepare_repo_scrub.py": "eeca6335f3b82549cc139e1dd508ddbde3e4fc16a56c92ff5534b42e4a01c128",
+    "scripts/prime_cpp_once.py": "06ce9e1fa53bbd58b5a361f984d6bf837a7de9b55e9b8bd0ddbcf154a6098ced",
+    "scripts/scrub_check.py": "baca34cf4cec1684f132ab3dc295d1cfa301411a94a0be000313be40cef6cf72",
+    "scripts/serial_history_scrub.py": "454ac40242fcafb9a5fb20bd89bf8e25c9ffa6d14abd18a422cb54f92155b857",
+    "tests/test_prime_cpp_once.py": "80dd3ca16c5f08f243efdc202b2ecb837b32a436dd696e9068f35183ee50467a",
+    "tests/test_release.py": "1867e337dc7325a74afeadcc107f6d4f97550a369e0265c5886c185e9f293aee",
+    "tests/test_repo_scrub_package.py": "8d2173e1cb475caeaf1a1e14a352b4421088b244b8e1990e8744e1fa7cea6a72",
+    "tests/test_serial_history_scrub.py": "d98e60f13da842e91a41653bbd76cb01873bf7a220f62acd8c81c46e8e211675",
+    "tests/uplink/test_scrub.py": "bc9be02de3b45ec9343d03f9e51bd69ce8e117b9570b52da187a104b877c6273"
+  },
+  "static_checks": {
+    "ruff_check": true,
+    "ruff_format_check": true,
+    "strict_mypy_files": 9
+  },
+  "version": 1
+}

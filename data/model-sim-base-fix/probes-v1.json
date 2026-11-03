@@ -1,0 +1,210 @@
+{
+  "kind": "FIXED_STATE_DIAGNOSTIC_NO_FAULT_EXECUTION",
+  "source_kind": "LOCAL_DRY_RENDER_FROM_FROZEN_SIMULATED_STATE",
+  "cases": [
+    {
+      "fault_id": "F04",
+      "trial": 1,
+      "snapshot_id": "5745b828f503550fd80c214715c83d87c322468bae5bce278d9e4275ee7c6a59",
+      "facts": {
+        "associated_with_snapshot": true,
+        "configured_dns_ok": false,
+        "dhcp_lease_present": true,
+        "dns_matches_snapshot": false,
+        "gateway_matches_snapshot": true,
+        "https_path_ok": true,
+        "interface_up": true,
+        "ipv4_linklocal": false,
+        "ipv4_path_ok": true,
+        "ipv4_usable": true,
+        "mtu_matches_snapshot": true,
+        "mtu_probe_ok": true,
+        "persistent_baseline_equal": false,
+        "portal_redirect_seen": false,
+        "protected_services_unchanged": true,
+        "proxy_matches_snapshot": true,
+        "radio_on": true,
+        "saved_network_matches_snapshot": true
+      },
+      "oracle": {
+        "checked_at": 0,
+        "evidence": [
+          {
+            "id": "dns-1",
+            "kind": "dns",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "dns-2",
+            "kind": "dns",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "tls-apple",
+            "kind": "tls",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "tls-google",
+            "kind": "tls",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "portal-apple",
+            "kind": "portal",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "portal-google",
+            "kind": "portal",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          }
+        ],
+        "verdict": "OFFLINE",
+        "version": "uplink-online-v1"
+      },
+      "expected_safe_repairs": [
+        "restore_dns"
+      ]
+    },
+    {
+      "fault_id": "F05",
+      "trial": 1,
+      "snapshot_id": "8ec0e191e153a879eedf30efcf169275794fd6a3e82f6c5086a085f4dc0a8670",
+      "facts": {
+        "associated_with_snapshot": true,
+        "configured_dns_ok": false,
+        "dhcp_lease_present": false,
+        "dns_matches_snapshot": true,
+        "gateway_matches_snapshot": false,
+        "https_path_ok": false,
+        "interface_up": true,
+        "ipv4_linklocal": false,
+        "ipv4_path_ok": false,
+        "ipv4_usable": true,
+        "mtu_matches_snapshot": true,
+        "mtu_probe_ok": true,
+        "persistent_baseline_equal": false,
+        "portal_redirect_seen": false,
+        "protected_services_unchanged": true,
+        "proxy_matches_snapshot": true,
+        "radio_on": true,
+        "saved_network_matches_snapshot": true
+      },
+      "oracle": {
+        "checked_at": 0,
+        "evidence": [
+          {
+            "id": "dns-1",
+            "kind": "dns",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "dns-2",
+            "kind": "dns",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "tls-apple",
+            "kind": "tls",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "tls-google",
+            "kind": "tls",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "portal-apple",
+            "kind": "portal",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          },
+          {
+            "id": "portal-google",
+            "kind": "portal",
+            "latency_ms": 0.0,
+            "ok": false,
+            "path_id": "path-synthetic",
+            "proxy_used": null,
+            "reason": "explicit_synthetic_measurement",
+            "status": null,
+            "target_id": null
+          }
+        ],
+        "verdict": "OFFLINE",
+        "version": "uplink-online-v1"
+      },
+      "expected_safe_repairs": [
+        "restore_ipv4",
+        "restore_gateway",
+        "renew_lease"
+      ]
+    }
+  ]
+}

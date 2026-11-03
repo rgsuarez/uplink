@@ -1,0 +1,289 @@
+{
+  "number": 19,
+  "fault": "site_only_outage",
+  "arm": "uplink",
+  "run_id": "1502b405caa8",
+  "source": "2f88b595098244da4d753e9bbef4a768cee35e63",
+  "elapsed_s": 16.04705045791343,
+  "failure": null,
+  "receipt": {
+    "version": 1,
+    "kind": "uplink-lab-eval",
+    "profile": "uplink-linux-lab-v1",
+    "fault": "site_only_outage",
+    "arm": "uplink",
+    "model": {
+      "name": "Muse Glimmer 30B",
+      "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+      "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+      "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "host_chip": "Apple M4 Max",
+      "provider": "llama_cpp",
+      "active_model_name": "Muse Glimmer 30B",
+      "verification": "server_verified",
+      "verified_at": 1793145259.90952,
+      "model_used": true
+    },
+    "model_calls_attempted": 2,
+    "evidence_kind": "linux_namespace",
+    "outcome": "site_report_required",
+    "failure": null,
+    "failure_details": null,
+    "probe_scripts": true,
+    "probe_episodes": [
+      {
+        "hypothesis_before": {
+          "layer": "dns",
+          "evidence": [
+            "dns-1"
+          ]
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"read_state\", \"timeout_ms\": 1000}]}}",
+        "program": {
+          "version": 1,
+          "probes": [
+            {
+              "op": "read_state",
+              "timeout_ms": 1000
+            }
+          ]
+        },
+        "execution": {
+          "version": 1,
+          "requested": {
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "started_at": 1793145269.991853,
+          "rows": [
+            {
+              "index": 0,
+              "probe": {
+                "op": "read_state",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793145270.0228045,
+              "ok": true,
+              "state": {
+                "addresses": [
+                  {
+                    "ifindex": 1,
+                    "ifname": "lo",
+                    "flags": [
+                      "LOOPBACK",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "mtu": 65536,
+                    "qdisc": "noqueue",
+                    "operstate": "UNKNOWN",
+                    "group": "default",
+                    "txqlen": 1000,
+                    "link_type": "loopback",
+                    "address": "mac-3fb3e7c97a3a88301ff816ce",
+                    "broadcast": "mac-3fb3e7c97a3a88301ff816ce",
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "local": "ADDRESS_REMOVED",
+                        "prefixlen": 8,
+                        "scope": "host",
+                        "label": "lo",
+                        "valid_life_time": 4294967295,
+                        "preferred_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "prefixlen": 128,
+                        "scope": "host",
+                        "protocol": "kernel_lo",
+                        "valid_life_time": 4294967295,
+                        "preferred_life_time": 4294967295
+                      }
+                    ]
+                  },
+                  {
+                    "ifindex": 694,
+                    "link_index": 693,
+                    "ifname": "u1502b405c0",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "mtu": 1500,
+                    "qdisc": "noqueue",
+                    "operstate": "UP",
+                    "group": "default",
+                    "txqlen": 1000,
+                    "link_type": "ether",
+                    "address": "mac-36cfd29297f86f9799794ada",
+                    "broadcast": "mac-8f1185d1e19ad8b8884f9a0d",
+                    "link_netnsid": 1,
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "local": "ADDRESS_REMOVED",
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "label": "u1502b405c0",
+                        "valid_life_time": 4294967295,
+                        "preferred_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "prefixlen": 64,
+                        "scope": "link",
+                        "protocol": "kernel_ll",
+                        "valid_life_time": 4294967295,
+                        "preferred_life_time": 4294967295
+                      }
+                    ]
+                  },
+                  {
+                    "ifindex": 696,
+                    "link_index": 695,
+                    "ifname": "u1502b405c1",
+                    "flags": [
+                      "BROADCAST",
+                      "MULTICAST",
+                      "UP",
+                      "LOWER_UP"
+                    ],
+                    "mtu": 1500,
+                    "qdisc": "noqueue",
+                    "operstate": "UP",
+                    "group": "default",
+                    "txqlen": 1000,
+                    "link_type": "ether",
+                    "address": "mac-89afe48b748dab9b99237345",
+                    "broadcast": "mac-8f1185d1e19ad8b8884f9a0d",
+                    "link_netnsid": 1,
+                    "addr_info": [
+                      {
+                        "family": "inet",
+                        "local": "ADDRESS_REMOVED",
+                        "prefixlen": 24,
+                        "scope": "global",
+                        "label": "u1502b405c1",
+                        "valid_life_time": 4294967295,
+                        "preferred_life_time": 4294967295
+                      },
+                      {
+                        "family": "inet6",
+                        "local": "ADDRESS_REMOVED",
+                        "prefixlen": 64,
+                        "scope": "link",
+                        "protocol": "kernel_ll",
+                        "valid_life_time": 4294967295,
+                        "preferred_life_time": 4294967295
+                      }
+                    ]
+                  }
+                ],
+                "routes": [
+                  {
+                    "dst": "default",
+                    "gateway": "ADDRESS_REMOVED",
+                    "dev": "u1502b405c0",
+                    "flags": []
+                  },
+                  {
+                    "dst": "ADDRESS_REMOVED/24",
+                    "dev": "u1502b405c1",
+                    "protocol": "kernel",
+                    "scope": "link",
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "flags": []
+                  },
+                  {
+                    "dst": "ADDRESS_REMOVED/24",
+                    "dev": "u1502b405c0",
+                    "protocol": "kernel",
+                    "scope": "link",
+                    "prefsrc": "ADDRESS_REMOVED",
+                    "flags": []
+                  }
+                ],
+                "resolver": "nameserver ADDRESS_REMOVED\noptions timeout:1 attempts:1\n",
+                "proxy": "url-5eae2af6eb430caa9a347ead"
+              },
+              "stdout": "{\"addresses\": [{\"ifindex\": 1, \"ifname\": \"lo\", \"flags\": [\"LOOPBACK\", \"UP\", \"LOWER_UP\"], \"mtu\": 65536, \"qdisc\": \"noqueue\", \"operstate\": \"UNKNOWN\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"loopback\", \"address\": \"mac-3fb3e7c97a3a88301ff816ce\", \"broadcast\": \"mac-3fb3e7c97a3a88301ff816ce\", \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 8, \"scope\": \"host\", \"label\": \"lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 128, \"scope\": \"host\", \"protocol\": \"kernel_lo\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 694, \"link_index\": 693, \"ifname\": \"u1502b405c0\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-36cfd29297f86f9799794ada\", \"broadcast\": \"mac-8f1185d1e19ad8b8884f9a0d\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u1502b405c0\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}, {\"ifindex\": 696, \"link_index\": 695, \"ifname\": \"u1502b405c1\", \"flags\": [\"BROADCAST\", \"MULTICAST\", \"UP\", \"LOWER_UP\"], \"mtu\": 1500, \"qdisc\": \"noqueue\", \"operstate\": \"UP\", \"group\": \"default\", \"txqlen\": 1000, \"link_type\": \"ether\", \"address\": \"mac-89afe48b748dab9b99237345\", \"broadcast\": \"mac-8f1185d1e19ad8b8884f9a0d\", \"link_netnsid\": 1, \"addr_info\": [{\"family\": \"inet\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 24, \"scope\": \"global\", \"label\": \"u1502b405c1\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}, {\"family\": \"inet6\", \"local\": \"ADDRESS_REMOVED\", \"prefixlen\": 64, \"scope\": \"link\", \"protocol\": \"kernel_ll\", \"valid_life_time\": 4294967295, \"preferred_life_time\": 4294967295}]}], \"routes\": [{\"dst\": \"default\", \"gateway\": \"ADDRESS_REMOVED\", \"dev\": \"u1502b405c0\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u1502b405c1\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}, {\"dst\": \"ADDRESS_REMOVED/24\", \"dev\": \"u1502b405c0\", \"protocol\": \"kernel\", \"scope\": \"link\", \"prefsrc\": \"ADDRESS_REMOVED\", \"flags\": []}], \"resolver\": \"nameserver ADDRESS_REMOVED\\noptions timeout:1 attempts:1\\n\", \"proxy\": \"url-5eae2af6eb430caa9a347ead\"}",
+              "status": "completed",
+              "elapsed_ms": 0.029584000003524125,
+              "finished_at": 1793145270.022833
+            }
+          ],
+          "status": "completed",
+          "profile": "linux_lab",
+          "validated": {
+            "version": 1,
+            "probes": [
+              {
+                "op": "read_state",
+                "timeout_ms": 1000
+              }
+            ]
+          },
+          "uid": 65534,
+          "elapsed_ms": 35.98831700219307,
+          "finished_at": 1793145270.0278418,
+          "budget": {
+            "attempted": 1,
+            "reserved_ms": 1000,
+            "elapsed_ms": 35.98831700219307
+          },
+          "settings_unchanged": true,
+          "before_sha256": "d79118c221ec532629ee24ccd357832c841b27386bae526ac98a6a3e239df17a",
+          "after_sha256": "d79118c221ec532629ee24ccd357832c841b27386bae526ac98a6a3e239df17a"
+        },
+        "alternate_qualified": false,
+        "hypothesis_after": {
+          "layer": "dns",
+          "evidence": [
+            "dns-1"
+          ]
+        },
+        "action": {
+          "version": 1,
+          "tool": "declare_online",
+          "args": {}
+        },
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"action\": {\"version\": 1, \"tool\": \"declare_online\", \"args\": {}}}",
+        "decision_ms": 7651.598833967
+      }
+    ],
+    "oracle": "ONLINE",
+    "app_resumed": false,
+    "changes": [],
+    "restore_retries": [],
+    "attempt_keys": [],
+    "trace": "uplink-bbc1f94266e543f5baf5ef558bcd7471.jsonl",
+    "catalog_sha256": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91"
+  },
+  "cleanup": {
+    "status": "closed",
+    "cleanup_failure": null,
+    "host_fingerprint_matches": true,
+    "owned_namespaces": 0,
+    "all_uplink_namespaces": 0
+  },
+  "traces": [
+    {
+      "name": "uplink-bbc1f94266e543f5baf5ef558bcd7471.jsonl",
+      "records": 9,
+      "verdict": "ONLINE",
+      "model_emissions": 2
+    }
+  ],
+  "finished_at": "2026-10-27T23:54:36.042299+00:00"
+}

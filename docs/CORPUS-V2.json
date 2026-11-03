@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "tasks": 190,
+  "solvable": 160,
+  "impossible": 30,
+  "train_tasks": 140,
+  "heldout_tasks": 50,
+  "evidence_sha256": "3a91773339e7b35fa6b792b1cdc7038e85fd7a313b1127ff724bdd0475979c09",
+  "train_freeze_sha256": "2167737a98c91c540440c89c128a37843255f95c89f4bdd377970aad48da8205",
+  "heldout_freeze_sha256": "e3eac088e21c230162b2748d158c15b457d8a0ffc2bb53605c33df489ca907f1",
+  "all_verified": true
+}

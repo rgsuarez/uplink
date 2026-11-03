@@ -1,0 +1,37 @@
+{
+  "aborts": 0,
+  "attempts": 11,
+  "denominator_complete": true,
+  "failures": 6,
+  "false_action_count_complete": true,
+  "false_action_requests": 0,
+  "false_online_complete": true,
+  "false_online_total": 0,
+  "median_recovery_seconds": null,
+  "metric": "correct no-change controls, never recovery",
+  "model_reached": 6,
+  "passes": 0,
+  "passes_over_model_reached": "0/6",
+  "per_case": {
+    "NC00": {
+      "false_action_requests": 0,
+      "model_reached": 3,
+      "passes": 0,
+      "passes_over_model_reached": "0/3",
+      "trials_with_false_actions": 0
+    },
+    "misleading_status": {
+      "false_action_requests": 0,
+      "model_reached": 3,
+      "passes": 0,
+      "passes_over_model_reached": "0/3",
+      "trials_with_false_actions": 0
+    }
+  },
+  "prereg_sha256": "17dcb501f96d4f8155ae1c8de4b0cca76a8a5ff3f90638edeb0ee1e4f10577b8",
+  "refused_before_model": 5,
+  "series_id": "0ea3e4e5eebc",
+  "state": "COMPLETED",
+  "stop_reason": "SIX_MODEL_REACHED",
+  "target_model_reached": 6
+}

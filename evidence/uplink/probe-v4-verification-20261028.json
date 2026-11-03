@@ -1,0 +1,28 @@
+{
+  "actual_sandbox_launches": 0,
+  "changed_source_sha256": {
+    "src/offline_agent/uplink/probe_execution.py": "d355db316ffc8db9c2bb0160f022fc3fa66189d6998ca46f79baa7540128274b",
+    "tests/uplink/test_probe_policy.py": "4adf0c7dadf8345268979d34d8abb4f56cf584f471c69835b9ba2116e4ede47d"
+  },
+  "live_gate": "fresh fleet window, source/native staging proof, actual positive control and returned non-read_state evidence",
+  "live_trials": 0,
+  "repair_commit": "63d155149092378a9b5232b0f10acfef85a11eef",
+  "source_manifest_sha256": "2603af082ee85430fba18a338921f0ac3bc80f80a7deb65a41db59164f86abc3",
+  "source_receipt": "artifacts/uplink/v4-desk-verification-20261028/verification-receipt.json",
+  "source_receipt_sha256": "62d26229888dd5886dae33b0c22c0cddab009397ef2db0c44b90ad1d2f33bf37",
+  "status": "READY-PROBE-TRIALS-V4_DESK_ONLY",
+  "tested_source_commit": "6dcfceb08cb37d73b9f2cd5161bb3737e64b7ed7",
+  "validation": {
+    "baseline_regression": "expected assertion failure against 3da086e",
+    "current_regression": "passed",
+    "focused_tests_passed": 353,
+    "placement": "fresh normal-user test checkout after 05:15 CT; render confirmed idle",
+    "result_hashes_verified": 13,
+    "ruff_check": "passed",
+    "ruff_format_files": 260,
+    "source_unchanged": true,
+    "strict_mypy_files": 195,
+    "temporary_directory_removed": true
+  },
+  "version": 1
+}

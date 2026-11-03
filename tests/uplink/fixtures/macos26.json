@@ -1,0 +1,15 @@
+{
+  "hardware": "Hardware Port: Wi-Fi\nDevice: en0\nEthernet Address: 02\u003a00\u003a00\u003a00\u003a00\u003a02\n\nHardware Port: USB Ethernet\nDevice: en1\n\nHardware Port: iPhone USB\nDevice: en2\n\nHardware Port: Thunderbolt Bridge\nDevice: bridge0\n\nHardware Port: Bluetooth PAN\nDevice: en3\n",
+  "services": "An asterisk (*) denotes that a network service is disabled.\nSynthetic Wi-Fi\nSynthetic Ethernet\nSynthetic Phone USB\nSynthetic Bridge\n*Synthetic PAN\n",
+  "order": "(1) Synthetic Wi-Fi\n(Hardware Port: Wi-Fi, Device: en0)\n(2) Synthetic Ethernet\n(Hardware Port: USB Ethernet, Device: en1)\n(3) Synthetic Phone USB\n(Hardware Port: iPhone USB, Device: en2)\n(4) Synthetic Bridge\n(Hardware Port: Thunderbolt Bridge, Device: bridge0)\n(*) Synthetic PAN\n(Hardware Port: Bluetooth PAN, Device: en3)\n",
+  "interfaces": "lo0 en0 en1 en2 en3 bridge0 utun0",
+  "ifconfig": "en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500\n ether 02\u003a00\u003a00\u003a00\u003a00\u003a02\n inet 192\u002e0\u002e2\u002e10 netmask 0xffffff00 broadcast 192\u002e0\u002e2\u002e255\n status: active\n not associated\n SSID: Fictional Research Network\n",
+  "packet": "yiaddr = 192\u002e0\u002e2\u002e10\nhost_name (string): synthetic-laptop.invalid\nlease_time (uint32): 3600\n",
+  "info": "DHCP Configuration\nIP address: 192\u002e0\u002e2\u002e10\nSubnet mask: 255\u002e255\u002e255\u002e0\nRouter: 192\u002e0\u002e2\u002e1\nClient ID: synthetic-person\n",
+  "proxy": "Enabled: Yes\nServer: proxy.synthetic.invalid\nPort: 8080\nAuthenticated Proxy Enabled: 0\n",
+  "saved": "Preferred networks on en0:\n\tFictional Research Network\n\tFictional iPhone Hotspot\n",
+  "routes": "Routing tables\nInternet:\nDestination Gateway Flags Netif Expire\ndefault 192\u002e0\u002e2\u002e1 UGScg en0\n192.0.2.1 02\u003a00\u003a00\u003a00\u003a00\u003a02 UHLWI en0\n",
+  "default": "route to: default\ngateway: 192\u002e0\u002e2\u002e1\ninterface: en0\n",
+  "dns": "resolver #1\n nameserver[0] : 192\u002e0\u002e2\u002e53\n search domain[0] : synthetic.invalid\n",
+  "system_proxy": "<dictionary> {\n HTTPEnable : 0\n HTTPSEnable : 0\n}\n"
+}

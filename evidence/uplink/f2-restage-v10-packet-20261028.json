@@ -1,0 +1,21 @@
+{
+  "archive_bytes": 184320,
+  "archive_sha256": "488eb41561a71e51d4632fd7f55bae2ac16888fd79dab52d75953375548b7178",
+  "guest_proof": "pending Kaylin window",
+  "helper_sha256": {
+    "guest-proof.py": "5f4b3beaf30864c58b06100fb804ce68f3c1cdf6717e9d8b507852951815b37c",
+    "host-proof.py": "f93778f323183c18c2ac2aa2d68d5ad8d34e0844fe627e21d79e57071bbc1908"
+  },
+  "host_proof": "pending Kaylin window",
+  "host_source_bytes": 151488,
+  "host_source_files": 27,
+  "local_source_matches_all_plan_hashes": true,
+  "manifest_sha256": "d189e9ec9556cf98fe59e9d6849dbfa613e7f55d374c6496a9977cf95313ed80",
+  "no_remote_contact": true,
+  "plan_sha256": "54996e420d3557e152c0c7bf12ff7aeae17d7e857a5a59129c99496fc0d60496",
+  "source_commit": "90fef73c1169950a7490ba3dabe0607bc1b93c8f",
+  "version": 1,
+  "worker_bundle_directory": "/tmp/uplink-worker-5b4c78804f0c12499b567792",
+  "worker_bytes": 133152,
+  "worker_files": 22
+}

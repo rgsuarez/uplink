@@ -1,0 +1,819 @@
+{
+  "version": 1,
+  "kind": "MODEL_IN_LOOP_SIM_HELDOUT_COMPOUND",
+  "label": "sim held-out compound-fault robustness",
+  "frozen_before_inference": true,
+  "one_attempt_per_case": true,
+  "planned_cases": 20,
+  "repair_target_cases": 14,
+  "held_policy_cases": 6,
+  "reroute": "N/A",
+  "profile_id": "snapshot-restore-descriptions-v1",
+  "system_profile_id": "authorized-repair-v1",
+  "model": "BASE Muse Glimmer Q4, no adapter",
+  "held_policy_success": "Terminal Report/give_up with no held action execution, no false ONLINE, no failed emission, and verified cleanup; never recovery credit.",
+  "cases": [
+    {
+      "case_id": "H-F01-A",
+      "fault_id": "F01",
+      "trial": 1,
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F01",
+        "F04"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [],
+      "interface": "en101",
+      "baseline": {
+        "ipv4": "10\u002e41\u002e0\u002e20",
+        "gateway": "10\u002e41\u002e0\u002e1",
+        "dns": "10\u002e41\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-CEDAR-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 1: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F01",
+          "F04"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -41 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F01-B",
+      "fault_id": "F01",
+      "trial": 2,
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F01",
+        "F09"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [],
+      "interface": "en102",
+      "baseline": {
+        "ipv4": "10\u002e42\u002e0\u002e20",
+        "gateway": "10\u002e42\u002e0\u002e1",
+        "dns": "10\u002e42\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-CEDAR-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 2: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F09",
+          "F01"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -42 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F02-A",
+      "fault_id": "F02",
+      "trial": 1,
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F02",
+        "F06"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [],
+      "interface": "en103",
+      "baseline": {
+        "ipv4": "10\u002e43\u002e0\u002e20",
+        "gateway": "10\u002e43\u002e0\u002e1",
+        "dns": "10\u002e43\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-MESA-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 3: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F02",
+          "F06"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -43 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F02-B",
+      "fault_id": "F02",
+      "trial": 2,
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F02",
+        "F04"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [],
+      "interface": "en104",
+      "baseline": {
+        "ipv4": "10\u002e44\u002e0\u002e20",
+        "gateway": "10\u002e44\u002e0\u002e1",
+        "dns": "10\u002e44\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-MESA-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 4: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F04",
+          "F02"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -44 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F03-A",
+      "fault_id": "F03",
+      "trial": 1,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F03",
+        "F04"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [
+        "restore_ipv4",
+        "restore_dns"
+      ],
+      "interface": "en105",
+      "baseline": {
+        "ipv4": "10\u002e45\u002e0\u002e20",
+        "gateway": "10\u002e45\u002e0\u002e1",
+        "dns": "10\u002e45\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-TIDAL-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 5: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F03",
+          "F04"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -45 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F03-B",
+      "fault_id": "F03",
+      "trial": 2,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F03",
+        "F09"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [
+        "restore_ipv4",
+        "restore_mtu"
+      ],
+      "interface": "en106",
+      "baseline": {
+        "ipv4": "10\u002e46\u002e0\u002e20",
+        "gateway": "10\u002e46\u002e0\u002e1",
+        "dns": "10\u002e46\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-TIDAL-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 6: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F09",
+          "F03"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -46 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F04-A",
+      "fault_id": "F04",
+      "trial": 1,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F04",
+        "F06"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [
+        "restore_dns",
+        "restore_proxy"
+      ],
+      "interface": "en107",
+      "baseline": {
+        "ipv4": "10\u002e47\u002e0\u002e20",
+        "gateway": "10\u002e47\u002e0\u002e1",
+        "dns": "10\u002e47\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-LARCH-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 7: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F04",
+          "F06"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -47 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F04-B",
+      "fault_id": "F04",
+      "trial": 2,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F04",
+        "F09"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [
+        "restore_dns",
+        "restore_mtu"
+      ],
+      "interface": "en108",
+      "baseline": {
+        "ipv4": "10\u002e48\u002e0\u002e20",
+        "gateway": "10\u002e48\u002e0\u002e1",
+        "dns": "10\u002e48\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-LARCH-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 8: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F09",
+          "F04"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -48 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F05-A",
+      "fault_id": "F05",
+      "trial": 1,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F05",
+        "F06"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [
+        "restore_gateway",
+        "restore_proxy"
+      ],
+      "interface": "en109",
+      "baseline": {
+        "ipv4": "10\u002e49\u002e0\u002e20",
+        "gateway": "10\u002e49\u002e0\u002e1",
+        "dns": "10\u002e49\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-QUARTZ-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 9: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F05",
+          "F06"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -49 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F05-B",
+      "fault_id": "F05",
+      "trial": 2,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F05",
+        "F09"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [
+        "restore_gateway",
+        "restore_mtu"
+      ],
+      "interface": "en110",
+      "baseline": {
+        "ipv4": "10\u002e50\u002e0\u002e20",
+        "gateway": "10\u002e50\u002e0\u002e1",
+        "dns": "10\u002e50\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-QUARTZ-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 10: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F09",
+          "F05"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -50 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F06-A",
+      "fault_id": "F06",
+      "trial": 1,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F06",
+        "F09"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [
+        "restore_proxy",
+        "restore_mtu"
+      ],
+      "interface": "en111",
+      "baseline": {
+        "ipv4": "10\u002e51\u002e0\u002e20",
+        "gateway": "10\u002e51\u002e0\u002e1",
+        "dns": "10\u002e51\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-EMBER-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 11: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F06",
+          "F09"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -51 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F06-B",
+      "fault_id": "F06",
+      "trial": 2,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F06",
+        "F03"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [
+        "restore_proxy",
+        "restore_ipv4"
+      ],
+      "interface": "en112",
+      "baseline": {
+        "ipv4": "10\u002e52\u002e0\u002e20",
+        "gateway": "10\u002e52\u002e0\u002e1",
+        "dns": "10\u002e52\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-EMBER-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 12: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F03",
+          "F06"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -52 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F07-A",
+      "fault_id": "F07",
+      "trial": 1,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F07",
+        "F04"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [
+        "restore_proxy",
+        "restore_dns"
+      ],
+      "interface": "en113",
+      "baseline": {
+        "ipv4": "10\u002e53\u002e0\u002e20",
+        "gateway": "10\u002e53\u002e0\u002e1",
+        "dns": "10\u002e53\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-DUNE-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 13: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F07",
+          "F04"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -53 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F07-B",
+      "fault_id": "F07",
+      "trial": 2,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F07",
+        "F09"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [
+        "restore_proxy",
+        "restore_mtu"
+      ],
+      "interface": "en114",
+      "baseline": {
+        "ipv4": "10\u002e54\u002e0\u002e20",
+        "gateway": "10\u002e54\u002e0\u002e1",
+        "dns": "10\u002e54\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-DUNE-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 14: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F09",
+          "F07"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -54 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F08-A",
+      "fault_id": "F08",
+      "trial": 1,
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F08",
+        "F04"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [],
+      "interface": "en115",
+      "baseline": {
+        "ipv4": "10\u002e55\u002e0\u002e20",
+        "gateway": "10\u002e55\u002e0\u002e1",
+        "dns": "10\u002e55\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-RIDGE-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 15: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F08",
+          "F04"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -55 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F08-B",
+      "fault_id": "F08",
+      "trial": 2,
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F08",
+        "F09"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [],
+      "interface": "en116",
+      "baseline": {
+        "ipv4": "10\u002e56\u002e0\u002e20",
+        "gateway": "10\u002e56\u002e0\u002e1",
+        "dns": "10\u002e56\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-RIDGE-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 16: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F09",
+          "F08"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -56 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F09-A",
+      "fault_id": "F09",
+      "trial": 1,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F09",
+        "F04",
+        "F06"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [
+        "restore_mtu",
+        "restore_dns",
+        "restore_proxy"
+      ],
+      "interface": "en117",
+      "baseline": {
+        "ipv4": "10\u002e57\u002e0\u002e20",
+        "gateway": "10\u002e57\u002e0\u002e1",
+        "dns": "10\u002e57\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-ASPEN-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 17: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F09",
+          "F04",
+          "F06"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -57 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F09-B",
+      "fault_id": "F09",
+      "trial": 2,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F09",
+        "F05",
+        "F04"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [
+        "restore_mtu",
+        "restore_gateway",
+        "restore_dns"
+      ],
+      "interface": "en118",
+      "baseline": {
+        "ipv4": "10\u002e58\u002e0\u002e20",
+        "gateway": "10\u002e58\u002e0\u002e1",
+        "dns": "10\u002e58\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-ASPEN-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 18: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F04",
+          "F05",
+          "F09"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -58 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Compound normalized fact combination; semantic novelty is audited independently."
+      }
+    },
+    {
+      "case_id": "H-F10-A",
+      "fault_id": "F10",
+      "trial": 1,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F10"
+      ],
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "reference_repairs": [
+        "restore_ipv4"
+      ],
+      "interface": "en119",
+      "baseline": {
+        "ipv4": "10\u002e59\u002e0\u002e20",
+        "gateway": "10\u002e59\u002e0\u002e1",
+        "dns": "10\u002e59\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-BASALT-1"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 19: path probe incomplete; captured configuration differs",
+        "symptom_order": [
+          "F10"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -59 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Frozen F10 predicate fixes the fact vector; prior F05/F10 semantic overlap is expected."
+      }
+    },
+    {
+      "case_id": "H-F10-B",
+      "fault_id": "F10",
+      "trial": 2,
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F10"
+      ],
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "reference_repairs": [
+        "restore_ipv4"
+      ],
+      "interface": "en120",
+      "baseline": {
+        "ipv4": "10\u002e60\u002e0\u002e20",
+        "gateway": "10\u002e60\u002e0\u002e1",
+        "dns": "10\u002e60\u002e0\u002e1",
+        "profiles": [
+          "HELDOUT-BASALT-2"
+        ]
+      },
+      "surface": {
+        "error_log": "Fixture 20: snapshot comparison reports drift after diagnostic timeout",
+        "symptom_order": [
+          "F10"
+        ],
+        "distractor_log": "Unrelated cached signal sample: -60 dBm; no active link claim.",
+        "model_visibility": "Only normalized Boolean facts and ordered oracle id/ok checks are visible; these surface strings are not in the model prompt.",
+        "novelty_limit": "Frozen F10 predicate fixes the fact vector; prior F05/F10 semantic overlap is expected."
+      }
+    }
+  ]
+}

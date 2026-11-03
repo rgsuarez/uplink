@@ -1,0 +1,61 @@
+{
+  "number": 15,
+  "fault": "lease_loss",
+  "arm": "scripted",
+  "run_id": "d65a822e7ebf",
+  "source": "b784277c487939d7ea67683cbd6ea20d9f5b3116",
+  "elapsed_s": 7.577627917053178,
+  "failure": null,
+  "receipt": {
+    "version": 1,
+    "kind": "uplink-lab-eval",
+    "profile": "uplink-linux-lab-v1",
+    "fault": "lease_loss",
+    "arm": "baseline",
+    "action_mode": null,
+    "comparison_arm": "scripted",
+    "model": {
+      "name": "Muse Glimmer 30B",
+      "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+      "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+      "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "host_chip": "Apple M4 Max",
+      "provider": null,
+      "active_model_name": null,
+      "verification": "server_verified",
+      "verified_at": 1793150950.847094,
+      "model_used": false
+    },
+    "model_calls_attempted": 0,
+    "evidence_kind": "linux_namespace",
+    "outcome": "reported",
+    "failure": null,
+    "failure_details": null,
+    "probe_scripts": false,
+    "probe_episodes": [],
+    "oracle": "OFFLINE",
+    "app_resumed": false,
+    "changes": [],
+    "restore_retries": [],
+    "attempt_keys": [],
+    "trace": "uplink-ee04b72b49064c57adb39208a4b7c91d.jsonl",
+    "catalog_sha256": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91"
+  },
+  "cleanup": {
+    "status": "closed",
+    "cleanup_failure": null,
+    "host_fingerprint_matches": true,
+    "owned_namespaces": 0,
+    "all_uplink_namespaces": 0
+  },
+  "traces": [
+    {
+      "name": "uplink-ee04b72b49064c57adb39208a4b7c91d.jsonl",
+      "records": 6,
+      "verdict": "OFFLINE",
+      "model_emissions": 0
+    }
+  ],
+  "finished_at": "2026-10-28T01:29:18.513738+00:00"
+}

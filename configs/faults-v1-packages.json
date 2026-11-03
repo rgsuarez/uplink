@@ -1,0 +1,574 @@
+{
+  "version": "uplink-bounded-faults-v1",
+  "status": "desk_only_unbound_templates",
+  "execute": false,
+  "target_name": "www.gstatic.com",
+  "live_parameters_required": true,
+  "tailscale_address_inventory_required": true,
+  "ipv4_ssh_paths": [
+    "oob",
+    "wifi"
+  ],
+  "pf_status_policy": "Status token only; rules and child anchor exact",
+  "packages": [
+    {
+      "fault": "test_host_blackhole",
+      "commands": {
+        "inject": [
+          "/sbin/route",
+          "-n",
+          "add",
+          "-host",
+          "-ifscope",
+          "WIFI_IF",
+          "TEST_IP4",
+          "127\u002e0\u002e0\u002e1",
+          "-blackhole"
+        ],
+        "revert": [
+          "/sbin/route",
+          "-n",
+          "delete",
+          "-host",
+          "-ifscope",
+          "WIFI_IF",
+          "TEST_IP4",
+          "127\u002e0\u002e0\u002e1",
+          "-blackhole"
+        ],
+        "pf_rule": "block drop out quick on WIFI_IF inet proto tcp from any to TEST_IP4 port 443\n",
+        "auto_revert_seconds": 60,
+        "repair_tool": "restore_test_host_route"
+      },
+      "snapshot_getters": {
+        "default_ipv4": [
+          "/sbin/route",
+          "-n",
+          "get",
+          "-inet",
+          "default"
+        ],
+        "default_ipv6": [
+          "/sbin/route",
+          "-n",
+          "get",
+          "-inet6",
+          "default"
+        ],
+        "ipv4_route_table": [
+          "/usr/sbin/netstat",
+          "-rn",
+          "-f",
+          "inet"
+        ],
+        "ipv6_route_table": [
+          "/usr/sbin/netstat",
+          "-rn",
+          "-f",
+          "inet6"
+        ],
+        "interface_inventory": [
+          "/sbin/ifconfig",
+          "-l"
+        ],
+        "wifi_info": [
+          "/usr/sbin/networksetup",
+          "-getinfo",
+          "Wi-Fi"
+        ],
+        "wifi_v6_routes": [
+          "/usr/sbin/networksetup",
+          "-getv6additionalroutes",
+          "Wi-Fi"
+        ],
+        "service_order": [
+          "/usr/sbin/networksetup",
+          "-listnetworkserviceorder"
+        ],
+        "pf_main_rules": [
+          "/sbin/pfctl",
+          "-sr"
+        ],
+        "pf_anchor_rules": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-sr"
+        ],
+        "pf_anchor_children": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-s",
+          "Anchors"
+        ],
+        "pf_anchor_tables": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-s",
+          "Tables"
+        ],
+        "-getdnsservers": [
+          "/usr/sbin/networksetup",
+          "-getdnsservers",
+          "Wi-Fi"
+        ],
+        "-getsearchdomains": [
+          "/usr/sbin/networksetup",
+          "-getsearchdomains",
+          "Wi-Fi"
+        ],
+        "-getwebproxy": [
+          "/usr/sbin/networksetup",
+          "-getwebproxy",
+          "Wi-Fi"
+        ],
+        "-getsecurewebproxy": [
+          "/usr/sbin/networksetup",
+          "-getsecurewebproxy",
+          "Wi-Fi"
+        ],
+        "-getautoproxyurl": [
+          "/usr/sbin/networksetup",
+          "-getautoproxyurl",
+          "Wi-Fi"
+        ],
+        "-getproxybypassdomains": [
+          "/usr/sbin/networksetup",
+          "-getproxybypassdomains",
+          "Wi-Fi"
+        ],
+        "-getsocksfirewallproxy": [
+          "/usr/sbin/networksetup",
+          "-getsocksfirewallproxy",
+          "Wi-Fi"
+        ],
+        "-getproxyautodiscovery": [
+          "/usr/sbin/networksetup",
+          "-getproxyautodiscovery",
+          "Wi-Fi"
+        ]
+      },
+      "target_probe": [
+        "/usr/bin/curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--noproxy",
+        "*",
+        "--ipv4",
+        "--interface",
+        "WIFI_IF",
+        "--resolve",
+        "www.gstatic.com:443:TEST_IP4",
+        "--connect-timeout",
+        "2",
+        "--max-time",
+        "3",
+        "--max-filesize",
+        "4096",
+        "--write-out",
+        "\n%{http_code}",
+        "https://www.gstatic.com/generate_204"
+      ],
+      "action_schema": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "const": 1
+          },
+          "tool": {
+            "const": "restore_test_host_route"
+          },
+          "snapshot_id": {
+            "const": "CAPTURED_SNAPSHOT_SHA256"
+          },
+          "policy": {
+            "const": "snapshot"
+          },
+          "evidence_ids": {
+            "const": [
+              "fault-v1-target",
+              "fault-v1-drift"
+            ]
+          }
+        },
+        "required": [
+          "version",
+          "tool",
+          "snapshot_id",
+          "policy",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "fault": "wifi_ipv6_off",
+      "commands": {
+        "inject": [
+          "/usr/sbin/networksetup",
+          "-setv6off",
+          "Wi-Fi"
+        ],
+        "revert": [
+          "/usr/sbin/networksetup",
+          "-setv6automatic",
+          "Wi-Fi"
+        ],
+        "pf_rule": "block drop out quick on WIFI_IF inet proto tcp from any to TEST_IP4 port 443\n",
+        "auto_revert_seconds": 60,
+        "repair_tool": "restore_wifi_ipv6"
+      },
+      "snapshot_getters": {
+        "default_ipv4": [
+          "/sbin/route",
+          "-n",
+          "get",
+          "-inet",
+          "default"
+        ],
+        "default_ipv6": [
+          "/sbin/route",
+          "-n",
+          "get",
+          "-inet6",
+          "default"
+        ],
+        "ipv4_route_table": [
+          "/usr/sbin/netstat",
+          "-rn",
+          "-f",
+          "inet"
+        ],
+        "ipv6_route_table": [
+          "/usr/sbin/netstat",
+          "-rn",
+          "-f",
+          "inet6"
+        ],
+        "interface_inventory": [
+          "/sbin/ifconfig",
+          "-l"
+        ],
+        "wifi_info": [
+          "/usr/sbin/networksetup",
+          "-getinfo",
+          "Wi-Fi"
+        ],
+        "wifi_v6_routes": [
+          "/usr/sbin/networksetup",
+          "-getv6additionalroutes",
+          "Wi-Fi"
+        ],
+        "service_order": [
+          "/usr/sbin/networksetup",
+          "-listnetworkserviceorder"
+        ],
+        "pf_main_rules": [
+          "/sbin/pfctl",
+          "-sr"
+        ],
+        "pf_anchor_rules": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-sr"
+        ],
+        "pf_anchor_children": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-s",
+          "Anchors"
+        ],
+        "pf_anchor_tables": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-s",
+          "Tables"
+        ],
+        "-getdnsservers": [
+          "/usr/sbin/networksetup",
+          "-getdnsservers",
+          "Wi-Fi"
+        ],
+        "-getsearchdomains": [
+          "/usr/sbin/networksetup",
+          "-getsearchdomains",
+          "Wi-Fi"
+        ],
+        "-getwebproxy": [
+          "/usr/sbin/networksetup",
+          "-getwebproxy",
+          "Wi-Fi"
+        ],
+        "-getsecurewebproxy": [
+          "/usr/sbin/networksetup",
+          "-getsecurewebproxy",
+          "Wi-Fi"
+        ],
+        "-getautoproxyurl": [
+          "/usr/sbin/networksetup",
+          "-getautoproxyurl",
+          "Wi-Fi"
+        ],
+        "-getproxybypassdomains": [
+          "/usr/sbin/networksetup",
+          "-getproxybypassdomains",
+          "Wi-Fi"
+        ],
+        "-getsocksfirewallproxy": [
+          "/usr/sbin/networksetup",
+          "-getsocksfirewallproxy",
+          "Wi-Fi"
+        ],
+        "-getproxyautodiscovery": [
+          "/usr/sbin/networksetup",
+          "-getproxyautodiscovery",
+          "Wi-Fi"
+        ]
+      },
+      "target_probe": [
+        "/usr/bin/curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--noproxy",
+        "*",
+        "--ipv6",
+        "--interface",
+        "WIFI_IF",
+        "--resolve",
+        "www.gstatic.com:443:[TEST_IP6]",
+        "--connect-timeout",
+        "2",
+        "--max-time",
+        "3",
+        "--max-filesize",
+        "4096",
+        "--write-out",
+        "\n%{http_code}",
+        "https://www.gstatic.com/generate_204"
+      ],
+      "action_schema": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "const": 1
+          },
+          "tool": {
+            "const": "restore_wifi_ipv6"
+          },
+          "snapshot_id": {
+            "const": "CAPTURED_SNAPSHOT_SHA256"
+          },
+          "policy": {
+            "const": "snapshot"
+          },
+          "evidence_ids": {
+            "const": [
+              "fault-v1-target",
+              "fault-v1-drift"
+            ]
+          }
+        },
+        "required": [
+          "version",
+          "tool",
+          "snapshot_id",
+          "policy",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "fault": "owned_pf_outbound",
+      "commands": {
+        "inject": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-f",
+          "fault.rules"
+        ],
+        "revert": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-F",
+          "rules"
+        ],
+        "pf_rule": "block drop out quick on WIFI_IF inet proto tcp from any to TEST_IP4 port 443\n",
+        "auto_revert_seconds": 60,
+        "repair_tool": "restore_owned_pf_anchor"
+      },
+      "snapshot_getters": {
+        "default_ipv4": [
+          "/sbin/route",
+          "-n",
+          "get",
+          "-inet",
+          "default"
+        ],
+        "default_ipv6": [
+          "/sbin/route",
+          "-n",
+          "get",
+          "-inet6",
+          "default"
+        ],
+        "ipv4_route_table": [
+          "/usr/sbin/netstat",
+          "-rn",
+          "-f",
+          "inet"
+        ],
+        "ipv6_route_table": [
+          "/usr/sbin/netstat",
+          "-rn",
+          "-f",
+          "inet6"
+        ],
+        "interface_inventory": [
+          "/sbin/ifconfig",
+          "-l"
+        ],
+        "wifi_info": [
+          "/usr/sbin/networksetup",
+          "-getinfo",
+          "Wi-Fi"
+        ],
+        "wifi_v6_routes": [
+          "/usr/sbin/networksetup",
+          "-getv6additionalroutes",
+          "Wi-Fi"
+        ],
+        "service_order": [
+          "/usr/sbin/networksetup",
+          "-listnetworkserviceorder"
+        ],
+        "pf_main_rules": [
+          "/sbin/pfctl",
+          "-sr"
+        ],
+        "pf_anchor_rules": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-sr"
+        ],
+        "pf_anchor_children": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-s",
+          "Anchors"
+        ],
+        "pf_anchor_tables": [
+          "/sbin/pfctl",
+          "-a",
+          "com.apple/uplink-v1-RUN_ID",
+          "-s",
+          "Tables"
+        ],
+        "-getdnsservers": [
+          "/usr/sbin/networksetup",
+          "-getdnsservers",
+          "Wi-Fi"
+        ],
+        "-getsearchdomains": [
+          "/usr/sbin/networksetup",
+          "-getsearchdomains",
+          "Wi-Fi"
+        ],
+        "-getwebproxy": [
+          "/usr/sbin/networksetup",
+          "-getwebproxy",
+          "Wi-Fi"
+        ],
+        "-getsecurewebproxy": [
+          "/usr/sbin/networksetup",
+          "-getsecurewebproxy",
+          "Wi-Fi"
+        ],
+        "-getautoproxyurl": [
+          "/usr/sbin/networksetup",
+          "-getautoproxyurl",
+          "Wi-Fi"
+        ],
+        "-getproxybypassdomains": [
+          "/usr/sbin/networksetup",
+          "-getproxybypassdomains",
+          "Wi-Fi"
+        ],
+        "-getsocksfirewallproxy": [
+          "/usr/sbin/networksetup",
+          "-getsocksfirewallproxy",
+          "Wi-Fi"
+        ],
+        "-getproxyautodiscovery": [
+          "/usr/sbin/networksetup",
+          "-getproxyautodiscovery",
+          "Wi-Fi"
+        ]
+      },
+      "target_probe": [
+        "/usr/bin/curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--noproxy",
+        "*",
+        "--ipv4",
+        "--interface",
+        "WIFI_IF",
+        "--resolve",
+        "www.gstatic.com:443:TEST_IP4",
+        "--connect-timeout",
+        "2",
+        "--max-time",
+        "3",
+        "--max-filesize",
+        "4096",
+        "--write-out",
+        "\n%{http_code}",
+        "https://www.gstatic.com/generate_204"
+      ],
+      "action_schema": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "const": 1
+          },
+          "tool": {
+            "const": "restore_owned_pf_anchor"
+          },
+          "snapshot_id": {
+            "const": "CAPTURED_SNAPSHOT_SHA256"
+          },
+          "policy": {
+            "const": "snapshot"
+          },
+          "evidence_ids": {
+            "const": [
+              "fault-v1-target",
+              "fault-v1-drift"
+            ]
+          }
+        },
+        "required": [
+          "version",
+          "tool",
+          "snapshot_id",
+          "policy",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

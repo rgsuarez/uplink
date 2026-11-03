@@ -1,0 +1,34 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "P04",
+  "catalog_id": "proxy_https_only_drift",
+  "role": "fault",
+  "baseline": {
+    "http_proxy": "configured",
+    "https_proxy": "configured",
+    "alternate": false,
+    "ipv6": "disabled"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "TTFFTT",
+      "verdict": "DEGRADED",
+      "app": false
+    },
+    {
+      "after": "restore_proxy",
+      "flags": "TTTTTT",
+      "verdict": "ONLINE",
+      "app": true
+    }
+  ],
+  "terminal": {
+    "tool": "recovered",
+    "layer": "proxy",
+    "component": "",
+    "step": "",
+    "reason": "",
+    "citation": "tls-apple"
+  }
+}

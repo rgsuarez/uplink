@@ -1,0 +1,28 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "F05",
+  "catalog_id": "egress_public_dns_blocked_benign",
+  "role": "control",
+  "baseline": {
+    "http_proxy": "configured",
+    "https_proxy": "configured",
+    "alternate": true,
+    "ipv6": "disabled"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "TTTTTT",
+      "verdict": "ONLINE",
+      "app": true
+    }
+  ],
+  "terminal": {
+    "tool": "declare_online",
+    "layer": "upstream",
+    "component": "",
+    "step": "",
+    "reason": "",
+    "citation": ""
+  }
+}

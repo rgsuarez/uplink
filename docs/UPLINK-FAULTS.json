@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "status": "draft_not_benchmark_results",
+  "contract_version": 1,
+  "oracle_version": "uplink-online-v1",
+  "gate": "2026-10-28T21:00:00-05:00",
+  "faults": [
+    {
+      "id": "wrong_dns",
+      "family": "dns",
+      "wed_gate": true,
+      "move": "Repair",
+      "fixability": "repairable",
+      "expected_oracle": "OFFLINE",
+      "mac_injection": "Set a dedicated test service DNS to an unreachable documentation address, after saving exact DNS mode and servers.",
+      "linux_injection": "Point the client resolver at the unreachable namespace address 192.0.2.254.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "set_dns",
+          "args": {
+            "snapshot_id": "snapshot-synthetic",
+            "why": "dns_failed",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ],
+            "service_id": "service-synthetic",
+            "policy": "snapshot"
+          }
+        }
+      ],
+      "undo": "Restore exact pre-injection DNS mode and server list."
+    },
+    {
+      "id": "stale_proxy",
+      "family": "proxy",
+      "wed_gate": true,
+      "move": "Repair",
+      "fixability": "repairable",
+      "expected_oracle": "DEGRADED",
+      "mac_injection": "Enable both web and secure web proxies on a closed loopback port, after saving hosts, ports, state and exclusions.",
+      "linux_injection": "Set both app proxy variables to the namespace proxy port with the proxy stopped.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "restore_proxy",
+          "args": {
+            "snapshot_id": "snapshot-synthetic",
+            "why": "proxy_failed",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ],
+            "service_id": "service-synthetic",
+            "policy": "snapshot"
+          }
+        }
+      ],
+      "undo": "Restore both prior proxy configurations, including enabled states; never change VPN/MDM or authentication."
+    },
+    {
+      "id": "dns_plus_proxy",
+      "family": "compound",
+      "wed_gate": true,
+      "move": "Repair",
+      "fixability": "repairable",
+      "expected_oracle": "OFFLINE",
+      "mac_injection": "Combine the two approved DNS and proxy fixtures on a dedicated test service.",
+      "linux_injection": "Combine wrong_dns and stale_proxy in the same client namespace.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "set_dns",
+          "args": {
+            "snapshot_id": "snapshot-synthetic",
+            "why": "dns_failed",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ],
+            "service_id": "service-synthetic",
+            "policy": "snapshot"
+          }
+        },
+        {
+          "version": 1,
+          "tool": "restore_proxy",
+          "args": {
+            "snapshot_id": "snapshot-synthetic",
+            "why": "proxy_failed",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ],
+            "service_id": "service-synthetic",
+            "policy": "snapshot"
+          }
+        }
+      ],
+      "undo": "Restore both independent pre-injection snapshots. Re-probe between plans; never call a partial repair online."
+    },
+    {
+      "id": "lease_loss",
+      "family": "dhcp",
+      "wed_gate": false,
+      "move": "Repair",
+      "fixability": "conditional",
+      "expected_oracle": "OFFLINE",
+      "mac_injection": "Future isolated test adapter with an expired lease or isolated DHCP source; no command run in U1.",
+      "linux_injection": "Stop the namespace DHCP responder, expire the test lease, and remove only the client namespace address.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "renew_lease",
+          "args": {
+            "snapshot_id": "snapshot-synthetic",
+            "why": "lease_missing",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ],
+            "service_id": "service-synthetic"
+          }
+        }
+      ],
+      "undo": "Restore the exact address/route/resolver checkpoint or recreate the disposable namespace. Lease renewal is not exactly invertible; U1 plan remains blocked."
+    },
+    {
+      "id": "bad_default_route",
+      "family": "route",
+      "wed_gate": false,
+      "move": "Report",
+      "fixability": "report_only",
+      "expected_oracle": "OFFLINE",
+      "mac_injection": "Future isolated test adapter with a wrong gateway; never edit the workstation default route in U1.",
+      "linux_injection": "Replace only the client namespace default route with an unreachable gateway.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "report",
+          "args": {
+            "component": "upstream",
+            "physical_step": "check_cable",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ]
+          }
+        }
+      ],
+      "undo": "Restore namespace route from the harness checkpoint. No model-facing route-add/delete tool exists; a proven alternate may separately reroute."
+    },
+    {
+      "id": "interface_down",
+      "family": "link",
+      "wed_gate": false,
+      "move": "Repair",
+      "fixability": "conditional",
+      "expected_oracle": "OFFLINE",
+      "mac_injection": "Future spare adapter disabled by the operator; never down/up this workstation interface in U1.",
+      "linux_injection": "Bring only the client namespace veth down.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "cycle_interface",
+          "args": {
+            "snapshot_id": "snapshot-synthetic",
+            "why": "snapshot_drift",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ],
+            "service_id": "service-synthetic"
+          }
+        }
+      ],
+      "undo": "Restore the original link state. cycle_interface is admitted only for an initially-up snapshot; an already-down adapter needs human enablement."
+    },
+    {
+      "id": "captive_portal",
+      "family": "portal",
+      "wed_gate": false,
+      "move": "Report",
+      "fixability": "report_only",
+      "expected_oracle": "CAPTIVE",
+      "mac_injection": "Join a separately approved laboratory portal manually; never automate credentials or terms.",
+      "linux_injection": "Serve a portal body/redirect for both HTTP connectivity checks in an isolated router namespace.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "report",
+          "args": {
+            "component": "portal",
+            "physical_step": "open_portal",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ]
+          }
+        }
+      ],
+      "undo": "Remove the portal stub and recreate the clean namespace. Human portal completion is not an agent repair."
+    },
+    {
+      "id": "isp_down_saved_alternate",
+      "family": "upstream",
+      "wed_gate": false,
+      "move": "Reroute",
+      "fixability": "conditional",
+      "expected_oracle": "OFFLINE",
+      "mac_injection": "Unplug an isolated demo router while a previously verified Ethernet, phone USB or saved hotspot route exists.",
+      "linux_injection": "Disable the primary router namespace uplink while retaining a second isolated path with prior online evidence.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "reroute",
+          "args": {
+            "snapshot_id": "snapshot-synthetic",
+            "why": "alternate_route",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ],
+            "candidate_id": "candidate-synthetic"
+          }
+        }
+      ],
+      "undo": "Restore exact service order/route checkpoint. Wi-Fi selection and USB/hotspot prerequisites remain human-gated and unproven on macOS 26."
+    },
+    {
+      "id": "healthy",
+      "family": "control",
+      "wed_gate": false,
+      "move": "no-op",
+      "fixability": "no_change",
+      "expected_oracle": "ONLINE",
+      "mac_injection": "Do not inject anything; collect fresh evidence only.",
+      "linux_injection": "Healthy namespaces and endpoints; no injection steps.",
+      "actions": [],
+      "undo": "No mutation, no undo required."
+    },
+    {
+      "id": "site_only_outage",
+      "family": "application",
+      "wed_gate": false,
+      "move": "no-op/report",
+      "fixability": "report_only",
+      "expected_oracle": "ONLINE",
+      "mac_injection": "The owned demo cloud endpoint returns a 503 while independent oracle endpoints remain reachable.",
+      "linux_injection": "Return 503 from the isolated app endpoint only.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "report",
+          "args": {
+            "component": "site",
+            "physical_step": "wait",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ]
+          }
+        }
+      ],
+      "undo": "Restore only the app stub. Do not change laptop networking; generic connectivity is not proof the interrupted request resumed."
+    },
+    {
+      "id": "mtu_black_hole",
+      "family": "transport",
+      "wed_gate": false,
+      "move": "Report",
+      "fixability": "held_out_report_only",
+      "expected_oracle": "DEGRADED",
+      "mac_injection": "Held out: external isolated router drops large packets; no workstation MTU edits.",
+      "linux_injection": "Set the client veth MTU and use tc netem loss in a disposable namespace; packet-size-selective loss/PMTU suppression needs U2 implementation.",
+      "actions": [
+        {
+          "version": 1,
+          "tool": "report",
+          "args": {
+            "component": "upstream",
+            "physical_step": "check_cable",
+            "evidence_ids": [
+              "evidence-synthetic"
+            ]
+          }
+        }
+      ],
+      "undo": "Restore namespace MTU/qdisc checkpoint or recreate the namespace. No MTU change action is admitted."
+    },
+    {
+      "id": "misleading_status",
+      "family": "observation",
+      "wed_gate": false,
+      "move": "no-op",
+      "fixability": "no_change",
+      "expected_oracle": "ONLINE",
+      "mac_injection": "Replay macOS 26 not-associated text alongside a valid lease, route and successful independent oracle.",
+      "linux_injection": "Synthetic parser observation only; keep all namespace connectivity healthy.",
+      "actions": [],
+      "undo": "No mutation, no undo required."
+    }
+  ]
+}

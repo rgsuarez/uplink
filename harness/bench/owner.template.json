@@ -1,0 +1,15 @@
+{
+  "approved_by": "Kaylin",
+  "kind": "BENCH-REDUCED-OWNER-v1",
+  "manifest_sha256": null,
+  "model_sha256": null,
+  "package_sha256": null,
+  "profile_sha256": null,
+  "prompt_sha256": null,
+  "registration_nonce": null,
+  "released": false,
+  "released_at": null,
+  "run_id": null,
+  "server_birth": null,
+  "server_pid": null
+}

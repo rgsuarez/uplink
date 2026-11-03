@@ -1,0 +1,965 @@
+{
+  "version": 2,
+  "mutations": [
+    {
+      "task_id": "v2-train-inflection-000",
+      "function": "camelize",
+      "operator": "return_value",
+      "mutated_source_sha256": "4a8308fa07b48bfced8d1aba073a539fe833916f2cad3c39e64c5a2471e59bf6"
+    },
+    {
+      "task_id": "v2-train-inflection-001",
+      "function": "dasherize",
+      "operator": "return_value",
+      "mutated_source_sha256": "dc5923fbccf3eb5c10b7ea2e39b96a6b9865178f4f7e15a3a0209e6d361daeac"
+    },
+    {
+      "task_id": "v2-train-inflection-002",
+      "function": "humanize",
+      "operator": "string_method",
+      "mutated_source_sha256": "34c92729ce21572c49e6eedd3f47fbc5d753c1dca8dd683128b739afc8a338a7"
+    },
+    {
+      "task_id": "v2-train-inflection-003",
+      "function": "ordinal",
+      "operator": "builtin_swap",
+      "mutated_source_sha256": "654c6c7c57cbda96e2c2218e361445b4ac5fafe887fca2d95b22b751ed26289e"
+    },
+    {
+      "task_id": "v2-train-inflection-004",
+      "function": "ordinalize",
+      "operator": "return_value",
+      "mutated_source_sha256": "d5dad4729a27b5d1843b139b71d18be63776587dc42e2b51e8ecacfcefc30faa"
+    },
+    {
+      "task_id": "v2-train-inflection-005",
+      "function": "pluralize",
+      "operator": "string_method",
+      "mutated_source_sha256": "5186ea19b10b671befc665a7d9f246b5178d62eb22e1fadf68108734a70428fa"
+    },
+    {
+      "task_id": "v2-train-inflection-006",
+      "function": "tableize",
+      "operator": "return_value",
+      "mutated_source_sha256": "93c4f9e66ab215024adbaaa1bde0be461c98a49db346b949de9fc283a5ecce62"
+    },
+    {
+      "task_id": "v2-train-inflection-007",
+      "function": "titleize",
+      "operator": "return_value",
+      "mutated_source_sha256": "e9f032dc6c36bb3f6bf09b7919a386d2a4c403a8aa69f566f61cdd61460f00ed"
+    },
+    {
+      "task_id": "v2-train-inflection-008",
+      "function": "transliterate",
+      "operator": "return_value",
+      "mutated_source_sha256": "3c7458894eeac93fe182924af9b061dfa4badb3b5eba77e6cf9b01d3f0a037b8"
+    },
+    {
+      "task_id": "v2-train-inflection-009",
+      "function": "underscore",
+      "operator": "string_method",
+      "mutated_source_sha256": "e5d92a88d21d03b2bc5c3526e9ca985dc022b12449dffcf681b181145b51563e"
+    },
+    {
+      "task_id": "v2-train-inflection-010",
+      "function": "camelize",
+      "operator": "return_value",
+      "mutated_source_sha256": "71384d41d95c18aa86a9f6d0d9e3733a1839e36b7f2f102fae675be58b20a0ea"
+    },
+    {
+      "task_id": "v2-train-inflection-011",
+      "function": "dasherize",
+      "operator": "return_value",
+      "mutated_source_sha256": "ed9b3223847a3710d4e40af356735c8e62f63e9f1b0fbed6804cb83703bb4873"
+    },
+    {
+      "task_id": "v2-train-inflection-012",
+      "function": "ordinal",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "9dde9d73cc2fe2fd3290e6b05335989e0ece0d9e25e097b317ac25760f1cc44e"
+    },
+    {
+      "task_id": "v2-train-inflection-013",
+      "function": "ordinalize",
+      "operator": "return_value",
+      "mutated_source_sha256": "86c4fb2638687124671caaf010cf3554b61d823128a9f6e2e75222771355b122"
+    },
+    {
+      "task_id": "v2-train-inflection-014",
+      "function": "parameterize",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "efc4c7035d03da5872c18bdfef56fadfb5ef7362c6d861b13cac3752d6be5546"
+    },
+    {
+      "task_id": "v2-train-inflection-015",
+      "function": "pluralize",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "970e7e5cbb28804d33b3724cb129e3835fa58fe9313eb2e349beb90375dbe446"
+    },
+    {
+      "task_id": "v2-train-inflection-016",
+      "function": "singularize",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "1ebb0c6fe8260cad240c1b05797c1f8b4576f391c02d4ae3d413d2f8857a9cae"
+    },
+    {
+      "task_id": "v2-train-inflection-017",
+      "function": "tableize",
+      "operator": "return_value",
+      "mutated_source_sha256": "37249c9774c8d3d0c5d80f98ea6c9aed244aa0fa51a4cd90e70457d892763d29"
+    },
+    {
+      "task_id": "v2-train-inflection-018",
+      "function": "titleize",
+      "operator": "return_value",
+      "mutated_source_sha256": "72e31d8c8e683674be6b3f72348678e52ad551383b007c853957272cc19cd3a9"
+    },
+    {
+      "task_id": "v2-train-inflection-019",
+      "function": "transliterate",
+      "operator": "return_value",
+      "mutated_source_sha256": "d08be2b7239ff750fc982844644cb7f834b1a838fced50fcc36f1a6054660b9b"
+    },
+    {
+      "task_id": "v2-train-inflection-020",
+      "function": "underscore",
+      "operator": "return_value",
+      "mutated_source_sha256": "d2ff2afcab494d4d3d59e0a96aab8b2be5c3420a1cff95d95a5b7efb53cc9ea5"
+    },
+    {
+      "task_id": "v2-train-inflection-021",
+      "function": "camelize",
+      "operator": "return_value",
+      "mutated_source_sha256": "ad276be5bda0eb81fd17833c2775083c25647f8bb976642504188b9cb37b00de"
+    },
+    {
+      "task_id": "v2-train-inflection-022",
+      "function": "dasherize",
+      "operator": "return_value",
+      "mutated_source_sha256": "4ac45497fc7535aeb9ad6438aa69a82837b31eb7a7eb77b03dc96471d3f07c4a"
+    },
+    {
+      "task_id": "v2-train-inflection-023",
+      "function": "humanize",
+      "operator": "integer_boundary",
+      "mutated_source_sha256": "0218cba97d5b8523a6720dfc03f007b7ec1c796d21559c772e086aedd428d003"
+    },
+    {
+      "task_id": "v2-train-inflection-024",
+      "function": "ordinal",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "e66f368aaf260c43773047b0f952eca10524f83ef4a59084ad70c5d211800c37"
+    },
+    {
+      "task_id": "v2-train-inflection-025",
+      "function": "ordinalize",
+      "operator": "return_value",
+      "mutated_source_sha256": "2d62bcdbbc2c6a29368e4329014ccb4db293f5663bd8afca765612df5fe584a8"
+    },
+    {
+      "task_id": "v2-train-inflection-026",
+      "function": "parameterize",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "79c15a8d19a46df4e1c4f5f1d0da5d0ccdc5718c3a2d35f5fcc65e70d8fe3ee3"
+    },
+    {
+      "task_id": "v2-train-inflection-027",
+      "function": "pluralize",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "6db7ed5714094661270bf3289af81bcec2800ae666418a638c98519d91cc105b"
+    },
+    {
+      "task_id": "v2-train-inflection-028",
+      "function": "singularize",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "2872c4ae87c543f7503a83fb07dc801762c9e8bce41fd10bf658e623971b424f"
+    },
+    {
+      "task_id": "v2-train-inflection-029",
+      "function": "tableize",
+      "operator": "return_value",
+      "mutated_source_sha256": "e62d77611d572267ea26e5d0272f84b99c8eb2a8bcd50455d341cf633d946c17"
+    },
+    {
+      "task_id": "v2-train-boltons-000",
+      "function": "Bits.__and__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "e26b18c02555b6f41fbe929e7d1976a1d847e547c59a0ef4e1fa59736b7b0480"
+    },
+    {
+      "task_id": "v2-train-boltons-001",
+      "function": "Bits.__eq__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "e55a584ff22ac37c3b4a1e264cf308935a507d238774249eb2e95a9388522ffa"
+    },
+    {
+      "task_id": "v2-train-boltons-002",
+      "function": "Bits.__getitem__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "ca0cead8b44a66476fe6b6e6ed69c6b00e8e21db1dcfcc899193cfe02b7baf22"
+    },
+    {
+      "task_id": "v2-train-boltons-003",
+      "function": "Bits.__len__",
+      "operator": "return_value",
+      "mutated_source_sha256": "a577a5c9d11ed5e6341e1f2a5575b80129af33b7e99e56b22047892916e1f5a0"
+    },
+    {
+      "task_id": "v2-train-boltons-004",
+      "function": "Bits.__lshift__",
+      "operator": "return_value",
+      "mutated_source_sha256": "9dd271f7c7f15a36471aef76f29e0b57937cccf5dd79a3ff6729734fd43ed3cd"
+    },
+    {
+      "task_id": "v2-train-boltons-005",
+      "function": "Bits.__or__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "d4c4d692aab992b10c1872938bb853c218a758844c3c567529a9832ea185a6aa"
+    },
+    {
+      "task_id": "v2-train-boltons-006",
+      "function": "Bits.__rshift__",
+      "operator": "return_value",
+      "mutated_source_sha256": "ea2c4859585eb66e1b0592e117933e0b9c1b560fd7bd41679dee465706802378"
+    },
+    {
+      "task_id": "v2-train-boltons-007",
+      "function": "Bits.as_bin",
+      "operator": "return_value",
+      "mutated_source_sha256": "1a02b3db60d9058e0dfbaa7723e0333ba45d981af6342c0e74f3ad993d300f74"
+    },
+    {
+      "task_id": "v2-train-boltons-008",
+      "function": "Bits.as_bytes",
+      "operator": "return_value",
+      "mutated_source_sha256": "3439e1742ba1e1cccd2bd0d988843aa1a1e8f129afc8dfdc45b237cf5594cb52"
+    },
+    {
+      "task_id": "v2-train-boltons-009",
+      "function": "Bits.as_hex",
+      "operator": "return_value",
+      "mutated_source_sha256": "bb0f437eabbcc3afcc1e6d65f58a2846524011f5044be1f450cf6f0eb8d4a85f"
+    },
+    {
+      "task_id": "v2-train-boltons-010",
+      "function": "Bits.as_int",
+      "operator": "return_value",
+      "mutated_source_sha256": "f1791f02b782a3d7852f802702e4ca59efebda3d24c0b045082c0f7bb86c6136"
+    },
+    {
+      "task_id": "v2-train-boltons-011",
+      "function": "Bits.as_list",
+      "operator": "return_value",
+      "mutated_source_sha256": "aa53ffd0e52b92aebd921d3996bb90c4c381bab1a4301e83c1bb30f2363e4521"
+    },
+    {
+      "task_id": "v2-train-boltons-012",
+      "function": "Bits.from_bin",
+      "operator": "return_value",
+      "mutated_source_sha256": "d45307cddd18bdf329b515909d519da22c10ddc9578cb3e733a552c20805d891"
+    },
+    {
+      "task_id": "v2-train-boltons-013",
+      "function": "Bits.from_bytes",
+      "operator": "return_value",
+      "mutated_source_sha256": "cd1a664a73c19c44fd1638257113ba74d5a09eed13a439859012b7a94e38ae01"
+    },
+    {
+      "task_id": "v2-train-boltons-014",
+      "function": "Bits.from_hex",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "52028a80122804af47d5e460f9de677d4991ba38f871fcb4252d717b438a6391"
+    },
+    {
+      "task_id": "v2-train-boltons-015",
+      "function": "Bits.from_int",
+      "operator": "return_value",
+      "mutated_source_sha256": "e3532c4e4a77be12950cfee7228bc45d1128f24ed6d33723de012c678936f710"
+    },
+    {
+      "task_id": "v2-train-boltons-016",
+      "function": "Bits.from_list",
+      "operator": "return_value",
+      "mutated_source_sha256": "8b3eb3f6707c9d5e961aad12d15d6c718c6233e34890d86b269b780f01710536"
+    },
+    {
+      "task_id": "v2-train-boltons-017",
+      "function": "ceil",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "6b7fcb281c86f83bd3ba612349cf242cd891361ac773d4e571e10468e8f77469"
+    },
+    {
+      "task_id": "v2-train-boltons-018",
+      "function": "floor",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "f0c74ce59ff262fa40eddccce903d3379e904716a3cb2c4514e6f2f50a4ae0e5"
+    },
+    {
+      "task_id": "v2-train-boltons-019",
+      "function": "Bits.__and__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "aefa2dd792277d1816d0b8ac453c743d1b9471d699d44e545defc3d4c01ee46d"
+    },
+    {
+      "task_id": "v2-train-boltons-020",
+      "function": "Bits.__eq__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "7d8ad3f143f514ba548a8769a44141b42d28a004fd08d635e909086eff03ccb5"
+    },
+    {
+      "task_id": "v2-train-boltons-021",
+      "function": "Bits.__getitem__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "29a017ac5d1160933acd9730ffb35f747030686adefb3b9ba322d256111b4f57"
+    },
+    {
+      "task_id": "v2-train-boltons-022",
+      "function": "Bits.__len__",
+      "operator": "return_value",
+      "mutated_source_sha256": "29c34a9359d1aad5cfc25712d051e5082c4810fdca6217e0fd584e7abcd7e6cb"
+    },
+    {
+      "task_id": "v2-train-boltons-023",
+      "function": "Bits.__lshift__",
+      "operator": "return_value",
+      "mutated_source_sha256": "d70edd7b99871a7ecd73408d455be865cc66bc978578ef9a174682dc9e58d6ae"
+    },
+    {
+      "task_id": "v2-train-boltons-024",
+      "function": "Bits.__or__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "49bef0ef04df5bf89c4a80e65176ec5a394b13dda5f146d39f7c5b7829200c7b"
+    },
+    {
+      "task_id": "v2-train-boltons-025",
+      "function": "Bits.__rshift__",
+      "operator": "return_value",
+      "mutated_source_sha256": "3105f5c10a1ef189e4ae5e50649c0cac2915b2b305d367e18723deacd9b76db9"
+    },
+    {
+      "task_id": "v2-train-boltons-026",
+      "function": "Bits.as_bin",
+      "operator": "return_value",
+      "mutated_source_sha256": "496fd225fef32c9e9054578bfdbb2d52e78c0156b5ffaed145a8817a0036ed04"
+    },
+    {
+      "task_id": "v2-train-boltons-027",
+      "function": "Bits.as_bytes",
+      "operator": "return_value",
+      "mutated_source_sha256": "8b607321485c7f84530a26b9d3dfa5890689b34ce8c826cc0c156990d361e0f2"
+    },
+    {
+      "task_id": "v2-train-boltons-028",
+      "function": "Bits.as_hex",
+      "operator": "return_value",
+      "mutated_source_sha256": "b574aec6bf7c00fac9d0fdc6399af996abed064383ec67b4194d5c04bfeddbf4"
+    },
+    {
+      "task_id": "v2-train-boltons-029",
+      "function": "Bits.as_int",
+      "operator": "return_value",
+      "mutated_source_sha256": "5db78ac26370fc0e87dfe0efc1b4ef4274ae3d5eb39312593ab7276bd5560eb9"
+    },
+    {
+      "task_id": "v2-train-boltons-030",
+      "function": "Bits.as_list",
+      "operator": "return_value",
+      "mutated_source_sha256": "3e5ec6d32564fbdb1d30254a05f7fbedbfcc703dcc9d2ea6a56f6fa0efce5c0e"
+    },
+    {
+      "task_id": "v2-train-boltons-031",
+      "function": "Bits.from_bin",
+      "operator": "return_value",
+      "mutated_source_sha256": "ad63f0dced2ff76f5ce885ae50f3c68a238cc7c44cec7fde8c954a3b7e401d88"
+    },
+    {
+      "task_id": "v2-train-boltons-032",
+      "function": "Bits.from_bytes",
+      "operator": "return_value",
+      "mutated_source_sha256": "318bf48558e36b6526e3c1840f95cd2e610b8c2d28911195e4f90f00a00847d0"
+    },
+    {
+      "task_id": "v2-train-boltons-033",
+      "function": "Bits.from_int",
+      "operator": "return_value",
+      "mutated_source_sha256": "9d6a5fd19982b6c4e2dfda2dd56a9a667778f163de1f3a062f116f495dd19833"
+    },
+    {
+      "task_id": "v2-train-boltons-034",
+      "function": "Bits.from_list",
+      "operator": "return_value",
+      "mutated_source_sha256": "b83616e537cff58c60f56294addd23f33cff56397e3a9f306b424900784d487c"
+    },
+    {
+      "task_id": "v2-train-boltons-035",
+      "function": "ceil",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "a06b1fb95e15e4ade60cba3913310cb3ea5d988b50daa12bc3a8c7ee7493bf0b"
+    },
+    {
+      "task_id": "v2-train-boltons-036",
+      "function": "floor",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "418421c0b1d06df279f306cf5d25b1b45d4984b67a7e217bb26afededa4c3b5b"
+    },
+    {
+      "task_id": "v2-train-boltons-037",
+      "function": "Bits.__and__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "a3ceba94caebc508ab7b9cdc9ab46158bd1b9f71245a8f76390f6ed6ebc88476"
+    },
+    {
+      "task_id": "v2-train-boltons-038",
+      "function": "Bits.__eq__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "dcda3ec06a32ada8bd5fd357b29467d2c0bb0a4a6f0428aa50d0702d78a0d2d8"
+    },
+    {
+      "task_id": "v2-train-boltons-039",
+      "function": "Bits.__getitem__",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "22deef4a50537f11c823bccf72429fb68d2edc00e314bedea0b48c9969211676"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-000",
+      "function": "alphanumcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "bf4d6f90e4e6f36cf3f548e3f8b1e6319cea554f65cffaa16dbb3a017d7dbc74"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-001",
+      "function": "backslashcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "ff273aec4956a83d4bd703cfc1ea7a2b99b9c9f15e441081232be93f86338a53"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-002",
+      "function": "capitalcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "da25711200f52cc0325534a5cf6b8f89ff0f46c69fb1674b7d32bdf05d9b09ca"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-003",
+      "function": "constcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "a79d8a4b9d28351f52aea775f77ef52dfb650f81384b1e67283cfdd255df9d85"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-004",
+      "function": "dotcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "ac38442c8725397276b1a87312d3085792fe5d74f2f8474f5ac5a3ed403573c8"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-005",
+      "function": "lowercase",
+      "operator": "string_method",
+      "mutated_source_sha256": "c03c3000195c20d552b04fa07635a80147f73e35be63228b56a49de84b10ce21"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-006",
+      "function": "pascalcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "975cc30db51efe802cf84dbe6f171697e4097462d3a7fd739e4bab6babae97c3"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-007",
+      "function": "pathcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "272380bfac9083640f59477236986c7404232ccc53ba233aa18d9425fa348040"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-008",
+      "function": "sentencecase",
+      "operator": "return_value",
+      "mutated_source_sha256": "1447b88e8cc138cd49cef82b93609f074da1b6df06df0d4ce516b9ebcd85d92b"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-009",
+      "function": "snakecase",
+      "operator": "return_value",
+      "mutated_source_sha256": "af8b502fb046e32ddd35c258480213b32828b0e418f78befe88d7e60503dfc3e"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-010",
+      "function": "spinalcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "756e761eae1ceb47de1306a07a962a81f6077ed8e6e1e669ef440c102488e071"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-011",
+      "function": "titlecase",
+      "operator": "return_value",
+      "mutated_source_sha256": "db2ec8d30b8be273e4fe2f374a6f937745ddd526caeb199c4ff2d034517797a8"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-012",
+      "function": "trimcase",
+      "operator": "string_method",
+      "mutated_source_sha256": "eaa791349dbd783c96c9de8927f026edd500a09f92e9ece93f2261da46af809b"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-013",
+      "function": "uppercase",
+      "operator": "string_method",
+      "mutated_source_sha256": "5c075d06c01039680105ddd99e1a35f82fa6a46aeca6c36c7068b57b8b99c021"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-014",
+      "function": "alphanumcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "1585dc158c7a658590522a08367e8cb3f30c48d8d6bb44cfd7bf906c34ce0982"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-015",
+      "function": "backslashcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "0508612ff3f46f126ae1b3e39e001db155966c5bf3ecf2adef5a3b06b844d610"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-016",
+      "function": "capitalcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "6b0f56c005e5c6198a56e7364fa5d95907f8bf36662896cf891e20954e11e2f1"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-017",
+      "function": "constcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "816fb8e32ae0b04f5c523fce93fba05400c8c9b6b785e455aa3686af327a7140"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-018",
+      "function": "dotcase",
+      "operator": "return_value",
+      "mutated_source_sha256": "0f3dcc52932522dc1a5bc93a5edf79e21675c651162d95ded51b51108da21552"
+    },
+    {
+      "task_id": "v2-heldout-stringcase-019",
+      "function": "lowercase",
+      "operator": "return_value",
+      "mutated_source_sha256": "8f1aadf7b70923894478d353a9ca03beb633427d3f4de9877eae89a2e6ab923f"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-000",
+      "function": "between",
+      "operator": "return_value",
+      "mutated_source_sha256": "da481cbd9665836c0f44f5b1c6f4f4442f0f3819d80aca27022579b1516fb2fd"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-001",
+      "function": "ceil_div",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "63e5fb3a3014f5be467c11263e8bcbde8bca9894a99fa3910241caa67097453d"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-002",
+      "function": "discount",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "76fd8b96c39749330a9bc93774b1e91c9692f0071ce157a91acfe1c77f141371"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-003",
+      "function": "distance",
+      "operator": "builtin_swap",
+      "mutated_source_sha256": "48386a6c18a7d272551627ec3c159738eaa53ca65ea7da902ca81f71a2b6ebf6"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-004",
+      "function": "inclusive",
+      "operator": "return_value",
+      "mutated_source_sha256": "37fbd738370b53bc18db2352eb4c7469a7b48e0f67d2fe47255394c28205958b"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-005",
+      "function": "midpoint",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "3899483c77a2ddf6efa5daa1d5b93d9c24da16e8b81b889c3d4fed8c7f3cbad3"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-006",
+      "function": "odd",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "78d51f2c4bdb505dad6e91c3a2a6f471c4f8ba7e14c4532853cd3958c3a92095"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-007",
+      "function": "positive",
+      "operator": "builtin_swap",
+      "mutated_source_sha256": "bb73e8ab0bc08c7332efc08ecf3781eac31aae6616ea2643e53ff98d53f96eed"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-008",
+      "function": "between",
+      "operator": "return_value",
+      "mutated_source_sha256": "e5337557a765f7999fd711f36d1d9dfb33741d97ed3aad26e25672f978ed2c6d"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-009",
+      "function": "ceil_div",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "af12b058f48ceb58ae7b83330731c127c7711b6860799c4b6bda9d0d3bf16638"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-010",
+      "function": "discount",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "bebc5e965ce3870eb1634000a08e75520db7ad18642d726aa1a06e3adb1ab4dd"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-011",
+      "function": "distance",
+      "operator": "return_value",
+      "mutated_source_sha256": "445cb60aa5c22ee764e0ae27b31971207a2f071c38c3cd60a7e10fcc76f12a3b"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-012",
+      "function": "inclusive",
+      "operator": "return_value",
+      "mutated_source_sha256": "4388c09fbbffa9fce364d15e890b8749733fba776d8b7164daaa34bd1856329f"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-013",
+      "function": "midpoint",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "1e33e665a60559c65725319a5d67332a927b30546e81de0e4b1ea4a503442ebc"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-014",
+      "function": "positive",
+      "operator": "return_value",
+      "mutated_source_sha256": "a57bf2a7f1b249d50112d6f6e7a7612e6167740437883519ce5f7bd4fc2e3122"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-015",
+      "function": "between",
+      "operator": "return_value",
+      "mutated_source_sha256": "4e5ab919ddf8c7a9d154f5f1e19e232a77d29d70e1a7278bf126100b42a5a2e9"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-016",
+      "function": "ceil_div",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "7fa389f6dbb89436989bee697ca892bfab850c2ad3dbee41fbc519bf78206877"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-017",
+      "function": "discount",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "e8e2a2cdedb23bd290556990dfb848f215a0cd7496b7aabf4056144358f2edf4"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-018",
+      "function": "distance",
+      "operator": "return_value",
+      "mutated_source_sha256": "a9339b274c2ae8d87fae915eb940b57a3b5a123597b258a0e42e58e027641127"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-019",
+      "function": "inclusive",
+      "operator": "return_value",
+      "mutated_source_sha256": "28407b61d9d3d65030bec716cd965ff0c138f77dfbd9ec6020067e430799a6e2"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-020",
+      "function": "midpoint",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "8a2b8fe73e734a4fa9d66c95615721390731af59639aa5abe6d495e7c69d979b"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-021",
+      "function": "odd",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "a902220355321a460664edd9eebe39b374fc7f36ad26a548136da9459d27d478"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-022",
+      "function": "positive",
+      "operator": "return_value",
+      "mutated_source_sha256": "a22c88efa2bd0e1e69e70626726faa2b5584e6801dcf542a80b664e941aa55b0"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-023",
+      "function": "between",
+      "operator": "return_value",
+      "mutated_source_sha256": "8bd17a3f34f31fecf962959818eca05fee62cdea6610651eba0af78c52ee6339"
+    },
+    {
+      "task_id": "v2-train-numeric-v2-024",
+      "function": "ceil_div",
+      "operator": "return_value",
+      "mutated_source_sha256": "d89df237796e23a59f1f23309ea4a273b002d96a3e0e3b6dfbfa20380dd69bc2"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-000",
+      "function": "dot",
+      "operator": "return_value",
+      "mutated_source_sha256": "a7210c220b34f0be155a34ddd20217024425b5dbf20ad2c081240fb484e6c6cc"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-001",
+      "function": "evens",
+      "operator": "return_value",
+      "mutated_source_sha256": "5fa2d798b397b141b8d8508aaf11772af8e53c35f473fb4b322aa3c3bb347713"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-002",
+      "function": "occurrences",
+      "operator": "return_value",
+      "mutated_source_sha256": "e4112ef2b54cb976ba35459d8ee8067dfe9cf9a1b4b9eb193af75edd2fa1e77f"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-003",
+      "function": "prefix",
+      "operator": "return_value",
+      "mutated_source_sha256": "97a10fed0932d1eedb06dffcdf1c5b0676a09ec642a14368e42a49e3b4af6863"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-004",
+      "function": "rotate",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "d765f52603d4c8386007525809cbd868ff8bd1b192971b566ef4bfc2d52a08cd"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-005",
+      "function": "spread",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "a0d4af5dae64b60aff1ba47852399bb6228783f74e4239a02528fa13caaab1a4"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-006",
+      "function": "tail",
+      "operator": "return_value",
+      "mutated_source_sha256": "bb243f39846da993fcebe37f7acbb09196c38bc2106fa77fa3b9cdc9095e022f"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-007",
+      "function": "without",
+      "operator": "return_value",
+      "mutated_source_sha256": "2f1a66ce6807085be7929bbcc68a116f5ff41921afbb676bdece6de33fa01994"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-008",
+      "function": "dot",
+      "operator": "return_value",
+      "mutated_source_sha256": "256d0b99b934ae74fb944868cfb9e92c6f0e1cb88821f745644f9a93cf144932"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-009",
+      "function": "evens",
+      "operator": "return_value",
+      "mutated_source_sha256": "c7e3dacb1f89e7fea5d6150f9e69a9d5fdafb11306e736d2205e61f7bf5d2f31"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-010",
+      "function": "occurrences",
+      "operator": "return_value",
+      "mutated_source_sha256": "f30becad7e855bb9c48457a3931d5aab4bd01cb61bae4a05b10dc960d65f1c92"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-011",
+      "function": "prefix",
+      "operator": "return_value",
+      "mutated_source_sha256": "876d3c2e085e0acfde5f87cfe0aefc3075bf9500330b55fcb44d0d6fabd972f3"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-012",
+      "function": "rotate",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "feae9711d6c97b5ac060b858474adf124e269138d426f7ed0d40e42f6425faba"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-013",
+      "function": "spread",
+      "operator": "arithmetic_operator",
+      "mutated_source_sha256": "9a9913580a9ba691ac3d43451c515aace8fc59b07ea23674cbff3b79345424fa"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-014",
+      "function": "tail",
+      "operator": "return_value",
+      "mutated_source_sha256": "c5ebb1562d59c7bf023765adaf8968bc5211f650aae0997087d2deb1ab308666"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-015",
+      "function": "without",
+      "operator": "return_value",
+      "mutated_source_sha256": "b8b631e69bd4d6acc05aa1babfd2b1c6f09012ee1036e176ba2284a0f2b1346d"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-016",
+      "function": "dot",
+      "operator": "return_value",
+      "mutated_source_sha256": "8c134c90d7131c3fb43b748cb39c6ec489008f4003e9acd3f2249bfaae9f65f8"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-017",
+      "function": "evens",
+      "operator": "return_value",
+      "mutated_source_sha256": "76ede0d242bf80e3c7503ac39826c78c1f378acc0ccba282247b5125363fbf73"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-018",
+      "function": "occurrences",
+      "operator": "return_value",
+      "mutated_source_sha256": "134f8d8a48d68597411cc06ee5709bee947f69b80056ab83bdedbc2f776807e8"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-019",
+      "function": "prefix",
+      "operator": "return_value",
+      "mutated_source_sha256": "76c370addcd0e45304654463f311536534b5eedc07db9ed4be50928552ffb6ce"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-020",
+      "function": "rotate",
+      "operator": "return_value",
+      "mutated_source_sha256": "0181df24685f223bd40e03625bde39aeb1ae8e832d622ee67e5d1a1993eaf09b"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-021",
+      "function": "spread",
+      "operator": "return_value",
+      "mutated_source_sha256": "177e625f585802ebc8ad6aeb734fc81add1f947203417961c0c1fb64dd3de2eb"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-022",
+      "function": "tail",
+      "operator": "return_value",
+      "mutated_source_sha256": "37553b652687ca3a165a45e40cb14f19ca0a320339f66ecd794aee960a9a2f1e"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-023",
+      "function": "without",
+      "operator": "return_value",
+      "mutated_source_sha256": "9074f487fe83d37791c795c6bc5f9e91ff7249ce2c9e9ba43f82281d8a7a49dd"
+    },
+    {
+      "task_id": "v2-train-sequence-v2-024",
+      "function": "dot",
+      "operator": "return_value",
+      "mutated_source_sha256": "8d6dce659dbc6091880a6f564b652629d0d2c7ab10b10010a1c44a342cb12f10"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-000",
+      "function": "contains_word",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "0c554af63b6f6e7fb2f88a830146126fd1833aefc74d79bd826960947b534e70"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-001",
+      "function": "extension",
+      "operator": "return_value",
+      "mutated_source_sha256": "4884f23b76d93618524ed90d693e270fd7796af2e775608b0a852dfd1eefb64f"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-002",
+      "function": "initials",
+      "operator": "return_value",
+      "mutated_source_sha256": "de20c9601987cf34d64025fd4cd94a46402d5f88849ad3ee827254dad3ce23f2"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-003",
+      "function": "normalize",
+      "operator": "return_value",
+      "mutated_source_sha256": "af24c59b6da5957fc213b0e3bd8d1f03d03072c30cc5966c72ff815f461721b6"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-004",
+      "function": "unquote",
+      "operator": "return_value",
+      "mutated_source_sha256": "030f8ded162a323ddba419d3be1cdae54fe729dd928b825c8919dcec5b357a03"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-005",
+      "function": "contains_word",
+      "operator": "comparison_boundary",
+      "mutated_source_sha256": "98c76c0406e7eb0d44bd42d804f147f16abefc87fcecd587e3ef9610537bf83a"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-006",
+      "function": "extension",
+      "operator": "return_value",
+      "mutated_source_sha256": "16c805bbf31efffc96f8c0f300d81d72f1935f1711967dde5cf2536de94f1c9c"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-007",
+      "function": "initials",
+      "operator": "return_value",
+      "mutated_source_sha256": "3d62984430373af3c725b71035396bcb5062ea4ae88729c792c77a100492114d"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-008",
+      "function": "normalize",
+      "operator": "return_value",
+      "mutated_source_sha256": "25da71e13a86eae1e4565673a308ef13ceb6c7c76b419cfad282dc29dab3f179"
+    },
+    {
+      "task_id": "v2-heldout-text-v2-009",
+      "function": "unquote",
+      "operator": "return_value",
+      "mutated_source_sha256": "950db8d26210f731c2c503643f8a3f26e767f66faa3092e1de83c0e4d6dc80da"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-000",
+      "function": "active_names",
+      "operator": "return_value",
+      "mutated_source_sha256": "5d6a45f1c2d95e4ad54588ca67389f87da7bb1442ca5547ec65e83ea32bdde44"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-001",
+      "function": "counts",
+      "operator": "return_value",
+      "mutated_source_sha256": "90a3d475dcdb6c395b7ff756bd2847f3ae1394c8c1afdb544c3a6096f47b4736"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-002",
+      "function": "has_all",
+      "operator": "return_value",
+      "mutated_source_sha256": "7c8df56f784c7527abdc07b627bb6fe1d7fd5c66e881614b6d62d1f350040137"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-003",
+      "function": "lookup",
+      "operator": "return_value",
+      "mutated_source_sha256": "2ff0e2a6e691be52eb76796918d27fd633b5b8ab9ecf9848c93fed169adf4865"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-004",
+      "function": "total",
+      "operator": "return_value",
+      "mutated_source_sha256": "cd3e1b718bfa21acd28cb36eea73bdc40e2307304b518458d2b1b822cbc74049"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-005",
+      "function": "active_names",
+      "operator": "return_value",
+      "mutated_source_sha256": "f21332da7f752499a03657d309c29b28bfb2c3d0e30a8e228018a4570781095d"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-006",
+      "function": "counts",
+      "operator": "return_value",
+      "mutated_source_sha256": "b9fd1bfea5258fed8eb1edb00f4980a825fed27c6c42e05d7de75e4e667d494e"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-007",
+      "function": "has_all",
+      "operator": "return_value",
+      "mutated_source_sha256": "765bba273bbc17c600c2f88c7a237d1618b8dc8e87f355abf059ab475facf707"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-008",
+      "function": "lookup",
+      "operator": "return_value",
+      "mutated_source_sha256": "044920698305b5e9ece0ea4991cce96f87970aba1e3e335f0e226a07ef058577"
+    },
+    {
+      "task_id": "v2-heldout-records-v2-009",
+      "function": "total",
+      "operator": "return_value",
+      "mutated_source_sha256": "4c8ad21dd1a9a78ce4cdf1bd781b8d81ba87bde9f9fd3bdf0846b37d5c92fc6e"
+    }
+  ]
+}

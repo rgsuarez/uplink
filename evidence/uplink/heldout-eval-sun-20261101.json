@@ -1,0 +1,1654 @@
+{
+  "version": 1,
+  "evidence_kind": "MODEL_IN_LOOP_SIM_HELDOUT_COMPOUND",
+  "label": "sim held-out compound-fault robustness",
+  "freeze_commit": "cc89bedb3652579dc70c82bfd76725919cc94f8c",
+  "manifest_sha256": "13e77a4f6ffb32c03bdd43cb44673b75d64a74eb19d28c6ead6ddab17988d649",
+  "raw_result_sha256": "1be9eefacc9cec01866a9ab3683e9bc322fa7d21d696d9fa7240bda89ec06f25",
+  "provider_billing_sha256": "8dbc69593342c9fcb3b1e64c016c5384aafcd916cb656f8a00a19a20df4c16a1",
+  "started_at": "2026-11-01T23:07:14.306218+00:00",
+  "finished_at": "2026-11-01T23:11:14.439468+00:00",
+  "function_elapsed_s": 240.133,
+  "summary": {
+    "adapter_enabled": false,
+    "attempted_cases": 20,
+    "call_log": [
+      {
+        "action": {
+          "evidence_id": "dns-1",
+          "reason": "snapshot_repair",
+          "snapshot_id": "94d4fb97d2b490265ff1f67f875ed4e74b8fef86fe88d48542a4012cd883c247",
+          "tool": "restore_dns",
+          "version": 1
+        },
+        "case_id": "H-F01-A",
+        "duration_ms": 5663.226,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"94d4fb97d2b490265ff1f67f875ed4e74b8fef86fe88d48542a4012cd883c247\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "associated_with_snapshot",
+          "reason": "no_safe_action",
+          "snapshot_id": "94d4fb97d2b490265ff1f67f875ed4e74b8fef86fe88d48542a4012cd883c247",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F01-A",
+        "duration_ms": 5602.379,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\":\"94d4fb97d2b490265ff1f67f875ed4e74b8fef86fe88d48542a4012cd883c247\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "mtu_probe_ok",
+          "reason": "snapshot_repair",
+          "snapshot_id": "05a5561d8dfbc4b36328505097c9de670d30d5c9e3dc5c1fa3f5b6ef2db34981",
+          "tool": "restore_mtu",
+          "version": 1
+        },
+        "case_id": "H-F01-B",
+        "duration_ms": 5558.04,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_mtu\",\"snapshot_id\":\"05a5561d8dfbc4b36328505097c9de670d30d5c9e3dc5c1fa3f5b6ef2db34981\",\"evidence_id\":\"mtu_probe_ok\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "no_safe_action",
+          "snapshot_id": "05a5561d8dfbc4b36328505097c9de670d30d5c9e3dc5c1fa3f5b6ef2db34981",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F01-B",
+        "duration_ms": 5855.81,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"05a5561d8dfbc4b36328505097c9de670d30d5c9e3dc5c1fa3f5b6ef2db34981\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "proxy_matches_snapshot",
+          "reason": "snapshot_repair",
+          "snapshot_id": "f98f19b2bbcb0ab28b4e094daa9e36c8045872dd037bab948fea3c2028b896b1",
+          "tool": "restore_proxy",
+          "version": 1
+        },
+        "case_id": "H-F02-A",
+        "duration_ms": 5035.287,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_proxy\",\"snapshot_id\":\"f98f19b2bbcb0ab28b4e094daa9e36c8045872dd037bab948fea3c2028b896b1\",\"evidence_id\":\"proxy_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "no_safe_action",
+          "snapshot_id": "f98f19b2bbcb0ab28b4e094daa9e36c8045872dd037bab948fea3c2028b896b1",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F02-A",
+        "duration_ms": 5303.308,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\":\"f98f19b2bbcb0ab28b4e094daa9e36c8045872dd037bab948fea3c2028b896b1\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "dns-2",
+          "reason": "snapshot_repair",
+          "snapshot_id": "212aa4b27e489607ad070c687c0e3429bdb948d0c54494751c83630ee34cfb1e",
+          "tool": "restore_dns",
+          "version": 1
+        },
+        "case_id": "H-F02-B",
+        "duration_ms": 5071.107,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"212aa4b27e489607ad070c687c0e3429bdb948d0c54494751c83630ee34cfb1e\",\"evidence_id\":\"dns-2\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "associated_with_snapshot",
+          "reason": "no_safe_action",
+          "snapshot_id": "212aa4b27e489607ad070c687c0e3429bdb948d0c54494751c83630ee34cfb1e",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F02-B",
+        "duration_ms": 5676.765,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"212aa4b27e489607ad070c687c0e3429bdb948d0c54494751c83630ee34cfb1e\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "ipv4_linklocal",
+          "reason": "snapshot_repair",
+          "snapshot_id": "df10f862ac8eba40c87f474962386f143cb3406463cbc28cf78fef2030ff30e1",
+          "tool": "restore_ipv4",
+          "version": 1
+        },
+        "case_id": "H-F03-A",
+        "duration_ms": 5476.474,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_ipv4\",\"snapshot_id\":\"df10f862ac8eba40c87f474962386f143cb3406463cbc28cf78fef2030ff30e1\",\"evidence_id\":\"ipv4_linklocal\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "dns-1",
+          "reason": "snapshot_repair",
+          "snapshot_id": "df10f862ac8eba40c87f474962386f143cb3406463cbc28cf78fef2030ff30e1",
+          "tool": "restore_dns",
+          "version": 1
+        },
+        "case_id": "H-F03-A",
+        "duration_ms": 5373.501,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"df10f862ac8eba40c87f474962386f143cb3406463cbc28cf78fef2030ff30e1\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "ipv4_linklocal",
+          "reason": "snapshot_repair",
+          "snapshot_id": "ba1eeb8f578163570b414a164313a8aa9cb0d79eeb6735bee3c806fcfbc39dfe",
+          "tool": "restore_ipv4",
+          "version": 1
+        },
+        "case_id": "H-F03-B",
+        "duration_ms": 5153.363,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_ipv4\",\"snapshot_id\":\"ba1eeb8f578163570b414a164313a8aa9cb0d79eeb6735bee3c806fcfbc39dfe\",\"evidence_id\":\"ipv4_linklocal\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "associated_with_snapshot",
+          "reason": "no_safe_action",
+          "snapshot_id": "ba1eeb8f578163570b414a164313a8aa9cb0d79eeb6735bee3c806fcfbc39dfe",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F03-B",
+        "duration_ms": 5485.303,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"ba1eeb8f578163570b414a164313a8aa9cb0d79eeb6735bee3c806fcfbc39dfe\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "dns-1",
+          "reason": "snapshot_repair",
+          "snapshot_id": "78a06710cad04c8ea18c35c37612725d8871dfd5654f0c2537c90bb3d7a6257b",
+          "tool": "restore_dns",
+          "version": 1
+        },
+        "case_id": "H-F04-A",
+        "duration_ms": 5116.843,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"78a06710cad04c8ea18c35c37612725d8871dfd5654f0c2537c90bb3d7a6257b\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "no_safe_action",
+          "snapshot_id": "78a06710cad04c8ea18c35c37612725d8871dfd5654f0c2537c90bb3d7a6257b",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F04-A",
+        "duration_ms": 5737.495,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"78a06710cad04c8ea18c35c37612725d8871dfd5654f0c2537c90bb3d7a6257b\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "dns-1",
+          "reason": "snapshot_repair",
+          "snapshot_id": "569a3978277e78cecf04e89e8dfb3bf81a472b50f43ccd5441cabd12889cc961",
+          "tool": "restore_dns",
+          "version": 1
+        },
+        "case_id": "H-F04-B",
+        "duration_ms": 5048.303,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"569a3978277e78cecf04e89e8dfb3bf81a472b50f43ccd5441cabd12889cc961\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "associated_with_snapshot",
+          "reason": "no_safe_action",
+          "snapshot_id": "569a3978277e78cecf04e89e8dfb3bf81a472b50f43ccd5441cabd12889cc961",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F04-B",
+        "duration_ms": 5389.502,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"569a3978277e78cecf04e89e8dfb3bf81a472b50f43ccd5441cabd12889cc961\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "gateway_matches_snapshot",
+          "reason": "snapshot_repair",
+          "snapshot_id": "03ed6b39d4d2a24d15cc2429c37bb9a57406dd9e03a50e93a0582c9f39c8963d",
+          "tool": "restore_gateway",
+          "version": 1
+        },
+        "case_id": "H-F05-A",
+        "duration_ms": 5483.876,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"03ed6b39d4d2a24d15cc2429c37bb9a57406dd9e03a50e93a0582c9f39c8963d\",\"evidence_id\":\"gateway_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "no_safe_action",
+          "snapshot_id": "03ed6b39d4d2a24d15cc2429c37bb9a57406dd9e03a50e93a0582c9f39c8963d",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F05-A",
+        "duration_ms": 5723.5,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\":\"03ed6b39d4d2a24d15cc2429c37bb9a57406dd9e03a50e93a0582c9f39c8963d\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "snapshot_repair",
+          "snapshot_id": "cbff9a0b2f402fd749ce36fad1fdb3ccc3b6b2d3a21dfbdf3dc4ecb72f0730bb",
+          "tool": "restore_gateway",
+          "version": 1
+        },
+        "case_id": "H-F05-B",
+        "duration_ms": 5292.342,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"cbff9a0b2f402fd749ce36fad1fdb3ccc3b6b2d3a21dfbdf3dc4ecb72f0730bb\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "no_safe_action",
+          "snapshot_id": "cbff9a0b2f402fd749ce36fad1fdb3ccc3b6b2d3a21dfbdf3dc4ecb72f0730bb",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F05-B",
+        "duration_ms": 5312.719,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"cbff9a0b2f402fd749ce36fad1fdb3ccc3b6b2d3a21dfbdf3dc4ecb72f0730bb\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "mtu_probe_ok",
+          "reason": "snapshot_repair",
+          "snapshot_id": "92775fac60a6ab57d8d465ed350285468c3befb0a356087df9de57fe6e24e981",
+          "tool": "restore_mtu",
+          "version": 1
+        },
+        "case_id": "H-F06-A",
+        "duration_ms": 5464.761,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_mtu\",\"snapshot_id\":\"92775fac60a6ab57d8d465ed350285468c3befb0a356087df9de57fe6e24e981\",\"evidence_id\":\"mtu_probe_ok\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "proxy_matches_snapshot",
+          "reason": "snapshot_repair",
+          "snapshot_id": "92775fac60a6ab57d8d465ed350285468c3befb0a356087df9de57fe6e24e981",
+          "tool": "restore_proxy",
+          "version": 1
+        },
+        "case_id": "H-F06-A",
+        "duration_ms": 5309.269,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_proxy\",\"snapshot_id\":\"92775fac60a6ab57d8d465ed350285468c3befb0a356087df9de57fe6e24e981\",\"evidence_id\":\"proxy_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "ipv4_linklocal",
+          "reason": "snapshot_repair",
+          "snapshot_id": "f6c1ce089b6dc0b8d76a049931dfd9bc4cf5f5e862433fa372e3d0a259b7d5ef",
+          "tool": "restore_ipv4",
+          "version": 1
+        },
+        "case_id": "H-F06-B",
+        "duration_ms": 5467.908,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_ipv4\",\"snapshot_id\":\"f6c1ce089b6dc0b8d76a049931dfd9bc4cf5f5e862433fa372e3d0a259b7d5ef\",\"evidence_id\":\"ipv4_linklocal\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "no_safe_action",
+          "snapshot_id": "f6c1ce089b6dc0b8d76a049931dfd9bc4cf5f5e862433fa372e3d0a259b7d5ef",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F06-B",
+        "duration_ms": 5605.396,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"f6c1ce089b6dc0b8d76a049931dfd9bc4cf5f5e862433fa372e3d0a259b7d5ef\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "dns-1",
+          "reason": "snapshot_repair",
+          "snapshot_id": "827c4b4d98faa0da502924ef054ab18ab34c567ab864a5fad59369e11f7e5494",
+          "tool": "restore_dns",
+          "version": 1
+        },
+        "case_id": "H-F07-A",
+        "duration_ms": 5123.534,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"827c4b4d98faa0da502924ef054ab18ab34c567ab864a5fad59369e11f7e5494\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "connectivity_unverified",
+          "snapshot_id": "827c4b4d98faa0da502924ef054ab18ab34c567ab864a5fad59369e11f7e5494",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F07-A",
+        "duration_ms": 5546.92,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"827c4b4d98faa0da502924ef054ab18ab34c567ab864a5fad59369e11f7e5494\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"connectivity_unverified\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "mtu_probe_ok",
+          "reason": "snapshot_repair",
+          "snapshot_id": "bec3563e2c10d7609bac51d1feabff4fc3bb6a88b4232e325c51eedecf44ab02",
+          "tool": "restore_mtu",
+          "version": 1
+        },
+        "case_id": "H-F07-B",
+        "duration_ms": 5203.495,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_mtu\",\"snapshot_id\":\"bec3563e2c10d7609bac51d1feabff4fc3bb6a88b4232e325c51eedecf44ab02\",\"evidence_id\":\"mtu_probe_ok\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "portal-google",
+          "reason": "connectivity_unverified",
+          "snapshot_id": "bec3563e2c10d7609bac51d1feabff4fc3bb6a88b4232e325c51eedecf44ab02",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F07-B",
+        "duration_ms": 5254.964,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"bec3563e2c10d7609bac51d1feabff4fc3bb6a88b4232e325c51eedecf44ab02\",\"evidence_id\":\"portal-google\",\"reason\":\"connectivity_unverified\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "dns-1",
+          "reason": "snapshot_repair",
+          "snapshot_id": "b60ad052ea0455f632312b5d9e810e611660af06cedee8c926b3bd89b6a39f97",
+          "tool": "restore_dns",
+          "version": 1
+        },
+        "case_id": "H-F08-A",
+        "duration_ms": 5190.937,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"b60ad052ea0455f632312b5d9e810e611660af06cedee8c926b3bd89b6a39f97\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "no_safe_action",
+          "snapshot_id": "b60ad052ea0455f632312b5d9e810e611660af06cedee8c926b3bd89b6a39f97",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F08-A",
+        "duration_ms": 5577.05,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"b60ad052ea0455f632312b5d9e810e611660af06cedee8c926b3bd89b6a39f97\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "mtu_probe_ok",
+          "reason": "snapshot_repair",
+          "snapshot_id": "6e7f7522eb5b19461468ff68f02a4e4c4c8dc010fab123c0cccbdc1fbb87eeaa",
+          "tool": "restore_mtu",
+          "version": 1
+        },
+        "case_id": "H-F08-B",
+        "duration_ms": 5274.206,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_mtu\",\"snapshot_id\":\"6e7f7522eb5b19461468ff68f02a4e4c4c8dc010fab123c0cccbdc1fbb87eeaa\",\"evidence_id\":\"mtu_probe_ok\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "no_safe_action",
+          "snapshot_id": "6e7f7522eb5b19461468ff68f02a4e4c4c8dc010fab123c0cccbdc1fbb87eeaa",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F08-B",
+        "duration_ms": 5505.84,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"6e7f7522eb5b19461468ff68f02a4e4c4c8dc010fab123c0cccbdc1fbb87eeaa\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "dns-1",
+          "reason": "snapshot_repair",
+          "snapshot_id": "4839ef66b64a9a9dcf8a5cb4b799d52f1e615dc7cbcdc626003ef3c4b08b0052",
+          "tool": "restore_dns",
+          "version": 1
+        },
+        "case_id": "H-F09-A",
+        "duration_ms": 5176.188,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"4839ef66b64a9a9dcf8a5cb4b799d52f1e615dc7cbcdc626003ef3c4b08b0052\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "associated_with_snapshot",
+          "reason": "no_safe_action",
+          "snapshot_id": "4839ef66b64a9a9dcf8a5cb4b799d52f1e615dc7cbcdc626003ef3c4b08b0052",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F09-A",
+        "duration_ms": 5414.493,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\":\"4839ef66b64a9a9dcf8a5cb4b799d52f1e615dc7cbcdc626003ef3c4b08b0052\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "dns-2",
+          "reason": "snapshot_repair",
+          "snapshot_id": "8c88c50bb8ff7e21b95594382ef61ba4a76cc99b5d122446f1f632bef794bcbe",
+          "tool": "restore_dns",
+          "version": 1
+        },
+        "case_id": "H-F09-B",
+        "duration_ms": 5231.778,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"8c88c50bb8ff7e21b95594382ef61ba4a76cc99b5d122446f1f632bef794bcbe\",\"evidence_id\":\"dns-2\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "gateway_matches_snapshot",
+          "reason": "snapshot_repair",
+          "snapshot_id": "8c88c50bb8ff7e21b95594382ef61ba4a76cc99b5d122446f1f632bef794bcbe",
+          "tool": "restore_gateway",
+          "version": 1
+        },
+        "case_id": "H-F09-B",
+        "duration_ms": 5287.669,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"8c88c50bb8ff7e21b95594382ef61ba4a76cc99b5d122446f1f632bef794bcbe\",\"evidence_id\":\"gateway_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+        "step": 2
+      },
+      {
+        "action": {
+          "evidence_id": "configured_dns_ok",
+          "reason": "no_safe_action",
+          "snapshot_id": "8c88c50bb8ff7e21b95594382ef61ba4a76cc99b5d122446f1f632bef794bcbe",
+          "tool": "report",
+          "version": 1
+        },
+        "case_id": "H-F09-B",
+        "duration_ms": 5698.905,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"8c88c50bb8ff7e21b95594382ef61ba4a76cc99b5d122446f1f632bef794bcbe\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+        "step": 3
+      },
+      {
+        "action": {
+          "evidence_id": "gateway_matches_snapshot",
+          "reason": "snapshot_repair",
+          "snapshot_id": "d948fbbea932a4c930793fd396313d642d67e32930a169d8eb3e1c819e8632a3",
+          "tool": "restore_gateway",
+          "version": 1
+        },
+        "case_id": "H-F10-A",
+        "duration_ms": 5172.639,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"d948fbbea932a4c930793fd396313d642d67e32930a169d8eb3e1c819e8632a3\",\"evidence_id\":\"gateway_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      },
+      {
+        "action": {
+          "evidence_id": "gateway_matches_snapshot",
+          "reason": "snapshot_repair",
+          "snapshot_id": "046bb9086cd9aa40e081f08021e7c0b4bfb530183e2d00b14741db21b679ba28",
+          "tool": "restore_gateway",
+          "version": 1
+        },
+        "case_id": "H-F10-B",
+        "duration_ms": 5504.472,
+        "failure": null,
+        "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"046bb9086cd9aa40e081f08021e7c0b4bfb530183e2d00b14741db21b679ba28\",\"evidence_id\":\"gateway_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+        "step": 1
+      }
+    ],
+    "calls_over_8s": 0,
+    "cleanup_verified": 20,
+    "complete": true,
+    "evidence_kind": "MODEL_IN_LOOP_SIM_HELDOUT_COMPOUND",
+    "false_online": 0,
+    "freeze_commit": "cc89bedb3652579dc70c82bfd76725919cc94f8c",
+    "held_policy": {
+      "attempted": 6,
+      "passed": 6,
+      "planned": 6,
+      "policy_rate": 1.0
+    },
+    "label": "sim held-out compound-fault robustness",
+    "manifest_sha256": "13e77a4f6ffb32c03bdd43cb44673b75d64a74eb19d28c6ead6ddab17988d649",
+    "median_call_latency_ms": 5389.502,
+    "model_calls": 39,
+    "per_class": {
+      "F01": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "held_policy",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 2,
+        "planned": 2,
+        "recovered": 0
+      },
+      "F02": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "held_policy",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 2,
+        "planned": 2,
+        "recovered": 0
+      },
+      "F03": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "repair_target",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 1,
+        "planned": 2,
+        "recovered": 1
+      },
+      "F04": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "repair_target",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 2,
+        "planned": 2,
+        "recovered": 0
+      },
+      "F05": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "repair_target",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 2,
+        "planned": 2,
+        "recovered": 0
+      },
+      "F06": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "repair_target",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 1,
+        "planned": 2,
+        "recovered": 1
+      },
+      "F07": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "repair_target",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 2,
+        "planned": 2,
+        "recovered": 0
+      },
+      "F08": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "held_policy",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 2,
+        "planned": 2,
+        "recovered": 0
+      },
+      "F09": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "repair_target",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 2,
+        "planned": 2,
+        "recovered": 0
+      },
+      "F10": {
+        "attempted": 2,
+        "blocked": 0,
+        "cleanup_verified": 2,
+        "cohort": "repair_target",
+        "failed": 0,
+        "false_online": 0,
+        "honest_report": 0,
+        "planned": 2,
+        "recovered": 2
+      }
+    },
+    "planned_cases": 20,
+    "profile_id": "snapshot-restore-descriptions-v1",
+    "repair_target": {
+      "attempted": 14,
+      "planned": 14,
+      "recovered": 4,
+      "recovery_rate": 0.2857142857142857
+    },
+    "reroute": "N/A: not in the 13-action grammar",
+    "unattempted": []
+  },
+  "overlap": {
+    "kind": "MODEL_IN_LOOP_SIM_HELDOUT_COMPOUND",
+    "model_calls": 0,
+    "prior_result_sha256": "a3074b9f0c8ddc5e190f50b1e6f0bfbe8d98487c1ac6ec7e7a6af1164d8b1ed0",
+    "cases_sha256": "cccf2f01d2650945bd613c9e80e96d5b7753e510c0108989be3895b51fe98eea",
+    "semantic_definition": "Unchanged system text and user JSON; online-check pairs sorted by id. Surface metadata and grammar snapshot id are excluded because they do not change diagnostic semantics.",
+    "prior_unique_prompts": 6,
+    "prior_unique_semantic_inputs": 6,
+    "heldout_unique_prompts": 20,
+    "heldout_unique_semantic_inputs": 19,
+    "semantic_prior_overlap_cases": [
+      "H-F10-A",
+      "H-F10-B"
+    ],
+    "exact_prior_overlap_cases": [
+      "H-F10-A"
+    ]
+  },
+  "app_id": "PROVIDER_ACCOUNT_REMOVED",
+  "app_state": "stopped",
+  "function_invocations": 1,
+  "containers": 1,
+  "cost": {
+    "app_metered_compute_usd": "0.09670646",
+    "metered_summary_delta_usd": "0.10000000",
+    "billed_delta_usd": "0E-8",
+    "billing_before": {
+      "metered_cost": "0.87005469",
+      "billed_cost": "0E-8",
+      "adjustments": {
+        "credits": "-0.87000000",
+        "plan_cost": "0E-8",
+        "network_egress_allowance": "-0.00005469",
+        "free_storage": "-0E-8",
+        "reservation_adjustment": "-0E-8"
+      },
+      "metered_cost_breakdown": {
+        "volumes": "0E-8",
+        "ephemeral_apps": "0.87483133",
+        "network_egress": "0.00005469",
+        "llm_tokens": "0E-8"
+      }
+    },
+    "billing_after": {
+      "metered_cost": "0.97005469",
+      "billed_cost": "0E-8",
+      "adjustments": {
+        "network_egress_allowance": "-0.00005469",
+        "plan_cost": "0E-8",
+        "free_storage": "-0E-8",
+        "reservation_adjustment": "-0E-8",
+        "credits": "-0.97000000"
+      },
+      "metered_cost_breakdown": {
+        "llm_tokens": "0E-8",
+        "ephemeral_apps": "0.97153779",
+        "network_egress": "0.00005469",
+        "volumes": "0E-8"
+      }
+    },
+    "app_billing_rows": [
+      {
+        "object_id": "PROVIDER_ACCOUNT_REMOVED",
+        "description": "uplink-heldout-compound-sun",
+        "environment": "main",
+        "interval_start": "2026-11-01T00:00:00",
+        "resource": "Memory",
+        "cost": "0.01706663"
+      },
+      {
+        "object_id": "PROVIDER_ACCOUNT_REMOVED",
+        "description": "uplink-heldout-compound-sun",
+        "environment": "main",
+        "interval_start": "2026-11-01T00:00:00",
+        "resource": "A10G",
+        "cost": "0.07333318"
+      },
+      {
+        "object_id": "PROVIDER_ACCOUNT_REMOVED",
+        "description": "uplink-heldout-compound-sun",
+        "environment": "main",
+        "interval_start": "2026-11-01T00:00:00",
+        "resource": "CPU",
+        "cost": "0.00630665"
+      }
+    ]
+  },
+  "verification": {
+    "receipt_artifacts_hash_checked": 440,
+    "all_first_prompts_match_frozen_audit": 20,
+    "all_emissions_match_frozen_parser_grammar_and_profile": 39,
+    "recovered_receipts_regraded_with_frozen_scorer": 4,
+    "replay_clock": "For replay only, time.time is fixed at the recorded verification timestamp so the unchanged oracle freshness gate evaluates the original evidence age. Raw records and the inference-time scorer are unchanged.",
+    "closed_kernels_and_exited_watchdogs": 20,
+    "original_frozen_files_unchanged": 173
+  },
+  "cases": [
+    {
+      "case_id": "H-F01-A",
+      "fault_id": "F01",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F01",
+        "F04"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_dns",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574460.97542,
+      "finished_at": 1793574472.368965,
+      "first_prompt_sha256": "66c403c0f41f72f598cd8421d0b35e960e64370e1c6a62c0b36ae3827599ee66",
+      "semantic_sha256": "b2de1d68d3d32a2f3e42978421b1ba06af5e406e7ff916813d3710f88e9dfadc",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "radio_on": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_dns",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"94d4fb97d2b490265ff1f67f875ed4e74b8fef86fe88d48542a4012cd883c247\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "66c403c0f41f72f598cd8421d0b35e960e64370e1c6a62c0b36ae3827599ee66",
+          "grammar_sha256": "1d780a6e0a739ddf8a833a50eff44c0fd5bd7d06a93533fc9a40c322b7778816"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\":\"94d4fb97d2b490265ff1f67f875ed4e74b8fef86fe88d48542a4012cd883c247\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "ff43bf4e143734ce85e60e0e2644695fe5049693764dfc8efd7349b5eda5d72a",
+          "grammar_sha256": "1d780a6e0a739ddf8a833a50eff44c0fd5bd7d06a93533fc9a40c322b7778816"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F01-B",
+      "fault_id": "F01",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F01",
+        "F09"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_mtu",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574472.3705049,
+      "finished_at": 1793574483.9044123,
+      "first_prompt_sha256": "6231d206a6cb0ca8e48f94b623b758ae845d5ca71848ad47a560a543f975f151",
+      "semantic_sha256": "e0acd142ae4db4276c9193cbab92e7b5dbbfed24ec1f593e86f8cd4e2d2b0cd8",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "radio_on": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_mtu",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_mtu\",\"snapshot_id\":\"05a5561d8dfbc4b36328505097c9de670d30d5c9e3dc5c1fa3f5b6ef2db34981\",\"evidence_id\":\"mtu_probe_ok\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "6231d206a6cb0ca8e48f94b623b758ae845d5ca71848ad47a560a543f975f151",
+          "grammar_sha256": "2d23e22ece9f0de9a955f4ee32d710053b47b555585a8b51069e3beb0f46f913"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"05a5561d8dfbc4b36328505097c9de670d30d5c9e3dc5c1fa3f5b6ef2db34981\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "9f14b9321408660e97b32dcc2f41dbf6e923458ef1c412ed18fdd13d6f443040",
+          "grammar_sha256": "2d23e22ece9f0de9a955f4ee32d710053b47b555585a8b51069e3beb0f46f913"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F02-A",
+      "fault_id": "F02",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F02",
+        "F06"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_proxy",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574483.9058976,
+      "finished_at": 1793574494.3623521,
+      "first_prompt_sha256": "3f4c7dd4dc0664276136af0513442e54cd7c59083e0ac1d30f9938eb4101bb72",
+      "semantic_sha256": "d7b5397b9387caf1a4bec82e01fd7d4b84aebcff8b61be58451da18b1cd4128a",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "interface_up": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_proxy",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_proxy\",\"snapshot_id\":\"f98f19b2bbcb0ab28b4e094daa9e36c8045872dd037bab948fea3c2028b896b1\",\"evidence_id\":\"proxy_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "3f4c7dd4dc0664276136af0513442e54cd7c59083e0ac1d30f9938eb4101bb72",
+          "grammar_sha256": "a5884ee201e241ee94a4f8422fcf5857112f6e871dc78ab39f011826e1eba687"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\":\"f98f19b2bbcb0ab28b4e094daa9e36c8045872dd037bab948fea3c2028b896b1\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "3326d71cfe3e8061b4c12ecc250cfc85825bd16c816525b99cd1df29ec07d7c3",
+          "grammar_sha256": "a5884ee201e241ee94a4f8422fcf5857112f6e871dc78ab39f011826e1eba687"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F02-B",
+      "fault_id": "F02",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F02",
+        "F04"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_dns",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574494.3637643,
+      "finished_at": 1793574505.2513578,
+      "first_prompt_sha256": "877eb4d8b3124f6dc400bad9dfd1a99b23951d6df4b3d51cacab8df369a84af9",
+      "semantic_sha256": "7e7f68ceabad84347449d511eb4fec481d14ab66eda348793a3af542a33b9af3",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "interface_up": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_dns",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"212aa4b27e489607ad070c687c0e3429bdb948d0c54494751c83630ee34cfb1e\",\"evidence_id\":\"dns-2\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "877eb4d8b3124f6dc400bad9dfd1a99b23951d6df4b3d51cacab8df369a84af9",
+          "grammar_sha256": "e46afb4b27febfd0319bbb4107301dabb5d41d9ba1e5187cf29cd6931d0764aa"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"212aa4b27e489607ad070c687c0e3429bdb948d0c54494751c83630ee34cfb1e\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "c259b54ba26cd8bfb8c52088c8011ae8b121a8ca1cc6e6f5d05284229cd5aaf5",
+          "grammar_sha256": "e46afb4b27febfd0319bbb4107301dabb5d41d9ba1e5187cf29cd6931d0764aa"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F03-A",
+      "fault_id": "F03",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F03",
+        "F04"
+      ],
+      "outcome": "recovered",
+      "failure": null,
+      "model_actions": [
+        "restore_ipv4",
+        "restore_dns"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574505.2528725,
+      "finished_at": 1793574516.2504883,
+      "first_prompt_sha256": "a94a7945b3f579a70dbabc0b842f463074679de849a83d49f2182cbc6b9fd1c8",
+      "semantic_sha256": "b38ce1b50be9248e5d4744cf32a8986edd34c5c33616ad00ab0efe60d5da072d",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "dns_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_ipv4",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_ipv4\",\"snapshot_id\":\"df10f862ac8eba40c87f474962386f143cb3406463cbc28cf78fef2030ff30e1\",\"evidence_id\":\"ipv4_linklocal\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "a94a7945b3f579a70dbabc0b842f463074679de849a83d49f2182cbc6b9fd1c8",
+          "grammar_sha256": "5c23749e5542d19853d73006b667da15c8258843b94eca4f1953f22ff7858d62"
+        },
+        {
+          "step": 2,
+          "tool": "restore_dns",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"df10f862ac8eba40c87f474962386f143cb3406463cbc28cf78fef2030ff30e1\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "7e81a6b4a9ac453345f30b8ceb7b0aaf7499388690bfe8e7199309e35966f39c",
+          "grammar_sha256": "5c23749e5542d19853d73006b667da15c8258843b94eca4f1953f22ff7858d62"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F03-B",
+      "fault_id": "F03",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F03",
+        "F09"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_ipv4",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574516.2524562,
+      "finished_at": 1793574527.0107315,
+      "first_prompt_sha256": "047fd250890c360de8c1dfe230741d67d56e3bc72992c84422637a0ed317ec0b",
+      "semantic_sha256": "7bf56c0f254636599ad9ab8e63c0c5611887a795b6032d1d41a74826affeef16",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "mtu_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_ipv4",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_ipv4\",\"snapshot_id\":\"ba1eeb8f578163570b414a164313a8aa9cb0d79eeb6735bee3c806fcfbc39dfe\",\"evidence_id\":\"ipv4_linklocal\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "047fd250890c360de8c1dfe230741d67d56e3bc72992c84422637a0ed317ec0b",
+          "grammar_sha256": "d924e2a3e43afb81b30e07201549501d13370e2fe167fa59a8f8f0bd0653cbaa"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"ba1eeb8f578163570b414a164313a8aa9cb0d79eeb6735bee3c806fcfbc39dfe\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "4ac28bfbbda9c1a0f6f4fc08e35abdf6c25a325078b44e4fc466e48f62349d22",
+          "grammar_sha256": "d924e2a3e43afb81b30e07201549501d13370e2fe167fa59a8f8f0bd0653cbaa"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F04-A",
+      "fault_id": "F04",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F04",
+        "F06"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_dns",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574527.0123212,
+      "finished_at": 1793574537.9988222,
+      "first_prompt_sha256": "41ab79c29eadcc98f8a7870fa481a5a2107f072bbaeb4dff0b2fa80495845a2b",
+      "semantic_sha256": "84b85d01616c3b4642bfcc93351b0194c5c742b0b6bf569e3e8bb3dd406229c9",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "proxy_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_dns",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"78a06710cad04c8ea18c35c37612725d8871dfd5654f0c2537c90bb3d7a6257b\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "41ab79c29eadcc98f8a7870fa481a5a2107f072bbaeb4dff0b2fa80495845a2b",
+          "grammar_sha256": "70d2338a49fffa52083ab75a7a1be17501fe6afbc61bb048d9ecf055b3b3537c"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"78a06710cad04c8ea18c35c37612725d8871dfd5654f0c2537c90bb3d7a6257b\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "493b440809a7f4292db81745e369100b7f56c98888bd72d9943f58b2d183e981",
+          "grammar_sha256": "70d2338a49fffa52083ab75a7a1be17501fe6afbc61bb048d9ecf055b3b3537c"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F04-B",
+      "fault_id": "F04",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F04",
+        "F09"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_dns",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574538.0004766,
+      "finished_at": 1793574548.5794203,
+      "first_prompt_sha256": "d3bef704a35adf9d3beaa804ac5dd6d1dc086b2e0ca29949a2fa4076ccdc960a",
+      "semantic_sha256": "4cd03a85c83056ab64b50d985de2f306d2f6f1932bb1e6608e5eca1d17a2f90a",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "mtu_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_dns",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"569a3978277e78cecf04e89e8dfb3bf81a472b50f43ccd5441cabd12889cc961\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "d3bef704a35adf9d3beaa804ac5dd6d1dc086b2e0ca29949a2fa4076ccdc960a",
+          "grammar_sha256": "d0cdeabf57f4a2f6cea82a671ef846a4e590c3b7aae398ee42e2d8257cbb7d5a"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"569a3978277e78cecf04e89e8dfb3bf81a472b50f43ccd5441cabd12889cc961\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "1026a484e3a9f0ab9e806d9947c5d31167893b6af58fd25c1c996e9f848ea1fe",
+          "grammar_sha256": "d0cdeabf57f4a2f6cea82a671ef846a4e590c3b7aae398ee42e2d8257cbb7d5a"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F05-A",
+      "fault_id": "F05",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F05",
+        "F06"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_gateway",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574548.5810356,
+      "finished_at": 1793574559.9385114,
+      "first_prompt_sha256": "99e8b4bc70cc8fc0ee64d853c988e57626f5a735988f07fb2b33a41f818e9c49",
+      "semantic_sha256": "457eee8ca954a5d0eb89256719f30539f2becace7251ea3f39524a312de66f5d",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "proxy_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_gateway",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"03ed6b39d4d2a24d15cc2429c37bb9a57406dd9e03a50e93a0582c9f39c8963d\",\"evidence_id\":\"gateway_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "99e8b4bc70cc8fc0ee64d853c988e57626f5a735988f07fb2b33a41f818e9c49",
+          "grammar_sha256": "0b61b015a94dd1127f331ee88354906329a4d2bcf4a467555ba5d5b37ab13763"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\":\"03ed6b39d4d2a24d15cc2429c37bb9a57406dd9e03a50e93a0582c9f39c8963d\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "fc476d94d916c21aefc82a65f11d565b417d5b02a7a0c8da29cfeac15ded1c0c",
+          "grammar_sha256": "0b61b015a94dd1127f331ee88354906329a4d2bcf4a467555ba5d5b37ab13763"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F05-B",
+      "fault_id": "F05",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F05",
+        "F09"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_gateway",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574559.940188,
+      "finished_at": 1793574570.66489,
+      "first_prompt_sha256": "8dd9751c638709420f1d61534aa09c8506d9b205e92df30d6c0a3755dd0b6c06",
+      "semantic_sha256": "708ecada1b3b1d1e20de01fccdaf7e798935d39b588d217149f44ff158b55e14",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "mtu_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_gateway",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"cbff9a0b2f402fd749ce36fad1fdb3ccc3b6b2d3a21dfbdf3dc4ecb72f0730bb\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "8dd9751c638709420f1d61534aa09c8506d9b205e92df30d6c0a3755dd0b6c06",
+          "grammar_sha256": "aef265e3ec3023addf71f281cb3d49f4d06e01bc31ac994fbf44fef34ab01c73"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"cbff9a0b2f402fd749ce36fad1fdb3ccc3b6b2d3a21dfbdf3dc4ecb72f0730bb\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "6ceddb6bdae4ef10cf88f99f820664a39c3dd4484f8899f03605d88d353a600e",
+          "grammar_sha256": "aef265e3ec3023addf71f281cb3d49f4d06e01bc31ac994fbf44fef34ab01c73"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F06-A",
+      "fault_id": "F06",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F06",
+        "F09"
+      ],
+      "outcome": "recovered",
+      "failure": null,
+      "model_actions": [
+        "restore_mtu",
+        "restore_proxy"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574570.6665633,
+      "finished_at": 1793574581.5728455,
+      "first_prompt_sha256": "c079d62e33f0a913a10b7c39259aee7fde6e82201027aa389240922cfffca36d",
+      "semantic_sha256": "9d7a1741f22683e0556c3ba82086b4a259312c9092991a35af0aac5ed45fe671",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "proxy_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_mtu",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_mtu\",\"snapshot_id\":\"92775fac60a6ab57d8d465ed350285468c3befb0a356087df9de57fe6e24e981\",\"evidence_id\":\"mtu_probe_ok\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "c079d62e33f0a913a10b7c39259aee7fde6e82201027aa389240922cfffca36d",
+          "grammar_sha256": "44b25d5210f8fb3c34679375aab751d9c7f80ac9aa165ae7e53d76adebf7aaff"
+        },
+        {
+          "step": 2,
+          "tool": "restore_proxy",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_proxy\",\"snapshot_id\":\"92775fac60a6ab57d8d465ed350285468c3befb0a356087df9de57fe6e24e981\",\"evidence_id\":\"proxy_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "53fab739616a37317b3269dbbe017713cd54de592aeccf2fb3d698f5244db670",
+          "grammar_sha256": "44b25d5210f8fb3c34679375aab751d9c7f80ac9aa165ae7e53d76adebf7aaff"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F06-B",
+      "fault_id": "F06",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F06",
+        "F03"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_ipv4",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574581.581701,
+      "finished_at": 1793574592.7817771,
+      "first_prompt_sha256": "df7a3d9ceaa15d408dc04d1bcc54aebcc3b84c45f367aa85298b9e3c0b2aabf6",
+      "semantic_sha256": "34186affeed9f105a282901013ea4cc4932514a97b2da54f0ba0c90ab18a55ba",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "proxy_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_ipv4",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_ipv4\",\"snapshot_id\":\"f6c1ce089b6dc0b8d76a049931dfd9bc4cf5f5e862433fa372e3d0a259b7d5ef\",\"evidence_id\":\"ipv4_linklocal\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "df7a3d9ceaa15d408dc04d1bcc54aebcc3b84c45f367aa85298b9e3c0b2aabf6",
+          "grammar_sha256": "ce63298d48bae56a3f69828978ff9a1b4e3922c61df7307217661da81d0f7859"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"f6c1ce089b6dc0b8d76a049931dfd9bc4cf5f5e862433fa372e3d0a259b7d5ef\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "f4b13506bef327648a3263299d093b141d1110be12e203b109e5c5ba0d573944",
+          "grammar_sha256": "ce63298d48bae56a3f69828978ff9a1b4e3922c61df7307217661da81d0f7859"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F07-A",
+      "fault_id": "F07",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F07",
+        "F04"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_dns",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574592.7835648,
+      "finished_at": 1793574603.5772946,
+      "first_prompt_sha256": "7bf111410395d8dc6de4fed07c027df71efc3c7867f0a07909b6a31b39c7f7be",
+      "semantic_sha256": "60aedb41cb8653907f659776ce68a6ae004d15d350604ff3dcbdd2917ea5f132",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "proxy_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_dns",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"827c4b4d98faa0da502924ef054ab18ab34c567ab864a5fad59369e11f7e5494\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "7bf111410395d8dc6de4fed07c027df71efc3c7867f0a07909b6a31b39c7f7be",
+          "grammar_sha256": "d6a59e5182d298744c79a75cf6b5f316f3647ce37ce01c6881c243b73b700a5a"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"827c4b4d98faa0da502924ef054ab18ab34c567ab864a5fad59369e11f7e5494\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"connectivity_unverified\"}",
+          "failure": null,
+          "prompt_sha256": "f60ed98b40b02e8e7d3ab0aa0bc84151c2c201be3dd072802c449c3e2ad13c29",
+          "grammar_sha256": "d6a59e5182d298744c79a75cf6b5f316f3647ce37ce01c6881c243b73b700a5a"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F07-B",
+      "fault_id": "F07",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F07",
+        "F09"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_mtu",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574603.579069,
+      "finished_at": 1793574614.1560762,
+      "first_prompt_sha256": "98b7f852391de0f18eb42f7caa6630943d399804c6e7ea845b3b46e996c6da29",
+      "semantic_sha256": "70797786b1c1c9a01ca24b6cec6892af52e4088eddda461cfc2876337b8a0383",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "proxy_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_mtu",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_mtu\",\"snapshot_id\":\"bec3563e2c10d7609bac51d1feabff4fc3bb6a88b4232e325c51eedecf44ab02\",\"evidence_id\":\"mtu_probe_ok\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "98b7f852391de0f18eb42f7caa6630943d399804c6e7ea845b3b46e996c6da29",
+          "grammar_sha256": "ed9be751eed514d323d6d4fd6432a1ec6fe277afa845d5aab5540494482c3052"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"bec3563e2c10d7609bac51d1feabff4fc3bb6a88b4232e325c51eedecf44ab02\",\"evidence_id\":\"portal-google\",\"reason\":\"connectivity_unverified\"}",
+          "failure": null,
+          "prompt_sha256": "ad8dcdb8fe6c819533749d5f2287af30c897c891aaa9ffcff808afdebc8b5f42",
+          "grammar_sha256": "ed9be751eed514d323d6d4fd6432a1ec6fe277afa845d5aab5540494482c3052"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F08-A",
+      "fault_id": "F08",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F08",
+        "F04"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_dns",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574614.1578891,
+      "finished_at": 1793574625.0768988,
+      "first_prompt_sha256": "72377457c8303f29d36a863d639461d67f532ac53d1f9793ea75c2902dbd9fc5",
+      "semantic_sha256": "2b2ed09aef70c1dcd3b423fa0531cffbee5d9525063d203a65bca7a8c5befc74",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "saved_network_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_dns",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"b60ad052ea0455f632312b5d9e810e611660af06cedee8c926b3bd89b6a39f97\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "72377457c8303f29d36a863d639461d67f532ac53d1f9793ea75c2902dbd9fc5",
+          "grammar_sha256": "11b8546490fadfd7d4f537f12eacf8e03482373ae1d9a2b4760e65afe6dc6ea3"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"b60ad052ea0455f632312b5d9e810e611660af06cedee8c926b3bd89b6a39f97\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "343b5899745fce1e2b4135aa3c6fa1663d5b7c65141e9fce24a2a5881f1d342c",
+          "grammar_sha256": "11b8546490fadfd7d4f537f12eacf8e03482373ae1d9a2b4760e65afe6dc6ea3"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F08-B",
+      "fault_id": "F08",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F08",
+        "F09"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_mtu",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574625.0787728,
+      "finished_at": 1793574635.9988773,
+      "first_prompt_sha256": "8336cb5b0aa6d1589897221ac957f48d3c5a6ac9a38bc8e09415d3714022ab87",
+      "semantic_sha256": "e4cf56ba7a84bd61b7ab3c8d7f6d5ccaf1dd7945ac9df7b890f1c8ae33d37e17",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "saved_network_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_mtu",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_mtu\",\"snapshot_id\":\"6e7f7522eb5b19461468ff68f02a4e4c4c8dc010fab123c0cccbdc1fbb87eeaa\",\"evidence_id\":\"mtu_probe_ok\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "8336cb5b0aa6d1589897221ac957f48d3c5a6ac9a38bc8e09415d3714022ab87",
+          "grammar_sha256": "c721228351823210cf3bedb77096bd16fc4912a966588ef16b3b42bf227f2e91"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"6e7f7522eb5b19461468ff68f02a4e4c4c8dc010fab123c0cccbdc1fbb87eeaa\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "e4d1b35cac3d3b0e2aa4f943dcda477aa8be95885e310ae370f57910c559fa8a",
+          "grammar_sha256": "c721228351823210cf3bedb77096bd16fc4912a966588ef16b3b42bf227f2e91"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F09-A",
+      "fault_id": "F09",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F09",
+        "F04",
+        "F06"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_dns",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574636.0008638,
+      "finished_at": 1793574646.7110047,
+      "first_prompt_sha256": "c60c4ee0099c830f384485a489c56c017fad308ad0f114940c858d1ab3b5c81f",
+      "semantic_sha256": "6faacab1117a22ba4d12ad8fd68d1930d4f9dfecaa7da40a611cdba85b804e7e",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "proxy_matches_snapshot": false,
+        "mtu_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_dns",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"4839ef66b64a9a9dcf8a5cb4b799d52f1e615dc7cbcdc626003ef3c4b08b0052\",\"evidence_id\":\"dns-1\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "c60c4ee0099c830f384485a489c56c017fad308ad0f114940c858d1ab3b5c81f",
+          "grammar_sha256": "0a7e0bbb81360e9064ef207ddc8dcbd00eb95ecdaa607a80cf4b5f960fe41aca"
+        },
+        {
+          "step": 2,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\":\"4839ef66b64a9a9dcf8a5cb4b799d52f1e615dc7cbcdc626003ef3c4b08b0052\",\"evidence_id\":\"associated_with_snapshot\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "1c67c41ffc793dc2eac77397a1748ffabff18fdd0049bf5a7e5d0fc815b294fd",
+          "grammar_sha256": "0a7e0bbb81360e9064ef207ddc8dcbd00eb95ecdaa607a80cf4b5f960fe41aca"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F09-B",
+      "fault_id": "F09",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F09",
+        "F05",
+        "F04"
+      ],
+      "outcome": "honest_report",
+      "failure": null,
+      "model_actions": [
+        "restore_dns",
+        "restore_gateway",
+        "report"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574646.7129784,
+      "finished_at": 1793574663.0876963,
+      "first_prompt_sha256": "f730d8f59666bf8ca0039a5a7b660b4fa07b94ccff7662a7ad0183db64a0a026",
+      "semantic_sha256": "08d4eb35eb698b8a32347684186531f763800ea8e6332ad5fe5d0270f60b1f77",
+      "prior_semantic_overlap": false,
+      "drift_at_last_decision": {
+        "mtu_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_dns",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_dns\",\"snapshot_id\":\"8c88c50bb8ff7e21b95594382ef61ba4a76cc99b5d122446f1f632bef794bcbe\",\"evidence_id\":\"dns-2\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "f730d8f59666bf8ca0039a5a7b660b4fa07b94ccff7662a7ad0183db64a0a026",
+          "grammar_sha256": "90f03b71b01f575fd65cec7cf32a3ddd938b3ec511376653a17a080835b9eaca"
+        },
+        {
+          "step": 2,
+          "tool": "restore_gateway",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"8c88c50bb8ff7e21b95594382ef61ba4a76cc99b5d122446f1f632bef794bcbe\",\"evidence_id\":\"gateway_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "c5cfc6ac277147121153db1ba61ab8725566926f9f6ca8ae2a6b3f8ecb765e27",
+          "grammar_sha256": "90f03b71b01f575fd65cec7cf32a3ddd938b3ec511376653a17a080835b9eaca"
+        },
+        {
+          "step": 3,
+          "tool": "report",
+          "raw_text": "{\"version\":1,\"tool\":\"report\",\"snapshot_id\": \"8c88c50bb8ff7e21b95594382ef61ba4a76cc99b5d122446f1f632bef794bcbe\",\"evidence_id\":\"configured_dns_ok\",\"reason\":\"no_safe_action\"}",
+          "failure": null,
+          "prompt_sha256": "c15fb16b6263810c6d61b29354aed9dc9796208be902d90e983694ec6e2052e0",
+          "grammar_sha256": "90f03b71b01f575fd65cec7cf32a3ddd938b3ec511376653a17a080835b9eaca"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F10-A",
+      "fault_id": "F10",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F10"
+      ],
+      "outcome": "recovered",
+      "failure": null,
+      "model_actions": [
+        "restore_gateway"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574663.0897434,
+      "finished_at": 1793574668.397374,
+      "first_prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+      "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6",
+      "prior_semantic_overlap": true,
+      "drift_at_last_decision": {
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_gateway",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"d948fbbea932a4c930793fd396313d642d67e32930a169d8eb3e1c819e8632a3\",\"evidence_id\":\"gateway_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "grammar_sha256": "3f356e49111bd1bdc4d43b982c7566aca0e2bcb44cda6830128fe50d09de7638"
+        }
+      ]
+    },
+    {
+      "case_id": "H-F10-B",
+      "fault_id": "F10",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F10"
+      ],
+      "outcome": "recovered",
+      "failure": null,
+      "model_actions": [
+        "restore_gateway"
+      ],
+      "false_online": 0,
+      "cleanup_verified": true,
+      "started_at": 1793574668.3995664,
+      "finished_at": 1793574674.0180318,
+      "first_prompt_sha256": "2b832b2a62e8d78213bc42dc90cb549b611c669cfcc2afc1e0a028d36f95bec4",
+      "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6",
+      "prior_semantic_overlap": true,
+      "drift_at_last_decision": {
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": false
+      },
+      "emissions": [
+        {
+          "step": 1,
+          "tool": "restore_gateway",
+          "raw_text": "{\"version\":1,\"tool\":\"restore_gateway\",\"snapshot_id\":\"046bb9086cd9aa40e081f08021e7c0b4bfb530183e2d00b14741db21b679ba28\",\"evidence_id\":\"gateway_matches_snapshot\",\"reason\":\"snapshot_repair\"}",
+          "failure": null,
+          "prompt_sha256": "2b832b2a62e8d78213bc42dc90cb549b611c669cfcc2afc1e0a028d36f95bec4",
+          "grammar_sha256": "dda583c4cdc69bfa74f61ea94ee85b923452d7691545d40f572299ea591c28c9"
+        }
+      ]
+    }
+  ]
+}

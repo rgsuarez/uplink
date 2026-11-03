@@ -1,0 +1,103 @@
+{
+  "cause": "standalone_preflight_omitted_pinned_wait_for_receipt_clock",
+  "cleanup": {
+    "checked_at": "2026-10-28T00:30:17.291656-05:00",
+    "network_faults_injected": 0,
+    "registered_watchdogs": 0,
+    "source_and_binary_matched": true,
+    "stage_absent": true,
+    "staging_cleaned": true
+  },
+  "eight_getter_rehearsal": "NOT_REACHED",
+  "evidence_directory": "artifacts/uplink/window-0020-20261028",
+  "kind": "uplink-window-preflight-abort",
+  "local_freshness_accepted": false,
+  "local_freshness_refusal": {
+    "controller_failure": "fresh_server_model_proof_required",
+    "diagnosed_at": "2026-10-28T00:29:43.598694-05:00",
+    "identity_pins_match": true,
+    "local_response_saved_at": 1793165334.136151,
+    "model_used": false,
+    "no_retry": true,
+    "remote_reply_ok": true,
+    "remote_timestamp_ahead_of_local_save_seconds": 0.04619193077087402,
+    "remote_verified_at": 1793165334.182343
+  },
+  "model_inference_calls": 0,
+  "native_build": {
+    "checked_at": "2026-10-28T00:28:11.810572-05:00",
+    "native_sha256": "d304ce7cc53dd61f46c6b8380d2a506fc355e5c0457b56d7d2390b57664d2f0a",
+    "normal_user": true,
+    "self_test": {
+      "network_reads": 0,
+      "network_writes": 0,
+      "self_test": "passed"
+    },
+    "source_files_verified": 99
+  },
+  "network_faults_injected": 0,
+  "outcome": "ABORTED_BEFORE_TRIAL_1",
+  "private_config_restored": true,
+  "reason": "fresh_server_model_proof_required",
+  "recommended_next_step": "Use pinned LabBackend.identity(), including wait_for_receipt_clock(), in a separately authorized fresh preflight; no oracle change.",
+  "recorded_at": "2026-10-28T00:31:07.959937-05:00",
+  "release": "Kaylin window ruling 2026-10-28 00:20 CT",
+  "remote_model_attestation": {
+    "active_model_name": "Muse Glimmer 30B",
+    "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+    "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+    "host_chip": "Apple M4 Max",
+    "llama_cpp_build": "10353 (f8def7fe1)",
+    "model_used": false,
+    "name": "Muse Glimmer 30B",
+    "provider": "llama_cpp",
+    "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+    "verification": "server_verified",
+    "verified_at": 1793165334.182343
+  },
+  "restore_seconds": null,
+  "retry": false,
+  "root_prepares": 0,
+  "snapshot_revert_diff": "NOT_APPLICABLE_NO_INJECTION",
+  "source_commit": "6b0cbbea249782a17b75a4a567bce49ba9e2bcde",
+  "trial_1_deadline": "2026-10-28T00:40:00-05:00",
+  "trial_outcomes": [
+    "NOT_RUN",
+    "NOT_RUN",
+    "NOT_RUN"
+  ],
+  "typecheck": {
+    "compiler_invocations": 1,
+    "exit_code": 0,
+    "normal_user": true,
+    "report": {
+      "compiler": [
+        "xcrun",
+        "swiftc",
+        "-typecheck"
+      ],
+      "gate_sha256": "57f3d1e8ec82fcbaafea7f15e46ae0b7f27c85c7d0c5acaceeabecd5bb35261d",
+      "non_root": true,
+      "passed": true,
+      "results": {
+        "harness/macos/UplinkNetwork.swift": {
+          "diagnostic": "",
+          "exit_code": 0,
+          "reason": "passed"
+        }
+      },
+      "sources": {
+        "harness/macos/UplinkNetwork.swift": "1017bda9646e8402b58ab6c46036a5ae74540ede96a9361d9ecc8c0e877e2d95"
+      },
+      "temporary_directory_removed": true,
+      "version": "uplink-macos-typecheck-v1"
+    },
+    "temporary_directories": [
+      "/var/folders/c8/b50cf96949x7gjrxdyq0vn1h0000gp/T/uplink-window0020-typecheck-zcb3vd_b",
+      "/var/folders/c8/b50cf96949x7gjrxdyq0vn1h0000gp/T/uplink-swift-typecheck-51qjjojx"
+    ],
+    "temporary_directories_removed": true
+  },
+  "version": 1,
+  "watchdogs_armed": 0
+}

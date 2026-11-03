@@ -1,0 +1,66 @@
+{
+  "runs": [
+    {
+      "run_id": "dc56159b42d2",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "aff9261adc18",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "e32ea421c10f",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "28a3560ef6b2",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "22a4c3580bd7",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "92a625f7744e",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "f2931ab26284",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "33a08fea4d2c",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "58d84af35657",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "7dfe8b109a9f",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    }
+  ],
+  "active_owned_daemons": 0,
+  "owned_namespaces": 0
+}

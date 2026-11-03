@@ -1,0 +1,244 @@
+{
+  "action_mode": "forced",
+  "all_window_getters_exact": true,
+  "branch": "fix/u1-linux-recovery",
+  "completed_trials": 3,
+  "handback_sha256": "d568f6890c87a70154283fdafd1e7599fa6a5e095b118aa087d38c66f1c5b57c",
+  "host_cleanup_completed_at": "2026-10-28T06:47:23.020449-05:00",
+  "independent_gguf_hash": {
+    "attempts": 1,
+    "bytes": 16756683904,
+    "expected_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+    "file_identity_unchanged": true,
+    "read_only": true,
+    "sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+    "status": "match",
+    "timestamp": 1793187797.396945
+  },
+  "independent_model_choice_claim": false,
+  "kind": "uplink-v5-handback",
+  "local_first_interval_hash_deferral": {
+    "reason": "less_than_90_seconds_cooldown_remaining",
+    "remote_hash_attempted": false
+  },
+  "owned_processes_left": 0,
+  "owned_watchdog_jobs": 0,
+  "private_config_restored": true,
+  "published": false,
+  "push": false,
+  "qualified_runtime_commit": "1082ebb50d52fa0a1d04efc9b3d4ce1fc3dafedb",
+  "raw_serial_absent_from_new_trial_outputs": true,
+  "recorded_at": "2026-10-28T06:48:25.238422-05:00",
+  "remote_evidence_files_verified": 53,
+  "requested_trials": 3,
+  "resource_samples": {
+    "errors": 0,
+    "max_swap_mib": 333.25,
+    "min_swap_mib": 333.25,
+    "peak_active_wired_compressed_bytes": 22228189184,
+    "peak_load": [
+      1.4541015625,
+      1.212890625,
+      1.54833984375
+    ],
+    "peak_load_including_admission": [
+      1.4541015625,
+      1.212890625,
+      1.6142578125
+    ],
+    "samples": 256,
+    "stopped": true
+  },
+  "retry_count": 0,
+  "root_snapshots_and_audits_retained": true,
+  "runner_invocations": 1,
+  "runtime_bytes_identical": true,
+  "runtime_payload_files": 104,
+  "server_lifecycle_unchanged": true,
+  "service_order_exact": true,
+  "source_commit": "ee8cd50b4721103e1d5efaa65f12a708d6629899",
+  "staging_files_verified_removed": 164,
+  "status": "THREE_PC1_RECOVERIES_VERIFIED_HANDBACK",
+  "three_consecutive_probe_enabled_recoveries": true,
+  "trials": [
+    {
+      "all_eight_getters_match": true,
+      "episodes": [
+        {
+          "action": "set_dns",
+          "action_evidence": [
+            "dns-1"
+          ],
+          "hypothesis_evidence": [
+            "dns-1"
+          ],
+          "layer": "dns",
+          "mode": "forced",
+          "probe_results": [
+            {
+              "ok": false,
+              "op": "dns_query",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "action": "restore_proxy",
+          "action_evidence": [
+            "tls-apple"
+          ],
+          "hypothesis_evidence": [
+            "tls-apple"
+          ],
+          "layer": "proxy",
+          "mode": "forced",
+          "probe_results": [
+            {
+              "ok": false,
+              "op": "https_head",
+              "status": "failed"
+            }
+          ]
+        }
+      ],
+      "job_retired": true,
+      "journal_trial": 15,
+      "non_read_state_returned": 1,
+      "oob_ok": true,
+      "oracle": "ONLINE",
+      "oracle_version": "uplink-online-v1",
+      "previous_handback_to_injection_seconds": null,
+      "protected_services_unchanged": true,
+      "receipt_sha256": "56f80b7f9ec34f8bb518451d27e595882aa1996c64f1d7433a8db15d91a5608c",
+      "restore_seconds": 38.265963999787346,
+      "run_id": "0f3194dee834",
+      "six_oracle_checks_pass": true,
+      "trace_rows": 27,
+      "trace_sha256": "359b010bee2720dd3db31323b76bff0631c7205b4b1a6eabfb07768f9d3a0639",
+      "trial_passed": true,
+      "watchdog": "disarmed",
+      "wifi_ssh_back": true,
+      "window_trial": 1
+    },
+    {
+      "all_eight_getters_match": true,
+      "episodes": [
+        {
+          "action": "set_dns",
+          "action_evidence": [
+            "dns-1"
+          ],
+          "hypothesis_evidence": [
+            "dns-1"
+          ],
+          "layer": "dns",
+          "mode": "forced",
+          "probe_results": [
+            {
+              "ok": false,
+              "op": "dns_query",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "action": "restore_proxy",
+          "action_evidence": [
+            "tls-apple"
+          ],
+          "hypothesis_evidence": [
+            "tls-apple"
+          ],
+          "layer": "proxy",
+          "mode": "forced",
+          "probe_results": [
+            {
+              "ok": false,
+              "op": "https_head",
+              "status": "failed"
+            }
+          ]
+        }
+      ],
+      "job_retired": true,
+      "journal_trial": 16,
+      "non_read_state_returned": 1,
+      "oob_ok": true,
+      "oracle": "ONLINE",
+      "oracle_version": "uplink-online-v1",
+      "previous_handback_to_injection_seconds": 150.371502161026,
+      "protected_services_unchanged": true,
+      "receipt_sha256": "25b894fde21d6b745eaacb298a6da4c227bcf19a479170299341cfff6e491190",
+      "restore_seconds": 33.328391999937594,
+      "run_id": "75429ca1ec21",
+      "six_oracle_checks_pass": true,
+      "trace_rows": 27,
+      "trace_sha256": "1495b00c4cc06f2239ae713cc3f3494e1d01ed82c19bcbfbac9c58a0bc23f7d7",
+      "trial_passed": true,
+      "watchdog": "disarmed",
+      "wifi_ssh_back": true,
+      "window_trial": 2
+    },
+    {
+      "all_eight_getters_match": true,
+      "episodes": [
+        {
+          "action": "set_dns",
+          "action_evidence": [
+            "dns-1"
+          ],
+          "hypothesis_evidence": [
+            "dns-1"
+          ],
+          "layer": "dns",
+          "mode": "forced",
+          "probe_results": [
+            {
+              "ok": false,
+              "op": "dns_query",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "action": "restore_proxy",
+          "action_evidence": [
+            "tls-apple"
+          ],
+          "hypothesis_evidence": [
+            "tls-apple"
+          ],
+          "layer": "proxy",
+          "mode": "forced",
+          "probe_results": [
+            {
+              "ok": false,
+              "op": "https_head",
+              "status": "failed"
+            }
+          ]
+        }
+      ],
+      "job_retired": true,
+      "journal_trial": 17,
+      "non_read_state_returned": 1,
+      "oob_ok": true,
+      "oracle": "ONLINE",
+      "oracle_version": "uplink-online-v1",
+      "previous_handback_to_injection_seconds": 150.53362202644348,
+      "protected_services_unchanged": true,
+      "receipt_sha256": "cb0cc15161cfa21e6f8c7e001245bf70a552806cb0ce42b9adedd0e5949d8895",
+      "restore_seconds": 34.21471400000155,
+      "run_id": "6c04d80f1c00",
+      "six_oracle_checks_pass": true,
+      "trace_rows": 27,
+      "trace_sha256": "0fda3d7d9f922ce231afd1be1bd267ebfe22fea8b583e3838dc36ad32bef2f79",
+      "trial_passed": true,
+      "watchdog": "disarmed",
+      "wifi_ssh_back": true,
+      "window_trial": 3
+    }
+  ],
+  "version": 1,
+  "window_hard_stop": "2026-10-28T06:55:00-05:00"
+}

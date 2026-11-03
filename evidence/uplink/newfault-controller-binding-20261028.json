@@ -1,0 +1,29 @@
+{
+  "archive_has_private_config": false,
+  "archive_sha256": "d2122c5da1310950173a45de5ba7ef0dcd51cd5959e28eed6acfc347c07262df",
+  "kind": "uplink-newfault-packet-binding",
+  "live_authorized": false,
+  "native_binary_sha256": "d304ce7cc53dd61f46c6b8380d2a506fc355e5c0457b56d7d2390b57664d2f0a",
+  "native_readback_before_live_required": true,
+  "package_sha256": "014f8be5db61408851fa2d20303f8c8a6d12ec0ce4eb39b86c9bfea215e626f9",
+  "packet_file_sha256": "feb86c2ceec3adeb5a01194b177cdaee00fb8319468d62c0b3e521dd2a5fc31d",
+  "packet_sha256": "ed389d2b69df3a2597147c806f087adf93dc12bad173d94c4763d3dd22ac87d8",
+  "runtime_sha256": "d3c7336f25bc4e6c896ef42b5631eae99cd8bab24791466aedf34a8d8fe739a9",
+  "source_commit": "a208ffa630c447d39c43abc13eda834503eca2b3",
+  "source_files_verified": 115,
+  "specs": [
+    {
+      "fault": "test_host_blackhole",
+      "run_id": "0aa3c9688c84",
+      "spec_sha256": "a5393da85fe40f07aec614f91fb06ad94e617dfbecbf667b59a5df40cf91ed79"
+    },
+    {
+      "fault": "owned_pf_outbound",
+      "run_id": "664023b25418",
+      "spec_sha256": "22fad51aeee9e36442422c8bcf41b6627ca922e3a6fd346608aec6ae802dfda7"
+    }
+  ],
+  "survey_sha256": "0b80c0398776a84f3cda0c9e8c094032ac158d0a5e1ff67de2b0646e67b572e5",
+  "version": 1,
+  "window_template_authorized": false
+}

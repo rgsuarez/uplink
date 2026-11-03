@@ -1,0 +1,850 @@
+{
+  "cleanup": {
+    "fixture_symlinks_unlinked_without_following": 1251,
+    "model_process_identity_unchanged": true,
+    "owned_temp_removed": true,
+    "private_config_copy_removed": true,
+    "regular_files_removed": 10860,
+    "source_commit": "7664635148aeccb788a2fe070617ba6e96dd5c71",
+    "source_files_verified": 901,
+    "vm_stopped": true
+  },
+  "evidence_hashes": {
+    "failed-case-evidence/audit.jsonl": "3327b3be2a57aeb9e2af6a9f1cba4372d582ba3f9744ef2faa6edd4fbf31b9d8",
+    "failed-case-evidence/dns.log": "359bf5dccfffc755c397b4bfee4db96f36ef9b3dd9c74cd1340fbeecc39fcad7",
+    "failed-case-evidence/http443.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "failed-case-evidence/http80.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "failed-case-evidence/processes.jsonl": "6fca9ac72de8df89ecfaea5eb38ddf55174b923c090881a86426541d9fc9c29b",
+    "failed-case-evidence/proxy.log": "9fc30fa86b1874059bcccd81ac3297e8f61659474140660e04a0a68fa915376a",
+    "failed-case-evidence/state.json": "d7cb9dd6d1abff0f8d723c967662d18120926fc1d61b5ed13e1c58bc67ac0c94",
+    "fake-tests.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fake-tests.stdout.private": "6d92fd1770ddf590203596d87058878ef9e3ca376ff5c6da9c63d9c1e4d2b2ba",
+    "final-cleanup.json": "14c28890dae9f6f3aadefd60ab38e437bca73ea4a5815a290b86080b8d69d068",
+    "final-logs-download.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final-logs-download.stdout.private": "f8de7e1b09653c73fd8e63b9bae4f4d15c3b550a2a958f26b76bb0de92b0ee9e",
+    "final-temp-cleanup.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final-temp-cleanup.stdout.private": "cc3ec77a6c0c9b7df7017bab31affb2a981effd8ebf0e599cfb2fb4ca9be4148",
+    "intent.json": "26ed4cf9edc8949d75d51ce86678cca9d7e257a4a62b4ce11bce7255ad907631",
+    "preflight.json": "b34d452a4c976171f32cfef7b661eb3fedc17d47a0d0395e9169c83f93055dbc",
+    "preflight.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "preflight.stdout.private": "cb86d7171a9e99c300d4d6de5aa7cbd669c77906e2e98eca563589d8d7500872",
+    "qualify_remote.py": "1fe95ffe51d95d67ab66e1bc052de0d862a714d94bb1359f913017ecae8c94cd",
+    "r2-handback-binding.json": "279e912a6c32e96043fafc5fe4541ff29d65aecd19388b395fccec55556b4e9f",
+    "remote-fake-final.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-fake-final.stdout.private": "c2a1a12184693b01f62775fb50c73b94dbbcde45625c83891e45d21eaa9e8e4f",
+    "remote-fake-qualification-final.json": "e5479318bb40c18525a5d119c1e2a7246e2b6e032a126bfcf4e6856eb9ec489c",
+    "remote-fake-qualification-r2.json": "f5c436a85206495b1430619727f3b5a651cbf719045523c672e872e4cf20e387",
+    "remote-fake-qualification.json": "c948cb558e6ca3df37f0e1f40acf992adc46e7c173308a1c60734c3d207ed869",
+    "remote-fake-r2.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-fake-r2.stdout.private": "587e0ea684d87480fdbc81a3b0cb0a93b9ad424831c941d6b7482613193928b8",
+    "remote-logs/source-manifest-final.json": "07ce40b7fc3659e93c0fc0b435ba1e30f4468278cb6db8f38e051e3f2c98ae7b",
+    "remote-logs/vm-envelope-r2.json": "1a9ad78e2749ee7ebb0150d1b967ef97c53efded88240e2d493a3c9f5ef00229",
+    "remote-logs/vm-envelope.json": "b4c8a164da1ac8f82d32417507b50f1cfa4e586bb8031993ad8f827b934b0521",
+    "remote-logs/vm-result-r2.private.json": "b66790bb3efc1a6595d4edd86477cafebac68f720674fa7584b355e90be338de",
+    "remote-logs/vm-result.private.json": "eb3387e0218a06d3785249c5b45cd0b8886109b72fbacf6d9df60ed0ac19d300",
+    "remote-logs/vm-run-r2.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-logs/vm-run-r2.stdout.private": "d0eabf8106a253efcd07efee9808154bdfc078f2c5b46ff1d69cda1a5e4a3fac",
+    "remote-logs/vm-run.stderr.private": "db621c3edcf87054f257b474657370de216b67256e7feddc40af9c77d54044c7",
+    "remote-logs/vm-run.stdout.private": "ba7f9828a72d78ad055ac195b09a39b1076c6fc9363f586ff0deb2d8138ac580",
+    "remote-logs/vm-start.stderr.private": "1175d57c73c736bb17e1d84c0701ef8dc9b2433c384f7a75e0bb693ef540a1e5",
+    "remote-logs/vm-start.stdout.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-logs/vm-stop.stderr.private": "5821fe2617552b8515981d7f75613c12bf5123255281e84204cd8da532a3f7a1",
+    "remote-logs/vm-stop.stdout.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results-final/mypy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results-final/mypy.stdout.log": "36dda6f9cde9c4724b81d27ea2de1d55f45a24bcb058ea63cdcf553e01f019e1",
+    "remote-results-final/pytest.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results-final/pytest.stdout.log": "dc73df7ce9d03c6a58da3f19fee5e2aeddd0c93b4ae0f0cdc2c76dcc9f4a9765",
+    "remote-results-final/pytest.xml": "101a9961f11983447dd5298c36ca0c5a11af7a38faf43219e90e941a6d1c0db4",
+    "remote-results-final/qualification.json": "e5479318bb40c18525a5d119c1e2a7246e2b6e032a126bfcf4e6856eb9ec489c",
+    "remote-results-final/ruff.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results-final/ruff.stdout.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "remote-results-r2/mypy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results-r2/mypy.stdout.log": "36dda6f9cde9c4724b81d27ea2de1d55f45a24bcb058ea63cdcf553e01f019e1",
+    "remote-results-r2/pytest.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results-r2/pytest.stdout.log": "ea4f6d1dedebd8acd1ce04f03a8ad2200f50d0f9b770eda7c13d4e06b003dc7e",
+    "remote-results-r2/pytest.xml": "444574d60e6f1633a45530bf2f7e189f2fb8c0a839814b21c02d0cf0bc2a952d",
+    "remote-results-r2/qualification.json": "f5c436a85206495b1430619727f3b5a651cbf719045523c672e872e4cf20e387",
+    "remote-results-r2/ruff.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results-r2/ruff.stdout.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "remote-results/mypy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results/mypy.stdout.log": "36dda6f9cde9c4724b81d27ea2de1d55f45a24bcb058ea63cdcf553e01f019e1",
+    "remote-results/pytest.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results/pytest.stdout.log": "5642c8b2cb526ff8b04aff17f492d8ece73ed02b8cd10f4aba0cf78cd813ef08",
+    "remote-results/pytest.xml": "5124e7e3004740260a01edfa79b0e45755d48c5b735abf3b820960db85d27265",
+    "remote-results/qualification.json": "c948cb558e6ca3df37f0e1f40acf992adc46e7c173308a1c60734c3d207ed869",
+    "remote-results/ruff.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "remote-results/ruff.stdout.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "source-delta-final.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-delta-final.stdout.private": "231fafef89014d20d3c0e6e95d515add74018fe39c7d9001e1b463919ddd318d",
+    "source-delta-r2.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-delta-r2.stdout.private": "481940b76247dba0ab66d95aa59e3377b53335f21a709f061d55264e67d4ed92",
+    "stage-create.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stage-create.stdout.private": "d3209ecc7df7fd474268fb7c7b2ba74f12c72dda8d12483292288f6621243dd4",
+    "stage-extract.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stage-extract.stdout.private": "46d4027e72bdc9114e3a30a0b8a3f27c8a5fcd781bea72773a00c90ac6d7358d",
+    "stage-upload.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stage-upload.stdout.private": "a66f77f9ab0a3c47c9abc91a43299e1c8949b04eaa4b0b7fac814e2b5d3bb98a",
+    "vm-admission.json": "7f729c7167af671fea65f6ec873a458fba9c41638992b82dd810e3456c8422b5",
+    "vm-cleanup.json": "b7fcfb87c1930e84da20e565df343390f3e2f3c7d30f6a584767903af387b502",
+    "vm-cleanup.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-cleanup.stdout.private": "b8eff6d695952e325715fa3bb0a428cb4a25d4a806073365a11b9d9ef8c9c600",
+    "vm-config-stage.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-config-stage.stdout.private": "474614de9894254876e442a0764d1a2e4234c705209aea51ab16dc86bc048786",
+    "vm-evidence/4a48422223c5/audit.jsonl": "5f857a277a7bbe2b16a522e9bd1e85fcd2c76ef3b9cb2fefc02fc866fe84d836",
+    "vm-evidence/4a48422223c5/dns.log": "8e2fbcbd8e51a3fa18dd8b81ab245e9e1748943ebc0eaa190609ea65b1d783b8",
+    "vm-evidence/4a48422223c5/fault-package-diff.json": "511bde250542fb97b5b29506be4ea9baeda2e57269e911d6112ef38d0ae1c804",
+    "vm-evidence/4a48422223c5/http443.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-evidence/4a48422223c5/http80.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-evidence/4a48422223c5/processes.jsonl": "97b67a9e614bfef3d79af646267f1e6df64e1b1805d7cdb2904ec12c3fbdd8dd",
+    "vm-evidence/4a48422223c5/proxy.log": "77e984126d6a548214d0130fecc5bf1f0f550611a8be8bb490f51b6dc2325d94",
+    "vm-evidence/4a48422223c5/state.json": "07b05eb7cb9eb263c7985cdc2c41bc7e74d2df1414ccc6273b743c85a58c5f5f",
+    "vm-evidence/4a48422223c5/v6-http.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-evidence/7191ca3abbc2/audit.jsonl": "db5f9e62b62ff4076b490b3e0faab8951476781688aa7923c983db7f9db59bd6",
+    "vm-evidence/7191ca3abbc2/dns.log": "ea55b5d28a9e00349ba185bbe7274fca71fc97748fa6275e6afc04887ebf5b47",
+    "vm-evidence/7191ca3abbc2/fault-package-diff.json": "cc6894d9f79649f026b8c0f8952bd7320c7292cb04676e8bde6bf05231226259",
+    "vm-evidence/7191ca3abbc2/http443.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-evidence/7191ca3abbc2/http80.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-evidence/7191ca3abbc2/processes.jsonl": "99d1eb08b45ccd3deb6056f65718b4e50fa6711c293491b336ba920c16c2bbb2",
+    "vm-evidence/7191ca3abbc2/proxy.log": "5dfd94222444687399e2bfbabd630f1b563fb4f8784f62f43c2cc65e2bf91096",
+    "vm-evidence/7191ca3abbc2/state.json": "864605e5d9847d21af91bdcdd49520b9fa8e0f2c22992bdef8b15b366e247e72",
+    "vm-evidence/b04d80ccbd90/audit.jsonl": "b1b5dfae149be57490af8c17f14791c200e74e11a3ec685e923181bfd6a40d81",
+    "vm-evidence/b04d80ccbd90/dns.log": "4e8af9cc2476fc2caa6334afc4e22976c526b65e5bf8c68db67f38a7372cfc2c",
+    "vm-evidence/b04d80ccbd90/fault-package-diff.json": "3fbe1b84d2436522436d660ebaad681c75dead8a3b1cdab6c0f6be0dd0344d55",
+    "vm-evidence/b04d80ccbd90/http443.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-evidence/b04d80ccbd90/http80.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-evidence/b04d80ccbd90/processes.jsonl": "e72373ada1f604f62d4b8b3b6376d7212d9313189628d51bf1ea668eb7f96393",
+    "vm-evidence/b04d80ccbd90/proxy.log": "3f74f0fe27f7e5e809d4f1df0b11963f715c58e9cde1490aa520ccdb536e524f",
+    "vm-evidence/b04d80ccbd90/state.json": "b6e57e0df8cfc85d25312d35bc45604f4e4a3aa878dd8adf45ff2bcd589ca1cd",
+    "vm-evidence/f3a3c50a0431/audit.jsonl": "3327b3be2a57aeb9e2af6a9f1cba4372d582ba3f9744ef2faa6edd4fbf31b9d8",
+    "vm-evidence/f3a3c50a0431/dns.log": "359bf5dccfffc755c397b4bfee4db96f36ef9b3dd9c74cd1340fbeecc39fcad7",
+    "vm-evidence/f3a3c50a0431/http443.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-evidence/f3a3c50a0431/http80.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-evidence/f3a3c50a0431/processes.jsonl": "6fca9ac72de8df89ecfaea5eb38ddf55174b923c090881a86426541d9fc9c29b",
+    "vm-evidence/f3a3c50a0431/proxy.log": "9fc30fa86b1874059bcccd81ac3297e8f61659474140660e04a0a68fa915376a",
+    "vm-evidence/f3a3c50a0431/state.json": "d7cb9dd6d1abff0f8d723c967662d18120926fc1d61b5ed13e1c58bc67ac0c94",
+    "vm-execution-envelope-r2.json": "6595b36bac649cf5b1a267e9b574566a4c394f7f9bce41e14dfa06743d188097",
+    "vm-execution-envelope.json": "c8a7275c21e6c1bd95dc7a693a2afbf80f89693d8aadae0c26e36e16fbdbbd98",
+    "vm-failed-case-evidence.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-failed-case-evidence.stdout.private": "8a0fa425f862df638489df9a4e8a408ac9fddc01f6a61ee220f24ac007953339",
+    "vm-postflight-evidence.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-postflight-evidence.stdout.private": "d637fb99ead876a2cf79111969ce461bd4aea5efb46b9f5f71b2560f2cff74a8",
+    "vm-postflight.json": "9ee2b197ce84c6cec0abdcf45b67f416be7c8634bde1a0b15af0f201fac0616b",
+    "vm-run-r2.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-run-r2.stdout.private": "b4291bddbab929f279fa1737e098e6fbe7a5d61a24dd9207272653d04855e00f",
+    "vm-run-result-r2.json": "b66790bb3efc1a6595d4edd86477cafebac68f720674fa7584b355e90be338de",
+    "vm-run-result.json": "eb3387e0218a06d3785249c5b45cd0b8886109b72fbacf6d9df60ed0ac19d300",
+    "vm-run.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-run.stdout.private": "18ecaf7d94146aaca5806ba34effb10a62fbaf8f2f3d688e53abf36a1b9827ae",
+    "vm-start-r2.stderr.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm-start-r2.stdout.private": "ffee4c48b7266dc582ec767bae96215b651a2af22908a529b5ee708388f1b967",
+    "vm-start.stderr.private": "76d3277664e1a85860958786089b0f73e2781f92fbb7ac070cbe7e79c5962bd1",
+    "vm-start.stdout.private": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vm_qualify.py": "fd3bbe64700defbddd7991cff4cd7b2999265deb2f67beb326ae5aa757c76444"
+  },
+  "fake_tests": {
+    "checks": {
+      "mypy": {
+        "exit_code": 0,
+        "seconds": 2.802
+      },
+      "pytest": {
+        "exit_code": 0,
+        "seconds": 4.246
+      },
+      "ruff": {
+        "exit_code": 0,
+        "seconds": 0.031
+      }
+    },
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "skips": 0,
+    "source_files_unchanged": true,
+    "tests": 926
+  },
+  "final_local_integrity": {
+    "frozen_inputs_match": 24,
+    "issued_clearance_unchanged": true,
+    "original_recovery_files_match": 66,
+    "private_config_unchanged_mode_0600": true,
+    "runtime_source_hashes_match": true
+  },
+  "initial_stopped_attempt": {
+    "cleanup_closed": true,
+    "fault_injected": false,
+    "original_receipt_preserved": true,
+    "reason": "driver_applied_mac_oracle_version_predicate_to_linux_lab_receipt",
+    "remediation_commit": "0e02daddf761894cfb843f5824f48bc900b58aa1",
+    "run_id": "f3a3c50a0431",
+    "source_commit": "0e5b32a9a9d20f7db7efe62670c10749e8742bf6",
+    "stage": "baseline_online_admission"
+  },
+  "mac_live_trials": 0,
+  "model_calls": 0,
+  "model_server_changed": false,
+  "packages_installed": 0,
+  "postflight": {
+    "namespaces": [],
+    "owned_processes_remaining": [],
+    "runs": {
+      "4a48422223c5": {
+        "closed": true,
+        "exact_diff": true,
+        "host_network_fingerprint_unchanged": true
+      },
+      "7191ca3abbc2": {
+        "closed": true,
+        "exact_diff": true,
+        "host_network_fingerprint_unchanged": true
+      },
+      "b04d80ccbd90": {
+        "closed": true,
+        "exact_diff": true,
+        "host_network_fingerprint_unchanged": true
+      },
+      "f3a3c50a0431": {
+        "closed": true,
+        "exact_diff": null,
+        "host_network_fingerprint_unchanged": true
+      }
+    },
+    "worker_files_verified": 8
+  },
+  "publication_scan": {
+    "configured_serial_occurrences": 0,
+    "disposition": "Seven retained issued-clearance occurrences plus five exact host-scoped release-marker occurrences. No new scan exception was added; publication remains gated.",
+    "findings": [
+      {
+        "line": 30,
+        "path": "HANDOFF-BUILD.md",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 4,
+        "path": "KAYLIN-OK.md",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 6,
+        "path": "KAYLIN-OK.md",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 8,
+        "path": "KAYLIN-OK.md",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 12,
+        "path": "KAYLIN-OK.md",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 19,
+        "path": "KAYLIN-OK.md",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 28,
+        "path": "KAYLIN-OK.md",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 51,
+        "path": "KAYLIN-OK.md",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 297,
+        "path": "READY-FAULTS-V1.md",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 210,
+        "path": "evidence/uplink/faults-v1-remote-qualification-20261028.json",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 73,
+        "path": "scripts/faults_v1_dryrun.py",
+        "rule": "lab_identity"
+      },
+      {
+        "line": 27,
+        "path": "tests/uplink/test_faults_v1_dryrun.py",
+        "rule": "lab_identity"
+      }
+    ],
+    "license_findings": 0,
+    "passed": false
+  },
+  "published": false,
+  "push": false,
+  "read_only_mac_dryrun_executed": false,
+  "read_only_mac_gate": "Exact configured FAULTS-V1-DRYRUN relay still required.",
+  "real_link_faults": 0,
+  "recorded_at": "2026-10-28T14:56:37.509225+00:00",
+  "runtime_source_hashes": {
+    "configs/faults-v1-packages.json": "3784867ac04459b535f43e2851ebc7285de5d85ccef75b4199a119459e7bec08",
+    "scripts/faults_v1_dryrun.py": "0adab2694f7b467e5ffb512253b559613cb0f5aa3dae4cf8f0bc62478a8aacf5",
+    "src/offline_agent/uplink/faults_v1.py": "2d3f5a7c6273cde5778cfe36f51951d1a41358e8a9c5b8eab655e02652284998",
+    "src/offline_agent/uplink/faults_v1_worker.py": "9cb3e243ed833f4848bbabbeaa843c8cace2894c56796569ceec1428e09f3d8b",
+    "src/offline_agent/uplink/lab_config.py": "1e0749fa57b91c658324be0fa14cbbfbc157a03e7566b0b3d324d9b055abb2a3",
+    "src/offline_agent/uplink/real_fleet.py": "e0945f6a2d623b8eb4887f98f566499032cd72c6b19c629c5a1555a3889fbfdb",
+    "src/offline_agent/uplink/real_protocol.py": "de375ba012f350d6c232ee387cf2ced9e253d9efe54adf03aed1435b63db61fd",
+    "src/offline_agent/uplink/real_worker.py": "2e44a1ad1b001d16124cbd325dd646e0b771b9f1ac29eeae9151246df2a5a80b"
+  },
+  "runtime_source_sha256": "e41d36f248a7e76c29ad28541df1b0225a500ce18301f1259f1202535f3fba1b",
+  "status": "remote_fake_and_linux_vm_qualified_mac_live_unrun",
+  "tested_source_commit": "7664635148aeccb788a2fe070617ba6e96dd5c71",
+  "version": 1,
+  "vm_cases": [
+    {
+      "after": {
+        "snapshot_match": true,
+        "target": {
+          "family": 4,
+          "ok": true
+        }
+      },
+      "after_online": {
+        "checked_at": 1793198934.9028459,
+        "evidence": [
+          {
+            "id": "dns-1",
+            "kind": "dns",
+            "latency_ms": 10.34625399995548,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "dns-2",
+            "kind": "dns",
+            "latency_ms": 10.169288000042798,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "tls-apple",
+            "kind": "tls",
+            "latency_ms": 10.094410000078824,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "tls-google",
+            "kind": "tls",
+            "latency_ms": 9.937402999980804,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "portal-apple",
+            "kind": "portal",
+            "latency_ms": 8.611552000047595,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "portal-google",
+            "kind": "portal",
+            "latency_ms": 7.120652000025984,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          }
+        ],
+        "verdict": "ONLINE",
+        "version": "uplink-linux-lab-v1"
+      },
+      "before_online": {
+        "checked_at": 1793198931.708392,
+        "evidence": [
+          {
+            "id": "dns-1",
+            "kind": "dns",
+            "latency_ms": 10.54626300003747,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "dns-2",
+            "kind": "dns",
+            "latency_ms": 10.268875999940974,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "tls-apple",
+            "kind": "tls",
+            "latency_ms": 11.907614999927318,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "tls-google",
+            "kind": "tls",
+            "latency_ms": 9.00965300002099,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "portal-apple",
+            "kind": "portal",
+            "latency_ms": 7.124694000026466,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "portal-google",
+            "kind": "portal",
+            "latency_ms": 6.290488999979971,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          }
+        ],
+        "verdict": "ONLINE",
+        "version": "uplink-linux-lab-v1"
+      },
+      "cleanup": {
+        "closed": true
+      },
+      "fault": "owned_pf_outbound",
+      "fault_measurement": {
+        "snapshot_match": false,
+        "target": {
+          "family": 4,
+          "ok": false
+        }
+      },
+      "model_calls": 0,
+      "passed": true,
+      "repair": "restore_owned_pf_anchor",
+      "repair_mode": "scripted_typed_snapshot_action",
+      "run_id": "b04d80ccbd90",
+      "worker_hashes": {
+        "faults_v1_linux.py": "360832c5903a37275159ad778ab56ba566d941ac95cd8caa1d5e5a292d1fce23",
+        "lab_protocol.py": "4ff2de76b85d1335cfa698a0e32a77b7b9cb5443dc1dbb9efe36345af2f1763b",
+        "lab_servers.py": "830308c27b0e5dc21f7ab281b05278af1a45618baeaac1b8db577aeba6947e49",
+        "lab_setup.py": "23fd838c4abcd7d6bb2e62b90bcc2b7964f3d01199f08ac063552540e97266ff",
+        "lab_worker.py": "bb7d24d954060f558ca7c5e4cb936c74ae6e2c2f0aac71f07d4e714dc8166765",
+        "probe_execution.py": "d355db316ffc8db9c2bb0160f022fc3fa66189d6998ca46f79baa7540128274b",
+        "probe_protocol.py": "405eedefa49161db7ad708f46fd1ae51153303551995ff1057abf39ecf8c3fc4",
+        "setup.sh": "30706d6680e8f20c8e37bf4a55875beb4c3d882b9c1f039386bb8ef538e6d95e"
+      }
+    },
+    {
+      "after": {
+        "snapshot_match": true,
+        "target": {
+          "family": 6,
+          "ok": true
+        }
+      },
+      "after_online": {
+        "checked_at": 1793198926.592025,
+        "evidence": [
+          {
+            "id": "dns-1",
+            "kind": "dns",
+            "latency_ms": 10.361796999973194,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "dns-2",
+            "kind": "dns",
+            "latency_ms": 11.710358000073029,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "tls-apple",
+            "kind": "tls",
+            "latency_ms": 11.909865999996327,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "tls-google",
+            "kind": "tls",
+            "latency_ms": 9.077029999957631,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "portal-apple",
+            "kind": "portal",
+            "latency_ms": 7.68384299999525,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "portal-google",
+            "kind": "portal",
+            "latency_ms": 6.64375500002734,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          }
+        ],
+        "verdict": "ONLINE",
+        "version": "uplink-linux-lab-v1"
+      },
+      "before_online": {
+        "checked_at": 1793198925.421856,
+        "evidence": [
+          {
+            "id": "dns-1",
+            "kind": "dns",
+            "latency_ms": 11.121747999936815,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "dns-2",
+            "kind": "dns",
+            "latency_ms": 10.989117000008264,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "tls-apple",
+            "kind": "tls",
+            "latency_ms": 11.367758999995203,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "tls-google",
+            "kind": "tls",
+            "latency_ms": 10.7741489999853,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "portal-apple",
+            "kind": "portal",
+            "latency_ms": 7.255698999983906,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "portal-google",
+            "kind": "portal",
+            "latency_ms": 6.879641000068659,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          }
+        ],
+        "verdict": "ONLINE",
+        "version": "uplink-linux-lab-v1"
+      },
+      "cleanup": {
+        "closed": true
+      },
+      "fault": "wifi_ipv6_off",
+      "fault_measurement": {
+        "snapshot_match": false,
+        "target": {
+          "family": 6,
+          "ok": false
+        }
+      },
+      "model_calls": 0,
+      "passed": true,
+      "repair": "restore_wifi_ipv6",
+      "repair_mode": "scripted_typed_snapshot_action",
+      "run_id": "4a48422223c5",
+      "worker_hashes": {
+        "faults_v1_linux.py": "360832c5903a37275159ad778ab56ba566d941ac95cd8caa1d5e5a292d1fce23",
+        "lab_protocol.py": "4ff2de76b85d1335cfa698a0e32a77b7b9cb5443dc1dbb9efe36345af2f1763b",
+        "lab_servers.py": "830308c27b0e5dc21f7ab281b05278af1a45618baeaac1b8db577aeba6947e49",
+        "lab_setup.py": "23fd838c4abcd7d6bb2e62b90bcc2b7964f3d01199f08ac063552540e97266ff",
+        "lab_worker.py": "bb7d24d954060f558ca7c5e4cb936c74ae6e2c2f0aac71f07d4e714dc8166765",
+        "probe_execution.py": "d355db316ffc8db9c2bb0160f022fc3fa66189d6998ca46f79baa7540128274b",
+        "probe_protocol.py": "405eedefa49161db7ad708f46fd1ae51153303551995ff1057abf39ecf8c3fc4",
+        "setup.sh": "30706d6680e8f20c8e37bf4a55875beb4c3d882b9c1f039386bb8ef538e6d95e"
+      }
+    },
+    {
+      "after": {
+        "snapshot_match": true,
+        "target": {
+          "family": 4,
+          "ok": true
+        }
+      },
+      "after_online": {
+        "checked_at": 1793198920.511986,
+        "evidence": [
+          {
+            "id": "dns-1",
+            "kind": "dns",
+            "latency_ms": 10.45771799999784,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "dns-2",
+            "kind": "dns",
+            "latency_ms": 9.955904000094051,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "tls-apple",
+            "kind": "tls",
+            "latency_ms": 11.629187000039565,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "tls-google",
+            "kind": "tls",
+            "latency_ms": 9.02877900000476,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "portal-apple",
+            "kind": "portal",
+            "latency_ms": 7.76609800004735,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "portal-google",
+            "kind": "portal",
+            "latency_ms": 8.444835999966926,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          }
+        ],
+        "verdict": "ONLINE",
+        "version": "uplink-linux-lab-v1"
+      },
+      "before_online": {
+        "checked_at": 1793198917.3397691,
+        "evidence": [
+          {
+            "id": "dns-1",
+            "kind": "dns",
+            "latency_ms": 10.309127000027729,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "dns-2",
+            "kind": "dns",
+            "latency_ms": 10.402798000086477,
+            "ok": true,
+            "path_id": null,
+            "proxy_used": null,
+            "reason": "system_resolved",
+            "status": null,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "tls-apple",
+            "kind": "tls",
+            "latency_ms": 9.988280000015948,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "tls-google",
+            "kind": "tls",
+            "latency_ms": 10.680643999990025,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          },
+          {
+            "id": "portal-apple",
+            "kind": "portal",
+            "latency_ms": 8.382082999901286,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-ae8fda2b38a2bc3bfa08fcc2"
+          },
+          {
+            "id": "portal-google",
+            "kind": "portal",
+            "latency_ms": 7.140236000054756,
+            "ok": true,
+            "path_id": "path-0b01cb72af088ffa8b064ef3",
+            "proxy_used": "proxy-9f38693a3bdd4bd37339401b",
+            "reason": "verified_lab_fixture",
+            "status": 204,
+            "target_id": "host-33449d6a6fb944476e3b5d80"
+          }
+        ],
+        "verdict": "ONLINE",
+        "version": "uplink-linux-lab-v1"
+      },
+      "cleanup": {
+        "closed": true
+      },
+      "fault": "test_host_blackhole",
+      "fault_measurement": {
+        "snapshot_match": false,
+        "target": {
+          "family": 4,
+          "ok": false
+        }
+      },
+      "model_calls": 0,
+      "passed": true,
+      "repair": "restore_test_host_route",
+      "repair_mode": "scripted_typed_snapshot_action",
+      "run_id": "7191ca3abbc2",
+      "worker_hashes": {
+        "faults_v1_linux.py": "360832c5903a37275159ad778ab56ba566d941ac95cd8caa1d5e5a292d1fce23",
+        "lab_protocol.py": "4ff2de76b85d1335cfa698a0e32a77b7b9cb5443dc1dbb9efe36345af2f1763b",
+        "lab_servers.py": "830308c27b0e5dc21f7ab281b05278af1a45618baeaac1b8db577aeba6947e49",
+        "lab_setup.py": "23fd838c4abcd7d6bb2e62b90bcc2b7964f3d01199f08ac063552540e97266ff",
+        "lab_worker.py": "bb7d24d954060f558ca7c5e4cb936c74ae6e2c2f0aac71f07d4e714dc8166765",
+        "probe_execution.py": "d355db316ffc8db9c2bb0160f022fc3fa66189d6998ca46f79baa7540128274b",
+        "probe_protocol.py": "405eedefa49161db7ad708f46fd1ae51153303551995ff1057abf39ecf8c3fc4",
+        "setup.sh": "30706d6680e8f20c8e37bf4a55875beb4c3d882b9c1f039386bb8ef538e6d95e"
+      }
+    }
+  ],
+  "vm_sequence_seconds": 22.724,
+  "vm_source_commit": "0e02daddf761894cfb843f5824f48bc900b58aa1",
+  "vm_source_runtime_unchanged_at_final_head": true
+}

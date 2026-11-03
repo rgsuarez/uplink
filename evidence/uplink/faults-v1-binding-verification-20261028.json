@@ -1,0 +1,37 @@
+{
+  "handoff_required": true,
+  "host_contact": false,
+  "live_binding_reason": "real target addresses, management inventory, compiled helper and private config binding await approved host preflight",
+  "live_faults": 0,
+  "live_package_sha256": null,
+  "live_spec_sha256": null,
+  "local_tests": {
+    "errors": 0,
+    "failed": 0,
+    "junit_sha256": "3dff1244121f519a2989b52eb0f208298220b103282ad150f2927e9a5d39fb2c",
+    "new_in_this_binding": 13,
+    "passed": 923,
+    "skipped": 0
+  },
+  "pf_status_line_policy": "full exact line for PF package; elapsed uptime differences are refusals, never normalized",
+  "recorded_at": "2026-10-28T14:24:49.957510+00:00",
+  "revert_seconds": 60,
+  "ruff_check": true,
+  "runtime_source_hashes": {
+    "configs/faults-v1-packages.json": "6d88dcbc9fe8e8313419168bc2ddbeb0e26c475784604749cf68c071cbad62c7",
+    "scripts/faults_v1_dryrun.py": "a4fa98d3cdd003fe510d8fa74c55c8034131b574cee3fc96a077cf5e78f1e402",
+    "src/offline_agent/uplink/faults_v1.py": "2c03ab0c289483c043881698fa94fc70a4fcb01322fab0626268707fb40bb849",
+    "src/offline_agent/uplink/faults_v1_worker.py": "97e07389fc7bdc7d4990c8a439b7d1afcc9289ac64c9098ae766c9533e5ba38d",
+    "src/offline_agent/uplink/lab_config.py": "1e0749fa57b91c658324be0fa14cbbfbc157a03e7566b0b3d324d9b055abb2a3",
+    "src/offline_agent/uplink/real_fleet.py": "e0945f6a2d623b8eb4887f98f566499032cd72c6b19c629c5a1555a3889fbfdb",
+    "src/offline_agent/uplink/real_protocol.py": "de375ba012f350d6c232ee387cf2ced9e253d9efe54adf03aed1435b63db61fd",
+    "src/offline_agent/uplink/real_worker.py": "2e44a1ad1b001d16124cbd325dd646e0b771b9f1ac29eeae9151246df2a5a80b"
+  },
+  "runtime_source_sha256": "4cd728da263b0a7fc44ca1012bdbd966e66f49fa49b9012346090daaaa97a01e",
+  "scope_review": "local GO-FAULTS-V1-BIND.md dated 2026-10-28 09:10 CT",
+  "status": "desk_bound_readonly_host_collection_pending_handback",
+  "strict_mypy_files": 99,
+  "tailnet_alias_required": true,
+  "version": 1,
+  "vm_contact": false
+}

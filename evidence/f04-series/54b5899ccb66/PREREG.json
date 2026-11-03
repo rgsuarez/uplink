@@ -1,0 +1,235 @@
+{
+  "arm": "BASE",
+  "attempt_cap": 30,
+  "attempts": [
+    {
+      "index": 1,
+      "manifest_sha256": "81af33f36fabc1abe2554ae2e344528c06cb8c5514b437244999beb7e1cb0df1",
+      "package_sha256": "6ca308c672b378deb970c2e22e0dd86866596cb1c7ed95c10ff86e13e9c29958",
+      "run_id": "d2c83ffa97ec"
+    },
+    {
+      "index": 2,
+      "manifest_sha256": "66b70454d5f8ee46a69a6b00534eb81a10ca3db794bcf06245efd34e49ea00b7",
+      "package_sha256": "29927bdc98d6c4f49ae9c49897bf24e9d98dca987f1ff252e9d5a81dc61b9cd7",
+      "run_id": "c81f7ae72ef1"
+    },
+    {
+      "index": 3,
+      "manifest_sha256": "0b384a99464260966c827eb6fd655dbe0ba21559c0321210b6cd91d434a7e7aa",
+      "package_sha256": "d498c15764445a967fa7d952dc07017d0d984ae850b819b8dc46f820f07e8241",
+      "run_id": "8d35661dd4a7"
+    },
+    {
+      "index": 4,
+      "manifest_sha256": "3b5426a2db1932c92b9856d836f9655bcd78271cb9d9535121dd93d9f53ed9ac",
+      "package_sha256": "e5ca6a7a4f21b414ef55fd4e92da73ab62be61d0909f45a16dd85c1479643856",
+      "run_id": "4bd33d9dc798"
+    },
+    {
+      "index": 5,
+      "manifest_sha256": "a51918b684206cfcfbd7c13bc25d895f0e2b8972ffa74f8ff55737c5c66656f3",
+      "package_sha256": "ccd50f1acb9f4f72d78ac66e5d2e7a05ee7dd845ee0c9d6df592f7a1e5edf39a",
+      "run_id": "469df53e8c1e"
+    },
+    {
+      "index": 6,
+      "manifest_sha256": "d14e0a8ac1748672c4997fb06ad7342ffbfbccf49db311a9f15bfb6b58616734",
+      "package_sha256": "4caa062cf74b1b763622f2749edfd5322a7d1d2c6120c55bfc0a136f61eb03cf",
+      "run_id": "0243e7cff627"
+    },
+    {
+      "index": 7,
+      "manifest_sha256": "dc2e0509ebead42aa5363d89ea2d65ceabb0ae7f79f587e3e9739df6214189a9",
+      "package_sha256": "703e7a620ae595f168caa8a20f3f50ddf60808fc6d28b44876d1cfeaf97a5a87",
+      "run_id": "fdc58cf18114"
+    },
+    {
+      "index": 8,
+      "manifest_sha256": "6c6131073db6bd8b6edee0751aef75e3540263084a8ba089366e3dae25ef13db",
+      "package_sha256": "598bdd5389c06c036266fa7ca922b8bff9c5df15ea7bdc6108309f0115a1562b",
+      "run_id": "7ecf58a42118"
+    },
+    {
+      "index": 9,
+      "manifest_sha256": "1fb42d0dad230bfe5d9fae456a03f537d4cbbf557dad787e25fbfd6c88734e90",
+      "package_sha256": "6f5aa82d9cf47afc113dfb048a9880898f18b6969336571019b0bb32bb0a8a53",
+      "run_id": "fbdb864e6b84"
+    },
+    {
+      "index": 10,
+      "manifest_sha256": "ad5540b485fc0190665115daa3569d588b86bf8e4ccf346db338d45b979095a0",
+      "package_sha256": "5b302719b07a253a0c9f586b724d79e285b4e891a626e2aa067e20c8014496ad",
+      "run_id": "b4cf03269348"
+    },
+    {
+      "index": 11,
+      "manifest_sha256": "1085551f20894f35b0165e09a4f6da91c79248c352a9897a4d76687a68df32b6",
+      "package_sha256": "0cb3d51560af93292067540ba3f5aad7ff1d74aa191c61084bbbe7609a09f7d1",
+      "run_id": "8a4a9132f9eb"
+    },
+    {
+      "index": 12,
+      "manifest_sha256": "9e6eaa35d26d9f21db249ca1345f71a40ef51a3a7b9490d77516f07517539085",
+      "package_sha256": "6b6f598315312ae166d13a1203b954ddb5693454a787c612ecf3aa1abff63551",
+      "run_id": "1bb0ecb3ec78"
+    },
+    {
+      "index": 13,
+      "manifest_sha256": "54e1ed881c12d658991cf20dd133921f6fea4e78edb7f742f5a6850a4fba0834",
+      "package_sha256": "678ffa7b0f05ff5f734f324d92c1e11befaf620c692bbf11085e5ebe50424830",
+      "run_id": "15006e214966"
+    },
+    {
+      "index": 14,
+      "manifest_sha256": "061dd6ee11b1be9a25ee215f2069a3614b7cf6b8fbe7441b75c61fe2130a36a0",
+      "package_sha256": "11f27c46ecb4d0fe5f889c0314d3b76a9aa2051238e82750667891633ca177dd",
+      "run_id": "eb87979b209a"
+    },
+    {
+      "index": 15,
+      "manifest_sha256": "2e2bb3d08d1590d14503bcc68c1eba941d834539244c07028e714945f7c7f222",
+      "package_sha256": "3dfca5c26fe85b3ab614c6da29d9225fcb4361fbd48dd3936e045882a7f9c6a6",
+      "run_id": "5b62fdb0a3bf"
+    },
+    {
+      "index": 16,
+      "manifest_sha256": "e1ab98c2abffd95dc444661b23aaa1286fbe6f92f1ef3cc764afa0c9bda27f65",
+      "package_sha256": "83d87900722900b3f9e449a815a64db89ef997a9855657b0823d607b5b07f7cd",
+      "run_id": "08305567bf37"
+    },
+    {
+      "index": 17,
+      "manifest_sha256": "ecafec2e3da92a82193f8c28bc02a3edd37520821354ee68a8ac562a12885b66",
+      "package_sha256": "386e9239a4ee6eaa69329ea9de7a4722eb3bdc9d6c697906af9b6c11bba07eb9",
+      "run_id": "17dd6a6c7d72"
+    },
+    {
+      "index": 18,
+      "manifest_sha256": "85c9c64d2f68a7dc79f9f61e265fc887e4fa3fa958c0d5a9d0174b6828403377",
+      "package_sha256": "50041ca271d542d15a5802720e7cd8ea15177b18a8fd3920c8ce60707f5604a7",
+      "run_id": "7dbcc6e81a9d"
+    },
+    {
+      "index": 19,
+      "manifest_sha256": "142942086e4c03d18a4fc04a6055b0ce24014f10a02cb13306245bc6ee5cd750",
+      "package_sha256": "39c652ca1a8a9f207d855a0b9b1e91353306de73c30b08f7c87d4ce479d59ec6",
+      "run_id": "ff41c66fd1f2"
+    },
+    {
+      "index": 20,
+      "manifest_sha256": "cde441c59c28375c58b4f096a7e7f3245988473680e7872d3ee961092e825e62",
+      "package_sha256": "a453dbdf729b7cba373813c65e6e31dc80a052c105c4cecf1e59bd3e3ae011c5",
+      "run_id": "6f216f686d85"
+    },
+    {
+      "index": 21,
+      "manifest_sha256": "4906bf4640d10293353caf1a5694eddf980921d8d585e485b25e788ea4a136f2",
+      "package_sha256": "0a253e44fc150b113385643261bbf98875ad478320f93b636e42c2849c8180ae",
+      "run_id": "109937c13898"
+    },
+    {
+      "index": 22,
+      "manifest_sha256": "a05c39a497309bcef658647c84d790dadb327d0bc4974d64d6980c422a9493a9",
+      "package_sha256": "5571f51d551938717ba15f6a983c6339c3d44924c166b16634cca29f69bc9871",
+      "run_id": "23938e574810"
+    },
+    {
+      "index": 23,
+      "manifest_sha256": "ebdbe6777e352f7f8a7a5b0c0b9e27399f0862808ac0d236356f3ef422b559e8",
+      "package_sha256": "ed7e1036a7783a2bdd65fd55d3b0d05673ebed683953665802f30d42db73542c",
+      "run_id": "58e959e53877"
+    },
+    {
+      "index": 24,
+      "manifest_sha256": "cbd18da1ff787e15f2bd3396bf7a4fde1d3e92f4809a784d8a4798ac8200189d",
+      "package_sha256": "cbf6cb30b556b36c6e4e8844e5c105739a91551a68e0401e1001f4319275dfeb",
+      "run_id": "dadf0cf0885c"
+    },
+    {
+      "index": 25,
+      "manifest_sha256": "691e1327752f2789a4c1cbf0a6f10689653fe30cbd4d0fe13ef5d419b61fb795",
+      "package_sha256": "febf4cafc905623a129ae13bec82ecb994c148115821eff20a281dac764e2c6b",
+      "run_id": "05f9d51a46dc"
+    },
+    {
+      "index": 26,
+      "manifest_sha256": "b796d628bcef4b9cbaf34a2297acc93c8486f85fef4678d57ca6d8f3f61ab951",
+      "package_sha256": "5b6ed236ec9b978737da4c4598a7ce0f2747635a807e19b9449d6853e6d41f8b",
+      "run_id": "9d0bc6302de6"
+    },
+    {
+      "index": 27,
+      "manifest_sha256": "61837c473dfdf2c2d78fbcabb3525aca539cca93905fe0c80ddd48aa75fec7eb",
+      "package_sha256": "853b46b7b4615df58051584c086a8fa032073213f75f4c003de9071e8b4fef37",
+      "run_id": "0aebfcc93eb3"
+    },
+    {
+      "index": 28,
+      "manifest_sha256": "a3810dddd56cdf22f922b754ef62e819e1dd3d345f97353a0e567e2380f99d33",
+      "package_sha256": "783642c6284944d8648d8095dec9fffcef289b4d13fa13cc62780401f3a6a528",
+      "run_id": "74a20610e0a6"
+    },
+    {
+      "index": 29,
+      "manifest_sha256": "30df0fbbf03ecc17d18154bafc69ff13be7f743a21d8e4f80aa3878d903d4371",
+      "package_sha256": "7b5476646a6865573f6ac3ee3e824a748425e436c9a6510cf9c8333c0e3d7772",
+      "run_id": "6e513caab41d"
+    },
+    {
+      "index": 30,
+      "manifest_sha256": "a90970141fcaf9f210909ef76ed6e1f50c59e9ea65a840746622fe8a9ae55bf9",
+      "package_sha256": "e3c223da3f4cf38d5aee3ce21b48cfa8f1d37c79abe35d0c9c72352ea9377542",
+      "run_id": "d393619ea175"
+    }
+  ],
+  "baseline_evidence_commit": "b6aa7ea20a7937142995634f0fa2d322a31db583",
+  "baseline_in_denominator": false,
+  "baseline_run": "1ec5c6c66f0a",
+  "capture_rule": "Capture completion means the recorded wrapper finalized; it never means model success. Preserve original runner exit code, all failed/refused recordings, exact authority and strict verdict for every attempt.",
+  "consecutive_refusal_cap": 3,
+  "cooldown_seconds": 60,
+  "created_at": "2026-11-03T12:00:19.602736-06:00",
+  "deadline": "2026-11-04T16:00:00-06:00",
+  "deadline_rule": "Do not start an attempt with 40 minutes or less remaining to 2026-11-04 16:00 CT. Recheck the original 30-minute authority reserve before invoking the runner. Finish existing safety cleanup; never extend a window.",
+  "entry_max_gib": 24.5,
+  "failure_rule": "A model-reached ordinary non-recovery is FAIL and remains in the denominator. Continuation requires unchanged strict VALIDATED, verified cleanup/OOB/protected state, no runtime resource violation, no false ONLINE and verified revert before the existing 45-second watchdog deadline. Unknown completion is ABORT with an incomplete-denominator flag.",
+  "fast_tier": false,
+  "fault": "F04 DNS",
+  "fixed_exporter_commit": "2f87f193c365864cea77b1394334bae9a7073bee",
+  "fixed_exporter_sha256": "55be8b977d721f5dfe741a24410232d9ad3bd3462a02e18582fb25fca4e91a21",
+  "ledger_rule": "Append a durable hash-chained JSONL outcome before updating JSON/Markdown projections after each attempt. Every attempt has an exclusive intent and unique preallocated run ID. No rerun-to-replace, no automatic resume, no discarded failures.",
+  "max_model_calls_per_trial": 4,
+  "minimum_start_reserve_seconds": 2400,
+  "oracle_sha256": "8ada6a245ee5929d08b393d5f9077ba46712aa9302e31109d443f035a7755d42",
+  "recording": true,
+  "refusal_rule": "Only parsed pre-reservation resource/headroom refusal or parsed Relay high-load refusal before remote reservation is REFUSED-BEFORE-MODEL. These count as zero scored model requests, remain in the ledger, wait 60 seconds and use the next fresh ID. Invalid identity, missing/unparsed management evidence, warm-up uncertainty and in-trial guard breaches are ABORT.",
+  "reserve_gib": 1.0,
+  "runtime_ceiling_gib": 25.5,
+  "schema": "f04-dns-series-prereg-v1",
+  "series_id": "54b5899ccb66",
+  "server_pid": 96367,
+  "stop_rule": "Stop after 10 confirmed model-reached trials, any ABORT/safety breach/failed or unproven revert, three consecutive safe admission refusals, exhaustion of the 30 fresh attempt IDs, or the deadline reserve. Never stop early merely because of PASS or ordinary model FAIL.",
+  "strict_reader_baseline_sha256": "15eb1c3516124bbf6564a5061da19355a03aa0bf0735dc1228716079ba8b1f14",
+  "summary_rule": "Report PASS / confirmed model-reached, median recovery among strictly validated PASS rows, false ONLINE total, refusals, aborts and any unknown denominator/counts. The prior FIX-NOW-12 success is excluded.",
+  "target_model_reached": 10,
+  "unchanged_rules": [
+    "swap equality including decreases",
+    "pressure exactly 1",
+    "disk at least 50 GiB",
+    "three entry samples over at least ten seconds after warm-up",
+    "OOB checks and Relay load gates",
+    "snapshot plus exact restore/diff",
+    "revert within 60 seconds and tighter existing watchdog/restore budgets",
+    "en7",
+    "Thunderbolt Bridge",
+    "sshd",
+    "firewall",
+    "VPN",
+    "Keychain",
+    "MDM",
+    "locations",
+    "model/prompt/profile/seed and temperature"
+  ],
+  "warmup_calls_per_attempt": 3
+}

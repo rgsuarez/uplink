@@ -1,0 +1,681 @@
+{
+  "number": 2,
+  "fault": "wrong_dns",
+  "arm": "glimmer-open",
+  "run_id": "aff9261adc18",
+  "source": "fc3beb47db25ed16fc45a0ced78121f23802e2c4",
+  "elapsed_s": 62.312789499992505,
+  "failure": "lab_evaluation_stopped_see_receipt",
+  "receipt": {
+    "action_mode": "open",
+    "app_resumed": false,
+    "arm": "uplink",
+    "attempt_keys": [],
+    "catalog_sha256": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91",
+    "changes": [],
+    "comparison_arm": "glimmer-open",
+    "evidence_kind": "linux_namespace",
+    "failure": "watchdog_ended_trial_no_recovery_credit",
+    "failure_details": null,
+    "fault": "wrong_dns",
+    "kind": "uplink-lab-eval",
+    "model": {
+      "active_model_name": "Muse Glimmer 30B",
+      "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+      "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+      "host_chip": "Apple M4 Max",
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "model_used": true,
+      "name": "Muse Glimmer 30B",
+      "provider": "llama_cpp",
+      "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+      "verification": "server_verified",
+      "verified_at": 1793148333.380318
+    },
+    "model_calls_attempted": 8,
+    "oracle": "DEGRADED",
+    "outcome": "refused_LabWatchdogRestored",
+    "probe_episodes": [
+      {
+        "action": {
+          "args": {},
+          "tool": "read_vitals",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"action\": {\"version\": 1, \"tool\": \"read_vitals\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "set_dns",
+          "reroute"
+        ],
+        "alternate_qualified": true,
+        "decision_ms": 11899.278040975332,
+        "execution": {
+          "after_sha256": "2acd90cfc8b96b20ca6228c1f56dd1bc57341a9b0ee66ae652d7f3095611d219",
+          "before_sha256": "2acd90cfc8b96b20ca6228c1f56dd1bc57341a9b0ee66ae652d7f3095611d219",
+          "budget": {
+            "attempted": 2,
+            "elapsed_ms": 42.43738299555844,
+            "reserved_ms": 2000
+          },
+          "elapsed_ms": 42.43738299555844,
+          "finished_at": 1793148348.1810782,
+          "profile": "linux_lab",
+          "requested": {
+            "probes": [
+              {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [
+            {
+              "argv": [
+                "/usr/bin/ping",
+                "-n",
+                "-c",
+                "1",
+                "-i",
+                "0.2",
+                "-I",
+                "ADDRESS_REMOVED",
+                "ADDRESS_REMOVED"
+              ],
+              "elapsed_ms": 1.6684180009178817,
+              "exit_code": 0,
+              "finished_at": 1793148348.1711264,
+              "index": 0,
+              "ok": true,
+              "probe": {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148348.1694586,
+              "status": "completed",
+              "stderr": "",
+              "stdout": "PING ADDRESS_REMOVED (ADDRESS_REMOVED) from ADDRESS_REMOVED : 56(84) bytes of data.\n64 bytes from ADDRESS_REMOVED: icmp_seq=1 ttl=64 time=0.023 ms\n\n--- ADDRESS_REMOVED ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 0.023/0.023/0.023/0.000 ms\n"
+            },
+            {
+              "answers": [
+                "ADDRESS_REMOVED"
+              ],
+              "argv": [
+                "/usr/bin/dig",
+                "@ADDRESS_REMOVED",
+                "host-9642c3045c74328132cf8ddf",
+                "A",
+                "+short",
+                "+tries=1",
+                "+time=1",
+                "-b",
+                "ADDRESS_REMOVED"
+              ],
+              "elapsed_ms": 4.334421995736193,
+              "exit_code": 0,
+              "finished_at": 1793148348.1754627,
+              "index": 1,
+              "ok": true,
+              "probe": {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148348.171129,
+              "status": "completed",
+              "stderr": "",
+              "stdout": "ADDRESS_REMOVED\n"
+            }
+          ],
+          "settings_unchanged": true,
+          "started_at": 1793148348.1386395,
+          "status": "completed",
+          "uid": 65534,
+          "validated": {
+            "probes": [
+              {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "dns-1"
+          ],
+          "layer": "dns"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "dns-1"
+          ],
+          "layer": "dns"
+        },
+        "program": {
+          "probes": [
+            {
+              "count": 1,
+              "interval_ms": 200,
+              "op": "ping_gateway",
+              "path": "alternate",
+              "timeout_ms": 1000
+            },
+            {
+              "name": "one",
+              "op": "dns_query",
+              "resolver": "alternate",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"ping_gateway\", \"path\": \"alternate\", \"count\": 1, \"interval_ms\": 200, \"timeout_ms\": 1000}, {\"op\": \"dns_query\", \"name\": \"one\", \"resolver\": \"alternate\", \"timeout_ms\": 1000}]}}"
+      },
+      {
+        "action": {
+          "args": {},
+          "tool": "read_vitals",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"action\": {\"version\": 1, \"tool\": \"read_vitals\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "set_dns",
+          "reroute"
+        ],
+        "alternate_qualified": true,
+        "decision_ms": 10351.83437494561,
+        "execution": {
+          "after_sha256": "2acd90cfc8b96b20ca6228c1f56dd1bc57341a9b0ee66ae652d7f3095611d219",
+          "before_sha256": "2acd90cfc8b96b20ca6228c1f56dd1bc57341a9b0ee66ae652d7f3095611d219",
+          "budget": {
+            "attempted": 4,
+            "elapsed_ms": 84.58547399641247,
+            "reserved_ms": 4000
+          },
+          "elapsed_ms": 42.14809100085404,
+          "finished_at": 1793148363.32896,
+          "profile": "linux_lab",
+          "requested": {
+            "probes": [
+              {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [
+            {
+              "argv": [
+                "/usr/bin/ping",
+                "-n",
+                "-c",
+                "1",
+                "-i",
+                "0.2",
+                "-I",
+                "ADDRESS_REMOVED",
+                "ADDRESS_REMOVED"
+              ],
+              "elapsed_ms": 1.6842940021888353,
+              "exit_code": 0,
+              "finished_at": 1793148363.3190224,
+              "index": 0,
+              "ok": true,
+              "probe": {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148363.3173392,
+              "status": "completed",
+              "stderr": "",
+              "stdout": "PING ADDRESS_REMOVED (ADDRESS_REMOVED) from ADDRESS_REMOVED : 56(84) bytes of data.\n64 bytes from ADDRESS_REMOVED: icmp_seq=1 ttl=64 time=0.022 ms\n\n--- ADDRESS_REMOVED ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 0.022/0.022/0.022/0.000 ms\n"
+            },
+            {
+              "answers": [
+                "ADDRESS_REMOVED"
+              ],
+              "argv": [
+                "/usr/bin/dig",
+                "@ADDRESS_REMOVED",
+                "host-9642c3045c74328132cf8ddf",
+                "A",
+                "+short",
+                "+tries=1",
+                "+time=1",
+                "-b",
+                "ADDRESS_REMOVED"
+              ],
+              "elapsed_ms": 4.419588003656827,
+              "exit_code": 0,
+              "finished_at": 1793148363.323444,
+              "index": 1,
+              "ok": true,
+              "probe": {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148363.319025,
+              "status": "completed",
+              "stderr": "",
+              "stdout": "ADDRESS_REMOVED\n"
+            }
+          ],
+          "settings_unchanged": true,
+          "started_at": 1793148363.2868106,
+          "status": "completed",
+          "uid": 65534,
+          "validated": {
+            "probes": [
+              {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "dns-1"
+          ],
+          "layer": "dns"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "dns-1"
+          ],
+          "layer": "dns"
+        },
+        "program": {
+          "probes": [
+            {
+              "count": 1,
+              "interval_ms": 200,
+              "op": "ping_gateway",
+              "path": "alternate",
+              "timeout_ms": 1000
+            },
+            {
+              "name": "one",
+              "op": "dns_query",
+              "resolver": "alternate",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"ping_gateway\", \"path\": \"alternate\", \"count\": 1, \"interval_ms\": 200, \"timeout_ms\": 1000}, {\"op\": \"dns_query\", \"name\": \"one\", \"resolver\": \"alternate\", \"timeout_ms\": 1000}]}}"
+      },
+      {
+        "action": {
+          "args": {},
+          "tool": "read_vitals",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"action\": {\"version\": 1, \"tool\": \"read_vitals\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "set_dns",
+          "reroute"
+        ],
+        "alternate_qualified": true,
+        "decision_ms": 10646.418125135824,
+        "execution": {
+          "after_sha256": "2acd90cfc8b96b20ca6228c1f56dd1bc57341a9b0ee66ae652d7f3095611d219",
+          "before_sha256": "2acd90cfc8b96b20ca6228c1f56dd1bc57341a9b0ee66ae652d7f3095611d219",
+          "budget": {
+            "attempted": 6,
+            "elapsed_ms": 125.90231400099583,
+            "reserved_ms": 6000
+          },
+          "elapsed_ms": 41.316840004583355,
+          "finished_at": 1793148376.9671233,
+          "profile": "linux_lab",
+          "requested": {
+            "probes": [
+              {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [
+            {
+              "argv": [
+                "/usr/bin/ping",
+                "-n",
+                "-c",
+                "1",
+                "-i",
+                "0.2",
+                "-I",
+                "ADDRESS_REMOVED",
+                "ADDRESS_REMOVED"
+              ],
+              "elapsed_ms": 0.5578339987550862,
+              "exit_code": 0,
+              "finished_at": 1793148376.957125,
+              "index": 0,
+              "ok": true,
+              "probe": {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148376.956568,
+              "status": "completed",
+              "stderr": "",
+              "stdout": "PING ADDRESS_REMOVED (ADDRESS_REMOVED) from ADDRESS_REMOVED : 56(84) bytes of data.\n64 bytes from ADDRESS_REMOVED: icmp_seq=1 ttl=64 time=0.026 ms\n\n--- ADDRESS_REMOVED ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 0.026/0.026/0.026/0.000 ms\n"
+            },
+            {
+              "answers": [
+                "ADDRESS_REMOVED"
+              ],
+              "argv": [
+                "/usr/bin/dig",
+                "@ADDRESS_REMOVED",
+                "host-9642c3045c74328132cf8ddf",
+                "A",
+                "+short",
+                "+tries=1",
+                "+time=1",
+                "-b",
+                "ADDRESS_REMOVED"
+              ],
+              "elapsed_ms": 4.467796999961138,
+              "exit_code": 0,
+              "finished_at": 1793148376.9615946,
+              "index": 1,
+              "ok": true,
+              "probe": {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              },
+              "started_at": 1793148376.9571273,
+              "status": "completed",
+              "stderr": "",
+              "stdout": "ADDRESS_REMOVED\n"
+            }
+          ],
+          "settings_unchanged": true,
+          "started_at": 1793148376.9258053,
+          "status": "completed",
+          "uid": 65534,
+          "validated": {
+            "probes": [
+              {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "dns-1"
+          ],
+          "layer": "dns"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "dns-1"
+          ],
+          "layer": "dns"
+        },
+        "program": {
+          "probes": [
+            {
+              "count": 1,
+              "interval_ms": 200,
+              "op": "ping_gateway",
+              "path": "alternate",
+              "timeout_ms": 1000
+            },
+            {
+              "name": "one",
+              "op": "dns_query",
+              "resolver": "alternate",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"ping_gateway\", \"path\": \"alternate\", \"count\": 1, \"interval_ms\": 200, \"timeout_ms\": 1000}, {\"op\": \"dns_query\", \"name\": \"one\", \"resolver\": \"alternate\", \"timeout_ms\": 1000}]}}"
+      },
+      {
+        "action": {
+          "args": {},
+          "tool": "read_vitals",
+          "version": 1
+        },
+        "action_mode": "open",
+        "action_verbatim": "{\"hypothesis_after\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"action\": {\"version\": 1, \"tool\": \"read_vitals\", \"args\": {}}}",
+        "admitted_tools": [
+          "read_vitals",
+          "read_dns",
+          "read_proxy",
+          "read_routes",
+          "list_route_candidates",
+          "probe_online",
+          "diff_snapshot",
+          "report",
+          "give_up",
+          "set_dns"
+        ],
+        "alternate_qualified": false,
+        "decision_ms": 9672.84516687505,
+        "execution": {
+          "after_sha256": "2acd90cfc8b96b20ca6228c1f56dd1bc57341a9b0ee66ae652d7f3095611d219",
+          "before_sha256": "2acd90cfc8b96b20ca6228c1f56dd1bc57341a9b0ee66ae652d7f3095611d219",
+          "budget": {
+            "attempted": 8,
+            "elapsed_ms": 126.50256499910029,
+            "reserved_ms": 8000
+          },
+          "elapsed_ms": 0.6002509981044568,
+          "finished_at": 1793148390.8285503,
+          "profile": "linux_lab",
+          "reason": "probe_episode_time_budget_exceeded",
+          "requested": {
+            "probes": [
+              {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "rows": [],
+          "settings_unchanged": true,
+          "started_at": 1793148390.8279498,
+          "status": "refused",
+          "stderr": "probe_episode_time_budget_exceeded",
+          "validated": {
+            "probes": [
+              {
+                "count": 1,
+                "interval_ms": 200,
+                "op": "ping_gateway",
+                "path": "alternate",
+                "timeout_ms": 1000
+              },
+              {
+                "name": "one",
+                "op": "dns_query",
+                "resolver": "alternate",
+                "timeout_ms": 1000
+              }
+            ],
+            "version": 1
+          },
+          "version": 1
+        },
+        "hypothesis_after": {
+          "evidence": [
+            "dns-1"
+          ],
+          "layer": "dns"
+        },
+        "hypothesis_before": {
+          "evidence": [
+            "dns-1"
+          ],
+          "layer": "dns"
+        },
+        "program": {
+          "probes": [
+            {
+              "count": 1,
+              "interval_ms": 200,
+              "op": "ping_gateway",
+              "path": "alternate",
+              "timeout_ms": 1000
+            },
+            {
+              "name": "one",
+              "op": "dns_query",
+              "resolver": "alternate",
+              "timeout_ms": 1000
+            }
+          ],
+          "version": 1
+        },
+        "script_verbatim": "{\"hypothesis_before\": {\"layer\": \"dns\", \"evidence\": [\"dns-1\"]}, \"program\": {\"version\": 1, \"probes\": [{\"op\": \"ping_gateway\", \"path\": \"alternate\", \"count\": 1, \"interval_ms\": 200, \"timeout_ms\": 1000}, {\"op\": \"dns_query\", \"name\": \"one\", \"resolver\": \"alternate\", \"timeout_ms\": 1000}]}}"
+      }
+    ],
+    "probe_scripts": true,
+    "profile": "uplink-linux-lab-v1",
+    "restore_retries": [],
+    "trace": "uplink-0a230bd1956646a5aa6cb305b11f74ee.jsonl",
+    "version": 1
+  },
+  "cleanup": {
+    "status": "closed",
+    "cleanup_failure": null,
+    "host_fingerprint_matches": true,
+    "owned_namespaces": 0,
+    "all_uplink_namespaces": 0
+  },
+  "traces": [
+    {
+      "name": "uplink-0a230bd1956646a5aa6cb305b11f74ee.jsonl",
+      "records": 22,
+      "verdict": "ERROR",
+      "model_emissions": 8
+    }
+  ],
+  "finished_at": "2026-10-28T00:46:35.785495+00:00"
+}

@@ -1,0 +1,144 @@
+{
+  "base_commit": "b40b237ddc015f732f9880e456105a13f20da116",
+  "boundary_rehearsal": {
+    "audit_hook_stop_before_process_creation": true,
+    "command": "uv run --frozen --offline uplink-real --rehearse-boundary --probe-scripts --oob-host lab-oob --output artifacts/uplink/preflight-0040-boundary-20261028",
+    "entrypoint": "run_preflight",
+    "lab-wifi_contacts": 0,
+    "processes_started": 0,
+    "receipt": "artifacts/uplink/preflight-0040-boundary-20261028/boundary-result.json",
+    "receipt_sha256": "c8c01f3e2dadb5fc06bfe7118929dbd4a73338a5423bf829dd919f600a357bc1",
+    "retries": 0,
+    "sockets_opened": 0,
+    "status": "PASS_STOPPED_BEFORE_FIRST_SSH",
+    "stopped_before_command": [
+      "ssh",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ConnectTimeout=3",
+      "-o",
+      "ServerAliveInterval=2",
+      "-o",
+      "ServerAliveCountMax=1",
+      "lab-oob",
+      "true"
+    ],
+    "trials_run": 0
+  },
+  "branch": "fix/u1-linux-recovery",
+  "effects": {
+    "lab-wifi_contacts": 0,
+    "live_retries": 0,
+    "live_trials": 0,
+    "model_inference_requests": 0,
+    "private_config_changed": false,
+    "pushes": 0,
+    "real_native_compiler_runs": 0,
+    "root_operations": 0,
+    "transfers": 0
+  },
+  "entrypoint": "offline_agent.uplink.real_preflight.run_preflight",
+  "fake_transport_rehearsal": {
+    "each_gate_failure_aborts_before_prepare": true,
+    "evidence_kind": "FAKE_TRANSPORT_ONLY",
+    "existing_restore_regressions_pass": true,
+    "fake_clock_ahead_ms": [
+      0,
+      1,
+      46,
+      100,
+      250,
+      500
+    ],
+    "passed": true,
+    "raw_receipt": "artifacts/uplink/preflight-0040-final-suite/test_fake_transport_full_chain0/result/0123456789ab-preflight.json",
+    "raw_receipt_sha256": "6a32ade30f759797906bad938e0ea79773eb5fec1b6bb0af4bf1c2fc237c1013",
+    "real_controller_and_worker_code": true,
+    "stale_and_sha_mismatch_refuse": true
+  },
+  "final_freshness_check": "unchanged 300-second proof limit; no second attestation",
+  "kind": "uplink-unified-preflight-desk-receipt",
+  "lesson": "Preflight logic and its boundary rehearsal share one committed entrypoint; pinned transport owns clock alignment. Persist each gate and append abort history.",
+  "live_prerequisites": [
+    "A new explicit window from the operator and fleet manager",
+    "New owned staging with the committed source and private config",
+    "Fresh native typecheck proof including the changed checker hash; historical proof cannot be reused"
+  ],
+  "local_authorization_admission": "existing transport clearance guard, before any SSH",
+  "publication_copy": {
+    "historical_hashes": "Original unredacted source/receipt bytes; no claim that they hash this publication copy.",
+    "raw_receipt": "artifacts/uplink/public-scrub-20261028/originals/d8c5456c0cf34130394798d86aa92e197c33327ba2c7e06630875b939138f6d3.raw",
+    "raw_sha256": "d8c5456c0cf34130394798d86aa92e197c33327ba2c7e06630875b939138f6d3",
+    "redactions": [
+      "device_aliases",
+      "device_specific_field_names"
+    ]
+  },
+  "recorded_at": "2026-10-28T06:03:04.522952+00:00",
+  "required_step_order": [
+    "oob",
+    "model_attestation",
+    "llama_build",
+    "native_typecheck",
+    "helper_build",
+    "helper_self_test",
+    "clearance",
+    "staging_readback"
+  ],
+  "source_sha256": {
+    "LAB-PROBE-TRIALS-PLAN.md": "9edd3e1d3d5632016e927ebcb6d200fcd2acb8607f09d5b3bd1091ac26d53393",
+    "docs/UPLINK-REAL-RECOVERY.md": "fc88501101d37ea4285a7ef804ba23c121cb8975f4d14c595a9c9afc27d4b7c7",
+    "scripts/check_macos_swift.py": "e45b71587b24bb3b67dbad1ae97f23fd0a78b4859a7bc9472616c040fc7a3e2c",
+    "src/offline_agent/uplink/real_preflight.py": "edf91f5892ecb4dbf4856ec8a7917cf70facca24e9664d42dd205efcf32f207f",
+    "src/offline_agent/uplink/real_preflight_worker.py": "12c023f6b87ba4c33a3b171d09e7450cc037238dea7fbc5842fb16c7b9637205",
+    "src/offline_agent/uplink/real_runner.py": "7987443c2c90b773984d27926db8199ac40141f60012f7fe456433929d00e474",
+    "tests/uplink/conftest.py": "e7aef2c07e9e12288f38be41172ad3bfba19ecfe9994bb5914a0ca84435353f2",
+    "tests/uplink/test_real.py": "ca5c0314e20eff26c36bfbeae01fb0a60dcc89d2ebdad96619c53b0585c2bd7c",
+    "tests/uplink/test_real_preflight.py": "48c3ec6990c766d6f07c1d2f7c830158865f116c1fe0dd2ab2382cc571116b9c",
+    "tests/uplink/test_real_safety.py": "810d204ed3f93073fe310d3e00290998e28d4a62d84e9bd7f890941b868a2a3f"
+  },
+  "status": "READY_FOR_WINDOW_DESK_ONLY",
+  "unchanged_pins": {
+    "pyproject.toml": "a8c52d8fb51882cd6367b92b631ac537baf29a5ad1bb9880dc3a619a5f6e1b99",
+    "src/offline_agent/uplink/model_identity.py": "18cd354bd524d8f09c6f115f9a92648b8c223d4cefaec80c2b7b2882d9cf149f",
+    "src/offline_agent/uplink/oracle.py": "8ada6a245ee5929d08b393d5f9077ba46712aa9302e31109d443f035a7755d42",
+    "src/offline_agent/uplink/real_transport.py": "53887b774996f4ad78f53287f7e63a74372400cb92919b251c1e3711a716878d",
+    "uv.lock": "7e9186b5add763224ce0eecd10602f6df6ff4afd373aface65f856a296fb0dd0"
+  },
+  "validation": {
+    "format": {
+      "command": "uv run --frozen --offline ruff format --check .",
+      "exit_code": 0,
+      "files": 250
+    },
+    "logs": {
+      "artifacts/uplink/preflight-0040-final-format.log": "8fc84de260370606207d2013c73b2de92868bcb9e7e1020fd067097954486ba6",
+      "artifacts/uplink/preflight-0040-final-mypy.log": "d9d12c8bee9454137f2a97af320cf042670ce8556a268e95376f71ca63fff9bd",
+      "artifacts/uplink/preflight-0040-final-pytest.log": "f323eb0e0258251582b717d8b2bb1cbbcd7aa4a8f3a35d8b4621ec138822ee43",
+      "artifacts/uplink/preflight-0040-final-ruff.log": "5b196eb3a6acb50d3fa398d04ca284985cc1ffec870e940264b00780bfd2c971"
+    },
+    "mypy": {
+      "checked_files": 191,
+      "command": "uv run --frozen --offline mypy --strict src tests scripts modal",
+      "exit_code": 0
+    },
+    "pytest": {
+      "actual_test_delta": 37,
+      "command": "uv run --frozen --offline pytest -q tests/uplink",
+      "errors": 0,
+      "expected_test_delta": 37,
+      "failures": 0,
+      "junit": "artifacts/uplink/preflight-0040-final-suite.xml",
+      "junit_sha256": "45223e107816bd4e07ccf48da6a87f5dfde621d94d4063c781200c96dcea03ca",
+      "new_preflight_tests": 37,
+      "passed": 749,
+      "skipped": 0
+    },
+    "ruff": {
+      "command": "uv run --frozen --offline ruff check .",
+      "exit_code": 0
+    }
+  },
+  "version": 1
+}

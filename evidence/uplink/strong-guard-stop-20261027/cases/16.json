@@ -1,0 +1,69 @@
+{
+  "number": 16,
+  "fault": "lease_loss",
+  "arm": "scripted-strong",
+  "run_id": "92535c07b22c",
+  "source": "e8ad2578b7da771667392c1065036ad468ab66cd",
+  "elapsed_s": 10.08099575014785,
+  "failure": null,
+  "receipt": {
+    "version": 1,
+    "kind": "uplink-lab-eval",
+    "profile": "uplink-linux-lab-v1",
+    "fault": "lease_loss",
+    "arm": "scripted-strong",
+    "action_mode": null,
+    "comparison_arm": "scripted-strong",
+    "model": {
+      "name": "Muse Glimmer 30B",
+      "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+      "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+      "source_repo": "meta-models/Muse-Glimmer-30B-GGUF",
+      "llama_cpp_build": "10353 (f8def7fe1)",
+      "host_chip": "Apple M4 Max",
+      "provider": null,
+      "active_model_name": null,
+      "verification": "server_verified",
+      "verified_at": 1793149622.4185479,
+      "model_used": false
+    },
+    "model_calls_attempted": 0,
+    "evidence_kind": "linux_namespace",
+    "outcome": "recovered",
+    "failure": null,
+    "failure_details": null,
+    "probe_scripts": false,
+    "probe_episodes": [],
+    "oracle": "ONLINE",
+    "app_resumed": true,
+    "changes": [
+      "reroute"
+    ],
+    "restore_retries": [],
+    "attempt_keys": [
+      {
+        "action": "reroute",
+        "target_path": "[\"ul-92535c07b22c-c\",null,null]",
+        "state_sha256": "42cad4fcd529ce336268c20ddb7c8bec97100c4c3c605d3b540d05d5def2de64"
+      }
+    ],
+    "trace": "uplink-e9d304b167254cb2935a4d4d86a536b8.jsonl",
+    "catalog_sha256": "f47e3c403401719af268738785fa33292bf9391c3c0322e59ab7041e761cdb91"
+  },
+  "cleanup": {
+    "status": "closed",
+    "cleanup_failure": null,
+    "host_fingerprint_matches": true,
+    "owned_namespaces": 0,
+    "all_uplink_namespaces": 0
+  },
+  "traces": [
+    {
+      "name": "uplink-e9d304b167254cb2935a4d4d86a536b8.jsonl",
+      "records": 11,
+      "verdict": "ONLINE",
+      "model_emissions": 0
+    }
+  ],
+  "finished_at": "2026-10-28T01:07:12.583766+00:00"
+}

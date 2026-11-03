@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "tool": {
+          "const": "list_files"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "maxLength": 240
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "tool",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "tool": {
+          "const": "read_file"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "maxLength": 240
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "tool",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "tool": {
+          "const": "search"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "maxLength": 240
+            },
+            "query": {
+              "type": "string",
+              "maxLength": 200
+            }
+          },
+          "required": [
+            "path",
+            "query"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "tool",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "tool": {
+          "const": "apply_patch"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "maxLength": 240
+            },
+            "old": {
+              "type": "string",
+              "maxLength": 16000
+            },
+            "new": {
+              "type": "string",
+              "maxLength": 16000
+            }
+          },
+          "required": [
+            "path",
+            "old",
+            "new"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "tool",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "tool": {
+          "const": "run_tests"
+        },
+        "args": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "tool",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "tool": {
+          "const": "declare_done"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "fixed",
+                "cannot_fix"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "maxLength": 1000
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "tool",
+        "args"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

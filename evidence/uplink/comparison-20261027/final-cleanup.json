@@ -1,0 +1,298 @@
+{
+  "runs": [
+    {
+      "run_id": "a86f3aefc4b3",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "8e3ee339d4e4",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "03fd2c20de00",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "e2fe6f4e6b60",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "35d0867c6c98",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "9e79e1f26377",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "11df04f9abf7",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "0e60c311095d",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "f4b8d4f91a0a",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "594220d55714",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "fe5217dde3fb",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "32782888f1cd",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "59eaec8911a7",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "3ecea577c213",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "d65a822e7ebf",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "406d6a23a70d",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "559184c37351",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "fac9b6ea22cb",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "867c7d759d1e",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "c2bd6251a0ef",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "82387842ec84",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "a8f931f279c1",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "c00b7f5edb73",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "56ce8cbf263d",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "1875e68bfe42",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "7c9ad923bdcc",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "438eb8ae2931",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "53b04d11837d",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "60fc140305d7",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "7119386f8cff",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "9aa018d61d28",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "804ab3cbdf7e",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "a6af122949d4",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "d15e5aa77470",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "e0406af7df13",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "0a847ea8e040",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "ca07333d1073",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "c7c8275a5713",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "ffb8709846a2",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "7e4b40639fed",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "791f71346c35",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "602e11a616ee",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "6037343ca078",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "a8daf60e185d",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "dbae4e99c57d",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "34973d5b3d91",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "ba0119d72e10",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    },
+    {
+      "run_id": "4a0297001d71",
+      "status": "closed",
+      "cleanup_failure": null,
+      "host_fingerprint_matches": true
+    }
+  ],
+  "active_owned_daemons": 0,
+  "owned_namespaces": 0,
+  "server_left_running": true,
+  "server_birth_matched": true,
+  "source_unchanged": true,
+  "checked_at": "2026-10-28T01:46:00.585646+00:00"
+}

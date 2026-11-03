@@ -1,0 +1,7 @@
+{
+  "model_weights_loaded": false,
+  "runtime_library_sha256": "7c3f9be2c1d92fc60b6eb75e4eb000446bddbc79403887e2334a76cd4e8ef2d0",
+  "grammar_sha256": "ebf9288baf4c52dc5b2587c31284796a1a627be75a241a1c0135c45cf6a7f3eb",
+  "valid_grammar_accepted": true,
+  "invalid_control_rejected": true
+}

@@ -1,0 +1,28 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "C04",
+  "catalog_id": "captive_walled_garden_partial",
+  "role": "fault",
+  "baseline": {
+    "http_proxy": "configured",
+    "https_proxy": "configured",
+    "alternate": false,
+    "ipv6": "disabled"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "TTTFTF",
+      "verdict": "CAPTIVE",
+      "app": true
+    }
+  ],
+  "terminal": {
+    "tool": "report",
+    "layer": "captive",
+    "component": "portal",
+    "step": "open_portal",
+    "reason": "",
+    "citation": "portal-apple"
+  }
+}

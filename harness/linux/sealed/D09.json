@@ -1,0 +1,34 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "D09",
+  "catalog_id": "dns_v6_resolver_with_ipv6_off",
+  "role": "fault",
+  "baseline": {
+    "http_proxy": "direct",
+    "https_proxy": "direct",
+    "alternate": false,
+    "ipv6": "disabled"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "FFFFFF",
+      "verdict": "OFFLINE",
+      "app": false
+    },
+    {
+      "after": "set_dns",
+      "flags": "TTTTTT",
+      "verdict": "ONLINE",
+      "app": true
+    }
+  ],
+  "terminal": {
+    "tool": "recovered",
+    "layer": "dns",
+    "component": "",
+    "step": "",
+    "reason": "",
+    "citation": "dns-1"
+  }
+}

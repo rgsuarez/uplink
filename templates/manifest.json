@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "model": "meta-models/Muse-Glimmer-30B",
+  "revision": "cec94fcfd6512f2cfe708138c32533b346ea4f69",
+  "assets": {
+    "templates/glimmer_native.jinja": {
+      "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/resolve/cec94fcfd6512f2cfe708138c32533b346ea4f69/chat_template.jinja",
+      "sha256": "cfc67e5f349f37690dfd31ed1f18bc4442a9dd32fe39a648f993cb4eb3cae678",
+      "size": 9992
+    },
+    "templates/tokenizer_config.json": {
+      "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/resolve/cec94fcfd6512f2cfe708138c32533b346ea4f69/tokenizer_config.json",
+      "sha256": "781e6c74f571642c71202167b67d9255b28cc439bdda1582ff31346182f5a9c5",
+      "size": 79936
+    },
+    "templates/MODEL-LICENSE": {
+      "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/resolve/cec94fcfd6512f2cfe708138c32533b346ea4f69/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358
+    }
+  }
+}

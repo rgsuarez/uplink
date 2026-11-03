@@ -1,0 +1,10 @@
+root ::= list-files | read-file | search | apply-patch | run-tests | declare-done
+list-files ::= "{" ws "\"tool\"" ws ":" ws "\"list_files\"" ws "," ws "\"args\"" ws ":" ws "{" ws "\"path\"" ws ":" ws string ws "}" ws "}" ws
+read-file ::= "{" ws "\"tool\"" ws ":" ws "\"read_file\"" ws "," ws "\"args\"" ws ":" ws "{" ws "\"path\"" ws ":" ws string ws "}" ws "}" ws
+search ::= "{" ws "\"tool\"" ws ":" ws "\"search\"" ws "," ws "\"args\"" ws ":" ws "{" ws "\"path\"" ws ":" ws string ws "," ws "\"query\"" ws ":" ws string ws "}" ws "}" ws
+apply-patch ::= "{" ws "\"tool\"" ws ":" ws "\"apply_patch\"" ws "," ws "\"args\"" ws ":" ws "{" ws "\"path\"" ws ":" ws string ws "," ws "\"old\"" ws ":" ws string ws "," ws "\"new\"" ws ":" ws string ws "}" ws "}" ws
+run-tests ::= "{" ws "\"tool\"" ws ":" ws "\"run_tests\"" ws "," ws "\"args\"" ws ":" ws "{" ws "}" ws "}" ws
+declare-done ::= "{" ws "\"tool\"" ws ":" ws "\"declare_done\"" ws "," ws "\"args\"" ws ":" ws "{" ws "\"status\"" ws ":" ws status ws "," ws "\"reason\"" ws ":" ws string ws "}" ws "}" ws
+status ::= "\"fixed\"" | "\"cannot_fix\""
+string ::= "\"" ([^"\\\x00-\x1F] | "\\" (["\\/bfnrt] | "u" [0-9a-fA-F]{4}))* "\""
+ws ::= [ \t\n\r]*

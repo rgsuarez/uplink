@@ -1,0 +1,147 @@
+{
+  "snapshot_incomplete": true,
+  "launched_calls": 139,
+  "completed_timing_pairs": 123,
+  "cancelled_calls": 19,
+  "double_bos_warnings": 127,
+  "http_500_server_exceptions": 4,
+  "prefill_seconds": 523.6676199999999,
+  "decode_seconds": 275.03075,
+  "prefill_tokens": 66786,
+  "decode_tokens": 4295,
+  "timing_scope": "All completed timing pairs, including grammar probe and partial relaxed pass; cancelled work excluded",
+  "legacy_harness_sha": null,
+  "legacy_harness_provenance": "Snapshot lacks checkout SHA and harness source; bench wrapper bytes are retained",
+  "evaluations": {
+    "parity": {
+      "rows_completed_at_snapshot": 15,
+      "fixed_verified": 0,
+      "provider_errors_original": 15,
+      "green_without_fixed_terminal": 6,
+      "per_task": [
+        {
+          "id": "v2-heldout-stringcase-000",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 31.202958750072867
+        },
+        {
+          "id": "v2-heldout-stringcase-001",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 31.064513749908656
+        },
+        {
+          "id": "v2-heldout-stringcase-002",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 31.269379625096917
+        },
+        {
+          "id": "v2-heldout-stringcase-003",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 31.06444524996914
+        },
+        {
+          "id": "v2-heldout-stringcase-004",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 31.059994833078235
+        },
+        {
+          "id": "v2-heldout-stringcase-005",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 31.06010862486437
+        },
+        {
+          "id": "v2-heldout-text-v2-000",
+          "outcome_original": "provider_error",
+          "verified_green": true,
+          "elapsed_s": 31.065841290866956
+        },
+        {
+          "id": "v2-heldout-text-v2-001",
+          "outcome_original": "provider_error",
+          "verified_green": true,
+          "elapsed_s": 31.067755833035335
+        },
+        {
+          "id": "v2-heldout-text-v2-002",
+          "outcome_original": "provider_error",
+          "verified_green": true,
+          "elapsed_s": 31.067203749902546
+        },
+        {
+          "id": "v2-heldout-records-v2-000",
+          "outcome_original": "provider_error",
+          "verified_green": true,
+          "elapsed_s": 31.06313104205765
+        },
+        {
+          "id": "v2-heldout-records-v2-001",
+          "outcome_original": "provider_error",
+          "verified_green": true,
+          "elapsed_s": 31.04111066716723
+        },
+        {
+          "id": "v2-heldout-records-v2-002",
+          "outcome_original": "provider_error",
+          "verified_green": true,
+          "elapsed_s": 31.071007542079315
+        },
+        {
+          "id": "v2-heldout-impossible-00",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 31.063826999859884
+        },
+        {
+          "id": "v2-heldout-impossible-01",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 31.06417016685009
+        },
+        {
+          "id": "v2-heldout-impossible-02",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 31.062695541186258
+        }
+      ]
+    },
+    "relaxed": {
+      "rows_completed_at_snapshot": 4,
+      "fixed_verified": 2,
+      "provider_errors_original": 2,
+      "green_without_fixed_terminal": 1,
+      "per_task": [
+        {
+          "id": "v2-heldout-stringcase-000",
+          "outcome_original": "fixed",
+          "verified_green": true,
+          "elapsed_s": 83.78287766687572
+        },
+        {
+          "id": "v2-heldout-stringcase-001",
+          "outcome_original": "provider_error",
+          "verified_green": false,
+          "elapsed_s": 121.0666915839538
+        },
+        {
+          "id": "v2-heldout-stringcase-002",
+          "outcome_original": "provider_error",
+          "verified_green": true,
+          "elapsed_s": 121.06655516591854
+        },
+        {
+          "id": "v2-heldout-stringcase-003",
+          "outcome_original": "fixed",
+          "verified_green": true,
+          "elapsed_s": 119.63966854196042
+        }
+      ]
+    }
+  }
+}

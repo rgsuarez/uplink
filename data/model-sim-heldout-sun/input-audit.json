@@ -1,0 +1,1015 @@
+{
+  "kind": "MODEL_IN_LOOP_SIM_HELDOUT_COMPOUND",
+  "model_calls": 0,
+  "prior_result_sha256": "a3074b9f0c8ddc5e190f50b1e6f0bfbe8d98487c1ac6ec7e7a6af1164d8b1ed0",
+  "cases_sha256": "cccf2f01d2650945bd613c9e80e96d5b7753e510c0108989be3895b51fe98eea",
+  "semantic_definition": "Unchanged system text and user JSON; online-check pairs sorted by id. Surface metadata and grammar snapshot id are excluded because they do not change diagnostic semantics.",
+  "prior_unique_prompts": 6,
+  "prior_unique_semantic_inputs": 6,
+  "heldout_unique_prompts": 20,
+  "heldout_unique_semantic_inputs": 19,
+  "semantic_prior_overlap_cases": [
+    "H-F10-A",
+    "H-F10-B"
+  ],
+  "exact_prior_overlap_cases": [
+    "H-F10-A"
+  ],
+  "cases": [
+    {
+      "case_id": "H-F01-A",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F01",
+        "F04"
+      ],
+      "facts": {
+        "radio_on": false,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": false,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "66c403c0f41f72f598cd8421d0b35e960e64370e1c6a62c0b36ae3827599ee66",
+      "semantic_sha256": "b2de1d68d3d32a2f3e42978421b1ba06af5e406e7ff916813d3710f88e9dfadc",
+      "negative_control_verified": true,
+      "reference_repairs_verified": false,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F01-B",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F01",
+        "F09"
+      ],
+      "facts": {
+        "radio_on": false,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": false,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "6231d206a6cb0ca8e48f94b623b758ae845d5ca71848ad47a560a543f975f151",
+      "semantic_sha256": "e0acd142ae4db4276c9193cbab92e7b5dbbfed24ec1f593e86f8cd4e2d2b0cd8",
+      "negative_control_verified": true,
+      "reference_repairs_verified": false,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F02-A",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F02",
+        "F06"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": false,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": false,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "3f4c7dd4dc0664276136af0513442e54cd7c59083e0ac1d30f9938eb4101bb72",
+      "semantic_sha256": "d7b5397b9387caf1a4bec82e01fd7d4b84aebcff8b61be58451da18b1cd4128a",
+      "negative_control_verified": true,
+      "reference_repairs_verified": false,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F02-B",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F02",
+        "F04"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": false,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": false,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "877eb4d8b3124f6dc400bad9dfd1a99b23951d6df4b3d51cacab8df369a84af9",
+      "semantic_sha256": "7e7f68ceabad84347449d511eb4fec481d14ab66eda348793a3af542a33b9af3",
+      "negative_control_verified": true,
+      "reference_repairs_verified": false,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F03-A",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F03",
+        "F04"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": false,
+        "ipv4_linklocal": true,
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": false,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": true,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "a94a7945b3f579a70dbabc0b842f463074679de849a83d49f2182cbc6b9fd1c8",
+      "semantic_sha256": "b38ce1b50be9248e5d4744cf32a8986edd34c5c33616ad00ab0efe60d5da072d",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F03-B",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F03",
+        "F09"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": false,
+        "ipv4_linklocal": true,
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": false,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "047fd250890c360de8c1dfe230741d67d56e3bc72992c84422637a0ed317ec0b",
+      "semantic_sha256": "7bf56c0f254636599ad9ab8e63c0c5611887a795b6032d1d41a74826affeef16",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F04-A",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F04",
+        "F06"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": false,
+        "proxy_matches_snapshot": false,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": true,
+        "https_path_ok": false,
+        "mtu_probe_ok": true,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "41ab79c29eadcc98f8a7870fa481a5a2107f072bbaeb4dff0b2fa80495845a2b",
+      "semantic_sha256": "84b85d01616c3b4642bfcc93351b0194c5c742b0b6bf569e3e8bb3dd406229c9",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F04-B",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F04",
+        "F09"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": false,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": false,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": true,
+        "https_path_ok": true,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "d3bef704a35adf9d3beaa804ac5dd6d1dc086b2e0ca29949a2fa4076ccdc960a",
+      "semantic_sha256": "4cd03a85c83056ab64b50d985de2f306d2f6f1932bb1e6608e5eca1d17a2f90a",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F05-A",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F05",
+        "F06"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": false,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": false,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": true,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "99e8b4bc70cc8fc0ee64d853c988e57626f5a735988f07fb2b33a41f818e9c49",
+      "semantic_sha256": "457eee8ca954a5d0eb89256719f30539f2becace7251ea3f39524a312de66f5d",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F05-B",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F05",
+        "F09"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": false,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": false,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "8dd9751c638709420f1d61534aa09c8506d9b205e92df30d6c0a3755dd0b6c06",
+      "semantic_sha256": "708ecada1b3b1d1e20de01fccdaf7e798935d39b588d217149f44ff158b55e14",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F06-A",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F06",
+        "F09"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": false,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": false,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": true,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": true,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "c079d62e33f0a913a10b7c39259aee7fde6e82201027aa389240922cfffca36d",
+      "semantic_sha256": "9d7a1741f22683e0556c3ba82086b4a259312c9092991a35af0aac5ed45fe671",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F06-B",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F06",
+        "F03"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": false,
+        "ipv4_linklocal": true,
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": false,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": true,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "df7a3d9ceaa15d408dc04d1bcc54aebcc3b84c45f367aa85298b9e3c0b2aabf6",
+      "semantic_sha256": "34186affeed9f105a282901013ea4cc4932514a97b2da54f0ba0c90ab18a55ba",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F07-A",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F07",
+        "F04"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": false,
+        "proxy_matches_snapshot": false,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": true,
+        "https_path_ok": false,
+        "mtu_probe_ok": true,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": true
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "7bf111410395d8dc6de4fed07c027df71efc3c7867f0a07909b6a31b39c7f7be",
+      "semantic_sha256": "60aedb41cb8653907f659776ce68a6ae004d15d350604ff3dcbdd2917ea5f132",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F07-B",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F07",
+        "F09"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": false,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": false,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": true,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": true,
+        "portal_redirect_seen": true
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "98b7f852391de0f18eb42f7caa6630943d399804c6e7ea845b3b46e996c6da29",
+      "semantic_sha256": "70797786b1c1c9a01ca24b6cec6892af52e4088eddda461cfc2876337b8a0383",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F08-A",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F08",
+        "F04"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": false,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": false,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": false,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "72377457c8303f29d36a863d639461d67f532ac53d1f9793ea75c2902dbd9fc5",
+      "semantic_sha256": "2b2ed09aef70c1dcd3b423fa0531cffbee5d9525063d203a65bca7a8c5befc74",
+      "negative_control_verified": true,
+      "reference_repairs_verified": false,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F08-B",
+      "cohort": "held_policy",
+      "injected_faults": [
+        "F08",
+        "F09"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": false,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": false,
+        "mtu_matches_snapshot": false,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "8336cb5b0aa6d1589897221ac957f48d3c5a6ac9a38bc8e09415d3714022ab87",
+      "semantic_sha256": "e4cf56ba7a84bd61b7ab3c8d7f6d5ccaf1dd7945ac9df7b890f1c8ae33d37e17",
+      "negative_control_verified": true,
+      "reference_repairs_verified": false,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F09-A",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F09",
+        "F04",
+        "F06"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": true,
+        "gateway_matches_snapshot": true,
+        "dns_matches_snapshot": false,
+        "proxy_matches_snapshot": false,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": false,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": true,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "c60c4ee0099c830f384485a489c56c017fad308ad0f114940c858d1ab3b5c81f",
+      "semantic_sha256": "6faacab1117a22ba4d12ad8fd68d1930d4f9dfecaa7da40a611cdba85b804e7e",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F09-B",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F09",
+        "F05",
+        "F04"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": false,
+        "dns_matches_snapshot": false,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": false,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": false,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "f730d8f59666bf8ca0039a5a7b660b4fa07b94ccff7662a7ad0183db64a0a026",
+      "semantic_sha256": "08d4eb35eb698b8a32347684186531f763800ea8e6332ad5fe5d0270f60b1f77",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [],
+      "semantic_within_set_overlap": []
+    },
+    {
+      "case_id": "H-F10-A",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F10"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": false,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": true,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "dns-1",
+        "dns-2",
+        "tls-apple",
+        "tls-google",
+        "portal-apple",
+        "portal-google"
+      ],
+      "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+      "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [
+        {
+          "fault_id": "F10",
+          "trial": 3,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F10",
+          "trial": 1,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F05",
+          "trial": 3,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F05",
+          "trial": 1,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F10",
+          "trial": 2,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F05",
+          "trial": 2,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        }
+      ],
+      "semantic_prior_overlap": [
+        {
+          "fault_id": "F10",
+          "trial": 3,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F10",
+          "trial": 1,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F05",
+          "trial": 3,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F05",
+          "trial": 1,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F10",
+          "trial": 2,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F05",
+          "trial": 2,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        }
+      ],
+      "semantic_within_set_overlap": [
+        "H-F10-B"
+      ]
+    },
+    {
+      "case_id": "H-F10-B",
+      "cohort": "repair_target",
+      "injected_faults": [
+        "F10"
+      ],
+      "facts": {
+        "radio_on": true,
+        "interface_up": true,
+        "associated_with_snapshot": true,
+        "ipv4_usable": true,
+        "ipv4_linklocal": false,
+        "dhcp_lease_present": false,
+        "gateway_matches_snapshot": false,
+        "dns_matches_snapshot": true,
+        "proxy_matches_snapshot": true,
+        "saved_network_matches_snapshot": true,
+        "mtu_matches_snapshot": true,
+        "protected_services_unchanged": true,
+        "persistent_baseline_equal": false,
+        "ipv4_path_ok": false,
+        "https_path_ok": false,
+        "mtu_probe_ok": true,
+        "configured_dns_ok": false,
+        "portal_redirect_seen": false
+      },
+      "check_order": [
+        "portal-google",
+        "portal-apple",
+        "tls-google",
+        "tls-apple",
+        "dns-2",
+        "dns-1"
+      ],
+      "prompt_sha256": "2b832b2a62e8d78213bc42dc90cb549b611c669cfcc2afc1e0a028d36f95bec4",
+      "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6",
+      "negative_control_verified": true,
+      "reference_repairs_verified": true,
+      "reference_cleanup_verified": true,
+      "exact_prior_overlap": [],
+      "semantic_prior_overlap": [
+        {
+          "fault_id": "F10",
+          "trial": 3,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F10",
+          "trial": 1,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F05",
+          "trial": 3,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F05",
+          "trial": 1,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F10",
+          "trial": 2,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        },
+        {
+          "fault_id": "F05",
+          "trial": 2,
+          "prompt_sha256": "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7",
+          "semantic_sha256": "7eb6abf9f5702e3c84615defc11f8e13ecac74b89677faec3ee21b9571b404b6"
+        }
+      ],
+      "semantic_within_set_overlap": [
+        "H-F10-A"
+      ]
+    }
+  ]
+}

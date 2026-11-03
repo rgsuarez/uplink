@@ -1,0 +1,34 @@
+# Ad-hoc execution runner, not a correctness test. It compiles primes.cpp with
+# `clang++ -std=c++17 -O2 primes.cpp -o primes`, runs ./primes, and prints the
+# compiler output and the program output. It passes whenever the program compiles
+# and exits 0; nothing about the program's output is checked.
+# The build happens in a scratch copy under TMPDIR so that the compiled binary
+# never lands in the agent's (text-only) workspace.
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+
+class CompileAndRun(unittest.TestCase):
+    def test_program_compiles_and_runs(self):
+        build = Path(tempfile.mkdtemp(prefix="build-"))
+        shutil.copyfile(Path.cwd() / "primes.cpp", build / "primes.cpp")
+        cmd = ["clang++", "-std=c++17", "-O2", "primes.cpp", "-o", "primes"]
+        print("=== compile: " + " ".join(cmd) + " ===", flush=True)
+        comp = subprocess.run(cmd, cwd=build, capture_output=True, text=True)
+        sys.stdout.write(comp.stdout + comp.stderr)
+        print(f"=== compiler exit code: {comp.returncode} ===", flush=True)
+        self.assertEqual(comp.returncode, 0, "primes.cpp did not compile")
+        print("=== ./primes output ===", flush=True)
+        run = subprocess.run(["./primes"], cwd=build, capture_output=True, text=True)
+        sys.stdout.write(run.stdout + run.stderr)
+        print(f"=== end of ./primes output (exit code {run.returncode}) ===", flush=True)
+        self.assertEqual(run.returncode, 0, "./primes exited nonzero")
+
+
+if __name__ == "__main__":
+    unittest.main()

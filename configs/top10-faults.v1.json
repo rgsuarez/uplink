@@ -1,0 +1,176 @@
+{
+  "acceptance": {
+    "dhcp_dynamic_fields": "Renewal timestamps/lease addresses may change only under DHCP; all before/after values and the reason are retained. No exact-old-lease claim.",
+    "edge_oracle_tests_sha256": "b8d14901a4f82e5673d290bc102f2c526a6e29932a28e2c016477bcff4635f12",
+    "false_online_max": 0,
+    "fault_effect_must_be_observed": true,
+    "online_oracle_sha256": "8ada6a245ee5929d08b393d5f9077ba46712aa9302e31109d443f035a7755d42",
+    "online_oracle_version": "uplink-online-v1",
+    "persistent_snapshot_exact": true,
+    "scoring_states": [
+      "recovered",
+      "honest_report",
+      "failed",
+      "blocked"
+    ],
+    "watchdog_restore_is_recovery_credit": false
+  },
+  "arm": "BASE",
+  "baseline_model_runs_before_freeze": 0,
+  "budget": {
+    "handback_seconds": 600,
+    "max_completion_tokens": 192,
+    "minimum_cooldown_seconds": 40,
+    "model_call_timeout_seconds": 8,
+    "model_decisions": 4,
+    "preflight_seconds": 600,
+    "reserve_seconds": 300,
+    "restore_timeout_seconds": 30,
+    "slot_seconds": 6000,
+    "trial_slot_seconds": 150,
+    "trials": 30,
+    "watchdog_seconds": 45
+  },
+  "constants": {
+    "bad_dns": "192\u002e0\u002e2\u002e53",
+    "bad_mtu": 1280,
+    "linklocal_address": "169\u002e254\u002e254\u002e2",
+    "linklocal_mask": "255\u002e255\u002e0\u002e0",
+    "stale_address": "198\u002e51\u002e100\u002e20",
+    "stale_gateway": "198\u002e51\u002e100\u002e1",
+    "stale_mask": "255\u002e255\u002e255\u002e0",
+    "stale_proxy_host": "127\u002e0\u002e0\u002e1",
+    "stale_proxy_port": 9,
+    "wrong_gateway": "192\u002e0\u002e2\u002e1"
+  },
+  "expected_server_pid": 19904,
+  "faults": [
+    {
+      "boundary": "Existing radio-on baseline and non-interactive reassociation must be proven.",
+      "evidence_class": "lab_wifi",
+      "id": "F01",
+      "inject": "native:radio_off",
+      "restore": "native:restore_radio",
+      "script": "scripts/top10_faults/f01_radio_off.py",
+      "slug": "radio_off",
+      "title": "Wi-Fi radio off",
+      "verify": "radio_on_false"
+    },
+    {
+      "boundary": "Only the captured Wi-Fi interface UP flag changes.",
+      "evidence_class": "lab_wifi",
+      "id": "F02",
+      "inject": "ifconfig:down",
+      "restore": "ifconfig:snapshot_up",
+      "script": "scripts/top10_faults/f02_interface_down.py",
+      "slug": "interface_down",
+      "title": "Wi-Fi interface administratively down",
+      "verify": "interface_up_false"
+    },
+    {
+      "boundary": "Inject the frozen link-local/no-lease symptom; do not claim a DHCP-server outage.",
+      "evidence_class": "lab_wifi",
+      "id": "F03",
+      "inject": "ipconfig:linklocal_manual",
+      "restore": "native:restore_ipv4_then_dhcp",
+      "script": "scripts/top10_faults/f03_dhcp_linklocal.py",
+      "slug": "dhcp_linklocal",
+      "title": "DHCP failure / self-assigned 169.254 address",
+      "verify": "linklocal_without_lease"
+    },
+    {
+      "boundary": "Cached/system fallback DNS may still work; configured-resolver negative control is mandatory.",
+      "evidence_class": "lab_wifi",
+      "id": "F04",
+      "inject": "native:bad_dns",
+      "restore": "native:restore_dns",
+      "script": "scripts/top10_faults/f04_bad_dns.py",
+      "slug": "bad_dns",
+      "title": "Bad configured DNS server",
+      "verify": "configured_dns_probe_fails"
+    },
+    {
+      "boundary": "Preserve the captured address/mask; use a documentation-only wrong router, never a live third-party gateway.",
+      "evidence_class": "lab_wifi",
+      "id": "F05",
+      "inject": "native:wrong_gateway",
+      "restore": "native:restore_ipv4",
+      "script": "scripts/top10_faults/f05_wrong_gateway.py",
+      "slug": "wrong_gateway",
+      "title": "Wrong IPv4 default gateway",
+      "verify": "gateway_changed_ipv4_probe_fails"
+    },
+    {
+      "boundary": "Use a closed loopback port; no credentials or external proxy.",
+      "evidence_class": "lab_wifi",
+      "id": "F06",
+      "inject": "native:stale_proxy",
+      "restore": "native:restore_proxy",
+      "script": "scripts/top10_faults/f06_stale_proxy.py",
+      "slug": "stale_proxy",
+      "title": "Stale web / secure proxy",
+      "verify": "proxy_changed_https_fails"
+    },
+    {
+      "boundary": "Operator chose a clearly labeled local portal simulation. No real portal authentication/recovery claim.",
+      "evidence_class": "local_portal_simulation",
+      "id": "F07",
+      "inject": "native:portal_proxy",
+      "restore": "native:restore_proxy",
+      "script": "scripts/top10_faults/f07_captive_portal.py",
+      "slug": "captive_portal",
+      "title": "Captive portal response (LOCAL SIMULATION)",
+      "verify": "owned_portal_redirect_seen"
+    },
+    {
+      "boundary": "Temporarily remove only the captured preferred profile and disassociate. Never delete or write Keychain credentials; restore the captured profile and association.",
+      "evidence_class": "lab_wifi",
+      "id": "F08",
+      "inject": "native:forget_current_profile",
+      "restore": "native:restore_saved_network",
+      "script": "scripts/top10_faults/f08_forgotten_saved_network.py",
+      "slug": "forgotten_saved_network",
+      "title": "Wrong / forgotten saved Wi-Fi network",
+      "verify": "saved_profile_absent_or_wrong_association"
+    },
+    {
+      "boundary": "Require a successful baseline DF packet to the captured gateway. This proves packet-size degradation, not a universal HTTP outage.",
+      "evidence_class": "lab_wifi",
+      "id": "F09",
+      "inject": "ifconfig:mtu_1280",
+      "restore": "ifconfig:snapshot_mtu",
+      "script": "scripts/top10_faults/f09_bad_mtu.py",
+      "slug": "bad_mtu",
+      "title": "Bad MTU for the known-good packet size",
+      "verify": "mtu_changed_df_probe_fails"
+    },
+    {
+      "boundary": "Inject a documentation-subnet stale address/router without changing the actual router. Report the controlled stale-client-state variant.",
+      "evidence_class": "lab_wifi",
+      "id": "F10",
+      "inject": "native:stale_ipv4",
+      "restore": "native:restore_ipv4_then_dhcp",
+      "script": "scripts/top10_faults/f10_stale_lease.py",
+      "slug": "stale_lease",
+      "title": "Stale IPv4 lease after a router/subnet change",
+      "verify": "stale_address_ipv4_probe_fails"
+    }
+  ],
+  "ordered_fault_ids": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "F08",
+    "F09",
+    "F10"
+  ],
+  "prompt_tuning_permitted": false,
+  "registered_at": "2026-10-29T02:18:00-05:00",
+  "status": "FROZEN_DEFINITION",
+  "trials_per_fault": 3,
+  "version": "uplink-top10-faults-v1"
+}

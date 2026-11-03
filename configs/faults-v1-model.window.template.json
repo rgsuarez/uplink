@@ -1,0 +1,39 @@
+{
+  "action_mode": "open",
+  "adapter_path": null,
+  "arm": "base",
+  "authorized": false,
+  "exclusive": false,
+  "expires_at": null,
+  "kind": "KAYLIN-OK-FAULTS-V1",
+  "owner_handback_sha256": null,
+  "owner_handback_verified": false,
+  "package_sha256": "014f8be5db61408851fa2d20303f8c8a6d12ec0ce4eb39b86c9bfea215e626f9",
+  "packet_sha256": "ed389d2b69df3a2597147c806f087adf93dc12bad173d94c4763d3dd22ac87d8",
+  "runtime_sha256": "d3c7336f25bc4e6c896ef42b5631eae99cd8bab24791466aedf34a8d8fe739a9",
+  "starts_at": null,
+  "trials": 2,
+  "version": 1,
+  "worker_windows": {
+    "0aa3c9688c84": {
+      "authorized": false,
+      "exclusive": false,
+      "expires_at": null,
+      "kind": "KAYLIN-OK-FAULTS-V1",
+      "package_sha256": "014f8be5db61408851fa2d20303f8c8a6d12ec0ce4eb39b86c9bfea215e626f9",
+      "r2_handback_verified": false,
+      "spec_sha256": "a5393da85fe40f07aec614f91fb06ad94e617dfbecbf667b59a5df40cf91ed79",
+      "starts_at": null
+    },
+    "664023b25418": {
+      "authorized": false,
+      "exclusive": false,
+      "expires_at": null,
+      "kind": "KAYLIN-OK-FAULTS-V1",
+      "package_sha256": "014f8be5db61408851fa2d20303f8c8a6d12ec0ce4eb39b86c9bfea215e626f9",
+      "r2_handback_verified": false,
+      "spec_sha256": "22fad51aeee9e36442422c8bcf41b6627ca922e3a6fd346608aec6ae802dfda7",
+      "starts_at": null
+    }
+  }
+}

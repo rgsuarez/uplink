@@ -1,0 +1,51 @@
+{
+  "bindings": {
+    "core": {
+      "base_commit": "5698e0c26f399f95c46dfc47de474006cb042e11",
+      "changed_files": {
+        "REPORT-U1-LIVE.md": "89c507d47bcfc30279f783917be8816ede79a27e12c0cde8480b87031850ad66",
+        "harness/macos/UplinkNetwork.swift": "6395b03968f9016142f9ee4178e80580397ece7fc1bda9e3e086f9ee00e6461c",
+        "src/offline_agent/uplink/real_fleet.py": "301051147c34668b4ddb58c9718858118b92a2927e288d1ccf815960e4158b0b",
+        "tests/uplink/test_fleet.py": "a19e1dea418ef35bae8b38e7dc7fe69339e59bf8e2392dc0c24c880353597a62"
+      },
+      "files_verified": 509,
+      "manifest_sha256": "73591bbe40d0b96825880d7c67cc91741b047cf899c9f7edbdef3d213da7f07e"
+    },
+    "recovery": {
+      "base_commit": "362bd72868237319cb05bd1a4268fcc87aa10022",
+      "changed_files": {
+        "docs/UPLINK-PROBE-ACCEPTANCE.md": "64c9c59b8f8ebe91e7f67c0c56ec89dcb5598077b32c35cf421b2996d62da0ac",
+        "docs/UPLINK-REAL-RECOVERY.md": "361471f4f6de26e1721fef1b1795bc1c181c1bd1bbf025e879cc5be487735412",
+        "src/offline_agent/uplink/probe_evidence.py": "e9e518a6768fd09add13fb19c37ac592325b5594fd0a4942fbdaad2b15990b6d",
+        "src/offline_agent/uplink/probe_overlay.py": "ea06b6d7187e227586c5db4e942ee2e3349a2b3f6be3b6364172ac34c3c93716",
+        "src/offline_agent/uplink/real_runner.py": "97dec97b775f21070337cb2ee5b449bc24c4e21d9c4932297f284f424c9acebd",
+        "tests/uplink/probe_receipts.py": "7ee74e8c4989d307df846f8f9754ece615cb08abcef948ef3daa88f0d7e82362",
+        "tests/uplink/test_probe_evidence.py": "0ec9d043a3a244b1382bb672ef1422c7f53c04d6cc2dee6f84d520e20443b7df",
+        "tests/uplink/test_probe_policy.py": "0118e8e12503d4c0f5ae96267ebab53c26b50b7eec594182b80052c0d48f0928"
+      },
+      "files_verified": 856,
+      "manifest_sha256": "b72b20212b2f40dbadd16ac485f15598590f126bdc1b8ce83397f92a6b008d59"
+    }
+  },
+  "credit_rule": "at_least_one_returned_non_read_state_probe_with_complete_trace_accounting",
+  "history_scrub": "still required before any publication",
+  "live_trials_run": 0,
+  "probe_execution_version": 2,
+  "refused_read_state_only_reason": "no_returned_non_read_state_probe_rows",
+  "review_source": "d1ed081",
+  "ruling_source": "e8dbeda",
+  "source_receipt": "artifacts/uplink/pc123-v3-20261028/verification-receipt.json",
+  "source_receipt_sha256": "dfbc14bc9c483c28c9f1e35cfb2e6119f14e4cada6f75d5ef44e1da50c02c344",
+  "status": "desk_verified_live_pending",
+  "verification": {
+    "core_focused_tests": 128,
+    "core_mypy_files": 170,
+    "recovery_focused_tests": 352,
+    "recovery_mypy_files": 195,
+    "retrieved_result_hashes_verified": 23,
+    "ruff": "check and format passed for both candidates",
+    "source_unchanged_on_test_host": true,
+    "temporary_test_checkout_removed": true
+  },
+  "version": 1
+}

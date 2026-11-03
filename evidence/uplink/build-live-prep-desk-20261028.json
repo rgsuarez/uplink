@@ -1,0 +1,130 @@
+{
+  "checks": {
+    "mypy": {
+      "exit_code": 0,
+      "seconds": 0.245
+    },
+    "pytest": {
+      "exit_code": 0,
+      "seconds": 5.325
+    },
+    "ruff": {
+      "exit_code": 0,
+      "seconds": 0.046
+    },
+    "ruff-format": {
+      "exit_code": 0,
+      "seconds": 0.022
+    }
+  },
+  "deliverable_sha256": {
+    "READY-FAULTS-V1-LIVE.md": "d5edc55e31f7165c0272914ff64a127ad1037e5963dfb1845e259a8262f419d0",
+    "demo/receipts/README.md": "189f0c8bf3efe41190fcb379f6d464ccf8aedbadcf9261b1134c853146b4d15b",
+    "demo/receipts/trial-15.md": "31310e2b600501af1d37027b70a984f58dc5ce466c0971746c228c724d034201",
+    "demo/receipts/trial-16.md": "d7a74b37f5854befe4be27cd8a85f6d98a2c077b147df42c15a84c5bb1426576",
+    "demo/receipts/trial-17.md": "e62034fefb61360dcd1ef8d32edcbad88afc12aff05c4f6216f1f0ca8230123d",
+    "scripts/demo_receipt.py": "786b7d18d55bf2b416f6ec98edee46fbf23e5210fc7d269a2ffbb6e686eba5d3",
+    "tests/uplink/test_demo_receipt.py": "84a628a8e749dd9aa9f30d1ed64897c45df9e8ccb529dd426f6e9f38fe1cc567"
+  },
+  "demo": {
+    "forbidden_effect_attempts": 0,
+    "host_contacts": 0,
+    "index_source_sha256": "32dfaf50cb6b68451e8e653b246cc2ae5a06cb53b3f6982419970cf2ecf7de3f",
+    "kind": "uplink-demo-receipt-no-contact",
+    "model_calls": 0,
+    "outputs": [
+      {
+        "journal_trial": 15,
+        "output": "demo/receipts/trial-15.md",
+        "output_sha256": "31310e2b600501af1d37027b70a984f58dc5ce466c0971746c228c724d034201",
+        "receipt_sha256": "56f80b7f9ec34f8bb518451d27e595882aa1996c64f1d7433a8db15d91a5608c",
+        "run_id": "0f3194dee834",
+        "trace_sha256": "359b010bee2720dd3db31323b76bff0631c7205b4b1a6eabfb07768f9d3a0639"
+      },
+      {
+        "journal_trial": 16,
+        "output": "demo/receipts/trial-16.md",
+        "output_sha256": "d7a74b37f5854befe4be27cd8a85f6d98a2c077b147df42c15a84c5bb1426576",
+        "receipt_sha256": "25b894fde21d6b745eaacb298a6da4c227bcf19a479170299341cfff6e491190",
+        "run_id": "75429ca1ec21",
+        "trace_sha256": "1495b00c4cc06f2239ae713cc3f3494e1d01ed82c19bcbfbac9c58a0bc23f7d7"
+      },
+      {
+        "journal_trial": 17,
+        "output": "demo/receipts/trial-17.md",
+        "output_sha256": "e62034fefb61360dcd1ef8d32edcbad88afc12aff05c4f6216f1f0ca8230123d",
+        "receipt_sha256": "cb0cc15161cfa21e6f8c7e001245bf70a552806cb0ce42b9adedd0e5949d8895",
+        "run_id": "6c04d80f1c00",
+        "trace_sha256": "0fda3d7d9f922ce231afd1be1bd267ebfe22fea8b583e3838dc36ad32bef2f79"
+      }
+    ],
+    "private_config_or_salt_reads": 0,
+    "renderer_sha256": "786b7d18d55bf2b416f6ec98edee46fbf23e5210fc7d269a2ffbb6e686eba5d3",
+    "reproductions_identical": true
+  },
+  "evidence_sha256": {
+    "checks.json": "d1706e2f55140223448de1f87668e97bc4c80c8a2741ba7f0fdaa6c5a267952e",
+    "cli-replay.md": "31310e2b600501af1d37027b70a984f58dc5ce466c0971746c228c724d034201",
+    "demo-no-contact-final.json": "e9d3e2a768ba85b9f67037f03ca50a7ab38c922a396c9f86712978ff11a551bb",
+    "focused.xml": "7666532072eeda70256ebea3ab6b734588c96baa7aeada1cc57117838461c7f4",
+    "mypy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mypy.stdout.log": "4d8615a3b23c25b3ef6259d7367cc2da9b7b794b659325c4369cb165f735b3bd",
+    "pytest.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pytest.stdout.log": "444d8a6a899a170fa83aefe23d14326466d747f525664a5dfef1f45a70adf8b9",
+    "ruff-format.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ruff-format.stdout.log": "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938",
+    "ruff.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ruff.stdout.log": "5b196eb3a6acb50d3fa398d04ca284985cc1ffec870e940264b00780bfd2c971",
+    "suite.xml": "34c498dc1941278a8de89a12c150b69274d65faf5d4e3f6fd98e7c188da0dd41"
+  },
+  "foreign_backup_unchanged": true,
+  "frozen_inputs_verified": 24,
+  "implementation_commit": "a59bb3fbb355595e194ad5c3ec0376469a2d4008",
+  "issued_clearance_unchanged": true,
+  "kind": "uplink-build-live-prep-desk-verification",
+  "ledger": {
+    "credential_or_identity_changes": 0,
+    "database_writes": 0,
+    "deploys": 0,
+    "external_messages": 0,
+    "host_contacts": 0,
+    "merges": 0,
+    "model_calls": 0,
+    "native_helper_builds": 0,
+    "network_faults": 0,
+    "publications": 0,
+    "pushes": 0,
+    "server_or_vm_changes": 0
+  },
+  "live_readiness": {
+    "authorized": false,
+    "blockers": [
+      "fresh_exact_window_and_current_owner_handback",
+      "dual_stack_target_pins_required_by_current_contract",
+      "native_root_package_and_spec_hashes_not_bound",
+      "new_fault_base_and_r4_open_model_controller_not_implemented"
+    ],
+    "ipv6_excluded_from_first_request": true,
+    "trial_arms_planned": [
+      "base",
+      "r4_open_if_accepted_sealed_eval"
+    ]
+  },
+  "new_tests": 29,
+  "original_recovery_evidence_files_verified": 66,
+  "parent_commit": "d937ef462c161b7a8ac32a30cd490ab7a691eacb",
+  "private_config_unchanged_mode_0600": true,
+  "private_evidence_directory": "artifacts/uplink/live-prep-20261028",
+  "recorded_at": "2026-10-28T11:58:51.737121-05:00",
+  "runtime_source_sha256": "7d3920faaaaecabe37daa18e86fef89ecd6d5e076c36b81057b0bdd069a13ef2",
+  "runtime_unchanged": true,
+  "saved_survey_unchanged": true,
+  "source_manifest_sha256": "cc77fbaa12d69c9f1dff2b85056e50a6ff9d88a339f10c276bbc67943b42b722",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 1013
+  },
+  "version": 1
+}

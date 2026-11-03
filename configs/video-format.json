@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "format": "video-data-constants-v1",
+  "source_read_only": true,
+  "files": [
+    {
+      "path": "../video/src/data/demo.ts",
+      "sha256": "fd6b40d96a3d1caadf7590103e22ffafce8c55c40dcf2d65baa86808cd06817d"
+    },
+    {
+      "path": "../video/src/data/metrics.ts",
+      "sha256": "dc74e3e82594a410ecd75723763c09e89920f63844fe37492021d84107734727"
+    },
+    {
+      "path": "../video/src/Cut.tsx",
+      "sha256": "60f6a2cf1ed40c8ac60a66a809350e4a91fa529138e5e560420e8006f4bf33cf"
+    },
+    {
+      "path": "../video/src/Root.tsx",
+      "sha256": "1ba5957c5b5f3121744f198d0fc86d0e5080ddb2e78c4a55f9350ad7ba24dfca"
+    }
+  ],
+  "note": "Type contracts inspected only; sibling composition has no JSON data loader."
+}

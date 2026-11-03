@@ -1,0 +1,40 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "X02",
+  "catalog_id": "dns_drift_plus_pmtu_blackhole",
+  "role": "fault",
+  "baseline": {
+    "http_proxy": "configured",
+    "https_proxy": "configured",
+    "alternate": true,
+    "ipv6": "disabled"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "FFFFTT",
+      "verdict": "DEGRADED",
+      "app": false
+    },
+    {
+      "after": "set_dns",
+      "flags": "TTFFTT",
+      "verdict": "DEGRADED",
+      "app": false
+    },
+    {
+      "after": "reroute",
+      "flags": "TTTTTT",
+      "verdict": "ONLINE",
+      "app": true
+    }
+  ],
+  "terminal": {
+    "tool": "recovered",
+    "layer": "upstream",
+    "component": "",
+    "step": "",
+    "reason": "",
+    "citation": "tls-apple"
+  }
+}

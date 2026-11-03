@@ -1,0 +1,18 @@
+{
+  "id": "boltons",
+  "repository": "mahmoud/boltons",
+  "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+  "license": "BSD-3-Clause",
+  "split": "train",
+  "source": "data/v2/upstream/boltons/module.py",
+  "assets": {
+    "data/v2/upstream/boltons/module.py": {
+      "url": "https://raw.githubusercontent.com/mahmoud/boltons/d31d821d56c8f7756af9c30a864077f2e5855321/boltons/mathutils.py",
+      "sha256": "f832235006d1a1fac34ff0d83f0f9819d00a3086cfb4df6169212b4d8d31d4fe"
+    },
+    "data/v2/upstream/boltons/LICENSE": {
+      "url": "https://raw.githubusercontent.com/mahmoud/boltons/d31d821d56c8f7756af9c30a864077f2e5855321/LICENSE",
+      "sha256": "c301912653a8d8c99eab6212aa3aea8d164ea249d8ad53c941e0558a0a5ac1e3"
+    }
+  }
+}

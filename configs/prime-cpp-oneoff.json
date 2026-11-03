@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "task_id": "adhoc-primes-cpp-rerun",
+  "mission": "Code me a prime number generator from 0 to 1000 in C++, then execute it to show that it works.",
+  "classification": "single_adhoc_task_not_a_benchmark",
+  "hidden_tests": false,
+  "reasoning_strength": "low",
+  "history_mode": "append-only-v1",
+  "route": "native_gbnf",
+  "budget": {
+    "max_steps": 16,
+    "max_tokens": 65536,
+    "max_action_tokens": 2048,
+    "max_seconds": 120.0,
+    "test_seconds": 3.0
+  },
+  "model": {
+    "gguf_filename": "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+    "gguf_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+    "server_build": "b10353-f8def7fe1",
+    "context_tokens": 8192,
+    "parallel": 1,
+    "adapter_count": 0,
+    "seed": 0,
+    "temperature": 0
+  },
+  "original": {
+    "task_id": "adhoc-primes-cpp",
+    "source_sha256": "ccd7aabd43d6388238e5b9a46cd9b5539b1cb8783d8da7a8b7a3a8d435940c97",
+    "oracle_sha256": "2367abcf93b47d0e2a39c0a62242295729c5c3bcc57b37170dd35e68c2a699d4",
+    "runner_sha256": "d7f5fc3c7c188231fafe251ad619d7d569ae8359a0288cf72652a7924162ba8f",
+    "trace_sha256": "e558580f0ea83406600606d076ca6c665330d93e1d04811ecff4eec2dca1a9e0",
+    "result_sha256": "1307c907fe5a513ea26279ad40c28fcf30a173dc53698e4368d494ba8cfd7af9",
+    "outcome": "budget_exhausted",
+    "reason": "step_budget",
+    "steps": 16,
+    "invalid_actions": 4,
+    "elapsed_s": 100.49053041706793
+  },
+  "workspace_overlay": {
+    "file": "src/offline_agent/workspace.py",
+    "original_rule": "if name.endswith(\".py\"):",
+    "packaged_rule": "if name == \"primes.cpp\":",
+    "purpose": "Allow only the original C++ placeholder to be edited in the isolated one-off runtime."
+  },
+  "oracle_contract": "Compile C++17 with clang++ -O2 and execute; exit success only, no output correctness assertion.",
+  "correctness_claim_allowed": false,
+  "frozen_evaluation_modified": false,
+  "run_count": 1,
+  "retry_count": 0,
+  "execution_gates": [
+    "Wednesday 2026-10-28 21:00 CT not-before gate, plus completed V5 and R2 handbacks",
+    "new fleet window naming this package and its times",
+    "R2 handback with exact base restoration and empty adapter list",
+    "fresh base GGUF and serving-build/context attestation",
+    "existing compiler and Python environment; no installation",
+    "no competing render/eval job",
+    "one fresh private output directory; no resume or retry",
+    "Existing CommandLineTools route and isolated compiler smoke must pass before model inference"
+  ],
+  "limits": {
+    "minimum_remaining_window_seconds": 180,
+    "extra_disk_reservation_bytes": 67108864,
+    "server_lifecycle_changes": false,
+    "network_faults": false,
+    "vm_access": false
+  },
+  "not_before": "2026-10-28T21:00:00-05:00",
+  "sandbox_overlay": {
+    "file": "src/offline_agent/sandbox.py",
+    "original_rule": "        \"/Library/Apple\",",
+    "packaged_rule": "        \"/Library/Apple\",\n        \"/Library/Developer/CommandLineTools\",",
+    "purpose": "Read the existing compiler and SDK in the isolated one-off only; network deny and write limits remain."
+  }
+}

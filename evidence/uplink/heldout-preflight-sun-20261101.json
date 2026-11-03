@@ -1,0 +1,161 @@
+{
+  "app_list_preflight": {
+    "active_rows": 0,
+    "stopped_rows": 1,
+    "total_rows": 1
+  },
+  "billing_preflight": {
+    "billed_cost_usd": "0",
+    "credits_applied_usd": "0.87000000",
+    "egress_allowance_usd": "0.00005469",
+    "metered_cost_usd": "0.87005469",
+    "remaining_credit_allowance": "not exposed by CLI summary; verify before any launch"
+  },
+  "code_changes": false,
+  "freeze_commit": null,
+  "frozen_runner_selected_trials": 21,
+  "head": "bf52a20b63f1843520e4451c732bd0487ae76d9c",
+  "held_class_expected_outcome": "Report/give_up; no recovery credit",
+  "held_classes": [
+    "F01",
+    "F02",
+    "F08"
+  ],
+  "host_contacts": 0,
+  "model": "BASE_Q4_no_adapter",
+  "model_calls": 0,
+  "new_apps": 0,
+  "normalized_input_fields": [
+    "observed boolean facts",
+    "online check id/ok list",
+    "prior actions",
+    "tool descriptions"
+  ],
+  "packet_compute_spend_usd": "0",
+  "prior_trials": 21,
+  "profile": "snapshot-restore-descriptions-v1",
+  "prompt_groups": {
+    "1d2276d8ec988c74b65d7167b4bb7b43231ab073c2885662b5eeca3e2e0956bf": [
+      {
+        "fault_id": "F03",
+        "trial": 3
+      },
+      {
+        "fault_id": "F03",
+        "trial": 1
+      },
+      {
+        "fault_id": "F03",
+        "trial": 2
+      }
+    ],
+    "85486a55cba3c5b6dd075cc20228ea0cda101e1dc0cb4f42527983cb8c40bea7": [
+      {
+        "fault_id": "F07",
+        "trial": 2
+      },
+      {
+        "fault_id": "F07",
+        "trial": 1
+      },
+      {
+        "fault_id": "F07",
+        "trial": 3
+      }
+    ],
+    "967e81394330447218eb6a0dde992b506c1c40172b7dfd862f7544c6eeca2088": [
+      {
+        "fault_id": "F09",
+        "trial": 2
+      },
+      {
+        "fault_id": "F09",
+        "trial": 1
+      },
+      {
+        "fault_id": "F09",
+        "trial": 3
+      }
+    ],
+    "a7305c870edfe1e6e8514dd7cac8cde745064716b3282cd7331849ec942eb7fc": [
+      {
+        "fault_id": "F04",
+        "trial": 1
+      },
+      {
+        "fault_id": "F04",
+        "trial": 3
+      },
+      {
+        "fault_id": "F04",
+        "trial": 2
+      }
+    ],
+    "ab1201c3dc8bb66128249b21e97ee8483bf74a241f4263a8fb1c4842768dbbd4": [
+      {
+        "fault_id": "F06",
+        "trial": 3
+      },
+      {
+        "fault_id": "F06",
+        "trial": 1
+      },
+      {
+        "fault_id": "F06",
+        "trial": 2
+      }
+    ],
+    "db8a0e40cbdd000b32955e460929c66e1662d7e93832a641dbd4816dc33a66b7": [
+      {
+        "fault_id": "F10",
+        "trial": 3
+      },
+      {
+        "fault_id": "F10",
+        "trial": 1
+      },
+      {
+        "fault_id": "F05",
+        "trial": 3
+      },
+      {
+        "fault_id": "F05",
+        "trial": 1
+      },
+      {
+        "fault_id": "F10",
+        "trial": 2
+      },
+      {
+        "fault_id": "F05",
+        "trial": 2
+      }
+    ]
+  },
+  "rates_usd_per_hour": {
+    "A10G": "1.10000",
+    "CPU": "0.04730",
+    "GiB_memory": "0.00800"
+  },
+  "raw_surface_details_not_in_model_input": [
+    "interface names",
+    "SSID names",
+    "gateway values",
+    "error/log wording"
+  ],
+  "reroute_in_13_tool_grammar": false,
+  "scenario_set_authored": false,
+  "source_result_sha256": "a3074b9f0c8ddc5e190f50b1e6f0bfbe8d98487c1ac6ec7e7a6af1164d8b1ed0",
+  "status": "awaiting_scope_clarification_before_authoring_or_inference",
+  "tentative_compute_ceiling": {
+    "ceiling_usd": "0.4761331111111111111111111111",
+    "cpu_request_and_limit": 2,
+    "function_seconds": 1100,
+    "gpu": "A10G",
+    "memory_gib_request_and_limit": 32,
+    "reserve_usd": "0.02",
+    "scaledown_seconds": 2,
+    "startup_seconds": 30
+  },
+  "unique_first_turn_prompts": 6
+}

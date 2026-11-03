@@ -1,0 +1,120 @@
+{
+  "binding": {
+    "archive_has_private_config": false,
+    "archive_sha256": "d2122c5da1310950173a45de5ba7ef0dcd51cd5959e28eed6acfc347c07262df",
+    "kind": "uplink-newfault-packet-binding",
+    "live_authorized": false,
+    "native_binary_sha256": "d304ce7cc53dd61f46c6b8380d2a506fc355e5c0457b56d7d2390b57664d2f0a",
+    "native_readback_before_live_required": true,
+    "package_sha256": "014f8be5db61408851fa2d20303f8c8a6d12ec0ce4eb39b86c9bfea215e626f9",
+    "packet_file_sha256": "feb86c2ceec3adeb5a01194b177cdaee00fb8319468d62c0b3e521dd2a5fc31d",
+    "packet_sha256": "ed389d2b69df3a2597147c806f087adf93dc12bad173d94c4763d3dd22ac87d8",
+    "runtime_sha256": "d3c7336f25bc4e6c896ef42b5631eae99cd8bab24791466aedf34a8d8fe739a9",
+    "source_commit": "a208ffa630c447d39c43abc13eda834503eca2b3",
+    "source_files_verified": 115,
+    "specs": [
+      {
+        "fault": "test_host_blackhole",
+        "run_id": "0aa3c9688c84",
+        "spec_sha256": "a5393da85fe40f07aec614f91fb06ad94e617dfbecbf667b59a5df40cf91ed79"
+      },
+      {
+        "fault": "owned_pf_outbound",
+        "run_id": "664023b25418",
+        "spec_sha256": "22fad51aeee9e36442422c8bcf41b6627ca922e3a6fd346608aec6ae802dfda7"
+      }
+    ],
+    "survey_sha256": "0b80c0398776a84f3cda0c9e8c094032ac158d0a5e1ff67de2b0646e67b572e5",
+    "version": 1,
+    "window_template_authorized": false
+  },
+  "evidence_sha256": {
+    "final-checks.json": "35b4e583405b5016423f1c694b00f8bc96a690b78df71f43ff9e067694746ac1",
+    "final-format.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final-format.stdout.log": "08a6f81023ff0ea3c8b53845f1b8c00d66f580c7277f7ca6121dad2281a9c914",
+    "final-mypy.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final-mypy.stdout.log": "adbe2679a016996b4036b957085d8e2e478f4dfe4d280f71d524bdba164dc01f",
+    "final-pytest.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final-pytest.stdout.log": "1f6d2312980b577d22584695f447ca652aeb9367fc7ffa8f3533a59d90bb99a3",
+    "final-ruff.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final-ruff.stdout.log": "5b196eb3a6acb50d3fa398d04ca284985cc1ffec870e940264b00780bfd2c971",
+    "final.xml": "de646017fca34314100e588b51bde998d1d0021b85ff060b8d21ad051b919513",
+    "focused-final.xml": "0de12e4f7301893d8cb0d3d36f57220f8c9b09aee4155819116743d0ebd79499",
+    "no-contact-plan.json": "4c7425b20a24090f05774779ee43bd2a85afdc973b75d3a874dc617069e1c20e",
+    "no-contact-proof.json": "8b36722adae65a79e826031ccb35e42037e5d0e092d8ba0601aa6d666709f715"
+  },
+  "external_messages": false,
+  "kind": "uplink-newfault-controller-desk-qualification",
+  "live_newfault_trials": 0,
+  "new_vm_runs": 0,
+  "no_contact_proof": {
+    "bound_packet_file_sha256": "feb86c2ceec3adeb5a01194b177cdaee00fb8319468d62c0b3e521dd2a5fc31d",
+    "forbidden_effect_attempts": 0,
+    "model_calls": 0,
+    "native_builds": 0,
+    "newfault_host_contacts": 0,
+    "packet_stays_unauthorized": true,
+    "runtime_sha256": "d3c7336f25bc4e6c896ef42b5631eae99cd8bab24791466aedf34a8d8fe739a9",
+    "vm_calls": 0
+  },
+  "private_evidence_directory": "artifacts/uplink/newfault-controller-20261028",
+  "publication": false,
+  "push": false,
+  "r4_eligible": false,
+  "readiness": "ready_for_scope_review_fresh_exact_window_required",
+  "recorded_at": "2026-10-28T13:20:59.703152-05:00",
+  "requested_arm": "base",
+  "requested_trials": 2,
+  "requested_window_minutes": 20,
+  "runtime_sha256": "d3c7336f25bc4e6c896ef42b5631eae99cd8bab24791466aedf34a8d8fe739a9",
+  "separate_capture_outcome": {
+    "ended_at": "2026-10-28T13:07:49.193835-05:00",
+    "receipt_sha256": "1d77eee0b3f98d9884ce9ceec8b94f2d41d8a369d74f8507e7ef4bd9db201b8b",
+    "recording_exists": false,
+    "status": "blocked_before_trial_handed_back",
+    "trial_invocations": 0
+  },
+  "source_commit": "a208ffa630c447d39c43abc13eda834503eca2b3",
+  "verification": {
+    "checks": {
+      "final-format": {
+        "exit_code": 0,
+        "seconds": 0.04
+      },
+      "final-mypy": {
+        "exit_code": 0,
+        "seconds": 0.723
+      },
+      "final-pytest": {
+        "exit_code": 0,
+        "seconds": 6.995
+      },
+      "final-ruff": {
+        "exit_code": 0,
+        "seconds": 0.051
+      }
+    },
+    "counts": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 1064
+    },
+    "foreign_backup_unchanged": true,
+    "frozen_inputs_verified": 24,
+    "issued_clearance_unchanged": true,
+    "new_tests": 51,
+    "original_acceptance_hashes_unchanged": {
+      "docs/UPLINK-PROBE-ACCEPTANCE.md": "37dd1bb41c609dde20c528097e06e5adc0cd86f982ff84cddd0a8034d0148efc",
+      "src/offline_agent/uplink/oracle.py": "8ada6a245ee5929d08b393d5f9077ba46712aa9302e31109d443f035a7755d42",
+      "src/offline_agent/uplink/probe_evidence.py": "e9e518a6768fd09add13fb19c37ac592325b5594fd0a4942fbdaad2b15990b6d",
+      "src/offline_agent/uplink/real_fleet.py": "e0945f6a2d623b8eb4887f98f566499032cd72c6b19c629c5a1555a3889fbfdb",
+      "src/offline_agent/uplink/real_protocol.py": "de375ba012f350d6c232ee387cf2ced9e253d9efe54adf03aed1435b63db61fd",
+      "src/offline_agent/uplink/real_worker.py": "2e44a1ad1b001d16124cbd325dd646e0b771b9f1ac29eeae9151246df2a5a80b"
+    },
+    "original_recovery_evidence_verified": 66,
+    "prior_demo_outputs_identical": true,
+    "private_config_unchanged_mode_0600": true
+  },
+  "version": 1
+}

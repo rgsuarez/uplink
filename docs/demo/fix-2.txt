@@ -1,0 +1,100 @@
+╭────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ MOCK / ANSWER-AWARE FIXTURE                                                                                │
+│ NETWORK ROUTE PRESENT: Current host has a default route                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────── TOOL-ONLY REPAIR ─────────────────────────────────────────────╮
+│ v2-train-boltons-000                                                                                       │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── BUDGET / MEASUREMENTS ───────────────────────────────────────────╮
+│ Steps 6/16  |  byte bounds 32892/65536  |  Wall budget 30.0 s                                              │
+│ Model generation tok/s: UNMEASURED  |  Model peak RSS: UNMEASURED                                          │
+│ Python harness peak RSS: 39.8 MiB (not model memory)                                                       │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────── MEASURED HARNESS RESIDENCY ────────────────────────────────────────╮
+│ Python harness peak RSS gauge (1 GiB display scale; not model RSS)                                         │
+│ █▊                                                                                                         │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 01 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "list_files", "args": {"path": "."}}                                                              │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 02 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "search", "args": {"path": ".", "query": "return"}}                                               │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 03 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "run_tests", "args": {}}                                                                          │
+│ RED / NOT GREEN                                                                                            │
+│ test_case_000 (__main__.Contract.test_case_000) ... ERROR                                                  │
+│ test_case_001 (__main__.Contract.test_case_001) ... ERROR                                                  │
+│ test_case_002 (__main__.Contract.test_case_002) ... ok                                                     │
+│ test_case_003 (__main__.Contract.test_case_003) ... ok                                                     │
+│                                                                                                            │
+│ ======================================================================                                     │
+│ ERROR: test_case_000 (__main__.Contract.test_case_000)                                                     │
+│ ----------------------------------------------------------------------                                     │
+│ Traceback (most recent call last):                                                                         │
+│   File "artifacts/tmp/task-x1w0m37k/oracle.py", line   │
+│ 10, in test_case_000                                                                                       │
+│     self.assertEqual((s.Bits('101') & s.Bits('110')).as_bin(), '100')                                      │
+│                       ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~                                                        │
+│   File "artifacts/tmp/task-x1w0m37k/work/solution.py", │
+│ line 196, in __and__                                                                                       │
+│     if (type(self)) < (type(other)):                                                                       │
+│        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                        │
+│ TypeError: '<' not supported between instances of 'type' and 'type'                                        │
+│                                                                                                            │
+│ ======================================================================                                     │
+│ ERROR: test_case_001 (__main__.Contract.test_case_001)                                                     │
+│ ----------------------------------------------------------------------                                     │
+│ Traceback (most recent call last):                                                                         │
+│   File "artifacts/tmp/task-x1w0m37k/oracle.py", line   │
+│ 12, in test_case_001                                                                                       │
+│     self.assertEqual((s.Bits('00') & s.Bits('11')).as_int(), 0)                                            │
+│                       ~~~~~~~~~~~~~^~~~~~~~~~~~~~                                                          │
+│   File "artifacts/tmp/task-x1w0m37k/work/solution.py", │
+│ line 196, in __and__                                                                                       │
+│     if (type(self)) < (type(other)):                                                                       │
+│        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                        │
+│ TypeError: '<' not supported between instances of 'type' and 'type'                                        │
+│                                                                                                            │
+│ ----------------------------------------------------------------------                                     │
+│ Ran 4 tests in 0.001s                                                                                      │
+│                                                                                                            │
+│ FAILED (errors=2)                                                                                          │
+│                                                                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 04 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "apply_patch", "args": {"path": "solution.py", "old": "def __and__(self, other):\n        if      │
+│ (type(self)) < (type(other)):\n            return NotImplemented\n        return Bits(self.val &           │
+│ other.val, max(self.len, other.len))", "new": "def __and__(self, other):\n        if type(self) is not     │
+│ type(other):\n            return NotImplemented\n        return Bits(self.val & other.val, max(self.len,   │
+│ other.len))"}}                                                                                             │
+│ Replacement block diff:                                                                                    │
+│ --- solution.py (old block)                                                                                │
+│ +++ solution.py (new block)                                                                                │
+│ @@ -1,4 +1,4 @@                                                                                            │
+│  def __and__(self, other):                                                                                 │
+│ -        if (type(self)) < (type(other)):                                                                  │
+│ +        if type(self) is not type(other):                                                                 │
+│              return NotImplemented                                                                         │
+│          return Bits(self.val & other.val, max(self.len, other.len))                                       │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 05 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "run_tests", "args": {}}                                                                          │
+│ GREEN                                                                                                      │
+│ test_case_000 (__main__.Contract.test_case_000) ... ok                                                     │
+│ test_case_001 (__main__.Contract.test_case_001) ... ok                                                     │
+│ test_case_002 (__main__.Contract.test_case_002) ... ok                                                     │
+│ test_case_003 (__main__.Contract.test_case_003) ... ok                                                     │
+│                                                                                                            │
+│ ----------------------------------------------------------------------                                     │
+│ Ran 4 tests in 0.000s                                                                                      │
+│                                                                                                            │
+│ OK                                                                                                         │
+│                                                                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 06 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "declare_done", "args": {"status": "fixed", "reason": "Current immutable oracle passed"}}         │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── fixed ───────────────────────────────────────────────────╮
+│ Current immutable oracle passed                                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

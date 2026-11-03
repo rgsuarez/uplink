@@ -1,0 +1,34 @@
+{
+  "version": "uplink-sealed-linux-v1",
+  "code": "X03",
+  "catalog_id": "proxy_drift_plus_https_blocked",
+  "role": "fault",
+  "baseline": {
+    "http_proxy": "configured",
+    "https_proxy": "configured",
+    "alternate": false,
+    "ipv6": "disabled"
+  },
+  "stages": [
+    {
+      "after": "inject",
+      "flags": "TTFFFF",
+      "verdict": "DEGRADED",
+      "app": false
+    },
+    {
+      "after": "restore_proxy",
+      "flags": "TTFFTT",
+      "verdict": "DEGRADED",
+      "app": false
+    }
+  ],
+  "terminal": {
+    "tool": "report",
+    "layer": "upstream",
+    "component": "upstream",
+    "step": "wait",
+    "reason": "",
+    "citation": "tls-apple"
+  }
+}

@@ -1,0 +1,625 @@
+{
+  "version": 1,
+  "project_license": "Apache-2.0",
+  "project_rules": [
+    {
+      "pattern": ".gitignore",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "Makefile",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "README.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "PROVENANCE.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "REPORT*.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "pyproject.toml",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "uv.lock",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "src/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "scripts/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "tests/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "modal/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "docs/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "configs/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "schemas/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "licenses/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "templates/manifest.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/train.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/sources.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/train.sha256",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/oracles/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/v2/*.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/v2/train.sha256",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/v2/oracles/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "eval/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "bench/lab/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/linux/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/macos/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "DIAG-*.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "TRIAL-LOG.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "evidence/uplink/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "CORRECTION-TRIALS-11-13.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "SERIAL-HISTORY-SCRUB-PLAN.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "KAYLIN-OK.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "SCRUB-REPORT.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "HANDBACK-PROBE-V5.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "READY-PROBE-TRIALS-V5.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "bench/adhoc/prime_cpp/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "SEALED-HELDOUT-FIXTURES.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "SERIAL-HISTORY-SCRUB-REPORT.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "HANDBACK-PROBE-V4.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "HANDOFF-BUILD.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "REPO-SCRUB-PACKAGE.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "READY-FAULTS-V1.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "READY-FAULTS-V1-LIVE.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "READY-PUBLIC-SCRUB.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "demo/receipts/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/top10/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "READY-BENCH-TOP10.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "GO-TOP10-FAULTS.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "ops/top10-stage/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "ENFORCEMENT-TOP10-FRI.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": ".env.example",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "TONIGHT/FRI-2130/*",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "RESULT-MODEL-SIM-BASE-FIX-SUN.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "PUBLIC-EXPORT-NOTES.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "RESULT-MODEL-SIM-SUN.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "RESULT-PROXY-REPAIR-SUN.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "RUN-LOG-GLIMMER.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "DEMO-SCRIPT.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "RESULT-HELDOUT-EVAL-SUN.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "RESULT-MODEL-SIM-PROXY-FIX-SUN.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/bench/README.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/bench/descriptions.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/model-sim-proxy-fix/probes-v1.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/model-sim-heldout-sun/cases.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/model-sim-heldout-sun/input-audit.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "demo/model-sim/adopted-F06.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/model-sim-base-fix/probes-v1.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "demo/model-sim/adopted-F04.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/bench/FROZEN.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "SUBMISSION-CHECKLIST.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "demo/model-sim/README.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "demo/model-sim/baseline-F06.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/model-sim-heldout-sun/manifest.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/bench/authority.template.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "data/model-sim-heldout-sun/manifest.sha256",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/bench/prompt.txt",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/model-sim/authorized-repair-v1.txt",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/bench/owner.template.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "harness/bench/richard.template.json",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "demo/model-sim/results-table.md",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "pytest.ini",
+      "license": "Apache-2.0"
+    },
+    {
+      "pattern": "RESULT-TOP10.md",
+      "license": "Apache-2.0",
+      "source_commit": "502120277014144b822b0dea89687056035122f0",
+      "scope": "First-party historical abort report; zero recorded trials and no recovery claim."
+    },
+    {
+      "pattern": "VIDEO-CLAIMS-F04.md",
+      "license": "Apache-2.0"
+    }
+  ],
+  "third_party_files": [
+    {
+      "path": "LICENSE",
+      "source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "revision": "Apache-2.0",
+      "license": "Apache-2.0",
+      "license_file": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "data/synthetic/LICENSE",
+      "source": "https://raw.githubusercontent.com/spdx/license-list-data/v3.26.0/text/CC0-1.0.txt",
+      "revision": "v3.26.0",
+      "license": "CC0-1.0",
+      "license_file": "data/synthetic/LICENSE",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "data/synthetic/eval_text.py",
+      "source": "original-synthetic",
+      "revision": "d9d2d841f10b7252deb48d66cd09c6a8fb50be51ea916436a05cbf9d2cd58d17",
+      "license": "CC0-1.0",
+      "license_file": "data/synthetic/LICENSE",
+      "sha256": "d9d2d841f10b7252deb48d66cd09c6a8fb50be51ea916436a05cbf9d2cd58d17"
+    },
+    {
+      "path": "data/synthetic/train_numeric.py",
+      "source": "original-synthetic",
+      "revision": "8e60d9db8ec274b36dbe53c7113d80fab745e8ea175c927c5933fc91b10a4c31",
+      "license": "CC0-1.0",
+      "license_file": "data/synthetic/LICENSE",
+      "sha256": "8e60d9db8ec274b36dbe53c7113d80fab745e8ea175c927c5933fc91b10a4c31"
+    },
+    {
+      "path": "data/upstream/inflection/LICENSE",
+      "source": "https://raw.githubusercontent.com/jpvanhal/inflection/88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1/LICENSE",
+      "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+      "license": "MIT",
+      "license_file": "data/upstream/inflection/LICENSE",
+      "sha256": "9e9f9b4b2e7543ad1486f1328bf9ec50e5a5e2bb9caceb59652496dd61e64133"
+    },
+    {
+      "path": "data/upstream/inflection/module.py",
+      "source": "https://raw.githubusercontent.com/jpvanhal/inflection/88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1/inflection/__init__.py",
+      "revision": "88eefaacf7d0caaa701af7c8ab2d0ab3f17086f1",
+      "license": "MIT",
+      "license_file": "data/upstream/inflection/LICENSE",
+      "sha256": "b6b089383f812e6986f917a3c689722c54b8a69f04ded2ac32b627cbcfdaf35e"
+    },
+    {
+      "path": "data/upstream/stringcase/LICENSE",
+      "source": "https://raw.githubusercontent.com/okunishinishi/python-stringcase/57aae96649f5cf7fc98e50b1d62479456d492715/LICENSE",
+      "revision": "57aae96649f5cf7fc98e50b1d62479456d492715",
+      "license": "MIT",
+      "license_file": "data/upstream/stringcase/LICENSE",
+      "sha256": "b8c493354463583e0e8958c2bc6bdec4ebfcb653b39e4ed5522f641689da9ea0"
+    },
+    {
+      "path": "data/upstream/stringcase/module.py",
+      "source": "https://raw.githubusercontent.com/okunishinishi/python-stringcase/57aae96649f5cf7fc98e50b1d62479456d492715/stringcase.py",
+      "revision": "57aae96649f5cf7fc98e50b1d62479456d492715",
+      "license": "MIT",
+      "license_file": "data/upstream/stringcase/LICENSE",
+      "sha256": "227026f2583455ee69ef6ea59e2afaee45061b94033a671b7bf8603c03fe5f1b"
+    },
+    {
+      "path": "data/v2/synthetic/numeric.py",
+      "source": "original-synthetic",
+      "revision": "36b501f11803ae03633c794812873632db02253419d0f41019b4fa447005cae3",
+      "license": "CC0-1.0",
+      "license_file": "data/synthetic/LICENSE",
+      "sha256": "36b501f11803ae03633c794812873632db02253419d0f41019b4fa447005cae3"
+    },
+    {
+      "path": "data/v2/synthetic/records.py",
+      "source": "original-synthetic",
+      "revision": "8cc54199c41057f8dd5c4cf89108d075339c2a82c2fd5534e6c1821003283a46",
+      "license": "CC0-1.0",
+      "license_file": "data/synthetic/LICENSE",
+      "sha256": "8cc54199c41057f8dd5c4cf89108d075339c2a82c2fd5534e6c1821003283a46"
+    },
+    {
+      "path": "data/v2/synthetic/sequence.py",
+      "source": "original-synthetic",
+      "revision": "5dad96dcdb14b90a227b8e46d77ed6a43591f06f8d941da6d9221e1483dd00b3",
+      "license": "CC0-1.0",
+      "license_file": "data/synthetic/LICENSE",
+      "sha256": "5dad96dcdb14b90a227b8e46d77ed6a43591f06f8d941da6d9221e1483dd00b3"
+    },
+    {
+      "path": "data/v2/synthetic/text.py",
+      "source": "original-synthetic",
+      "revision": "116279213230970b88e4c0c7b5e321a3d4c1d46f36092b74e20ed35c06acaf0e",
+      "license": "CC0-1.0",
+      "license_file": "data/synthetic/LICENSE",
+      "sha256": "116279213230970b88e4c0c7b5e321a3d4c1d46f36092b74e20ed35c06acaf0e"
+    },
+    {
+      "path": "data/v2/upstream/boltons/LICENSE",
+      "source": "https://raw.githubusercontent.com/mahmoud/boltons/d31d821d56c8f7756af9c30a864077f2e5855321/LICENSE",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "license": "BSD-3-Clause",
+      "license_file": "data/v2/upstream/boltons/LICENSE",
+      "sha256": "c301912653a8d8c99eab6212aa3aea8d164ea249d8ad53c941e0558a0a5ac1e3"
+    },
+    {
+      "path": "data/v2/upstream/boltons/module.py",
+      "source": "https://raw.githubusercontent.com/mahmoud/boltons/d31d821d56c8f7756af9c30a864077f2e5855321/boltons/mathutils.py",
+      "revision": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "license": "BSD-3-Clause",
+      "license_file": "data/v2/upstream/boltons/LICENSE",
+      "sha256": "f832235006d1a1fac34ff0d83f0f9819d00a3086cfb4df6169212b4d8d31d4fe"
+    },
+    {
+      "path": "templates/MODEL-LICENSE",
+      "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B/resolve/cec94fcfd6512f2cfe708138c32533b346ea4f69/LICENSE",
+      "revision": "cec94fcfd6512f2cfe708138c32533b346ea4f69",
+      "license": "Apache-2.0",
+      "license_file": "templates/MODEL-LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "templates/glimmer_native.jinja",
+      "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B/resolve/cec94fcfd6512f2cfe708138c32533b346ea4f69/chat_template.jinja",
+      "revision": "cec94fcfd6512f2cfe708138c32533b346ea4f69",
+      "license": "Apache-2.0",
+      "license_file": "templates/MODEL-LICENSE",
+      "sha256": "cfc67e5f349f37690dfd31ed1f18bc4442a9dd32fe39a648f993cb4eb3cae678"
+    },
+    {
+      "path": "templates/tokenizer_config.json",
+      "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B/resolve/cec94fcfd6512f2cfe708138c32533b346ea4f69/tokenizer_config.json",
+      "revision": "cec94fcfd6512f2cfe708138c32533b346ea4f69",
+      "license": "Apache-2.0",
+      "license_file": "templates/MODEL-LICENSE",
+      "sha256": "781e6c74f571642c71202167b67d9255b28cc439bdda1582ff31346182f5a9c5"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/attrs/26.1.0/"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "license": "MIT",
+      "source": "https://pypi.org/project/colorama/0.4.6/"
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.1",
+      "license": "MIT",
+      "source": "https://pypi.org/project/iniconfig/2.3.1/"
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "license": "BSD-3-Clause",
+      "source": "https://pypi.org/project/jinja2/3.1.6/"
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/jsonschema/4.26.0/"
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "license": "MIT",
+      "source": "https://pypi.org/project/jsonschema-specifications/2025.9.1/"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/markdown-it-py/4.2.0/"
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.4",
+      "license": "BSD-3-Clause",
+      "source": "https://pypi.org/project/markupsafe/3.0.4/"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "license": "MIT",
+      "source": "https://pypi.org/project/mdurl/0.1.2/"
+    },
+    {
+      "name": "mypy",
+      "version": "1.15.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/mypy/1.15.0/"
+    },
+    {
+      "name": "mypy-extensions",
+      "version": "1.1.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/mypy-extensions/1.1.0/"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "source": "https://pypi.org/project/packaging/26.3/"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.7.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/pluggy/1.7.0/"
+    },
+    {
+      "name": "pygments",
+      "version": "2.21.0",
+      "license": "BSD-2-Clause",
+      "source": "https://pypi.org/project/pygments/2.21.0/"
+    },
+    {
+      "name": "pytest",
+      "version": "8.4.2",
+      "license": "MIT",
+      "source": "https://pypi.org/project/pytest/8.4.2/"
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/referencing/0.37.0/"
+    },
+    {
+      "name": "rich",
+      "version": "14.2.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/rich/14.2.0/"
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.9.1",
+      "license": "MIT",
+      "source": "https://pypi.org/project/rpds-py/2026.9.1/"
+    },
+    {
+      "name": "ruff",
+      "version": "0.17.2",
+      "license": "MIT",
+      "source": "https://pypi.org/project/ruff/0.17.2/"
+    },
+    {
+      "name": "types-jsonschema",
+      "version": "4.26.0.20261006",
+      "license": "Apache-2.0",
+      "source": "https://pypi.org/project/types-jsonschema/4.26.0.20261006/"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "license": "PSF-2.0",
+      "source": "https://pypi.org/project/typing-extensions/4.16.0/"
+    }
+  ],
+  "build_dependencies": [
+    {
+      "name": "setuptools",
+      "version": "80.9.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/setuptools/80.9.0/"
+    },
+    {
+      "name": "wheel",
+      "version": "0.45.1",
+      "license": "MIT",
+      "source": "https://pypi.org/project/wheel/0.45.1/"
+    }
+  ],
+  "scope": "Tracked source/data/assets and frozen Python/build dependencies. Staged remote toolchain is separate, uninstalled and unverified; see configs/remote-toolchain.json."
+}

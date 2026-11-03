@@ -1,0 +1,121 @@
+╭────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ MOCK / ANSWER-AWARE FIXTURE                                                                                │
+│ NETWORK ROUTE PRESENT: Current host has a default route                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────── TOOL-ONLY REPAIR ─────────────────────────────────────────────╮
+│ v2-train-inflection-000                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── BUDGET / MEASUREMENTS ───────────────────────────────────────────╮
+│ Steps 6/16  |  byte bounds 33488/65536  |  Wall budget 30.0 s                                              │
+│ Model generation tok/s: UNMEASURED  |  Model peak RSS: UNMEASURED                                          │
+│ Python harness peak RSS: 39.1 MiB (not model memory)                                                       │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────── MEASURED HARNESS RESIDENCY ────────────────────────────────────────╮
+│ Python harness peak RSS gauge (1 GiB display scale; not model RSS)                                         │
+│ █▊                                                                                                         │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 01 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "list_files", "args": {"path": "."}}                                                              │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 02 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "search", "args": {"path": ".", "query": "return"}}                                               │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 03 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "run_tests", "args": {}}                                                                          │
+│ RED / NOT GREEN                                                                                            │
+│ test_case_000 (__main__.Contract.test_case_000) ... FAIL                                                   │
+│ test_case_001 (__main__.Contract.test_case_001) ... ERROR                                                  │
+│ test_case_002 (__main__.Contract.test_case_002) ... FAIL                                                   │
+│ test_case_003 (__main__.Contract.test_case_003) ... ok                                                     │
+│ test_case_004 (__main__.Contract.test_case_004) ... ok                                                     │
+│                                                                                                            │
+│ ======================================================================                                     │
+│ ERROR: test_case_001 (__main__.Contract.test_case_001)                                                     │
+│ ----------------------------------------------------------------------                                     │
+│ Traceback (most recent call last):                                                                         │
+│   File "artifacts/tmp/task-kd7ojzlw/oracle.py", line   │
+│ 12, in test_case_001                                                                                       │
+│     self.assertEqual(s.camelize('red_green',False), 'redGreen')                                            │
+│                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                         │
+│   File "artifacts/tmp/task-kd7ojzlw/work/solution.py", │
+│ line 171, in camelize                                                                                      │
+│     return string[0].lower() + camelize(string)[1:]                                                        │
+│                                ~~~~~~~~~~~~~~~~^^^^                                                        │
+│ TypeError: 'NoneType' object is not subscriptable                                                          │
+│                                                                                                            │
+│ ======================================================================                                     │
+│ FAIL: test_case_000 (__main__.Contract.test_case_000)                                                      │
+│ ----------------------------------------------------------------------                                     │
+│ Traceback (most recent call last):                                                                         │
+│   File "artifacts/tmp/task-kd7ojzlw/oracle.py", line   │
+│ 10, in test_case_000                                                                                       │
+│     self.assertEqual(s.camelize('red_green'), 'RedGreen')                                                  │
+│ AssertionError: None != 'RedGreen'                                                                         │
+│                                                                                                            │
+│ ======================================================================                                     │
+│ FAIL: test_case_002 (__main__.Contract.test_case_002)                                                      │
+│ ----------------------------------------------------------------------                                     │
+│ Traceback (most recent call last):                                                                         │
+│   File "artifacts/tmp/task-kd7ojzlw/oracle.py", line   │
+│ 14, in test_case_002                                                                                       │
+│     self.assertEqual(s.camelize(''), '')                                                                   │
+│ AssertionError: None != ''                                                                                 │
+│                                                                                                            │
+│ ----------------------------------------------------------------------                                     │
+│ Ran 5 tests in 0.001s                                                                                      │
+│                                                                                                            │
+│ FAILED (failures=2, errors=1)                                                                              │
+│                                                                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 04 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "apply_patch", "args": {"path": "solution.py", "old": "def camelize(string: str,                  │
+│ uppercase_first_letter: bool = True) -> str:\n    \"\"\"\n    Convert strings to CamelCase.\n\n            │
+│ Examples::\n\n        >>> camelize(\"device_type\")\n        'DeviceType'\n        >>>                     │
+│ camelize(\"device_type\", False)\n        'deviceType'\n\n    :func:`camelize` can be thought of as a      │
+│ inverse of :func:`underscore`,\n    although there are some cases where that does not hold::\n\n           │
+│ >>> camelize(underscore(\"IOError\"))\n        'IoError'\n\n    :param uppercase_first_letter: if set to   │
+│ `True` :func:`camelize` converts\n        strings to UpperCamelCase. If set to `False` :func:`camelize`    │
+│ produces\n        lowerCamelCase. Defaults to `True`.\n    \"\"\"\n    if uppercase_first_letter:\n        │
+│ return None\n    else:\n        return string[0].lower() + camelize(string)[1:]", "new": "def              │
+│ camelize(string: str, uppercase_first_letter: bool = True) -> str:\n    \"\"\"\n    Convert strings to     │
+│ CamelCase.\n\n    Examples::\n\n        >>> camelize(\"device_type\")\n        'DeviceType'\n        >>>   │
+│ camelize(\"device_type\", False)\n        'deviceType'\n\n    :func:`camelize` can be thought of as a      │
+│ inverse of :func:`underscore`,\n    although there are some cases where that does not hold::\n\n           │
+│ >>> camelize(underscore(\"IOError\"))\n        'IoError'\n\n    :param uppercase_first_letter: if set to   │
+│ `True` :func:`camelize` converts\n        strings to UpperCamelCase. If set to `False` :func:`camelize`    │
+│ produces\n        lowerCamelCase. Defaults to `True`.\n    \"\"\"\n    if uppercase_first_letter:\n        │
+│ return re.sub(r\"(?:^|_)(.)\", lambda m: m.group(1).upper(), string)\n    else:\n        return            │
+│ string[0].lower() + camelize(string)[1:]"}}                                                                │
+│ Replacement block diff:                                                                                    │
+│ --- solution.py (old block)                                                                                │
+│ +++ solution.py (new block)                                                                                │
+│ @@ -20,6 +20,6 @@                                                                                          │
+│          lowerCamelCase. Defaults to `True`.                                                               │
+│      """                                                                                                   │
+│      if uppercase_first_letter:                                                                            │
+│ -        return None                                                                                       │
+│ +        return re.sub(r"(?:^|_)(.)", lambda m: m.group(1).upper(), string)                                │
+│      else:                                                                                                 │
+│          return string[0].lower() + camelize(string)[1:]                                                   │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 05 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "run_tests", "args": {}}                                                                          │
+│ GREEN                                                                                                      │
+│ test_case_000 (__main__.Contract.test_case_000) ... ok                                                     │
+│ test_case_001 (__main__.Contract.test_case_001) ... ok                                                     │
+│ test_case_002 (__main__.Contract.test_case_002) ... ok                                                     │
+│ test_case_003 (__main__.Contract.test_case_003) ... ok                                                     │
+│ test_case_004 (__main__.Contract.test_case_004) ... ok                                                     │
+│                                                                                                            │
+│ ----------------------------------------------------------------------                                     │
+│ Ran 5 tests in 0.000s                                                                                      │
+│                                                                                                            │
+│ OK                                                                                                         │
+│                                                                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── 06 SCHEMA-VALID ACTION ──────────────────────────────────────────╮
+│ {"tool": "declare_done", "args": {"status": "fixed", "reason": "Current immutable oracle passed"}}         │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── fixed ───────────────────────────────────────────────────╮
+│ Current immutable oracle passed                                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "node": "lab",
+  "oob_host": "lab-oob",
+  "wifi_host": "lab-wifi",
+  "bench_relative": "lab-bench",
+  "source_relative": "lab-bench/uplink-u1",
+  "python_relative": "lab-bench/offline-agent/.venv/bin/python",
+  "approved_serial": "",
+  "approved_by": "",
+  "approved_at": "",
+  "fleet_clearance_at": "",
+  "clearance_file": "FLEET-CLEARANCE.local.md"
+}

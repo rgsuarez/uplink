@@ -1,0 +1,82 @@
+{
+  "attempts": [
+    {
+      "action_chosen": [
+        "restore_dns"
+      ],
+      "false_online": 0,
+      "finished_at": "2026-11-03T12:16:53.123533-06:00",
+      "index": 1,
+      "model_reached": true,
+      "model_requests": 1,
+      "outcome": "PASS",
+      "previous_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "reason": "strict_recovered",
+      "recording_path": "PRIVATE_HOME/uplink-f04-runs/f04-series-54b5899ccb66/attempts/01-d2c83ffa97ec/terminal.typescript",
+      "recording_sha256": "98f3506acd43e652c2ca4256a2e6ca88c5bb61d793cb6c862a03a54e6e2ec2fc",
+      "recovery_seconds": 17.541,
+      "result_sha256": "c723ce90f288fb4b067375058738cee3d4aaf6137effcfb86d93961f935d7cc6",
+      "retry": false,
+      "row_sha256": "609d57c62ac97d82e5cfe9775a0deeaefd173cfa95a2331e19a0b82d4853accc",
+      "run_id": "d2c83ffa97ec",
+      "strict_reader_verdict": "VALIDATED",
+      "strict_result_sha256": "918b7795c1563dce0029efcf8a070050e6f733934b3f870022e60934970de1e7"
+    },
+    {
+      "action_chosen": [],
+      "false_online": 0,
+      "finished_at": "2026-11-03T12:18:20.004526-06:00",
+      "index": 2,
+      "model_reached": false,
+      "model_requests": 0,
+      "outcome": "REFUSED-BEFORE-MODEL",
+      "previous_sha256": "609d57c62ac97d82e5cfe9775a0deeaefd173cfa95a2331e19a0b82d4853accc",
+      "reason": "relay_load_refused",
+      "recording_path": "PRIVATE_HOME/uplink-f04-runs/f04-series-54b5899ccb66/attempts/02-c81f7ae72ef1/terminal.typescript",
+      "recording_sha256": "a923f64e5d8008a05aaf33f6336e1fa9fa9232e7bdfa70f31d6845be45394ce4",
+      "recovery_seconds": null,
+      "result_sha256": "5d4929cafc2ee03a8d0794b618af8f6ab0655e9f63ed8afd61fda5ba39d844dd",
+      "retry": false,
+      "row_sha256": "78a6e43b844758dc212512f1ddf8741eeeb84982fa565997e38f94f935e0bfbc",
+      "run_id": "c81f7ae72ef1",
+      "strict_reader_verdict": "REFUSED",
+      "strict_result_sha256": "5687af40f5e8b80831cb70b3e8896f8a17cdd746519a839a39d15d0b97cb8b63"
+    },
+    {
+      "action_chosen": [],
+      "false_online": 0,
+      "finished_at": "2026-11-03T12:19:20.928325-06:00",
+      "index": 3,
+      "model_reached": false,
+      "model_requests": 0,
+      "outcome": "ABORT",
+      "previous_sha256": "78a6e43b844758dc212512f1ddf8741eeeb84982fa565997e38f94f935e0bfbc",
+      "reason": "safety_or_terminal_evidence_unproven",
+      "recording_path": "PRIVATE_HOME/uplink-f04-runs/f04-series-54b5899ccb66/attempts/03-8d35661dd4a7/terminal.typescript",
+      "recording_sha256": "964955709eedd8d81c1e79be9bbb8fbf90c1d9635333d2037ccfd22a385ce93c",
+      "recovery_seconds": null,
+      "result_sha256": null,
+      "retry": false,
+      "row_sha256": "b39db422ebca95777cb9ab35ce0dc619460a4ea1cf016436faa260f7e8a6ad18",
+      "run_id": "8d35661dd4a7",
+      "strict_reader_verdict": "REFUSED",
+      "strict_result_sha256": "5687af40f5e8b80831cb70b3e8896f8a17cdd746519a839a39d15d0b97cb8b63"
+    }
+  ],
+  "series_id": "54b5899ccb66",
+  "state": "STOPPED",
+  "summary": {
+    "aborts": 1,
+    "attempts": 3,
+    "denominator_complete": true,
+    "failures": 0,
+    "false_online_complete": true,
+    "false_online_total": 0,
+    "median_population": "strictly validated recovered trials only",
+    "median_recovery_seconds": 17.541,
+    "model_reached": 1,
+    "passes": 1,
+    "passes_over_model_reached": "1/1",
+    "refused_before_model": 1
+  }
+}

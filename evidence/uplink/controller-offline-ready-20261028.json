@@ -1,0 +1,325 @@
+{
+  "before_first_lab-wifi_call": {
+    "arguments": [
+      "--execute",
+      "--confirm-live",
+      "--confirm-restores",
+      "--probe-scripts",
+      "--fault",
+      "dns_and_proxy",
+      "--trials",
+      "3",
+      "--oob-host",
+      "lab-oob",
+      "--output",
+      "artifacts/uplink/controller-offline-ready-20261028/boundary-only"
+    ],
+    "boundary_preflight_sha256": "1d28e3df72c39d52073d883b0eae8278db979a8fc85ff27cbd5c9ff4fa28acb5",
+    "entry": ".venv/bin/uplink-real",
+    "live_controller_source_unmodified": true,
+    "processes_started": 0,
+    "sockets_opened": 0,
+    "status": "PASS_STOPPED_BEFORE_FIRST_SSH",
+    "stop_mechanism": "Python subprocess.Popen audit event before process creation",
+    "stopped_before_command": [
+      "ssh",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ConnectTimeout=3",
+      "-o",
+      "ServerAliveInterval=2",
+      "-o",
+      "ServerAliveCountMax=1",
+      "lab-oob",
+      "true"
+    ]
+  },
+  "branch": "fix/u1-linux-recovery",
+  "cache_population": {
+    "cache_directory": ".cache/uv",
+    "cached_wheel_hashes_match_lock_metadata": true,
+    "cached_wheels": {
+      "attrs": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+        "version": "26.1.0",
+        "wheel": "attrs-26.1.0-py3-none-any.whl"
+      },
+      "iniconfig": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "9121e2c1fdb355232495be3194c8dfe87ccc2d5dee45947b78e68f499790d7a7",
+        "version": "2.3.1",
+        "wheel": "iniconfig-2.3.1-py3-none-any.whl"
+      },
+      "jinja2": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+        "version": "3.1.6",
+        "wheel": "jinja2-3.1.6-py3-none-any.whl"
+      },
+      "jsonschema": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce",
+        "version": "4.26.0",
+        "wheel": "jsonschema-4.26.0-py3-none-any.whl"
+      },
+      "jsonschema-specifications": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe",
+        "version": "2025.9.1",
+        "wheel": "jsonschema_specifications-2025.9.1-py3-none-any.whl"
+      },
+      "markdown-it-py": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a",
+        "version": "4.2.0",
+        "wheel": "markdown_it_py-4.2.0-py3-none-any.whl"
+      },
+      "markupsafe": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "0930db9bdc62d22944e10b066448bb65dc9abe9112880c7cab8da54db4284d5f",
+        "version": "3.0.4",
+        "wheel": "markupsafe-3.0.4-cp312-cp312-macosx_11_0_arm64.whl"
+      },
+      "mdurl": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8",
+        "version": "0.1.2",
+        "wheel": "mdurl-0.1.2-py3-none-any.whl"
+      },
+      "mypy": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "2f2147ab812b75e5b5499b01ade1f4a81489a147c01585cda36019102538615f",
+        "version": "1.15.0",
+        "wheel": "mypy-1.15.0-cp312-cp312-macosx_11_0_arm64.whl"
+      },
+      "mypy-extensions": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505",
+        "version": "1.1.0",
+        "wheel": "mypy_extensions-1.1.0-py3-none-any.whl"
+      },
+      "packaging": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+        "version": "26.3",
+        "wheel": "packaging-26.3-py3-none-any.whl"
+      },
+      "pluggy": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "7dd7b0d8832ba3cb632c306926ded123429211b83641b35dc5c41ad2d34f9bec",
+        "version": "1.7.0",
+        "wheel": "pluggy-1.7.0-py3-none-any.whl"
+      },
+      "pygments": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9",
+        "version": "2.21.0",
+        "wheel": "pygments-2.21.0-py3-none-any.whl"
+      },
+      "pytest": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "872f880de3fc3a5bdc88a11b39c9710c3497a547cfa9320bc3c5e62fbf272e79",
+        "version": "8.4.2",
+        "wheel": "pytest-8.4.2-py3-none-any.whl"
+      },
+      "referencing": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231",
+        "version": "0.37.0",
+        "wheel": "referencing-0.37.0-py3-none-any.whl"
+      },
+      "rich": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "76bc51fe2e57d2b1be1f96c524b890b816e334ab4c1e45888799bfaab0021edd",
+        "version": "14.2.0",
+        "wheel": "rich-14.2.0-py3-none-any.whl"
+      },
+      "rpds-py": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "e21c1429e205828ea886a2293a4a2c8e01f4c25d9893ca330e97a6cf73f52e7b",
+        "version": "2026.9.1",
+        "wheel": "rpds_py-2026.9.1-cp312-cp312-macosx_11_0_arm64.whl"
+      },
+      "ruff": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "92a80d2f44584dabb0189b3a6c393e37e525e04942838482010575cb81945be7",
+        "version": "0.17.2",
+        "wheel": "ruff-0.17.2-py3-none-macosx_11_0_arm64.whl"
+      },
+      "types-jsonschema": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "29301f4e65e3928540cdf5e23ad716e38bb0c0b416a48dada213edd3d70206ec",
+        "version": "4.26.0.20261006",
+        "wheel": "types_jsonschema-4.26.0.20261006-py3-none-any.whl"
+      },
+      "typing-extensions": {
+        "locked_hash_present_in_uv_cache_metadata": true,
+        "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+        "version": "4.16.0",
+        "wheel": "typing_extensions-4.16.0-py3-none-any.whl"
+      }
+    },
+    "command": [
+      "uv",
+      "sync",
+      "--frozen",
+      "--no-python-downloads",
+      "--no-progress",
+      "--color",
+      "never"
+    ],
+    "exit_code": 0,
+    "lockfile_and_dependency_declarations_unchanged": true,
+    "network_scope": "locked PyPI artifacts only"
+  },
+  "checked_at": "2026-10-28T00:23:52.700405-05:00",
+  "effects": {
+    "lab-wifi_contacts": 0,
+    "model_calls": 0,
+    "new_native_compiler_invocations": 0,
+    "pushes": 0,
+    "root_operations": 0,
+    "transfers": 0,
+    "trials": 0,
+    "watchdog_operations": 0
+  },
+  "evidence_kind": "local_only",
+  "exact_entry_preflight": {
+    "command": [
+      "uv",
+      "run",
+      "--frozen",
+      "--offline",
+      "uplink-real",
+      "--help"
+    ],
+    "exit_code": 0,
+    "help_contract_present": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "a73ff665a8caf19333ccfe646b6d0960c6519cef47a67419400193771789c35c"
+  },
+  "input_sha256": {
+    "evidence/uplink/native-typecheck-20261028.json": "f793fffcd56f1a5e10608f494100d55800a325aeb4fd293a1bfdbc189598f8a2",
+    "pyproject.toml": "a8c52d8fb51882cd6367b92b631ac537baf29a5ad1bb9880dc3a619a5f6e1b99",
+    "scripts/check_macos_swift.py": "57f3d1e8ec82fcbaafea7f15e46ae0b7f27c85c7d0c5acaceeabecd5bb35261d",
+    "uv.lock": "7e9186b5add763224ce0eecd10602f6df6ff4afd373aface65f856a296fb0dd0"
+  },
+  "installed_environment": {
+    "extra_packages": [],
+    "installed_versions": {
+      "attrs": "26.1.0",
+      "iniconfig": "2.3.1",
+      "jinja2": "3.1.6",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "markdown-it-py": "4.2.0",
+      "markupsafe": "3.0.4",
+      "mdurl": "0.1.2",
+      "mypy": "1.15.0",
+      "mypy-extensions": "1.1.0",
+      "offline-agent": "0.1.0",
+      "packaging": "26.3",
+      "pluggy": "1.7.0",
+      "pygments": "2.21.0",
+      "pytest": "8.4.2",
+      "referencing": "0.37.0",
+      "rich": "14.2.0",
+      "rpds-py": "2026.9.1",
+      "ruff": "0.17.2",
+      "types-jsonschema": "4.26.0.20261006",
+      "typing-extensions": "4.16.0"
+    },
+    "locked_active_closure_matches": true,
+    "platform_excluded": [
+      "colorama"
+    ]
+  },
+  "kind": "uplink-controller-offline-preflight",
+  "limitations": [
+    "Local readiness only; a new explicit GO is required.",
+    "Remote native build/self-test, model attestation, snapshot, watchdog and live gates remain unrun."
+  ],
+  "local_evidence": {
+    "directory": "artifacts/uplink/controller-offline-ready-20261028",
+    "files": {
+      "boundary-result.json": "e6142fc0b84c82e81f3bad57832c75133f5d5327c801b1ba8ce063f256f3913a",
+      "boundary_preflight.py": "1d28e3df72c39d52073d883b0eae8278db979a8fc85ff27cbd5c9ff4fa28acb5",
+      "cache-artifact-bindings.json": "f36dfaba91df96637cb7d6ec886cbe3f46144331c30c7917736f4ee0e73d979d",
+      "cache-sync.json": "a1999d0452993c72d09a4fa72c058ecf7b723ca86ab8e71c50c01386071069d9",
+      "controller-help.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "controller-help.stdout.txt": "a73ff665a8caf19333ccfe646b6d0960c6519cef47a67419400193771789c35c",
+      "entry-command.json": "f819ef3cdfa6504ede480e0e9fa1a3ab4b5d00e698497dd5aea6629a203974f5",
+      "installed-versions.json": "c0f8382af6cb98c28cdc751ec73cdc0348baeaaeb8f0d12fc05c9e4a6b3467b7",
+      "local-staging-result.json": "a27f1ba8b82dc6319aa35283aab9783db73efb3f69e30f2852c5b87be583a6f2"
+    }
+  },
+  "publication_copy": {
+    "historical_hashes": "Original unredacted source/receipt bytes; no claim that they hash this publication copy.",
+    "raw_receipt": "artifacts/uplink/public-scrub-20261028/originals/0dffc3c52c3c9f56d67d8801acb0172d2b5196a16ab86f8aec1f4ddcaeac2ca6.raw",
+    "raw_sha256": "0dffc3c52c3c9f56d67d8801acb0172d2b5196a16ab86f8aec1f4ddcaeac2ca6",
+    "redactions": [
+      "device_aliases",
+      "device_specific_field_names"
+    ]
+  },
+  "source_commit": "b2c002a841a119624abe087b95c7265aef94d5b5",
+  "staging_dry_run": {
+    "all_files_match_git_and_worktree": true,
+    "archive_members": 101,
+    "archive_sha256": "0421516c72e0d70a62c30fe4cd8d16ba8dfc627bb33d1d7df58856eef208912a",
+    "checked_at": "2026-10-28T00:22:18.758722-05:00",
+    "commands": [
+      {
+        "command": [
+          "uv",
+          "sync",
+          "--frozen",
+          "--offline",
+          "--check"
+        ],
+        "exit_code": 0,
+        "stderr_sha256": "57b53152597b89caae9b18e2aa3595b96569f9232eb812ff2c968e91e7115d71",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "make",
+          "macos-staging-payload",
+          "NATIVE_TYPECHECK_RECEIPT=evidence/uplink/native-typecheck-20261028.json",
+          "MACOS_STAGING_REVISION=b2c002a841a119624abe087b95c7265aef94d5b5",
+          "MACOS_STAGING_PAYLOAD=artifacts/uplink/controller-offline-ready-20261028/macos-staging.tar"
+        ],
+        "exit_code": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "b171ef8d263307efec9ebcc65567b14da6e2732f12735b1e838fa9f56a33a79d"
+      }
+    ],
+    "compiler_invocations": 0,
+    "config_clearance_trial_log_abort_unchanged": true,
+    "extraction_removed": true,
+    "lab-wifi_contacts": 0,
+    "load_clearance": "PASS",
+    "local_extraction_readback": "PASS",
+    "manifest_sha256": "d2fd5fe71e1df1cd6d18b8f1910d99ae8c2727e6c62f4554f1e8f12cca003a6c",
+    "native_typecheck_receipt_matches": true,
+    "private_files_excluded": true,
+    "source_commit": "b2c002a841a119624abe087b95c7265aef94d5b5",
+    "source_files": 99,
+    "transfers": 0,
+    "trials": 0
+  },
+  "status": "READY_FOR_NEW_WINDOW",
+  "unchanged": {
+    "fleet_clearance": true,
+    "prior_aborts": true,
+    "private_lab_config": true,
+    "pyproject": true,
+    "runtime_source": true,
+    "trial_log": true,
+    "uv_lock": true
+  },
+  "uv_version": "uv 0.11.17 (a33a629d6 2026-05-28 aarch64-apple-darwin)",
+  "version": 1
+}
