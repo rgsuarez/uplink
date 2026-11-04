@@ -66,7 +66,7 @@
     },
     {
       "candidate_path": "README.md",
-      "candidate_sha256": "fa741ff1d96d04362ca4fb2133d4ff233155f01e43376c380ee0672724ae31e1",
+      "candidate_sha256": "191a43436715299176a2ac4c5f9825aa6d37d13a7431507668fe535f791abaec",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "README.md",
@@ -5967,6 +5967,12 @@
     "scope": "Sync README and clarify post-hoc tool-description rewrites. Only unmodified base Muse Glimmer weights were used; original evidence and frozen harness hashes are unchanged.",
     "source_commit": "71e696e952e3abf717db11cfc1d41d47869777b2",
     "source_readme_sha256": "fa741ff1d96d04362ca4fb2133d4ff233155f01e43376c380ee0672724ae31e1"
+  },
+  "readme_siteonly_correction": {
+    "base_clean_commit": "ee394c3daa1b752e8c69e39121f7acfcf96ac09e",
+    "scope": "Site-only is pending / not yet run in a committed series because no site-only ledger is committed. DNS, proxy and control counts are unchanged; F01 remains pending.",
+    "source_commit": "b758b785381f8003d89453f467f4029d1293dd2e",
+    "source_readme_sha256": "191a43436715299176a2ac4c5f9825aa6d37d13a7431507668fe535f791abaec"
   },
   "repo_gate_sync": {
     "base_export_commit": "96a5d43c7749cf81d3bcc645c6862830fcbfa30d",

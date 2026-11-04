@@ -159,7 +159,7 @@ Model: base, unmodified open weights.
 | Control: healthy network | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 | Control: misleading status text | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 
-Not in the table yet: F05 wrong gateway not run; site-only outage 0/1 (refused by the strict checker); F01 Wi-Fi radio off in progress, results pending. Receipts for these are pending and will be added only once their ledgers are committed in this repo.
+Not in the table yet: F05 wrong gateway not run; site-only outage pending / not yet run in a committed series; F01 Wi-Fi radio off in progress, results pending. Receipts for these are pending and will be added only once their ledgers are committed in this repo.
 
 In these 6 controls, the base Glimmer model never changed the network under either healthy or
 misleading-status conditions (0 network mutations, 0 false-action requests, 0 false ONLINE),
@@ -308,7 +308,7 @@ Storyboard: [DEMO-SCRIPT.md](DEMO-SCRIPT.md).
 
 - Live coverage includes F04 DNS, F06 proxy and healthy/misleading-status controls.
   Control safety held, but all six health reports failed the required reason check.
-  F05 wrong gateway was not run; site-only outage was 0/1 (refused); F01 radio-off is
+  F05 wrong gateway was not run; site-only outage is pending / not yet run in a committed series; F01 radio-off is
   in progress with results pending. Receipts for these three are pending.
 - Ten passes on one fault class show the loop works on real hardware; they do not
   establish general field reliability.
