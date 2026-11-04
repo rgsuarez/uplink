@@ -1,0 +1,60 @@
+{
+  "all_listed_series": {
+    "false_online": 0,
+    "model_reached": 6,
+    "passes": 1
+  },
+  "pre_model_exclusions": 4,
+  "public_files": [
+    {
+      "path": "F01-COMBINED-TALLY.md",
+      "sha256": "ffeccad0c428ca324558f72139629eb9246818ab38e20749edbe1ffdeb929cd1"
+    },
+    {
+      "path": "SERIES-LEDGER.json",
+      "sha256": "e57e77c6aa88994c43b1b8990109102e72028b5284cd1104bd0dc017d0b61696"
+    }
+  ],
+  "schema": "UPLINK-F01-PUBLIC-MANIFEST-v1",
+  "scope": "Public-safe projection of all ten committed attempt rows. This file excludes its own hash; the export manifest tracks it. Raw private evidence is omitted.",
+  "source_commit": "3ba3d74fd79ed615f367199d14e8546d59c97b36",
+  "source_files": [
+    {
+      "source_path": "artifacts/uplink/f01-series-b6cec6aa1c24/SERIES-LEDGER.json",
+      "source_sha256": "da2d09d50b2194fe45b1319d45f43b6bf3bd5a9e058a5646d87611246e10135d"
+    },
+    {
+      "source_path": "artifacts/uplink/f01-series-943ca53b4167/SERIES-LEDGER.json",
+      "source_sha256": "4c681cb7473c3cf8692eed383e8c3af4c029fd60624b165ad8490ce9ec5b4521"
+    },
+    {
+      "source_path": "artifacts/uplink/f01-series-1c2228ebcf54/SERIES-LEDGER.json",
+      "source_sha256": "946118d92f2c126e57e7a3cf04dcc6aedc56f6225b64b9faa63c4205d529b661"
+    },
+    {
+      "source_path": "artifacts/uplink/f01-series-0e706a845a37/SERIES-LEDGER.json",
+      "source_sha256": "62406694aba05d63d16602fa4f92c030d872e9acfb6f936d58364aa48bd6a195"
+    },
+    {
+      "source_path": "artifacts/uplink/f01-series-8ff8fb7d3935/SERIES-LEDGER.json",
+      "source_sha256": "129c6f0a8e411b881c33735ebb38e6bced3a4bf8613c8f36225209079a0f9b2f"
+    },
+    {
+      "source_path": "artifacts/uplink/f01-series-55786933090e/SERIES-LEDGER.json",
+      "source_sha256": "196a325d8c6ac621184825866c50615a661b805f0611ae73141102697b961198"
+    },
+    {
+      "source_path": "artifacts/uplink/F01-COMBINED-TALLY.md",
+      "source_sha256": "47b2fa350391c189ea6fd833c2013058ca58ec93af74f24f9716ab90d0e6cdde"
+    },
+    {
+      "source_path": "artifacts/uplink/F01-EVIDENCE-MANIFEST.json",
+      "source_sha256": "66ff412fce0f20d373e02c42fe31f51c49981d06a3e9f71bea254b3160d0af43"
+    }
+  ],
+  "specified_continuation": {
+    "false_online": 0,
+    "model_reached": 5,
+    "passes": 1
+  }
+}

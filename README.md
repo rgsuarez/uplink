@@ -25,6 +25,8 @@ two segments). Both observed **0 false ONLINE**. Pre-model stops: **DNS 4,
 proxy 6, not counted** in those denominators. See [Results](#results) for
 the segment policies, all exclusions and the failed no-change controls.
 
+**F01 radio-off:** 1/5 model-reached, 1 strict recovery 11.213 s, false ONLINE 0 in the specified three-series continuation; all listed series are 1/6. See the scoped tally below.
+
 ## What it does
 
 1. **Observe.** Read-only probes collect interfaces, DNS, proxy and route facts.
@@ -156,10 +158,13 @@ Model: base, unmodified open weights.
 | ↳ segment `075540cb0307` (v2) | `restore_dns` | 2/2 | 17.6935 s | 0 | `evidence/f04-series/075540cb0307/` |
 | ↳ segment `51ffa1727d58` (v2, completed) | `restore_dns` | 7/7 | 15.236 s | 0 | `evidence/f04-series/51ffa1727d58/` |
 | **F06 stale proxy** (2 segments; entry max raised from 24.5 to 24.75 GiB between them; 6 pre-model headroom refusals excluded from trial count) | `restore_proxy` | **5/5 PASS** (A 2/2 + B 3/3) | **10.395 s** | **0** | [F06-COMBINED-TALLY.md](evidence/f06-series/F06-COMBINED-TALLY.md); [SERIES-LEDGER.json](evidence/f06-series/98e499eebbd7/SERIES-LEDGER.json); [SERIES-LEDGER.json](evidence/f06-series/15a6104a9685/SERIES-LEDGER.json) (committed source `c3dd1ad`; sanitized public derivatives) |
+| **F01 Wi-Fi radio off** (specified three-series continuation) | `restore_radio` | **1/5 model-reached PASS** | **1 strict recovery: 11.213 s** (one passing trial) | **0** | [F01 tally](evidence/f01-series/F01-COMBINED-TALLY.md); [F01 ledger](evidence/f01-series/SERIES-LEDGER.json) |
 | Control: healthy network | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 | Control: misleading status text | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 
-Not in the table yet: F05 wrong gateway not run; site-only outage pending / not yet run in a committed series; F01 Wi-Fi radio off in progress, results pending. Receipts for these are pending and will be added only once their ledgers are committed in this repo.
+Not in the table yet: F05 wrong gateway not run; site-only outage pending / not yet run in a committed series. Receipts for the pending cases will be added only once their ledgers are committed in this repo.
+
+F01 caveat: small n; radio-off is the hardest measured live repair segment. The specified three-series continuation is 1/5 (one PASS, one FAIL, three ABORTs); all listed series are 1/6 after including an earlier model-reached ABORT. Four pre-model refusals/aborts are excluded and listed in the tally.
 
 In these 6 controls, the base Glimmer model never changed the network under either healthy or
 misleading-status conditions (0 network mutations, 0 false-action requests, 0 false ONLINE),
@@ -266,6 +271,31 @@ Expected controls: `0/6` PASS, zero false ONLINE, zero network changes, zero
 false-action requests, five pre-model exclusions. All six health reports failed
 the required `verified` reason check; they are not recovery successes.
 
+**Recompute the scoped F01 result** from the committed public derivative (no model or network):
+
+```sh
+python3 - <<'PY'
+import json
+from pathlib import Path
+
+rows = json.loads(Path("evidence/f01-series/SERIES-LEDGER.json").read_text())["attempts"]
+assert len({r["run_id"] for r in rows}) == len(rows)
+trials = [r for r in rows if r["population"] == "specified_continuation" and r["model_reached"]]
+passes = [r for r in trials if r["outcome"] == "PASS"]
+all_trials = [r for r in rows if r["model_reached"]]
+excluded = [r for r in rows if not r["model_reached"]]
+print(f"F01 continuation: {len(passes)}/{len(trials)} model-reached PASS")
+print("Strict recovery:", ", ".join(f"{r['recovery_seconds']:.3f} s" for r in passes))
+print(f"All listed: {sum(r['outcome'] == 'PASS' for r in all_trials)}/{len(all_trials)} model-reached PASS")
+print("False ONLINE:", sum(r["false_online"] for r in all_trials))
+print("Pre-model exclusions:", len(excluded))
+for r in excluded:
+    print(r["run_id"], r["outcome"], r["reason"])
+PY
+```
+
+Expected: continuation 1/5, one strict recovery 11.213 s, all listed 1/6, false ONLINE 0, and four listed pre-model exclusions.
+
 **Replay recorded simulation trajectories** (no model, no network changes):
 
 ```sh
@@ -306,10 +336,10 @@ Storyboard: [DEMO-SCRIPT.md](DEMO-SCRIPT.md).
 
 ## Honest caveats
 
-- Live coverage includes F04 DNS, F06 proxy and healthy/misleading-status controls.
+- Live coverage includes F04 DNS, F06 proxy, F01 radio-off and healthy/misleading-status controls.
   Control safety held, but all six health reports failed the required reason check.
-  F05 wrong gateway was not run; site-only outage is pending / not yet run in a committed series; F01 radio-off is
-  in progress with results pending. Receipts for these three are pending.
+  F05 wrong gateway was not run; site-only outage is pending / not yet run in a committed series.
+- F01 caveat: small n; radio-off is the hardest measured live repair segment. The specified three-series continuation is 1/5 (one PASS, one FAIL, three ABORTs); all listed series are 1/6 after including an earlier model-reached ABORT. Four pre-model refusals/aborts are excluded and listed in the tally.
 - Ten passes on one fault class show the loop works on real hardware; they do not
   establish general field reliability.
 - The F04 aggregate spans three policy segments, and timings are warm (three warm-ups).

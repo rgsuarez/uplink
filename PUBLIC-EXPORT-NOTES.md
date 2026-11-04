@@ -31,7 +31,14 @@ across two segments with entry limits of 24.5 then 24.75 GiB. Six pre-model
 headroom refusals are excluded. Controls passed 0/6: network safety held (zero
 network changes, false-action requests and false ONLINE), but every health report
 failed the required verified-reason check. Five pre-model refusals are excluded.
-These denominators remain separate. F05, site-only outage and F01 remain PENDING.
+These denominators remain separate. F05 and site-only outage remain PENDING.
+
+F01 evidence from committed source 3ba3d74fd79ed615f367199d14e8546d59c97b36 is now
+projected into the local candidate: 1/5 model-reached in the specified continuation,
+one strict recovery at 11.213 s, false ONLINE 0; all listed series 1/6. Small n;
+radio-off is the hardest measured live repair segment. Four pre-model stops are
+excluded and listed in [the public-safe tally](evidence/f01-series/F01-COMBINED-TALLY.md).
+This local addition is publication pending; raw recordings and approvals are omitted.
 The final cut and video URL are not verified.
 
 ## Public derivatives and hashes

@@ -12,6 +12,37 @@
     "removed_unused_window_option": true,
     "scope": "Remove obsolete cloud execution surfaces from the on-device base release. Original run evidence and the complete base recovery harness retain their original bytes."
   },
+  "f01_evidence_sync": {
+    "all_listed_series": {
+      "false_online": 0,
+      "model_reached": 6,
+      "passes": 1
+    },
+    "attempt_rows": 10,
+    "base_clean_commit": "2884be736ba704304bd5bafd06d7573fc665308b",
+    "new_model_calls": 0,
+    "pre_model_exclusions": 4,
+    "private_intake_commit": "9cd1973c466cb7249bd0da923d59431c5f110092",
+    "public_files": [
+      "evidence/f01-series/F01-COMBINED-TALLY.md",
+      "evidence/f01-series/SERIES-LEDGER.json",
+      "evidence/f01-series/F01-EVIDENCE-MANIFEST.json"
+    ],
+    "runtime_and_test_inputs_unchanged": true,
+    "scope": "Public-safe F01 tally, combined ledger and provenance manifest. Specified three-series continuation 1/5; all listed model-reached trials 1/6; four pre-model stops excluded. Raw private evidence, approvals and media omitted.",
+    "source_docs_commit": "b82e3563788a6422ce75ab1a6d74b21d7bcb4b06",
+    "source_evidence_commit": "3ba3d74fd79ed615f367199d14e8546d59c97b36",
+    "specified_continuation": {
+      "false_online": 0,
+      "model_reached": 5,
+      "passes": 1
+    },
+    "status_docs_synced": [
+      "SUBMISSION-CHECKLIST.md",
+      "PUBLIC-EXPORT-NOTES.md"
+    ],
+    "strict_recovery_seconds": 11.213
+  },
   "files": [
     {
       "candidate_path": ".gitignore",
@@ -66,7 +97,7 @@
     },
     {
       "candidate_path": "README.md",
-      "candidate_sha256": "191a43436715299176a2ac4c5f9825aa6d37d13a7431507668fe535f791abaec",
+      "candidate_sha256": "e643c6ff203d84e1a756614fac2e00c2e3f7e15b77aeb2f759d887d101da22c3",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "README.md",
@@ -153,7 +184,7 @@
     },
     {
       "candidate_path": "SUBMISSION-CHECKLIST.md",
-      "candidate_sha256": "0a72463c0a2c36e91e38a1c4b5310bc8a03decd531c7bad4a2634a5483e4e119",
+      "candidate_sha256": "7054514f8325a5b814f96e93e04e95f113118ad9e2664a932785504deff269c1",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "SUBMISSION-CHECKLIST.md",
@@ -5885,7 +5916,7 @@
   "generated_files": [
     {
       "path": "PUBLIC-EXPORT-NOTES.md",
-      "sha256": "6f5b88a6c23540b38d7b862e12297d896d7a5f886aa8fd72fced7676aeaabd94"
+      "sha256": "b1722fcf7a5898ac230fdc5f034c4cdad73c1c90be4d9c966f7933e72ed03478"
     },
     {
       "path": "RUN-LOG-GLIMMER.md",
@@ -5934,6 +5965,18 @@
     {
       "path": "tests/uplink/test_base_serving.py",
       "sha256": "534e712e233f1619967ad08105423ee11bbd009ee971ba1328fb07f165148d0f"
+    },
+    {
+      "path": "evidence/f01-series/F01-COMBINED-TALLY.md",
+      "sha256": "ffeccad0c428ca324558f72139629eb9246818ab38e20749edbe1ffdeb929cd1"
+    },
+    {
+      "path": "evidence/f01-series/SERIES-LEDGER.json",
+      "sha256": "e57e77c6aa88994c43b1b8990109102e72028b5284cd1104bd0dc017d0b61696"
+    },
+    {
+      "path": "evidence/f01-series/F01-EVIDENCE-MANIFEST.json",
+      "sha256": "40016262265a351d08a862e40070eae0ea0e5e3ae298fdaeb2c3cd0ab31263bc"
     }
   ],
   "hash_meaning": "Historical source hashes identify measured private inputs. Public derivative hashes identify this CPU candidate and do not regrade historical results.",
@@ -5951,7 +5994,7 @@
     }
   },
   "public_release_inventory": {
-    "file_count": 981,
+    "file_count": 984,
     "result_top10_classification": "First-party historical abort report; exact Apache-2.0 rule and source commit recorded in licenses/manifest.json.",
     "scope": "Every tracked and non-ignored candidate file; no filename exclusions."
   },
