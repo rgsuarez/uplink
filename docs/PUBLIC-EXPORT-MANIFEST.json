@@ -52,7 +52,7 @@
     },
     {
       "candidate_path": "DEMO-SCRIPT.md",
-      "candidate_sha256": "c44ec6176d8f830e153a7ef24a6b77daae4af67b03acf5bc2e0912948389307f",
+      "candidate_sha256": "2f13623222edded8fb0a822b72a54cd9471151c5b7e55a20841dd37ec89aebaf",
       "changed": true,
       "source_commit": "952dbf59048c51999fe6fd46d29efc89e1b7e8db",
       "source_sha256": "9cae1f75737a9976b6af0efcc44d81e99bd408f08a10753908a61fdffcf5bea4"
@@ -97,7 +97,7 @@
     },
     {
       "candidate_path": "README.md",
-      "candidate_sha256": "e643c6ff203d84e1a756614fac2e00c2e3f7e15b77aeb2f759d887d101da22c3",
+      "candidate_sha256": "9a8e0b22c48c857f458fc9e0d12e7e74beedae040b545623c367624549dc84a2",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "README.md",
@@ -105,13 +105,13 @@
     },
     {
       "candidate_path": "REPORT-F10.md",
-      "candidate_sha256": "98dc2571233b04ef4ca8064eb26b4a921d3c1e040b2aa76cda3095beaacacf07",
-      "changed": false,
+      "candidate_sha256": "fb9a5c8de5d2c490479fea4bfebf9c2452e09bd9300212dfbb31492dec554f3b",
+      "changed": true,
       "source_sha256": "98dc2571233b04ef4ca8064eb26b4a921d3c1e040b2aa76cda3095beaacacf07"
     },
     {
       "candidate_path": "REPORT-F9.md",
-      "candidate_sha256": "c01d84c238d1c2da586ddfa6d107d61eac6d75bc3376da076db724942b76c8d8",
+      "candidate_sha256": "5985527fecda0b243ed9ac4666ff2e9cad0ce165088961666a6d12cc355b647c",
       "changed": true,
       "source_sha256": "ee5c5affc0e8190aa3a548ae19a79c3afdace77d09b30035289b06a5ab5f48cd"
     },
@@ -123,7 +123,7 @@
     },
     {
       "candidate_path": "REPORT-U1-LIVE.md",
-      "candidate_sha256": "b2acbe29e059db6119e067f046f4f2d9bc793cba5dd9d1800bcc5379cd6c7098",
+      "candidate_sha256": "00a48f47e71b02057107083472225495ef7e28251c70b17ac1c02242ee91396c",
       "changed": true,
       "source_sha256": "6f71f0e1f631f290dd8b902c7522aded331d3441b8e82b82198893d76ea348c8"
     },
@@ -147,13 +147,13 @@
     },
     {
       "candidate_path": "RESULT-MODEL-SIM-PROXY-FIX-SUN.md",
-      "candidate_sha256": "7939e30c6e0c2d0ffd66d3b1bc2bd5bdce8b449bfa6f45174b75fc605fc8e2a6",
+      "candidate_sha256": "8d572b6a73fce6d41cb6c19d9ff0d3966cb3274068be354528f8e7b0625fe6a5",
       "changed": true,
       "source_sha256": "d71a976e2d7cff3a51961094cd17b1c1fba0f1368c4c51eeb4cca9eb7aef1484"
     },
     {
       "candidate_path": "RESULT-MODEL-SIM-SUN.md",
-      "candidate_sha256": "473a643537432c1ab9a958c0dd558ef9e248e280db253be0eaac8643bb3e3d41",
+      "candidate_sha256": "f94e405ed220b00cb01edf7f0bdc66b66100d0b3853d707be01f5caf5fde588b",
       "changed": true,
       "source_sha256": "27107563252c4475f75a0736cb8850b5a050eb9e3cd12ced4900296ebf503729"
     },
@@ -165,7 +165,7 @@
     },
     {
       "candidate_path": "RESULT-SPARK-VS-GLIMMER-MON.md",
-      "candidate_sha256": "b2a66c644fd3110858bf462aa493cb633a46f1386ca435d8ac8d2eb8ca10a928",
+      "candidate_sha256": "60161ec05c62c24d5666f955588e3972ad6b048ff5d54bdadedb7eefc9d6ee1d",
       "changed": true,
       "source_commit": "952dbf59048c51999fe6fd46d29efc89e1b7e8db",
       "source_sha256": "ad575551620083c4a4c19ac7d2329e9a1a88900252dc4a7160d8e64dfce3678f"
@@ -184,7 +184,7 @@
     },
     {
       "candidate_path": "SUBMISSION-CHECKLIST.md",
-      "candidate_sha256": "7054514f8325a5b814f96e93e04e95f113118ad9e2664a932785504deff269c1",
+      "candidate_sha256": "c8371fc3f8ce515b2311e0eb39b1578cf6260f691f80b9ff243536575fd240bc",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "SUBMISSION-CHECKLIST.md",
@@ -1866,13 +1866,13 @@
     },
     {
       "candidate_path": "docs/LAB-F10.md",
-      "candidate_sha256": "b5dcc93ece46fe0dadb1d8a0be0b692455e7e3f5df7fce14c76937a2f9a894f7",
+      "candidate_sha256": "fc54f0e2d8f8a32c97571b80dd7f9f5f95f7395543e2f4fb571c70948fe5086b",
       "changed": true,
       "source_sha256": "ef39a7ec841312a56e0374935aa255de3dee782ee7eeb16459d1e65765d88468"
     },
     {
       "candidate_path": "docs/LAB-F9.md",
-      "candidate_sha256": "c8bf00b663ecb769e50c6180cc90f10cc6d2a65906ae3a963ad6f15971de434d",
+      "candidate_sha256": "4a679f34b982dddb90904bf55c12627971588ffdea7a0fa404cccfe21566c30b",
       "changed": true,
       "source_sha256": "2978f79973eb3b71621c877a76c2cc6d61490d223c07fa1b54134b56aea003a9"
     },
