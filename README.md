@@ -68,8 +68,9 @@ and the [Results](#results) count every trial, including the ones it failed.
   otherwise walk people through blind settings changes.
 - **The gap:** cloud assistants are unreachable during exactly this failure. A local
   model stays available.
-- **Why trust it:** every change is snapshotted, exactly diffed, verified and
-  auto-reverted on failure. Uplink would rather report than guess.
+- **Why trust it:** changes are snapshot-bound and independently checked.
+  Rollback is attempted on failure; only recorded exact-diff checks prove handback.
+  Uplink would rather report than guess.
 - **Limits:** broad deployment, other device classes, field reliability and user impact
   have not been measured yet. See [Honest caveats](#honest-caveats).
 
@@ -111,7 +112,7 @@ Meta Muse Glimmer 30B uses base, unmodified open weights in this bounded loop.
                                    ▼                               ▼
                           verified recovery                 honest Report / give_up
 
- Detached root watchdog: restores the snapshot within 60 s on timeout, failure or controller loss.
+ Detached root watchdog: attempts snapshot restoration on timeout, failure or controller loss.
  OOB control link: a separate path from a second machine, checked before any change and never modified.
 ```
 
@@ -128,9 +129,10 @@ probe modules), live harness in `harness/` and `scripts/`, evidence in `evidence
 - **Snapshot and exact diff.** The exact DNS, search-domain and proxy state (and whatever
   setting a fault touches) is captured before injection. Repairs can only restore captured
   values, and the result is read back and diffed exactly against the snapshot.
-- **Revert within 60 s.** A detached root watchdog is armed before injection with a hard
+- **Rollback deadline, verified separately.** A detached root watchdog is armed before injection with a hard
   60-second network deadline (individual series use tighter budgets). If the controller
-  dies, times out or verification fails, the watchdog restores the snapshot independently.
+  dies, times out or verification fails, the watchdog attempts snapshot restoration independently.
+  A configured deadline does not prove successful handback; the recorded exact-diff check does.
 - **No free-form power.** Typed actions only, single-use attempts, durable audit records,
   held actions refused by execution gates, and success decided by the independent oracle.
 - **Preregistered trials.** Every live series freezes its prompt, model hash, oracle hash,
@@ -159,7 +161,7 @@ Model: base, unmodified open weights.
 | Control: misleading status text | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 | **Site-only app server down** (owned local 503 stub) | report | **1/3 correct-report PASS** (two ABORTs counted) | n/a (report, no recovery) | **0** | [Site-only tally](evidence/siteonly-series/SITEONLY-COMBINED-TALLY.md); [ledger](evidence/siteonly-series/SERIES-LEDGER.json) |
 
-F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability.
+F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability. F05 capture/handback caveat: video capture for the second PASS and final ABORT is CAPTURE_INCOMPLETE; media are not committed. Trial 3 retained restore_failed; later empty-baseline comparisons do not prove bounded historical handback.
 
 Site-only caveat: small n; 1/3 model-reached correct-report PASS, with both earlier ABORTs counted. The fresh run e3cbf14d34b4 chose report for an unavailable application on a healthy network, made zero network/system mutations and was strict-reader VALIDATED. False ONLINE 0; median recovery n/a because reporting is the correct action. This was an owned local 503 stub, not a real outage. One zero-request pre-model refusal/ABORT is excluded. Capture is CAPTURE_INCOMPLETE (viewport changed); the trial was unaffected and videos are not committed.
 
@@ -358,7 +360,7 @@ with an out-of-band link; it is not part of the quick reproduction.
 
 ## Demo video
 
-Demo video (owner upload pending): VIDEO_URL_PLACEHOLDER. Verify the actual final master's duration, opening disclosure, recovery footage and captions before submission; the saved event cap is 3:00.
+Demo video (owner upload pending): {{OWNER_APPROVED_PUBLIC_VIDEO_URL}}. Verify the actual final master's duration, opening disclosure, recovery footage and captions before submission; the saved event cap is 3:00.
 
 ## Judging map
 
@@ -369,14 +371,14 @@ Demo video (owner upload pending): VIDEO_URL_PLACEHOLDER. Verify the actual fina
 | Technical depth (20%) | [Architecture](#architecture), [Safety model](#safety-model), preregistered evidence in `evidence/` |
 | Demo (25%) | [Demo video](#demo-video) and the reproducible results above |
 | Bonus: Best Build on Meta Open Weights | Unmodified open Glimmer weights on our own hardware, pinned by SHA-256, served locally with no cloud |
-| Bonus: Best Agentic Use Case | Observe → typed action → bounded execution → independent verification, with auto-revert and honest Report |
+| Bonus: Best Agentic Use Case | Observe → typed action → bounded execution → independent verification, with rollback attempts and honest Report |
 
 ## Honest caveats
 
 - Live coverage includes F04 DNS, F06 proxy, F05 wrong gateway, F01 radio-off, the owned site-only stub and healthy/misleading-status controls.
   Control safety held, but all six health reports failed the required reason check.
   F05 is final at 2/2 model-reached PASS; target 5 was not met and small n limits the result. Site-only is 1/3 correct-report PASS on an owned local 503 stub, not a real outage; two ABORTs stay counted.
-- F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability.
+- F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability. F05 capture/handback caveat: video capture for the second PASS and final ABORT is CAPTURE_INCOMPLETE; media are not committed. Trial 3 retained restore_failed; later empty-baseline comparisons do not prove bounded historical handback.
 - Site-only capture is CAPTURE_INCOMPLETE; trial unaffected, videos not committed. Small n; one pre-model stop excluded; no recovery time claimed.
 - F01 caveat: small n; radio-off is the hardest measured live repair segment. The specified three-series continuation is 1/5 (one PASS, one FAIL, three ABORTs); all listed series are 1/6 after including an earlier model-reached ABORT. Four pre-model refusals/aborts are excluded and listed in the tally.
 - Ten passes on one fault class show the loop works on real hardware; they do not

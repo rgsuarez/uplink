@@ -15,10 +15,10 @@ base, unmodified open weights.
 | Stage 1: theme fit (Build for Your World) and real Meta model use | pass/fail | A clear user and job (get an offline computer back online), base Glimmer in the loop | [README](README.md#what-it-does), [evidence/f04-series/](evidence/f04-series/) |
 | Impact | 30% | Outage-time help that a cloud assistant cannot give; named users; honest limits | [README: Why it matters](README.md#why-it-matters-impact) |
 | Use of Meta AI tooling | 25% | Base Glimmer open weights on-device via `llama-server`, native chat template, grammar-constrained typed tools, hash-pinned model | [README: How it uses Meta AI](README.md#how-it-uses-meta-ai), [templates/manifest.json](templates/manifest.json) |
-| Technical depth | 20% | Independent ONLINE oracle, snapshot-only repairs with exact diff, 60 s detached revert, OOB control link, preregistered series | [README: Architecture](README.md#architecture), [README: Safety model](README.md#safety-model), `evidence/f04-series/*/PREREG.json` |
+| Technical depth | 20% | Independent ONLINE oracle, snapshot-only repairs with exact diff, detached rollback attempts and independent handback checks, OOB control link, preregistered series | [README: Architecture](README.md#architecture), [README: Safety model](README.md#safety-model), `evidence/f04-series/*/PREREG.json` |
 | Demo | 25% | Owner verifies the final master, recovery footage, honest limits and duration against committed evidence | [README: Demo video](README.md#demo-video), [DEMO-SCRIPT.md](DEMO-SCRIPT.md) |
 | Bonus: Best Build on Meta Open Weights | bonus | Unmodified open Glimmer weights, our own hardware, no cloud at decision time | [README: How it uses Meta AI](README.md#how-it-uses-meta-ai) |
-| Bonus: Best Agentic Use Case | bonus | Observe → typed action → bounded execution → independent verification, auto-revert, honest Report | [README: What it does](README.md#what-it-does) |
+| Bonus: Best Agentic Use Case | bonus | Observe → typed action → bounded execution → independent verification, rollback attempts, honest Report | [README: What it does](README.md#what-it-does) |
 | Bonus: Most Viral | bonus | Needs a published X post and its link in the form (owner decision) | Draft below |
 
 ## Kickoff rules
@@ -26,7 +26,7 @@ base, unmodified open weights.
 - [x] Repository created on or after Oct 26; first commit `dabff4c` (Oct 26, 2026, 11:40 AM CT); incremental history.
 - [x] Pre-existing work called out: Glimmer weights, llama.cpp and Python libraries ([README](README.md), [PROVENANCE.md](PROVENANCE.md)).
 - [x] Source-available license: Apache-2.0 ([LICENSE](LICENSE)); upstream terms in [licenses/manifest.json](licenses/manifest.json).
-- [x] Not a chat wrapper, simple RAG, image analyzer or medical advice: an on-device agent taking typed, auto-reverting actions on a real OS.
+- [x] Not a chat wrapper, simple RAG, image analyzer or medical advice: an on-device agent taking typed actions with independently checked rollback attempts on a real OS.
 - [ ] Verify the actual final uploaded video is at or under 3:00; no final duration is certified here.
 - [x] Repository URL resolved: https://github.com/rgsuarez/uplink; recorded published baseline ee394c3, local candidate update publication pending.
 - [ ] Video uploaded and viewable by anonymous judges (owner action).
@@ -43,7 +43,7 @@ base, unmodified open weights.
 | 5 | X post link (optional) | Blank unless an approved post is live | Owner decision |
 | 6 | Project Description* | Final text in the submission packet; carries the pre-existing line and both bonus claims | Ready; check the character limit |
 | 7 | Public GitHub repo* | https://github.com/rgsuarez/uplink | Resolved URL; confirm current public evidence before Submit |
-| 8 | 3-minute video URL* | `VIDEO_URL_PLACEHOLDER` | Blocked until upload |
+| 8 | 3-minute video URL* | `{{OWNER_APPROVED_PUBLIC_VIDEO_URL}}` | Blocked until upload |
 | 9 | Use of Meta products* | Final text in the submission packet | Ready |
 | 10 | Why Meta's models* | Final text in the submission packet | Ready |
 | 11 | Feedback on Meta products (optional) | Draft in the submission packet | Owner approves, edits or omits |
@@ -71,25 +71,25 @@ misleading-status conditions (0 network mutations, 0 false-action requests, 0 fa
 but all 6 health reports failed the oracle's required `verified` reason check (0/6 PASS);
 5 pre-model headroom refusals are retained and excluded from the trial denominator.
 
-F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability.
+F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability. F05 capture/handback caveat: video capture for the second PASS and final ABORT is CAPTURE_INCOMPLETE; media are not committed. Trial 3 retained restore_failed; later empty-baseline comparisons do not prove bounded historical handback.
 
 Site-only caveat: small n; 1/3 model-reached correct-report PASS, with both earlier ABORTs counted. The fresh run e3cbf14d34b4 chose report for an unavailable application on a healthy network, made zero network/system mutations and was strict-reader VALIDATED. False ONLINE 0; median recovery n/a because reporting is the correct action. This was an owned local 503 stub, not a real outage. One zero-request pre-model refusal/ABORT is excluded. Capture is CAPTURE_INCOMPLETE (viewport changed); the trial was unaffected and videos are not committed.
 
 ## Before Submit
 
 - [ ] Test freeze Wed 11:00 AM CT; commit the final ledgers.
-- [ ] Update the README results table from committed ledgers; remove every PENDING row and placeholder.
+- [ ] Use only committed final result rows; keep unresolved owner placeholders visible until the owner supplies and verifies them.
 - [ ] Recompute the numbers with the README reproduction script; they must match the table.
-- [ ] Confirm the video voiceover numbers match the table (current VO: 10 model-reached trials, DNS restored every time, median about 15.3 s, zero false online).
+- [ ] Verify the actual final narration, captions and every result card against the committed table; no final cut or duration is certified here.
 - [ ] Remaining owner actions: provide the verified final video URL, provide the optional X post link, and Submit after checking the public evidence, form requirements and consent; publication remains separately authorized.
 - [ ] Fill the form, verify anonymous access to the repo and video links, then the owner presses Submit and keeps the receipt.
 
 ## Optional X post draft (unposted)
 
 ```text
-Uplink: when Wi-Fi breaks, cloud AI breaks too. So Meta's open Muse Glimmer runs on the laptop, picks one typed fix, and independent checks decide. 10/10 live DNS trials recovered, median 15.3 s, 0 false online. VIDEO_URL_PLACEHOLDER https://github.com/rgsuarez/uplink
+Uplink: when Wi-Fi breaks, cloud AI breaks too. So Meta's open Muse Glimmer runs on the laptop, picks one typed fix, and independent checks decide. 10/10 live DNS trials recovered, median 15.3 s, 0 false online. {{OWNER_APPROVED_PUBLIC_VIDEO_URL}} https://github.com/rgsuarez/uplink
 ```
 
-About 260 characters with X's 23-character link counting; add any hashtag or handle the event requires.
+Owner replaces the video placeholder and confirms final post length and any event-required hashtag or handle.
 
 Nothing in this checklist publishes, posts or submits anything.

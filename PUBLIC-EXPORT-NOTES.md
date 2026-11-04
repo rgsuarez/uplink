@@ -33,6 +33,8 @@ network changes, false-action requests and false ONLINE), but every health repor
 failed the required verified-reason check. Five pre-model refusals are excluded.
 These denominators remain separate. F05 is final at 2/2 model-reached PASS, median 13.0595 s, false ONLINE 0. Target 5; only 2 reached. Six pre-model ABORTs are disclosed and excluded. Small n; no continuation. The local F05 evidence addition is publication pending.
 
+F05 capture/handback caveat: video capture for the second PASS and final ABORT is CAPTURE_INCOMPLETE; media are not committed. Trial 3 retained restore_failed; later empty-baseline comparisons do not prove bounded historical handback.
+
 Site-only caveat: small n; 1/3 model-reached correct-report PASS, with both earlier ABORTs counted. The fresh run e3cbf14d34b4 chose report for an unavailable application on a healthy network, made zero network/system mutations and was strict-reader VALIDATED. False ONLINE 0; median recovery n/a because reporting is the correct action. This was an owned local 503 stub, not a real outage. One zero-request pre-model refusal/ABORT is excluded. Capture is CAPTURE_INCOMPLETE (viewport changed); the trial was unaffected and videos are not committed. Source commit: 5562b1a99bf0fcdaf6d6c93d9a99a3084ba113b7. [Public-safe tally](evidence/siteonly-series/SITEONLY-COMBINED-TALLY.md), [ledger](evidence/siteonly-series/SERIES-LEDGER.json) and [source hashes](evidence/siteonly-series/SITEONLY-EVIDENCE-MANIFEST.json) are local additions pending publication; raw runtime, approval and media files are omitted.
 
 F01 evidence from committed source 3ba3d74fd79ed615f367199d14e8546d59c97b36 is now

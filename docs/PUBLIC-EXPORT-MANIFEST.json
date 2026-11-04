@@ -101,7 +101,7 @@
     },
     {
       "candidate_path": "DEMO-SCRIPT.md",
-      "candidate_sha256": "4521561ff52aa5ad7200f083ffbf22377dbeb7dc1ea18b18c2d234a3ac0174df",
+      "candidate_sha256": "8bc78e4ae77a9e95117f608c11fa682542c3cd8fe2cc33c3641293038d547345",
       "changed": true,
       "source_commit": "952dbf59048c51999fe6fd46d29efc89e1b7e8db",
       "source_sha256": "9cae1f75737a9976b6af0efcc44d81e99bd408f08a10753908a61fdffcf5bea4"
@@ -146,7 +146,7 @@
     },
     {
       "candidate_path": "README.md",
-      "candidate_sha256": "6c8e594d116b0999ed0a73d9c9c77ebe19ace68bf388e2c133f6b2f1bfacff37",
+      "candidate_sha256": "2964a690ebf83c322bcf2f2ddd8420f9a025428d95914a10d2179172ab5cc1f9",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "README.md",
@@ -233,7 +233,7 @@
     },
     {
       "candidate_path": "SUBMISSION-CHECKLIST.md",
-      "candidate_sha256": "839eb14b6cb4cdb6282ec94d1e32eef1fadf8cd5e0a129ad6f6e9a9f5a3f187e",
+      "candidate_sha256": "aa66a10161c6f207fe378f93c7a68882ed96f289d28d9fece1eb9b77396c59d5",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "SUBMISSION-CHECKLIST.md",
@@ -5962,10 +5962,109 @@
       "source_sha256": "7e9186b5add763224ce0eecd10602f6df6ff4afd373aface65f856a296fb0dd0"
     }
   ],
+  "freeze_readiness_audit": {
+    "clean_export_evidence_commit": "1a917c2ad97a84a785a90460977af465762061bc",
+    "control_exclusion_scope": "Five excluded pre-model attempts shared by the combined control series, not five per case.",
+    "docs_synced": [
+      "README.md",
+      "SUBMISSION-CHECKLIST.md",
+      "DEMO-SCRIPT.md",
+      "PUBLIC-EXPORT-NOTES.md"
+    ],
+    "f05_model_reached": 2,
+    "f05_target": 5,
+    "f05_target_reached": false,
+    "fast_tier": false,
+    "historical_runtime_qualification_preserved": true,
+    "historical_source_hashes_preserved": true,
+    "host_contacts": 0,
+    "model": "BASE Meta Muse Glimmer 30B, unmodified open weights, no model adapter",
+    "new_trials": 0,
+    "profiles": {
+      "Controls combined": {
+        "counted_aborts": 0,
+        "failures": 6,
+        "false_online": 0,
+        "median_recovery_seconds": null,
+        "pre_model_excluded": 5,
+        "ratio": "0/6"
+      },
+      "F01 all listed": {
+        "counted_aborts": 4,
+        "failures": 1,
+        "false_online": 0,
+        "median_recovery_seconds": "11.213",
+        "pre_model_excluded": 4,
+        "ratio": "1/6"
+      },
+      "F01 continuation": {
+        "counted_aborts": 3,
+        "failures": 1,
+        "false_online": 0,
+        "median_recovery_seconds": "11.213",
+        "pre_model_excluded": 4,
+        "ratio": "1/5"
+      },
+      "F04": {
+        "counted_aborts": 0,
+        "failures": 0,
+        "false_online": 0,
+        "median_recovery_seconds": "15.319",
+        "pre_model_excluded": 4,
+        "ratio": "10/10"
+      },
+      "F05": {
+        "counted_aborts": 0,
+        "failures": 0,
+        "false_online": 0,
+        "median_recovery_seconds": "13.0595",
+        "pre_model_excluded": 6,
+        "ratio": "2/2"
+      },
+      "F06": {
+        "counted_aborts": 0,
+        "failures": 0,
+        "false_online": 0,
+        "median_recovery_seconds": "10.395",
+        "pre_model_excluded": 6,
+        "ratio": "5/5"
+      },
+      "Healthy control": {
+        "counted_aborts": 0,
+        "failures": 3,
+        "false_online": 0,
+        "median_recovery_seconds": null,
+        "pre_model_excluded": 5,
+        "ratio": "0/3"
+      },
+      "Misleading-status control": {
+        "counted_aborts": 0,
+        "failures": 3,
+        "false_online": 0,
+        "median_recovery_seconds": null,
+        "pre_model_excluded": 5,
+        "ratio": "0/3"
+      },
+      "Site-only correct report": {
+        "counted_aborts": 2,
+        "failures": 0,
+        "false_online": 0,
+        "median_recovery_seconds": null,
+        "pre_model_excluded": 1,
+        "ratio": "1/3"
+      }
+    },
+    "published": false,
+    "pushed": false,
+    "result_values_changed": false,
+    "scope": "Wording-only reconciliation against committed live evidence. Stale gateway card corrected in the source video handoff, F05 incomplete capture and historical handback limits carried forward, rollback attempts distinguished from proven restoration, owner video placeholder retained. No ledger, model, runtime, test, or media changes.",
+    "source_docs_commit": "7768215513336436a61426d873029f4e990e1cc9",
+    "source_evidence_commit": "b7af4685f07ee84af303bf3845bfe6fa6a4c7efe"
+  },
   "generated_files": [
     {
       "path": "PUBLIC-EXPORT-NOTES.md",
-      "sha256": "75f2ee44af89831ea29a29ac8a73177e120604f5b0e12803671deca4c68adf65"
+      "sha256": "269964880117eb497418ac42d8662c60f74b1d62c9af54159b8d81a217b7073f"
     },
     {
       "path": "RUN-LOG-GLIMMER.md",

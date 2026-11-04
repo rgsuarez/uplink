@@ -59,6 +59,8 @@ network safety held, but all six reports failed the required verified-reason che
 five pre-model exclusions remain. Do not present those controls as successes.
 See the current [results table](README.md#results) and public ledgers for sources.
 F05 is final at 2/2 model-reached PASS, median 13.0595 s, false ONLINE 0; target 5, only 2 reached. Small n; six pre-model ABORTs excluded; no continuation. Its local evidence update is publication pending; F01 is committed: 1/5 model-reached in the specified continuation, one strict recovery at 11.213 s, false ONLINE 0, all listed 1/6, four pre-model stops excluded.
+F05 capture/handback caveat: video capture for the second PASS and final ABORT is CAPTURE_INCOMPLETE; media are not committed. Trial 3 retained restore_failed; later empty-baseline comparisons do not prove bounded historical handback.
+
 Site-only caveat: small n; 1/3 model-reached correct-report PASS, with both earlier ABORTs counted. The fresh run e3cbf14d34b4 chose report for an unavailable application on a healthy network, made zero network/system mutations and was strict-reader VALIDATED. False ONLINE 0; median recovery n/a because reporting is the correct action. This was an owned local 503 stub, not a real outage. One zero-request pre-model refusal/ABORT is excluded. Capture is CAPTURE_INCOMPLETE (viewport changed); the trial was unaffected and videos are not committed.
 Use the [site-only tally](evidence/siteonly-series/SITEONLY-COMBINED-TALLY.md) for result cards; this is a correct report, not repair footage.
 At the Wednesday 11:00 AM CT testing freeze, recalculate every claimed denominator,
