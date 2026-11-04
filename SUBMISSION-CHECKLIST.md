@@ -43,7 +43,7 @@ base, unmodified open weights.
 | 5 | X post link (optional) | Blank unless an approved post is live | Owner decision |
 | 6 | Project Description* | Final text in the submission packet; carries the pre-existing line and both bonus claims | Ready; check the character limit |
 | 7 | Public GitHub repo* | https://github.com/rgsuarez/uplink | Resolved URL; confirm current public evidence before Submit |
-| 8 | 3-minute video URL* | `{{OWNER_APPROVED_PUBLIC_VIDEO_URL}}` | Blocked until upload |
+| 8 | 3-minute video URL* | `https://youtu.be/MwG44-hKuqQ` | Done |
 | 9 | Use of Meta products* | Final text in the submission packet | Ready |
 | 10 | Why Meta's models* | Final text in the submission packet | Ready |
 | 11 | Feedback on Meta products (optional) | Draft in the submission packet | Owner approves, edits or omits |
@@ -87,7 +87,7 @@ Site-only caveat: small n; 1/3 model-reached correct-report PASS, with both earl
 ## Optional X post draft (unposted)
 
 ```text
-Uplink: when Wi-Fi breaks, cloud AI breaks too. So Meta's open Muse Glimmer runs on the laptop, picks one typed fix, and independent checks decide. 10/10 live DNS trials recovered, median 15.3 s, 0 false online. {{OWNER_APPROVED_PUBLIC_VIDEO_URL}} https://github.com/rgsuarez/uplink
+Uplink: when Wi-Fi breaks, cloud AI breaks too. So Meta's open Muse Glimmer runs on the laptop, issues one typed fix, and independent checks decide. 10/10 live DNS trials recovered, median 15.3 s, 0 false online. https://youtu.be/MwG44-hKuqQ https://github.com/rgsuarez/uplink
 ```
 
 Owner replaces the video placeholder and confirms final post length and any event-required hashtag or handle.

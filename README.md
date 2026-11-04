@@ -380,7 +380,7 @@ with an out-of-band link; it is not part of the quick reproduction.
 
 ## Demo video
 
-Demo video (owner upload pending): {{OWNER_APPROVED_PUBLIC_VIDEO_URL}}. Verify the actual final master's duration, opening disclosure, recovery footage and captions before submission; the saved event cap is 3:00.
+Demo video (2:52): https://youtu.be/MwG44-hKuqQ
 
 Narration: synthetic AI voice, OpenAI gpt-audio voice 'marin' via OpenRouter (text-to-speech). It is not Richard's voice; no human voiceover was recorded. Used only for the demo video; Uplink makes no TTS or non-Meta model calls at runtime.
 
