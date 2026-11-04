@@ -1,6 +1,6 @@
 # Uplink recording script for Lindsey
 
-Target cut: r12q7, 2:51.90, hard cap 3:00. Use existing recorded evidence only.
+Target: owner-verified final cut, hard cap 3:00; duration remains unverified here. Use existing recorded evidence only.
 This script authorizes no model run, host probe, network change, rendering or upload.
 
 ## Exact headline wording
@@ -58,7 +58,7 @@ false ONLINE 0, six pre-model exclusions. Disclose the two entry limits, 24.5 an
 network safety held, but all six reports failed the required verified-reason check;
 five pre-model exclusions remain. Do not present those controls as successes.
 See the current [results table](README.md#results) and public ledgers for sources.
-Keep F05 wrong gateway, site-only outage and F01 radio-off PENDING until committed.
+Keep F05 and site-only PENDING until committed; F01 is committed: 1/5 model-reached in the specified continuation, one strict recovery at 11.213 s, false ONLINE 0, all listed 1/6, four pre-model stops excluded.
 At the Wednesday 11:00 AM CT testing freeze, recalculate every claimed denominator,
 median and false-ONLINE total from the committed ledgers, or omit the row and footage.
 Do not infer a count, a winner, an action-selection success or general reliability.

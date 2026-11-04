@@ -59,7 +59,7 @@ bash ${LAB_BENCH_ROOT}/f10/run-bench.sh --dry-run
 ```
 
 The archive stays beside the F10 directory so exact package verification sees no
-extra file. Dry mode needs neither GGUF nor llama binaries. It validates all 50 task hashes,
+extra file. Dry mode needs neither GGUF nor GGUF runtime binaries. It validates all 50 task hashes,
 runs two sandboxed MOCK trajectories per selected arm (verified repair and exhausted
 run converted by F8), constructs the unchanged grammar-probe requests, prints the
 server settings, exercises the cap and samples memory. It opens no inference socket

@@ -5,7 +5,7 @@
 > before the hackathon. A private pre-kickoff prototype and design notes were used as
 > reference only; none of their code was ported. All Uplink code in this repository
 > (agent loop, typed tools, safety gates, watchdog, oracle, evidence harness and replay
-> tooling) was written during the event. First commit: `dabff4c`, Oct 26, 2026, 11:40 AM CT.
+> tooling) was written during the event. Original development history began at dabff4c on Oct 26, 2026, 11:40 AM CT; the public export has separate Git history.
 > Details: [PROVENANCE.md](PROVENANCE.md).
 
 When your connection breaks, every cloud assistant breaks with it, at the exact moment
@@ -47,14 +47,7 @@ take). An honest Report is a valid result; it never earns recovery credit.
 
 ## Why it matters (impact)
 
-Losing your connection is one of computing's most ordinary failures and one of its
-most frustrating: in a 2026 benchmark of 50,000+ IT help-desk tickets, network
-troubleshooting had the highest negative-sentiment rate of any use case (39%)
-([Fixify](https://www.fixify.com/it-help-desk-benchmark-report-2026)). A single
-resolver failure can make "basically all Internet services" unreachable
-([Cloudflare, July 2025](https://blog.cloudflare.com/cloudflare-1-1-1-1-incident-on-july-14-2025/)),
-and 2.2 billion people are still offline, with rural connectivity far behind urban
-([ITU, 2025](https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx)).
+According to Fixify ([2026 IT help-desk benchmark](https://www.fixify.com/it-help-desk-benchmark-report-2026)), network troubleshooting had the highest negative-sentiment rate of any use case (39%) in its benchmark of 50,000+ IT help-desk tickets. According to Cloudflare ([July 2025 incident report](https://blog.cloudflare.com/cloudflare-1-1-1-1-incident-on-july-14-2025/)), a single resolver failure can make "basically all Internet services" unreachable. According to ITU ([2025 Facts and Figures](https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-Facts-and-Figures.aspx)), 2.2 billion people are still offline, with rural connectivity far behind urban.
 
 It is also exactly when modern help disappears. Cloud assistants need the network you
 just lost. Help for getting back online has to run on the device, so Uplink runs
@@ -83,7 +76,7 @@ and the [Results](#results) count every trial, including the ones it failed.
 | Piece | What Uplink does with it |
 | --- | --- |
 | Meta Muse Glimmer 30B (base, unmodified open weights, Apache-2.0) | Chooses the recovery action on the device. Unmodified Q4_K_M GGUF, pinned by SHA-256 `4cc57c0f…f60e` |
-| `llama-server` (llama.cpp b10353, `f8def7fe1`, Metal) | Serves the model on `localhost` only, on an Apple M4 Max MacBook Pro with 36 GB |
+| `llama-server` (llama.cpp b10353, `f8def7fe1`, Metal) | Serves the model on `localhost` only, on the recorded Apple M4 Max Mac environment |
 | Glimmer native chat template | Rendered verbatim from `meta-models/Muse-Glimmer-30B` revision `cec94fc…`, hash-pinned in [templates/manifest.json](templates/manifest.json) |
 | Grammar-constrained tool use | A GBNF grammar generated from the typed action schema makes every model turn a valid, closed action |
 
@@ -306,7 +299,7 @@ Saved, sanitized replay views are in [demo/model-sim/](demo/model-sim/README.md)
 Original private recordings and receipt bundles are not distributed. Ledgers committed in this repo
 retain the original evidence hashes and carry separate public derivative hashes.
 
-**Run the model yourself** (any 24 GB+ Apple Silicon or GPU machine):
+**Run the model yourself on compatible Apple Silicon or GPU hardware; broader hardware support is unqualified:**
 
 ```sh
 hf download meta-models/Muse-Glimmer-30B-GGUF --include "Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf" --local-dir models/
@@ -319,9 +312,7 @@ with an out-of-band link; it is not part of the quick reproduction.
 
 ## Demo video
 
-3-minute demo r13 (2:45.23): `VIDEO_URL_PLACEHOLDER` (placeholder token; no public video URL yet). It opens with the
-pre-existing-work line, shows a real recorded recovery and ends on the honest limits.
-Storyboard: [DEMO-SCRIPT.md](DEMO-SCRIPT.md).
+Demo video (owner upload pending): VIDEO_URL_PLACEHOLDER. Verify the actual final master's duration, opening disclosure, recovery footage and captions before submission; the saved event cap is 3:00.
 
 ## Judging map
 

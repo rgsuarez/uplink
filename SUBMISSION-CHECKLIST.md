@@ -16,7 +16,7 @@ base, unmodified open weights.
 | Impact | 30% | Outage-time help that a cloud assistant cannot give; named users; honest limits | [README: Why it matters](README.md#why-it-matters-impact) |
 | Use of Meta AI tooling | 25% | Base Glimmer open weights on-device via `llama-server`, native chat template, grammar-constrained typed tools, hash-pinned model | [README: How it uses Meta AI](README.md#how-it-uses-meta-ai), [templates/manifest.json](templates/manifest.json) |
 | Technical depth | 20% | Independent ONLINE oracle, snapshot-only repairs with exact diff, 60 s detached revert, OOB control link, preregistered series | [README: Architecture](README.md#architecture), [README: Safety model](README.md#safety-model), `evidence/f04-series/*/PREREG.json` |
-| Demo | 25% | 3-minute video (cut r12q7, 171.90 s) with a real recorded recovery and the honest limits | [README: Demo video](README.md#demo-video), [DEMO-SCRIPT.md](DEMO-SCRIPT.md) |
+| Demo | 25% | Owner verifies the final master, recovery footage, honest limits and duration against committed evidence | [README: Demo video](README.md#demo-video), [DEMO-SCRIPT.md](DEMO-SCRIPT.md) |
 | Bonus: Best Build on Meta Open Weights | bonus | Unmodified open Glimmer weights, our own hardware, no cloud at decision time | [README: How it uses Meta AI](README.md#how-it-uses-meta-ai) |
 | Bonus: Best Agentic Use Case | bonus | Observe → typed action → bounded execution → independent verification, auto-revert, honest Report | [README: What it does](README.md#what-it-does) |
 | Bonus: Most Viral | bonus | Needs a published X post and its link in the form (owner decision) | Draft below |
@@ -27,10 +27,10 @@ base, unmodified open weights.
 - [x] Pre-existing work called out: Glimmer weights, llama.cpp and Python libraries ([README](README.md), [PROVENANCE.md](PROVENANCE.md)).
 - [x] Source-available license: Apache-2.0 ([LICENSE](LICENSE)); upstream terms in [licenses/manifest.json](licenses/manifest.json).
 - [x] Not a chat wrapper, simple RAG, image analyzer or medical advice: an on-device agent taking typed, auto-reverting actions on a real OS.
-- [x] Video at or under 3:00 (171.90 s).
-- [ ] Repository public at submission (owner action).
+- [ ] Verify the actual final uploaded video is at or under 3:00; no final duration is certified here.
+- [x] Repository URL resolved: https://github.com/rgsuarez/uplink; recorded published baseline ee394c3, local candidate update publication pending.
 - [ ] Video uploaded and viewable by anonymous judges (owner action).
-- [ ] Video opens with one line on what was pre-existing (current cut opens "Built entirely during the hackathon."; confirm or re-voice the first line).
+- [ ] Verify the uploaded opening discloses pre-existing Meta weights, llama.cpp and Python libraries, and distinguishes the Uplink implementation authored during the hackathon.
 
 ## Form fields (13, per the saved form snapshot; confirm against the live form)
 
@@ -42,7 +42,7 @@ base, unmodified open weights.
 | 4 | Problem statement* | Build for Your World | Ready |
 | 5 | X post link (optional) | Blank unless an approved post is live | Owner decision |
 | 6 | Project Description* | Final text in the submission packet; carries the pre-existing line and both bonus claims | Ready; check the character limit |
-| 7 | Public GitHub repo* | `https://github.com/rgsuarez/uplink` | Blocked until the owner makes it public |
+| 7 | Public GitHub repo* | https://github.com/rgsuarez/uplink | Resolved URL; confirm current public evidence before Submit |
 | 8 | 3-minute video URL* | `VIDEO_URL_PLACEHOLDER` | Blocked until upload |
 | 9 | Use of Meta products* | Final text in the submission packet | Ready |
 | 10 | Why Meta's models* | Final text in the submission packet | Ready |
@@ -76,7 +76,7 @@ but all 6 health reports failed the oracle's required `verified` reason check (0
 - [ ] Update the README results table from committed ledgers; remove every PENDING row and placeholder.
 - [ ] Recompute the numbers with the README reproduction script; they must match the table.
 - [ ] Confirm the video voiceover numbers match the table (current VO: 10 model-reached trials, DNS restored every time, median about 15.3 s, zero false online).
-- [ ] Owner approves: repository public plus push; video upload; optional X post.
+- [ ] Remaining owner actions: provide the verified final video URL, provide the optional X post link, and Submit after checking the public evidence, form requirements and consent; publication remains separately authorized.
 - [ ] Fill the form, verify anonymous access to the repo and video links, then the owner presses Submit and keeps the receipt.
 
 ## Optional X post draft (unposted)

@@ -15,7 +15,7 @@ The runtime and launch failures were:
 - The four-B200 request remained queued without a container and was canceled without execution.
 - The final H200 invocation reached a provider result-upload DNS failure after its last observed weight-loading state. Its final attempt count is unknown; no case receipts were recovered and no scores are invented.
 
-All six comparison source/configuration/test files are committed and match HEAD. The existing unrelated working changes are preserved. A later fresh session must read the saved evidence and resolve the missing-result attempt state and budget before any separately authorized evaluation. The cutoff completion record is [READY-SPARK-CUTOFF-MON.md](READY-SPARK-CUTOFF-MON.md).
+All six comparison source/configuration/test files are committed and match HEAD. The existing unrelated working changes are preserved. A later fresh session must read the saved evidence and resolve the missing-result attempt state and budget before any separately authorized evaluation. The cutoff completion record is the original private cutoff completion record (not distributed).
 
 ## Measured results and recommendation
 
@@ -91,9 +91,9 @@ The resource report includes compute and metered network egress. The two final r
 
 The fresh cutoff workspace metered delta, measured from the original preparation-admission snapshot, is **$8.37299190**. It differs from the app-specific sum by **$0.00113950**. Earlier saved workspace readings used the later launcher snapshot and covered a narrower window. All snapshots are preserved; the app-specific sum attributes the full comparison, and the cutoff credit delta below uses the original admission snapshot.
 
-At cutoff verification, the app-specific total was unchanged. It comprises **$8.34113950 compute** and **$0.03299190 metered egress covered by the egress allowance**. Applied workspace free credits increased by **$8.34000000** over the comparison period; the November workspace total is **$9.42000000**, including prior usage. Credit adjustments are rounded separately from per-app metering. The fresh record is [spark-cutoff-mon-20261102.json](evidence/uplink/spark-cutoff-mon-20261102.json).
+At cutoff verification, the app-specific total was unchanged. It comprises **$8.34113950 compute** and **$0.03299190 metered egress covered by the egress allowance**. Applied workspace free credits increased by **$8.34000000** over the comparison period; the November workspace total is **$9.42000000**, including prior usage. Credit adjustments are rounded separately from per-app metering. The fresh record is the original private cutoff evidence receipt (not distributed).
 
-The approved cap is $12 of November Starter free credits and $0 cash. Before launch, the conservative bound including prior preparation, the more expensive GPU fallback and reserve was below $12. A further full H200-only reservation plus reserve now projects **$14.64326840 cumulative**, above that cap. The admission helper refuses another launch with `spark_cumulative_cap_refused`. [NEEDS-AMANDA.md](NEEDS-AMANDA.md) records the stop. No cap extension, cash use or extra attempt is inferred.
+The approved cap is $12 of November Starter free credits and $0 cash. Before launch, the conservative bound including prior preparation, the more expensive GPU fallback and reserve was below $12. A further full H200-only reservation plus reserve now projects **$14.64326840 cumulative**, above that cap. The admission helper refuses another launch with `spark_cumulative_cap_refused`. the original private stop record (not distributed) records the stop. No cap extension, cash use or extra attempt is inferred.
 
 ## Provenance and verification
 
@@ -105,10 +105,10 @@ The approved cap is $12 of November Starter free credits and $0 cash. Before lau
 | Reused baseline result SHA-256 | `1be9eefacc9cec01866a9ab3683e9bc322fa7d21d696d9fa7240bda89ec06f25` |
 | Baseline evidence audit | 440 artifact hashes checked, 39 prompts reproduced, four recovery proofs replayed |
 | Offline checks before final launch | 94 focused tests passed; scoped Ruff passed |
-| Structured comparison record | [evidence/uplink/spark-vs-glimmer-mon-20261102.json](evidence/uplink/spark-vs-glimmer-mon-20261102.json) |
-| Provider billing | [artifacts/uplink/spark-vs-glimmer-mon-20261102/provider-billing-final.json](artifacts/uplink/spark-vs-glimmer-mon-20261102/provider-billing-final.json) |
-| Result-upload failure frames | [artifacts/uplink/spark-vs-glimmer-mon-20261102/capacity-failure-frames.json](artifacts/uplink/spark-vs-glimmer-mon-20261102/capacity-failure-frames.json) |
-| Loading observations | [artifacts/uplink/spark-vs-glimmer-mon-20261102/loading-monitor-capacity.jsonl](artifacts/uplink/spark-vs-glimmer-mon-20261102/loading-monitor-capacity.jsonl) |
+| Structured comparison record | Original private comparison receipt, not distributed in this export |
+| Provider billing | Original private final billing receipt, not distributed in this export |
+| Result-upload failure frames | Original private provider failure record, not distributed in this export |
+| Loading observations | Original private loading-monitor record, not distributed in this export |
 
 These are model decisions over simulated faults. No live Wi-Fi was exercised. Glimmer's 20-case registration contains 18 compound cases and two F10 variants with prior semantic overlap; its new-compound repair subset is 2/12. The complete overlap disclosure remains in [RESULT-HELDOUT-EVAL-SUN.md](RESULT-HELDOUT-EVAL-SUN.md). Glimmer used an A10G and Spark used H200s with a newer compatible runtime, so any future latency comparison must disclose those differences.
 

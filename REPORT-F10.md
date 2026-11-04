@@ -86,7 +86,7 @@ MOCK trajectories: an independently verified repair and a step-exhausted traject
 converted by the registered F8 policy. Neither MOCK arm is complete held-out or
 model-performance evidence. The unchanged grammar probe built 20 request bodies
 and sent none. The two-second cap fired, memory sampling and summarization passed.
-The rehearsal area contained no GGUF or llama binaries. No model was loaded,
+The rehearsal area contained no GGUF or GGUF runtime binaries. No model was loaded,
 started, stopped or queried by this preparation or rehearsal.
 
 ## Runtime estimate and window

@@ -169,8 +169,8 @@ this report is a separate documentation commit.
 The packaged runner's dry-run completed with exit 0 at 05:26:30 CT on
 2026-10-27. Both budget-label mock harness checks, all 20 offline probe requests,
 server command construction, swap admission and the two-second child cap passed.
-No GGUF or llama binary was present at the staged benchmark paths. Existing
-unrelated llama PIDs were only observed and left untouched.
+No GGUF or GGUF runtime binary was present at the staged benchmark paths. Existing
+unrelated GGUF runtime PIDs were only observed and left untouched.
 
 Dry-run evidence:
 `artifacts/f9/final-dry/results/dryrun-20261027-052621-46685`.

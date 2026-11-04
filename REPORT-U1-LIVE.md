@@ -228,7 +228,7 @@ Muse Glimmer 30B, `Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf`, from
 `meta-models/Muse-Glimmer-30B-GGUF`, SHA-256
 `4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e`.
 Serving build: llama.cpp `10353 (f8def7fe1)` on Apple M4 Max, localhost:8080,
-one slot, context 8192, seed 0, temperature 0 and eager per-request GBNF. training, paid API or model load on the workstation.
+Serving configuration: one slot, context 8192, seed 0, temperature 0 and eager per-request GBNF; base Muse Glimmer weights were unchanged.
 
 Source `705ee30` passed 983 full-suite tests, 477 Uplink tests, lint and strict
 typechecking on lab. The final hardening step added 33 tests, matching the expected

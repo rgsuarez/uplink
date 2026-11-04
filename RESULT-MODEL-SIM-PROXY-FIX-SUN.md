@@ -2,7 +2,7 @@
 
 BLUF: the final balanced tool-description candidate recovered **21/21 simulated faults**, versus the `authorized-repair-v1` baseline's **15/21**, with **zero false ONLINE, zero calls over eight seconds and 21/21 verified cleanup**. F06/F07 both improved from 0/3 to 3/3; all five previously recovered classes remained 3/3. **The operator adopted this candidate after explicitly reviewing its six-description scope**, resolving the later packet's one-proxy-line restriction.
 
-**MODEL_IN_LOOP_SIM only. Real unadapted Muse Glimmer Q4 inference, simulated faults. Not live Wi-Fi, not a TOP10 field result, and not held-out generalization.** The descriptions were tuned after inspecting F06/F07 failures. Two regressing candidates are retained below, not omitted or pooled into the final result.
+**MODEL_IN_LOOP_SIM only. Real unadapted Muse Glimmer Q4 inference, simulated faults. Not live Wi-Fi, not a TOP10 field result, and not held-out generalization.** The descriptions were rewritten after inspecting F06/F07 failures. Two regressing candidates are retained below, not omitted or pooled into the final result.
 
 North Star Check: obtain model-selected proxy repairs without losing existing recoveries or weakening the independent safety gates. The final candidate meets the measured recovery/safety target on this known simulated population. The selected overlay is now `snapshot-restore-descriptions-v1`, using the unchanged `authorized-repair-v1` system text. This profile selection does not imply live integration or host authority.
 

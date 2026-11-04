@@ -4,7 +4,7 @@ BLUF: the real Q4_K_M BASE model recovered **0/21 simulated faults (0%)**. All 2
 
 **Evidence: MODEL_IN_LOOP_SIM. Real BASE model, simulated fault engine (FAKE_KERNEL). This is not live Wi-Fi evidence and not the TOP10 result.**
 
-North Star Check: measure the frozen model-driven recovery path honestly, preserve every miss, and keep simulation separate from physical Wi-Fi recovery. The prompt, grammar, fact projection, 8-second model timeout and hash-bound files were not tuned for this result.
+North Star Check: measure the frozen model-driven recovery path honestly, preserve every miss, and keep simulation separate from physical Wi-Fi recovery. The prompt, grammar, fact projection, 8-second model timeout and hash-bound files were not changed for this result.
 
 | Metric | Recorded value |
 | --- | --- |

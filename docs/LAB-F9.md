@@ -39,11 +39,11 @@ BENCH_PYTHON=.venv/bin/python \
 bash ${LAB_BENCH_ROOT}/f9/run-bench.sh --dry-run
 ```
 
-Dry mode requires no GGUF or llama binaries. It runs real sandboxed mock repairs
+Dry mode requires no GGUF or GGUF runtime binaries. It runs real sandboxed mock repairs
 and impossible-task checks at both budget labels, constructs all 20 grammar
 probe requests, prints server settings, checks swap admission, exercises a
 two-second child timeout, samples memory and writes a summary. It sends no
-inference requests and never kills existing llama processes.
+inference requests and never kills existing GGUF runtime processes.
 
 After the prior run ends, drain confirmation and an approved time window,
 the operator can use the same invocation with `--confirm-drain`. The retained defaults
