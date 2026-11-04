@@ -146,7 +146,7 @@
     },
     {
       "candidate_path": "README.md",
-      "candidate_sha256": "2964a690ebf83c322bcf2f2ddd8420f9a025428d95914a10d2179172ab5cc1f9",
+      "candidate_sha256": "40c0b0e6c1bae4f3b79255cc708911cf3273b17a85b54c060cfb0e4298920d94",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "README.md",
@@ -7037,6 +7037,39 @@
   "hash_meaning": "Historical source hashes identify measured private inputs. Public derivative hashes identify this CPU candidate and do not regrade historical results.",
   "history_included": false,
   "kind": "sanitized_cpu_runtime_candidate",
+  "nov4_framing": {
+    "control_safety": {
+      "false_action_requests": 0,
+      "false_online": 0,
+      "model_reached": 6,
+      "network_changes": 0,
+      "safe_trials": 6
+    },
+    "control_strict": {
+      "model_reached": 6,
+      "passes": 0,
+      "per_case": "0/3 each",
+      "reason": "Required diagnosis reason missed"
+    },
+    "fast_tier": false,
+    "headline_false_online_scope": "Observed named live populations, including known-limit trials and controls; not a reliability guarantee.",
+    "historical_runtime_qualification_preserved": true,
+    "historical_source_hashes_preserved": true,
+    "narration_addendum": {
+      "disclosure_sha256": "88305aa02dbefe40c2ea047a00bd83a5786edae12e156aa1655ed55d5613d13e",
+      "no_audio_generation_or_media_change": true,
+      "placement": "README.md immediately after the Demo video paragraph",
+      "scope": "Synthetic narration for the demo video only; application runtime unchanged"
+    },
+    "new_trials": 0,
+    "public_parent_commit": "11f299e5dac182c5d0919f1e2cb7e64f1a728320",
+    "published": false,
+    "pushed": false,
+    "runtime_and_evidence_unchanged": true,
+    "scope": "Order and narrative framing only. DNS/proxy/gateway lead; safety controls are separately labeled 6/6 safe and 0/6 strict. Radio-off and site-only remain in the full tables under known limits. All original result rows, numeric evidence, registrations and caveats are retained.",
+    "source_parent_commit": "03239c6cdb0bb8786c14411ad0f27de698d222e8",
+    "source_readme_content_sha256": "50561ee640539f13828a47427dc3643c12c03eccd4f7c09232d33f2e67a44442"
+  },
   "public_derivative_registrations": {
     "f10": {
       "changed_input": "src/offline_agent/sandbox.py",

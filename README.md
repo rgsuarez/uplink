@@ -18,16 +18,11 @@ independent checker, not the model, decides whether the computer is back ONLINE.
 `4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e`.
 Uplink uses base, unmodified open weights.
 
-**Headline (committed evidence):** on a real Mac, Meta Muse Glimmer 30B
-recovered **10/10 model-reached DNS trials** (median **15.319 s**) and
-**5/5 model-reached proxy trials** (median **10.4 s**, exactly 10.395 s, across
-two segments). Both observed **0 false ONLINE**. Pre-model stops: **DNS 4,
-proxy 6, not counted** in those denominators. See [Results](#results) for
-the segment policies, all exclusions and the failed no-change controls.
+**Headline (committed evidence):** Uplink fixed DNS faults 10/10, proxy faults 5/5 and wrong-gateway faults 2/2 (model-reached trials, small sample), with zero false ONLINE across every reported live test, using base Muse Glimmer open weights run locally.
 
-**F05 wrong gateway:** 2/2 model-reached PASS, median 13.0595 s, false ONLINE 0. Target 5; only 2 reached. Small n; no continuation.
+Across 6 healthy-network or misleading-status trials, Uplink changed nothing and never claimed a false recovery (6/6 safe).
 
-**F01 radio-off:** 1/5 model-reached, 1 strict recovery 11.213 s, false ONLINE 0 in the specified three-series continuation; all listed series are 1/6. See the scoped tally below.
+
 
 ## What it does
 
@@ -148,6 +143,19 @@ appears here.
 
 Model: base, unmodified open weights.
 
+**Detailed DNS/proxy evidence:** on a real Mac, Meta Muse Glimmer 30B
+recovered **10/10 model-reached DNS trials** (median **15.319 s**) and
+**5/5 model-reached proxy trials** (median **10.4 s**, exactly 10.395 s, across
+two segments). Both observed **0 false ONLINE**. Pre-model stops: **DNS 4,
+proxy 6, not counted** in those denominators. See [Results](#results) for
+the segment policies, all exclusions and the strict scores of the safety controls.
+
+**F05 wrong gateway:** 2/2 model-reached PASS, median 13.0595 s, false ONLINE 0. Target 5; only 2 reached. Small n; no continuation.
+
+Across 6 healthy-network or misleading-status trials, Uplink changed nothing and never claimed a false recovery (6/6 safe).
+
+*Strict score 0/6: the rubric also required the correct diagnosis reason (verified), which Uplink missed in all 6 trials. Each control case remains 0/3 strict. Safety results are not recovery credit.*
+
 | Fault (series) | Expected action | Passes / model-reached | Median recovery | False ONLINE | Evidence |
 | --- | --- | ---: | ---: | ---: | --- |
 | **F04 bad DNS** (3 segments, mixed policy) | `restore_dns` | **10/10** | **15.319 s** (range 15.125-17.695) | **0** | [EVIDENCE-F04-SERIES.md](EVIDENCE-F04-SERIES.md), [evidence/f04-series/](evidence/f04-series/) |
@@ -156,10 +164,22 @@ Model: base, unmodified open weights.
 | ↳ segment `51ffa1727d58` (v2, completed) | `restore_dns` | 7/7 | 15.236 s | 0 | `evidence/f04-series/51ffa1727d58/` |
 | **F06 stale proxy** (2 segments; entry max raised from 24.5 to 24.75 GiB between them; 6 pre-model headroom refusals excluded from trial count) | `restore_proxy` | **5/5 PASS** (A 2/2 + B 3/3) | **10.395 s** | **0** | [F06-COMBINED-TALLY.md](evidence/f06-series/F06-COMBINED-TALLY.md); [SERIES-LEDGER.json](evidence/f06-series/98e499eebbd7/SERIES-LEDGER.json); [SERIES-LEDGER.json](evidence/f06-series/15a6104a9685/SERIES-LEDGER.json) (committed source `c3dd1ad`; sanitized public derivatives) |
 | **F05 wrong gateway** (final series cd4fea26e41a) | `restore_gateway` | **2/2 model-reached PASS** | **13.0595 s** | **0** | [F05 tally](evidence/f05-series/F05-COMBINED-TALLY.md); [F05 ledger](evidence/f05-series/SERIES-LEDGER.json) |
-| **F01 Wi-Fi radio off** (specified three-series continuation) | `restore_radio` | **1/5 model-reached PASS** | **1 strict recovery: 11.213 s** (one passing trial) | **0** | [F01 tally](evidence/f01-series/F01-COMBINED-TALLY.md); [F01 ledger](evidence/f01-series/SERIES-LEDGER.json) |
 | Control: healthy network | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 | Control: misleading status text | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
+| Safety controls, healthy + misleading-status | no mutation | **6/6 safe; 0/6 strict** | n/a | **0** | `evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json`; not recovery credit |
+
+### Known limits and next steps
+
+**F01 radio-off:** 1/5 model-reached, 1 strict recovery 11.213 s, false ONLINE 0 in the specified three-series continuation; all listed series are 1/6. See the scoped tally below.
+
+| Fault (series) | Expected action | Passes / model-reached | Median recovery | False ONLINE | Evidence |
+| --- | --- | ---: | ---: | ---: | --- |
+| **F01 Wi-Fi radio off** (specified three-series continuation) | `restore_radio` | **1/5 model-reached PASS** | **1 strict recovery: 11.213 s** (one passing trial) | **0** | [F01 tally](evidence/f01-series/F01-COMBINED-TALLY.md); [F01 ledger](evidence/f01-series/SERIES-LEDGER.json) |
 | **Site-only app server down** (owned local 503 stub) | report | **1/3 correct-report PASS** (two ABORTs counted) | n/a (report, no recovery) | **0** | [Site-only tally](evidence/siteonly-series/SITEONLY-COMBINED-TALLY.md); [ledger](evidence/siteonly-series/SERIES-LEDGER.json) |
+
+Wi-Fi radio off: 1/5 in the specified continuation, one strict recovery at 11.213 s, false ONLINE 0; one FAIL and three counted ABORTs. All listed series are 1/6 after an earlier model-reached ABORT; four listed pre-model stops are excluded. Known limit, small n. Next step: improve radio-state detection before reconfiguration.
+
+Site-only (owned 503 stub, network healthy): 1/3 correct-report PASS, two earlier ABORTs counted, one pre-model stop excluded, false ONLINE 0; no recovery median. The strict-reader VALIDATED report identified the server error and changed nothing. This was not a real outage. CAPTURE_INCOMPLETE; trial unaffected, videos not committed. Next step: sharper app-vs-network attribution.
 
 F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability. F05 capture/handback caveat: video capture for the second PASS and final ABORT is CAPTURE_INCOMPLETE; media are not committed. Trial 3 retained restore_failed; later empty-baseline comparisons do not prove bounded historical handback.
 
@@ -361,6 +381,8 @@ with an out-of-band link; it is not part of the quick reproduction.
 ## Demo video
 
 Demo video (owner upload pending): {{OWNER_APPROVED_PUBLIC_VIDEO_URL}}. Verify the actual final master's duration, opening disclosure, recovery footage and captions before submission; the saved event cap is 3:00.
+
+Narration: synthetic AI voice, OpenAI gpt-audio voice 'marin' via OpenRouter (text-to-speech). It is not Richard's voice; no human voiceover was recorded. Used only for the demo video; Uplink makes no TTS or non-Meta model calls at runtime.
 
 ## Judging map
 
