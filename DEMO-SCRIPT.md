@@ -45,7 +45,7 @@ names, addresses, prompts or credentials.
 ## Simulation remains separate
 
 If retained in the cut, label every simulation shot MODEL_IN_LOOP_SIM. The adopted
-21/21 descriptions were tuned post hoc on those cases. Held-out repair targets were
+21/21 descriptions were rewritten post hoc on those cases. Held-out repair targets were
 4/14 (new inputs 2/12), held-policy honest reports 6/6, false ONLINE 0, cleanups 20/20.
 These are saved GPU simulation results, not live recoveries or on-device timings.
 [Held-out result](RESULT-HELDOUT-EVAL-SUN.md).

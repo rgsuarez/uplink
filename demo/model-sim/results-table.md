@@ -1,5 +1,5 @@
 MODEL_IN_LOOP_SIM | recorded BASE Muse Glimmer Q4 | post-hoc development evidence
-Adopted descriptions tuned after F06/F07 failures; not held-out and not live Wi-Fi.
+Adopted descriptions rewritten after F06/F07 failures; not held-out and not live Wi-Fi.
 Replay reads saved files only: zero new model calls or host probes.
 
 | Recorded run | Recovered | Honest reports | False ONLINE |

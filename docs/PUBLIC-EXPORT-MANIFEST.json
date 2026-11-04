@@ -21,7 +21,7 @@
     },
     {
       "candidate_path": "DEMO-SCRIPT.md",
-      "candidate_sha256": "f6178e320c96f9da60f5fe77e05210018950ece9052c52992c0f144ea60afdf3",
+      "candidate_sha256": "c44ec6176d8f830e153a7ef24a6b77daae4af67b03acf5bc2e0912948389307f",
       "changed": true,
       "source_commit": "952dbf59048c51999fe6fd46d29efc89e1b7e8db",
       "source_sha256": "9cae1f75737a9976b6af0efcc44d81e99bd408f08a10753908a61fdffcf5bea4"
@@ -66,7 +66,7 @@
     },
     {
       "candidate_path": "README.md",
-      "candidate_sha256": "077dfa579e1acbc9193d13163250bc6304359359760d08c6ec1857fa3576a43f",
+      "candidate_sha256": "fa741ff1d96d04362ca4fb2133d4ff233155f01e43376c380ee0672724ae31e1",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "README.md",
@@ -1751,31 +1751,31 @@
     },
     {
       "candidate_path": "demo/model-sim/README.md",
-      "candidate_sha256": "9a223da4a8cb2e6cf81143cb18f27459ae26450bd6f3499f4dc02b07bc9caa1b",
+      "candidate_sha256": "f62962289150580b6d343edeea399eb01bf6ee05929f20b765b4433d1b236488",
       "changed": true,
       "source_sha256": "2268a0309e608466b837d5df3352293194f31e925c5c52b65e592edbe429b9b6"
     },
     {
       "candidate_path": "demo/model-sim/adopted-F04.md",
-      "candidate_sha256": "36a76e0383e6148e8e0ccb9df57eefa68f8f8fa6e577491a21368077acd0cabc",
-      "changed": false,
+      "candidate_sha256": "843c5f065b5da0217c65d8d301006dc3eb87b17948faa36bd13b849191a8f580",
+      "changed": true,
       "source_sha256": "36a76e0383e6148e8e0ccb9df57eefa68f8f8fa6e577491a21368077acd0cabc"
     },
     {
       "candidate_path": "demo/model-sim/adopted-F06.md",
-      "candidate_sha256": "d89ff36d5dbe42ce46fa769f3040738e0661de5098f550359b6981f76f942bea",
-      "changed": false,
+      "candidate_sha256": "3f528618c17f3fae1f14cd4598ec1e6ece66f4e2c058c2c08911fce8c1fee651",
+      "changed": true,
       "source_sha256": "d89ff36d5dbe42ce46fa769f3040738e0661de5098f550359b6981f76f942bea"
     },
     {
       "candidate_path": "demo/model-sim/baseline-F06.md",
-      "candidate_sha256": "cd66b0fd3701d6ad79c6289ae552f7f9a52cbdc5889b536ad3552da77e5ce206",
-      "changed": false,
+      "candidate_sha256": "7ba82fdbc0b85c2dba0d5185f8c3ba8b351fd6c8124dd42ccd924a54ceef1d5d",
+      "changed": true,
       "source_sha256": "cd66b0fd3701d6ad79c6289ae552f7f9a52cbdc5889b536ad3552da77e5ce206"
     },
     {
       "candidate_path": "demo/model-sim/results-table.md",
-      "candidate_sha256": "f70cb366b380a7354152b9e318e495d48f19000610556ce4db5a32f9d29d802f",
+      "candidate_sha256": "5548203a3b4aa9f8a22e9a6e20281c2a97977675ef5d1254b906d92dc4444c27",
       "changed": true,
       "source_sha256": "9a127b710ef379ae876cfe19c9d6abbbd4a8d545754ed031ed50b4398d3e582c"
     },
@@ -4279,7 +4279,7 @@
     },
     {
       "candidate_path": "harness/bench/README.md",
-      "candidate_sha256": "450a97b2eecd47ba1d90f68026602c8c2722d1ea19494beace22883828d2c123",
+      "candidate_sha256": "52c1015d716c829e93f5e9310d4c487f033e889719031e09dd05ece750ae6f8d",
       "changed": true,
       "source_sha256": "b52c16159ed6827730190750277e93af387edeb2aa206acbc760e564713cebde"
     },
@@ -4568,7 +4568,7 @@
     },
     {
       "candidate_path": "scripts/replay_model_sim.py",
-      "candidate_sha256": "e74aba999794d8f7201c7e0bd65f932b4487c3dbcc2e586cfd70a455934e0668",
+      "candidate_sha256": "908f893248a8653259996a07fde5d38f63d98b3067d5660c1a9d2716dd3ae5f1",
       "changed": true,
       "source_sha256": "91e4672b70db011ee72d74e3d056be9062080b208c4e700a77affb4e0f201a00"
     },
@@ -5889,7 +5889,7 @@
     },
     {
       "path": "RUN-LOG-GLIMMER.md",
-      "sha256": "79b9a6dbc6aa317f7c4a4ee609eb356abb1102226bbed30add160d452cb531f7"
+      "sha256": "24a8ed1dda2b9fea2a1caa3c76449a7af964c1734fcd5199d1edda963551a87a"
     },
     {
       "path": "VIDEO-CLAIMS-F04.md",
@@ -5961,6 +5961,12 @@
     "runtime_and_test_inputs_unchanged": true,
     "scope": "Documentation-only consistency polish. DNS and proxy headline; explicit pre-model exclusions; current control outcomes; model uses base, unmodified open weights.",
     "source_note": "Original source hashes identify earlier committed inputs; new public derivative hashes identify this wording revision."
+  },
+  "readme_resync": {
+    "base_clean_commit": "157f7656ced27188308c6014a40d6ea8b55266ba",
+    "scope": "Sync README and clarify post-hoc tool-description rewrites. Only unmodified base Muse Glimmer weights were used; original evidence and frozen harness hashes are unchanged.",
+    "source_commit": "71e696e952e3abf717db11cfc1d41d47869777b2",
+    "source_readme_sha256": "fa741ff1d96d04362ca4fb2133d4ff233155f01e43376c380ee0672724ae31e1"
   },
   "repo_gate_sync": {
     "base_export_commit": "96a5d43c7749cf81d3bcc645c6862830fcbfa30d",
@@ -6099,6 +6105,61 @@
         "passed": 1464,
         "skipped": 22
       }
+    },
+    {
+      "fake_kernel": {
+        "false_online": 0,
+        "held_slots": 9,
+        "host_contacts": 0,
+        "model_calls": 0,
+        "recorded_trials": 21,
+        "recovered": 21,
+        "safety_gate_passed": true
+      },
+      "guard_scope": "Existing CPU network/host-tool/real-weight guard; required TOP10 and bench cases plus fake-kernel smoke additionally run under the existing OS network-denial profile.",
+      "limits": [
+        "No model inference",
+        "No live host or native host execution",
+        "No GPU execution",
+        "No Linux qualification",
+        "Original private packages and receipts omitted"
+      ],
+      "platform": "macOS ARM64",
+      "python": "3.12.13",
+      "qualification_input_inventory_sha256": "4b027a8bfeab1d35a8d79a77db68f19ae6d9f05a4a93887489e1d7dce57aa92b",
+      "qualified_at": "2026-11-03T23:39:15.893085+00:00",
+      "runs": [
+        {
+          "errors": 0,
+          "failures": 0,
+          "label": "cpu",
+          "skipped": 246,
+          "tests": 1480
+        },
+        {
+          "errors": 0,
+          "failures": 0,
+          "label": "top10_sandbox",
+          "skipped": 4,
+          "tests": 161
+        },
+        {
+          "errors": 0,
+          "failures": 0,
+          "label": "bench_sandbox",
+          "skipped": 10,
+          "tests": 77
+        }
+      ],
+      "status": "Historical qualification of clean candidate 157f765; current README resync and presentation wording are requalified below.",
+      "test_count_note": "Six checks belonging only to the removed cloud-budget code were removed; the base-run, replay, authority and safety checks remain.",
+      "unit_tests": {
+        "collected": 1480,
+        "errors": 0,
+        "failed": 0,
+        "passed": 1458,
+        "skipped": 22
+      }
     }
   ],
   "runtime_qualification_scope": {
@@ -6121,8 +6182,8 @@
     ],
     "platform": "macOS ARM64",
     "python": "3.12.13",
-    "qualification_input_inventory_sha256": "4b027a8bfeab1d35a8d79a77db68f19ae6d9f05a4a93887489e1d7dce57aa92b",
-    "qualified_at": "2026-11-03T23:39:15.893085+00:00",
+    "qualification_input_inventory_sha256": "3fbab903f2535f6a04743f580e5503f53661464696450613720feffe3c6d457d",
+    "qualified_at": "2026-11-04T08:50:40.795013+00:00",
     "runs": [
       {
         "errors": 0,
@@ -6146,7 +6207,7 @@
         "tests": 77
       }
     ],
-    "test_count_note": "Six checks belonging only to the removed cloud-budget code were removed; the base-run, replay, authority and safety checks remain.",
+    "test_count_note": "No tests added or removed. README synchronization and post-hoc tool-description wording changes were requalified with the unchanged test suite. Sandbox cases are counted once in the combined unique total.",
     "unit_tests": {
       "collected": 1480,
       "errors": 0,

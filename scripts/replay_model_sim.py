@@ -50,7 +50,7 @@ DISPLAY_FACTS = (
 )
 LABEL = (
     "MODEL_IN_LOOP_SIM | recorded BASE Muse Glimmer Q4 | post-hoc development evidence\n"
-    "Adopted descriptions tuned after F06/F07 failures; not held-out and not live Wi-Fi.\n"
+    "Adopted descriptions rewritten after F06/F07 failures; not held-out and not live Wi-Fi.\n"
     "Replay reads saved files only: zero new model calls or host probes.\n"
 )
 

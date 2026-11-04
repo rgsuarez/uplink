@@ -9,7 +9,7 @@ All rows below are MODEL_IN_LOOP_SIM, not live Wi-Fi measurements.
 | Authorized-repair baseline | 15/21 | 6/21 | 0 | RESULT-MODEL-SIM-BASE-FIX-SUN.md |
 | Added global proxy instructions and long proxy description | 6/21 | 15/21 | 0 | RESULT-PROXY-REPAIR-SUN.md |
 | Long proxy description only | 6/21 | 15/21 | 0 | RESULT-PROXY-REPAIR-SUN.md |
-| Adopted snapshot-restore descriptions, post-hoc tuned | 21/21 | 0/21 | 0 | RESULT-MODEL-SIM-PROXY-FIX-SUN.md |
+| Adopted snapshot-restore descriptions, rewritten post hoc | 21/21 | 0/21 | 0 | RESULT-MODEL-SIM-PROXY-FIX-SUN.md |
 | Frozen compound-fault held-out repair targets | 4/14 | 10/14 | 0 | RESULT-HELDOUT-EVAL-SUN.md |
 
 The held-out run separately passed 6/6 held-policy cases, with 20/20 verified

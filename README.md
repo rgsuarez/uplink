@@ -158,11 +158,8 @@ Model: base, unmodified open weights.
 | **F06 stale proxy** (2 segments; entry max raised from 24.5 to 24.75 GiB between them; 6 pre-model headroom refusals excluded from trial count) | `restore_proxy` | **5/5 PASS** (A 2/2 + B 3/3) | **10.395 s** | **0** | [F06-COMBINED-TALLY.md](evidence/f06-series/F06-COMBINED-TALLY.md); [SERIES-LEDGER.json](evidence/f06-series/98e499eebbd7/SERIES-LEDGER.json); [SERIES-LEDGER.json](evidence/f06-series/15a6104a9685/SERIES-LEDGER.json) (committed source `c3dd1ad`; sanitized public derivatives) |
 | Control: healthy network | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 | Control: misleading status text | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
-| F05 wrong gateway | `restore_gateway` | _PENDING (only if run and committed before the freeze)_ | _PENDING_ | _PENDING_ | _PENDING_ |
-| Site-only outage | `report` | _PENDING (only if run and committed)_ | n/a | _PENDING_ | _PENDING_ |
-| F01 Wi-Fi radio off | `restore_radio` | _PENDING (only if run and committed)_ | _PENDING_ | _PENDING_ | _PENDING_ |
 
-<!-- Placeholder rows: replace with committed numbers at the Wed 11 AM CT freeze, or delete rows for series that were not run. Never leave a PENDING row in the published README. -->
+Not in the table yet: F05 wrong gateway not run; site-only outage 0/1 (refused by the strict checker); F01 Wi-Fi radio off in progress, results pending. Receipts for these are pending and will be added only once their ledgers are committed in this repo.
 
 In these 6 controls, the base Glimmer model never changed the network under either healthy or
 misleading-status conditions (0 network mutations, 0 false-action requests, 0 false ONLINE),
@@ -185,7 +182,9 @@ on the same Mac under a restricted restore-only profile; that sequence, and the 
 before it, are in [REPORT-U1-LIVE.md](REPORT-U1-LIVE.md) and are not pooled with the
 series above.
 
-### Simulation (separate, labeled MODEL_IN_LOOP_SIM)
+### Simulated fault trials
+
+Separate from the live results above; labeled `MODEL_IN_LOOP_SIM`.
 
 Meta Muse Glimmer 30B (base, unmodified open weights), served by `llama-server` on a Modal A10G GPU, chose actions against
 simulated faults. These rows are not live recoveries and not on-device timings.
@@ -193,7 +192,7 @@ simulated faults. These rows are not live recoveries and not on-device timings.
 | Run | Recovered | Honest reports | False ONLINE | Note |
 | --- | ---: | ---: | ---: | --- |
 | `authorized-repair-v1` baseline | 15/21 | 6 | 0 | Retained baseline |
-| `snapshot-restore-descriptions-v1` | 21/21 | 0 | 0 | Adopted; tool descriptions tuned **post hoc** on these same cases |
+| `snapshot-restore-descriptions-v1` | 21/21 | 0 | 0 | Adopted; tool descriptions rewritten **post hoc** on these same cases |
 | Held-out compound faults (frozen before inference) | 4/14 repair targets | 6/6 held-policy reports | 0 | New repair inputs 2/12; 20/20 verified cleanups |
 
 Two rejected description variants (6/21 each, 0 false ONLINE) are kept in
@@ -234,7 +233,7 @@ PY
 
 Expected: `10/10`, `15.319 s`, `0`, and four excluded attempts.
 
-**Recompute F06 and no-change controls** (committed public ledgers, no model or network):
+**Recompute F06 and no-change controls** (ledgers committed in this repo, no model or network):
 
 ```sh
 python3 - <<'PY'
@@ -274,7 +273,7 @@ python3 -c "from pathlib import Path; print(Path('demo/model-sim/adopted-F04.md'
 ```
 
 Saved, sanitized replay views are in [demo/model-sim/](demo/model-sim/README.md).
-Original private recordings and receipt bundles are not distributed. Public ledgers
+Original private recordings and receipt bundles are not distributed. Ledgers committed in this repo
 retain the original evidence hashes and carry separate public derivative hashes.
 
 **Run the model yourself** (any 24 GB+ Apple Silicon or GPU machine):
@@ -290,7 +289,7 @@ with an out-of-band link; it is not part of the quick reproduction.
 
 ## Demo video
 
-3-minute demo (cut r12q7, 2:51.90): **VIDEO_URL_PLACEHOLDER**. It opens with the
+3-minute demo r13 (2:45.23): `VIDEO_URL_PLACEHOLDER` (placeholder token; no public video URL yet). It opens with the
 pre-existing-work line, shows a real recorded recovery and ends on the honest limits.
 Storyboard: [DEMO-SCRIPT.md](DEMO-SCRIPT.md).
 
@@ -309,13 +308,13 @@ Storyboard: [DEMO-SCRIPT.md](DEMO-SCRIPT.md).
 
 - Live coverage includes F04 DNS, F06 proxy and healthy/misleading-status controls.
   Control safety held, but all six health reports failed the required reason check.
-  F05 wrong gateway, site-only outage and F01 radio-off remain pending, only if
-  committed before the Wednesday 11:00 AM CT freeze.
+  F05 wrong gateway was not run; site-only outage was 0/1 (refused); F01 radio-off is
+  in progress with results pending. Receipts for these three are pending.
 - Ten passes on one fault class show the loop works on real hardware; they do not
   establish general field reliability.
 - The F04 aggregate spans three policy segments, and timings are warm (three warm-ups).
 - "0 false ONLINE" is what we observed, not a guarantee.
-- The 21/21 simulation result was tuned post hoc; the held-out simulation result is 4/14.
+- The 21/21 simulation result came after rewriting the tool descriptions post hoc on those same cases; the held-out simulation result is 4/14.
 - Model: Meta Muse Glimmer 30B, base, unmodified open weights.
 
 ## License and provenance

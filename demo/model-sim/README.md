@@ -2,7 +2,7 @@
 
 These are sanitized views of saved **MODEL_IN_LOOP_SIM** evidence: real unadapted
 BASE Muse Glimmer Q4 inference on Modal A10G, with a fake fault kernel. The adopted
-descriptions were tuned after F06/F07 failures. None is held-out or live Wi-Fi evidence.
+descriptions were rewritten after F06/F07 failures. None is held-out or live Wi-Fi evidence.
 Opening a view does not measure this computer's connection or run a model.
 
 | View | Recorded observation |

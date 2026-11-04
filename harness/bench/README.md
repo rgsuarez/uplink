@@ -4,8 +4,8 @@ This package registers one F04 DNS-fault observation using unadapted Q4 BASE and
 `snapshot-restore-descriptions-v1`. It is an offline review artifact. It does not
 authorize contact, staging, root installation, fault injection or inference.
 
-The prior 21/21 result is MODEL_IN_LOOP_SIM, tuned after F06/F07 inspection, not
-held-out and not live Wi-Fi. This package has no measured live recovery result.
+The prior 21/21 result is MODEL_IN_LOOP_SIM, with tool descriptions rewritten post hoc
+after F06/F07 inspection, not held-out and not live Wi-Fi. This package has no measured live recovery result.
 
 ## Binding and activation
 
