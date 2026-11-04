@@ -1,0 +1,26 @@
+{
+  "at": 1793756960.741278,
+  "attempts_consumed": 1,
+  "baseline_exact_now": true,
+  "excluded_from_model_denominator": true,
+  "model_reached": false,
+  "model_requests": 0,
+  "original_hashes": {
+    "PREREG.json": "bb31201e5094d5c3e325eea4e5cc83a38f2c4aa03473a66232a237d08e30fb75",
+    "SERIES-LEDGER.json": "1bdd3ac9a477640fced6ad34f255b26a8897d9ab5c30ed5e80346b880f26ff1e",
+    "SERIES-LEDGER.jsonl": "344fe2836ebe2d96d68469ec4479ee8597ca831f9e27db4ba91780364ad65194",
+    "SERIES-LEDGER.md": "121ae547fcbf9d5a7dddf6756ee6b6ccdfad4cccf5d8d2de2470efb80f279032",
+    "STATE.json": "16bf8e894447f30bf40db53b31c6c4ae68398090b560402b8a0007a2fda6835b",
+    "SUMMARY.json": "820b047dfefd6d0d4a05840ac6c5afec76472e3ab1a7e6f9849cf5312dfadcd0"
+  },
+  "read_only_evidence_sha256": "9230ce7ee1005bb8f1797b287f7024725a104defc2798902d3d0c90684eae83a",
+  "reason": "inject/f05_active_fault_settle_unproven",
+  "resumable": false,
+  "run_id": "d06d739b2d5b",
+  "schema": "branchout-terminal-closure-v1",
+  "series_id": "2fb95641a8b5",
+  "state": "STOPPED",
+  "stop_reason": "ABORT",
+  "terminal": true,
+  "unused_attempts_retired": 14
+}

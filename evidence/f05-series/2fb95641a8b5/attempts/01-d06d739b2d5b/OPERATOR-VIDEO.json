@@ -1,0 +1,70 @@
+{
+  "clip_seconds": 30,
+  "continuous": false,
+  "finished_at": 1793756616.059062,
+  "host": "operator-Mac",
+  "method": "finite screencapture clips; natural completion; no audio",
+  "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-2fb95641a8b5/attempts/01-d06d739b2d5b/operator-video-001.mov",
+  "requested_stop_at": 1793756603.133887,
+  "run_id": "d06d739b2d5b",
+  "schema": "uplink-operator-video-v2",
+  "segments": [
+    {
+      "bytes": 8412241,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793756522.425181,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0,
+      "index": 1,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-2fb95641a8b5/attempts/01-d06d739b2d5b/operator-video-001.mov",
+      "sha256": "507aa9e326701364b22d778346d9d543b8777690ac1ba5d6cb0f70d3812fa184",
+      "started_at": 1793756491.9871318
+    },
+    {
+      "bytes": 13344005,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793756553.5074291,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0.771909236907959,
+      "index": 2,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-2fb95641a8b5/attempts/01-d06d739b2d5b/operator-video-002.mov",
+      "sha256": "f85944f1b2f42f65b0019d0a3ed8232ea1b175751fdefafee92ccb34bb570642",
+      "started_at": 1793756523.1970901
+    },
+    {
+      "bytes": 19475793,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793756584.555275,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0.7314019203186035,
+      "index": 3,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-2fb95641a8b5/attempts/01-d06d739b2d5b/operator-video-003.mov",
+      "sha256": "97d8a13af3f215a665d359495456f2cf440540fec9e06c82ebb0939ed83076b9",
+      "started_at": 1793756554.238831
+    },
+    {
+      "bytes": 21957271,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793756615.6572502,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0.7380270957946777,
+      "index": 4,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-2fb95641a8b5/attempts/01-d06d739b2d5b/operator-video-004.mov",
+      "sha256": "73ce719242025afca1da40041c594140c57a9e90a4361f281c132770021c06a0",
+      "started_at": 1793756585.293302
+    }
+  ],
+  "sha256": "507aa9e326701364b22d778346d9d543b8777690ac1ba5d6cb0f70d3812fa184",
+  "started_at": 1793756491.8661492,
+  "status": "RECORDED",
+  "trial_blocking": false,
+  "viewport_rule": "front Terminal id/title/bounds at clip boundaries; no interim occlusion guarantee"
+}

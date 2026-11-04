@@ -1,0 +1,15 @@
+{
+  "at": 1793756960.7408938,
+  "event": "terminal_closure_intent",
+  "original_hashes": {
+    "PREREG.json": "bb31201e5094d5c3e325eea4e5cc83a38f2c4aa03473a66232a237d08e30fb75",
+    "SERIES-LEDGER.json": "1bdd3ac9a477640fced6ad34f255b26a8897d9ab5c30ed5e80346b880f26ff1e",
+    "SERIES-LEDGER.jsonl": "344fe2836ebe2d96d68469ec4479ee8597ca831f9e27db4ba91780364ad65194",
+    "SERIES-LEDGER.md": "121ae547fcbf9d5a7dddf6756ee6b6ccdfad4cccf5d8d2de2470efb80f279032",
+    "STATE.json": "16bf8e894447f30bf40db53b31c6c4ae68398090b560402b8a0007a2fda6835b",
+    "SUMMARY.json": "820b047dfefd6d0d4a05840ac6c5afec76472e3ab1a7e6f9849cf5312dfadcd0"
+  },
+  "write_set": [
+    "TERMINAL-CLOSURE.json"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "media_committed": false,
+  "recordings": [
+    {
+      "local_file_available": true,
+      "media_committed": false,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-372d7304785e/attempts/01-bd4685c92ffc/terminal.typescript",
+      "run_id": "bd4685c92ffc",
+      "series_id": "372d7304785e",
+      "sha256": "55e84b1f803e6bdf18dc21439defe8ec656db2c0f3a545eb037249995fcec850"
+    },
+    {
+      "local_file_available": true,
+      "media_committed": false,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-07feb82455e7/attempts/01-d93397b1a7f5/terminal.typescript",
+      "run_id": "d93397b1a7f5",
+      "series_id": "07feb82455e7",
+      "sha256": "1796e05ea3162639e8b7d5a5b013c6f3dbc84066f8d100d49e8307552704c2a4"
+    },
+    {
+      "local_file_available": true,
+      "media_committed": false,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-2fb95641a8b5/attempts/01-d06d739b2d5b/terminal.typescript",
+      "run_id": "d06d739b2d5b",
+      "series_id": "2fb95641a8b5",
+      "sha256": "18976e927e79b96720ce7699fe48a711d9f0902e2273660c1c77070770a62e51"
+    },
+    {
+      "local_file_available": true,
+      "media_committed": false,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-46b49c0793cc/attempts/01-eb5066f07b6b/terminal.typescript",
+      "run_id": "eb5066f07b6b",
+      "series_id": "46b49c0793cc",
+      "sha256": "123b3954a772f9780005400ef392abff49dda71ac7ccee96447c257a8c82cd6a"
+    },
+    {
+      "local_file_available": true,
+      "media_committed": false,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-61ab0007254a/attempts/01-511da249465d/terminal.typescript",
+      "run_id": "511da249465d",
+      "series_id": "61ab0007254a",
+      "sha256": "22b6c6d1bfae5a6e5fff13b04eeaf1e15da00c032ab851d549babd4b9d8d3607"
+    },
+    {
+      "local_file_available": true,
+      "media_committed": false,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/01-2227959ce71d/terminal.typescript",
+      "run_id": "2227959ce71d",
+      "series_id": "cd4fea26e41a",
+      "sha256": "08c4636a071995f0d8a0bb758209b95b102deb5649325ed19a00a4444336a5f4"
+    },
+    {
+      "local_file_available": true,
+      "media_committed": false,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/02-8a36250baf8f/terminal.typescript",
+      "run_id": "8a36250baf8f",
+      "series_id": "cd4fea26e41a",
+      "sha256": "2360662339f207c653ba5d531b5c361ae15585fc2a4209b830a3d9f48546adcd"
+    },
+    {
+      "local_file_available": true,
+      "media_committed": false,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/terminal.typescript",
+      "run_id": "21f5d24f0824",
+      "series_id": "cd4fea26e41a",
+      "sha256": "e6cc72dd95e4a621aa1c94a3f21bba1191d938194aade624c93d77cb348d89ba"
+    }
+  ],
+  "schema": "uplink-f05-recording-index-v1"
+}

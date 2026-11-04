@@ -1,0 +1,21 @@
+{
+  "case_id": "F05",
+  "claim": "In the single registered November 3 F05 live wrong-gateway trial, Uplink recovered before cleanup. Recovery was verified 13.941 seconds after the verified-fault measurement. Recorded false ONLINE: no. OOB checks passed: yes. Cleanup verified: yes. This one trial does not establish general reliability or change the separate frozen simulation results.",
+  "cleanup_ok": true,
+  "definition_id": "wrong-ipv4-kernel-gateway-v7c",
+  "eligible_for_submission": true,
+  "false_online": false,
+  "false_online_count": 0,
+  "input_manifest_sha256": "5363089a7d4a5d174e0a6ae9b0c40d3ba0e638b826267bcf6003ec7d212f1ab4",
+  "model_gateway_recovery_verified": true,
+  "oob_ok": true,
+  "outcome": "recovered",
+  "outcome_key": "recovered",
+  "receipt_sha256": "f04f6a747c4bcdd87bcfb724b7a52ad9c8a122845b02b37dcdc15f95e5b0fcf4",
+  "recording_integrity_sha256": "69c4b5496e955c8d3840314d87394c2dc1eb937b880fa6940aa0f25421621da0",
+  "result_sha256": "472630200b1401e335bdc881479eaa30c4fef3c97548f977521d13ef721a11e4",
+  "run_id": "2227959ce71d",
+  "status": "VALIDATED",
+  "time_basis": "verified-fault measurement to successful recovery measurement, before cleanup",
+  "time_to_recovery_seconds": 13.941
+}

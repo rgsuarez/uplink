@@ -1,0 +1,323 @@
+{
+  "capture_complete": true,
+  "events": [
+    {
+      "at": 1793806262.7136269,
+      "event": "recording_session_started",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "kind": "real_recorded_base_trial"
+      }
+    },
+    {
+      "at": 1793806284.054584,
+      "event": "warmup_completed",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "complete": true,
+        "request_count": 3
+      }
+    },
+    {
+      "at": 1793806294.918877,
+      "event": "resource_headroom_admitted",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "passed": true
+      }
+    },
+    {
+      "at": 1793806295.027811,
+      "event": "intent.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "kind": "uplink-bench-reduced-v1"
+      }
+    },
+    {
+      "at": 1793806295.028051,
+      "event": "authority.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "kind": "AMANDA-GO-BRANCHOUT-F05-ATTEMPT-v1"
+      }
+    },
+    {
+      "at": 1793806295.028278,
+      "event": "authority-binding.json",
+      "run_id": "8a36250baf8f",
+      "summary": {}
+    },
+    {
+      "at": 1793806295.0284212,
+      "event": "reservation-state-initial.json",
+      "run_id": "8a36250baf8f",
+      "summary": {}
+    },
+    {
+      "at": 1793806299.7193012,
+      "event": "reservation-request-sent.json",
+      "run_id": "8a36250baf8f",
+      "summary": {}
+    },
+    {
+      "at": 1793806300.282759,
+      "event": "reservation-confirmed.json",
+      "run_id": "8a36250baf8f",
+      "summary": {}
+    },
+    {
+      "at": 1793806300.283354,
+      "event": "reservation.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "kind": "uplink-bench-reduced-v1",
+        "lifecycle": "reserved"
+      }
+    },
+    {
+      "at": 1793806300.283807,
+      "event": "preflight-oob.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "consecutive_successes": 3,
+        "failures": 0,
+        "kind": "TOP10-RELAY-OOB-v1",
+        "passed": true
+      }
+    },
+    {
+      "at": 1793806307.134784,
+      "event": "preflight.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "base_verified": true
+      }
+    },
+    {
+      "at": 1793806307.135186,
+      "event": "intent.json",
+      "run_id": "8a36250baf8f",
+      "summary": {}
+    },
+    {
+      "at": 1793806312.5929532,
+      "event": "preflight.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "base_verified": true
+      }
+    },
+    {
+      "at": 1793806315.19188,
+      "event": "prepare.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "lifecycle": "snapshotted"
+      }
+    },
+    {
+      "at": 1793806316.240351,
+      "event": "arm.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "lifecycle": "armed"
+      }
+    },
+    {
+      "at": 1793806321.009919,
+      "event": "negative-control.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "fault_effective": true,
+        "lifecycle": "fault_verified"
+      }
+    },
+    {
+      "at": 1793806321.010923,
+      "event": "observe-1.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "fault_effective": true,
+        "lifecycle": "fault_verified"
+      }
+    },
+    {
+      "at": 1793806323.302739,
+      "event": "oracle-1.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "verdict": "DEGRADED"
+      }
+    },
+    {
+      "at": 1793806323.917772,
+      "event": "resource-1.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "base_verified": true
+      }
+    },
+    {
+      "at": 1793806324.505292,
+      "event": "model-intent-1.json",
+      "run_id": "8a36250baf8f",
+      "summary": {}
+    },
+    {
+      "at": 1793806330.566615,
+      "event": "model-1.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "kind": "bench-reduced-base-completion-v1",
+        "request_count": 1,
+        "tool": "restore_gateway"
+      }
+    },
+    {
+      "at": 1793806331.169921,
+      "event": "action-1.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "lifecycle": "deciding"
+      }
+    },
+    {
+      "at": 1793806334.1779048,
+      "event": "verify-observation-1.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "lifecycle": "deciding"
+      }
+    },
+    {
+      "at": 1793806334.1785789,
+      "event": "verify-oracle-1.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "verdict": "ONLINE"
+      }
+    },
+    {
+      "at": 1793806334.1801112,
+      "event": "oob-qualification.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "consecutive_successes": 3,
+        "failures": 0,
+        "kind": "TOP10-RELAY-OOB-v1",
+        "passed": true
+      }
+    },
+    {
+      "at": 1793806337.719949,
+      "event": "restore.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "lifecycle": "restored"
+      }
+    },
+    {
+      "at": 1793806338.6587598,
+      "event": "handback-oracle.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "verdict": "ONLINE"
+      }
+    },
+    {
+      "at": 1793806339.786749,
+      "event": "close.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "lifecycle": "closed"
+      }
+    },
+    {
+      "at": 1793806339.787473,
+      "event": "retire.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "retired": true
+      }
+    },
+    {
+      "at": 1793806340.388122,
+      "event": "handback-resources.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "base_verified": true
+      }
+    },
+    {
+      "at": 1793806340.389718,
+      "event": "receipt.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "cleanup_verified": true,
+        "evidence_kind": "BASE",
+        "false_online": 0,
+        "kind": "uplink-bench-reduced-v1",
+        "model_requests": 1,
+        "outcome": "recovered",
+        "synthetic_policy_requests": 0
+      }
+    },
+    {
+      "at": 1793806340.390275,
+      "event": "slot-timing.json",
+      "run_id": "8a36250baf8f",
+      "summary": {}
+    },
+    {
+      "at": 1793806385.221807,
+      "event": "handback-oob.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "consecutive_successes": 3,
+        "failures": 0,
+        "kind": "TOP10-RELAY-OOB-v1",
+        "passed": true
+      }
+    },
+    {
+      "at": 1793806385.836864,
+      "event": "handback-resources.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "base_verified": true
+      }
+    },
+    {
+      "at": 1793806386.408577,
+      "event": "reduced-result.json",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "complete": true,
+        "kind": "uplink-bench-reduced-v1"
+      }
+    },
+    {
+      "at": 1793806386.4092648,
+      "event": "recording_session_finished",
+      "run_id": "8a36250baf8f",
+      "summary": {
+        "complete": true
+      }
+    }
+  ],
+  "exit_code": 0,
+  "finished_at": 1793806386.4092648,
+  "format": "macos-script-r-v1",
+  "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/02-8a36250baf8f/terminal.typescript",
+  "sha256": "2360662339f207c653ba5d531b5c361ae15585fc2a4209b830a3d9f48546adcd",
+  "started_at": 1793806262.7136269
+}

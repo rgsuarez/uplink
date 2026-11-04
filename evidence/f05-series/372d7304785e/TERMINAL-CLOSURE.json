@@ -1,0 +1,27 @@
+{
+  "at": 1793754668.2390258,
+  "attempts_consumed": 1,
+  "excluded_from_model_denominator": true,
+  "model_reached": 0,
+  "model_requests": 0,
+  "original_hashes": {
+    "PREREG.json": "bbaea80c0948b04a04afa1431be03a4e20d48eb42c8158518aaf1a11bbe60c89",
+    "SERIES-LEDGER.json": "c40654c28706b0a5218d146e5ebe87685959bd92c1de53f66b2c7598a6bffd51",
+    "SERIES-LEDGER.jsonl": "1faf92e0bc69fbb079b37dedcc5ee17311ba50335ba17aa8777a2dcfa2efb9b3",
+    "SERIES-LEDGER.md": "4f25d3e165fd8634910fbdac8d9d3fc12423dc7d22c30cd76d1bfcc2087ef8df",
+    "STATE.json": "68a8a1f8ce15db2b84de5d5fd51ca6165f6804ff40bba5d994cafde070383f2b",
+    "SUMMARY.json": "7a00b31302337b9aea3b2c9b6ea245042c2c7b1863f544c81b0f0b1d063a477a"
+  },
+  "passes": 0,
+  "resumable": false,
+  "runtime_reason": "inject/top10_restore_deadline_exceeded",
+  "schema": "branchout-terminal-closure-v1",
+  "secondary_export_error": "FileNotFoundError: absent negative-control.json after pre-measurement abort",
+  "series_id": "372d7304785e",
+  "state": "STOPPED",
+  "stop_reason": "ABORT",
+  "terminal": true,
+  "unused_attempts_retired": 14,
+  "video_segments": 4,
+  "video_status": "RECORDED"
+}

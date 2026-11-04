@@ -1,0 +1,30 @@
+{
+  "at": 1793755886.538222,
+  "attempts_consumed": 1,
+  "excluded_from_denominator": true,
+  "model_reached": false,
+  "model_requests": 0,
+  "no_bench_contact_during_attempt": true,
+  "original_hashes": {
+    "PREREG.json": "92b62ab5ae9199e3a86e3f0ee354da9b0cd7ffb58d22c0d2e84bd8a240cbf46a",
+    "SERIES-LEDGER.json": "0d525b3ab24b92d967d8a044989f32ae1f9dc2869eb9c495dc8fe2db4362bb20",
+    "SERIES-LEDGER.jsonl": "487c260b5c2f5cca369c923544c054623e64a37b22c0da03a31b9902089bd204",
+    "SERIES-LEDGER.md": "2e3fe7f271fe3524139955f3f6dd6f39c71fc6e74daf93022ef0de3aa456b85c",
+    "STATE.json": "af0369fb7a188c8ab1238221ae16ede039656341c0af52d7aaed8ca3f2bb311d",
+    "SUMMARY.json": "d72a76b08b27629904bf775932bcda3ab65a80eda80f5f6e821b3237da0370c0"
+  },
+  "original_ledger_counts_retained": "null, not rewritten",
+  "proof_sha256": "d5b6aa5fdce81917a3e0776f67df314a4016aed4e3dc8f7c328e9a7bffa5c2b8",
+  "qualification_sha256": "52a88576549524ef1c896b1935b6abf3b29ec6163184df9f8bd6b5adc055205e",
+  "reason": "driver base interpreter failed importing bench_run/jsonschema before prelaunch helpers",
+  "resumable": false,
+  "run_id": "d93397b1a7f5",
+  "schema": "branchout-terminal-closure-v1",
+  "series_id": "07feb82455e7",
+  "state": "STOPPED",
+  "stop_reason": "ABORT",
+  "terminal": true,
+  "typescript_sha256": "1796e05ea3162639e8b7d5a5b013c6f3dbc84066f8d100d49e8307552704c2a4",
+  "unused_attempts_retired": 14,
+  "zero_model_proven": true
+}

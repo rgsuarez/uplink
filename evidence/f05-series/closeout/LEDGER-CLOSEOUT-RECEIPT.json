@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-04T09:51:44.235808-06:00",
+  "closure": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/TERMINAL-CLOSURE-TRIAL-03.json",
+  "closure_sha256": "b64a57567fc42621bd0882b8ddc94a61ee2d873f30dfbb1a65839745bb7c6f63",
+  "counted_model_reached": 2,
+  "counted_passes": 2,
+  "journal": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/SERIES-OPERATOR-CLOSEOUT.jsonl",
+  "journal_sha256": "ccb3133a411cd96a68951d336a82950f3abf53e53aa3dd2c9c6a1253995c48eb",
+  "ledger_json_sha256": "180ac29aa52c12c5590e89793423b1bbb9a2a8458aad466102969de6174d5b00",
+  "ledger_md_sha256": "922b23dc6feda7438245fc72c75c38af9d76e7b1eb1445bc20a3febcb7e560db",
+  "original_ledger_jsonl_sha256": "314531ec65a605ad47acdd84c0a937642b14b24c043d56a8c2a5499dffbfa741",
+  "schema": "f05-v7d-ledger-closeout-receipt-v1",
+  "series_stopped": true,
+  "trial3_excluded": true
+}

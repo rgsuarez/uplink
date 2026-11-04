@@ -1,0 +1,28 @@
+{
+  "clip_seconds": 30,
+  "continuous": false,
+  "finished_at": 1793755319.158459,
+  "host": "operator-Mac",
+  "method": "finite screencapture clips; natural completion; no audio",
+  "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-07feb82455e7/attempts/01-d93397b1a7f5/operator-video-001.mov",
+  "requested_stop_at": 1793755288.977403,
+  "run_id": "d93397b1a7f5",
+  "schema": "uplink-operator-video-v2",
+  "segments": [
+    {
+      "bytes": 2667428,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793755319.157388,
+      "gap_before_seconds": 0,
+      "index": 1,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-07feb82455e7/attempts/01-d93397b1a7f5/operator-video-001.mov",
+      "sha256": "851014734490a0103067a60cac5fded1b03e3831a475f1db5993394070c81d77",
+      "started_at": 1793755288.774209
+    }
+  ],
+  "sha256": "851014734490a0103067a60cac5fded1b03e3831a475f1db5993394070c81d77",
+  "started_at": 1793755288.773945,
+  "status": "RECORDED",
+  "trial_blocking": false
+}

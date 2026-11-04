@@ -1,0 +1,49 @@
+{
+  "action_chosen": [],
+  "false_online": 0,
+  "finished_at": "2026-11-04T09:35:51.636136-06:00",
+  "index": 3,
+  "model_reached": false,
+  "model_requests": 0,
+  "outcome": "ABORT",
+  "reason": "f05_unowned_route_change",
+  "recording_path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/terminal.typescript",
+  "recording_sha256": "e6cc72dd95e4a621aa1c94a3f21bba1191d938194aade624c93d77cb348d89ba",
+  "recovery_seconds": null,
+  "result_sha256": "a42269eaef22c93b787f28f4951de2493c0caedcc5e79e113bcf5023a0c5ac82",
+  "retry": false,
+  "run_id": "21f5d24f0824",
+  "strict_reader_verdict": "REFUSED",
+  "strict_result_sha256": "5687af40f5e8b80831cb70b3e8896f8a17cdd746519a839a39d15d0b97cb8b63",
+  "video_path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/operator-video-001.mov",
+  "video_segments": [
+    {
+      "bytes": 309319,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793806479.7606668,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0,
+      "index": 1,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/operator-video-001.mov",
+      "sha256": "1dfc58ff28b0dcd188d03c008544c0c71a42f06afb7fb4ca62a613ca9655e415",
+      "started_at": 1793806447.141494
+    },
+    {
+      "bytes": 700485,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793806510.612878,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0.6270511150360107,
+      "index": 2,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/operator-video-002.mov",
+      "sha256": "6e20f6060f33309f1780e6ffc97f484cf926a8144f522a8cda15a4da2cdca3be",
+      "started_at": 1793806480.387718
+    }
+  ],
+  "video_sha256": "1dfc58ff28b0dcd188d03c008544c0c71a42f06afb7fb4ca62a613ca9655e415",
+  "video_status": "CAPTURE_INCOMPLETE"
+}

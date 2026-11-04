@@ -1,0 +1,51 @@
+{
+  "action_chosen": [
+    "restore_gateway"
+  ],
+  "false_online": 0,
+  "finished_at": "2026-11-04T09:33:06.684923-06:00",
+  "index": 2,
+  "model_reached": true,
+  "model_requests": 1,
+  "outcome": "PASS",
+  "reason": "strict_recovered",
+  "recording_path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/02-8a36250baf8f/terminal.typescript",
+  "recording_sha256": "2360662339f207c653ba5d531b5c361ae15585fc2a4209b830a3d9f48546adcd",
+  "recovery_seconds": 12.178,
+  "result_sha256": "98d6ec8985d1e57bd3febb57ed49273d2b3269c0d9ca61e2f801739d0e78e304",
+  "retry": false,
+  "run_id": "8a36250baf8f",
+  "strict_reader_verdict": "VALIDATED",
+  "strict_result_sha256": "819dd6f3b059be5d5959307e2628043f3f08ec00c363969771f04145cd48e371",
+  "video_path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/02-8a36250baf8f/operator-video-001.mov",
+  "video_segments": [
+    {
+      "bytes": 330806,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793806294.736636,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0,
+      "index": 1,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/02-8a36250baf8f/operator-video-001.mov",
+      "sha256": "1b0847c6f4a6d0953344f3320ddc9c097dfb8a6ce31d63b48f8eb31881aa18f1",
+      "started_at": 1793806262.53504
+    },
+    {
+      "bytes": 1023094,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793806325.697262,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0.7003591060638428,
+      "index": 2,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/02-8a36250baf8f/operator-video-002.mov",
+      "sha256": "2b2d11cb1d6eaf19166b03f7cb38d574f5a9c30300f57c8c22584701214a32ed",
+      "started_at": 1793806295.436995
+    }
+  ],
+  "video_sha256": "1b0847c6f4a6d0953344f3320ddc9c097dfb8a6ce31d63b48f8eb31881aa18f1",
+  "video_status": "CAPTURE_INCOMPLETE"
+}

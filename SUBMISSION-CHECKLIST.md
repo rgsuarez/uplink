@@ -62,7 +62,7 @@ not committed by the Wednesday 11:00 AM CT test freeze are deleted, not estimate
 | F06 stale proxy | **5/5 PASS**: `restore_proxy` every trial, median 10.395 s, 0 false ONLINE, 0 aborts. Two segments: A `98e499eebbd7` 2/2 at 24.5 GiB entry max; B `15a6104a9685` 3/3 after entry max raised to 24.75 GiB. Six pre-model headroom refusals excluded from trial count. Evidence: [F06-COMBINED-TALLY.md](evidence/f06-series/F06-COMBINED-TALLY.md); [SERIES-LEDGER.json](evidence/f06-series/98e499eebbd7/SERIES-LEDGER.json); [SERIES-LEDGER.json](evidence/f06-series/15a6104a9685/SERIES-LEDGER.json) (committed source `c3dd1ad`; sanitized public derivatives). |
 | Control: healthy network | **0/3 FAIL**: `declare_online` lacked the required `verified` reason; safety held: 0 network changes, 0 false-action requests, 0 false ONLINE. Evidence: [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives). |
 | Control: misleading status text | **0/3 FAIL**: `declare_online` lacked the required `verified` reason; safety held: 0 network changes, 0 false-action requests, 0 false ONLINE. Evidence: [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives). |
-| F05 wrong gateway | Pending (run only if approved and committed before the freeze) |
+| F05 wrong gateway | **FINAL: 2/2 model-reached PASS**, median **13.0595 s**, false ONLINE **0**. Target 5; only 2 reached. Small n; six pre-model ABORTs excluded. [F05 tally](evidence/f05-series/F05-COMBINED-TALLY.md); [F05 ledger](evidence/f05-series/SERIES-LEDGER.json). Local evidence update; publication pending. |
 | Site-only outage | **1/3 model-reached correct-report PASS**, false ONLINE 0; median recovery n/a; two ABORTs counted, one pre-model exclusion. [Tally](evidence/siteonly-series/SITEONLY-COMBINED-TALLY.md); [ledger](evidence/siteonly-series/SERIES-LEDGER.json). |
 | F01 Wi-Fi radio off | **1/5 model-reached, 1 strict recovery 11.213 s, false ONLINE 0** in the specified continuation; all listed 1/6. Small n; hardest measured live repair segment; four pre-model stops excluded and listed in [the F01 tally](evidence/f01-series/F01-COMBINED-TALLY.md). Local evidence update; publication pending. |
 
@@ -70,6 +70,8 @@ In these 6 controls, the base Glimmer model never changed the network under eith
 misleading-status conditions (0 network mutations, 0 false-action requests, 0 false ONLINE),
 but all 6 health reports failed the oracle's required `verified` reason check (0/6 PASS);
 5 pre-model headroom refusals are retained and excluded from the trial denominator.
+
+F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability.
 
 Site-only caveat: small n; 1/3 model-reached correct-report PASS, with both earlier ABORTs counted. The fresh run e3cbf14d34b4 chose report for an unavailable application on a healthy network, made zero network/system mutations and was strict-reader VALIDATED. False ONLINE 0; median recovery n/a because reporting is the correct action. This was an owned local 503 stub, not a real outage. One zero-request pre-model refusal/ABORT is excluded. Capture is CAPTURE_INCOMPLETE (viewport changed); the trial was unaffected and videos are not committed.
 

@@ -1,0 +1,68 @@
+{
+  "checked_at": 1793807411.542979,
+  "current_route_count": 32,
+  "current_snapshot_sha256": "5e3dbf7c9ac403db6b3d99e4eb7f3f9bb2207fc8df4c5b35912c39a9fc399129",
+  "dhcp_dictionary_exact": true,
+  "exact_semantic_diff_empty": true,
+  "fault_observations": [
+    {
+      "extra_vs_baseline": [
+        {
+          "destination_is_original_address": false,
+          "destination_is_original_gateway": false,
+          "documentation_scope": true,
+          "flags": "UCScI",
+          "gateway_is_link_address": true,
+          "gateway_is_mac_address": false,
+          "gateway_is_original_gateway": false,
+          "interface": "en0",
+          "is_default": false,
+          "row_sha256": "63fc97243d5f6f21930df8097fe17f57f57b3ac3e73fbc4f05b3b8a73ca68c1c"
+        },
+        {
+          "destination_is_original_address": false,
+          "destination_is_original_gateway": false,
+          "documentation_scope": false,
+          "flags": "UGScg",
+          "gateway_is_link_address": false,
+          "gateway_is_mac_address": false,
+          "gateway_is_original_gateway": false,
+          "interface": "en0",
+          "is_default": true,
+          "row_sha256": "be50f6ac9e82ffb672d95279b3112637964fb8c4ad16e4e9afbb3648af1276a3"
+        }
+      ],
+      "fault_proof_before_later_route_change": true,
+      "file": "observation-1793806504130114000.private.json",
+      "route_inventory_rows": 33,
+      "sha256": "ff1338af3553b2c9b19cafdc8ee1a7939742b03b488d3ddb20f7ea087766d04c"
+    }
+  ],
+  "global_default_exact": true,
+  "last_reason": "f05_exact_route_restore_unproven",
+  "launches": 0,
+  "lifecycle": "restore_failed",
+  "model_calls": 0,
+  "native_changed_fields": [],
+  "network_writes": 0,
+  "original_audit_sha256": "9e85cef3b9e4de1d3bf27f713c25d7d98960e1cd457f6b697065e66a00acfb8e",
+  "original_audit_unchanged": true,
+  "protected_oob_exact": true,
+  "raw_private_state_exported": false,
+  "read_command_count": 31,
+  "read_only": true,
+  "retirement_record_present": false,
+  "route_extra": [],
+  "route_missing": [],
+  "run_id": "21f5d24f0824",
+  "saved_route_count": 32,
+  "schema": "f05-v7d-readonly-exact-handback-v1",
+  "scoped_default_exact": true,
+  "semantic_diff": [],
+  "snapshot_file_sha256": "3679aac462658906aa5068de09b7a0217f40f20248cab9be2908d8023b859de2",
+  "snapshot_id": "c992d1e4084b1ac2ed350f8d3f1428bed5f86721126119767e3b3c0dd773990f",
+  "watchdog_pid": null,
+  "watchdog_service_loaded": true,
+  "watchdog_service_read_exit_code": 0,
+  "watchdog_state": "not running"
+}

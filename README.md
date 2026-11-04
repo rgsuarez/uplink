@@ -25,6 +25,8 @@ two segments). Both observed **0 false ONLINE**. Pre-model stops: **DNS 4,
 proxy 6, not counted** in those denominators. See [Results](#results) for
 the segment policies, all exclusions and the failed no-change controls.
 
+**F05 wrong gateway:** 2/2 model-reached PASS, median 13.0595 s, false ONLINE 0. Target 5; only 2 reached. Small n; no continuation.
+
 **F01 radio-off:** 1/5 model-reached, 1 strict recovery 11.213 s, false ONLINE 0 in the specified three-series continuation; all listed series are 1/6. See the scoped tally below.
 
 ## What it does
@@ -151,12 +153,13 @@ Model: base, unmodified open weights.
 | ↳ segment `075540cb0307` (v2) | `restore_dns` | 2/2 | 17.6935 s | 0 | `evidence/f04-series/075540cb0307/` |
 | ↳ segment `51ffa1727d58` (v2, completed) | `restore_dns` | 7/7 | 15.236 s | 0 | `evidence/f04-series/51ffa1727d58/` |
 | **F06 stale proxy** (2 segments; entry max raised from 24.5 to 24.75 GiB between them; 6 pre-model headroom refusals excluded from trial count) | `restore_proxy` | **5/5 PASS** (A 2/2 + B 3/3) | **10.395 s** | **0** | [F06-COMBINED-TALLY.md](evidence/f06-series/F06-COMBINED-TALLY.md); [SERIES-LEDGER.json](evidence/f06-series/98e499eebbd7/SERIES-LEDGER.json); [SERIES-LEDGER.json](evidence/f06-series/15a6104a9685/SERIES-LEDGER.json) (committed source `c3dd1ad`; sanitized public derivatives) |
+| **F05 wrong gateway** (final series cd4fea26e41a) | `restore_gateway` | **2/2 model-reached PASS** | **13.0595 s** | **0** | [F05 tally](evidence/f05-series/F05-COMBINED-TALLY.md); [F05 ledger](evidence/f05-series/SERIES-LEDGER.json) |
 | **F01 Wi-Fi radio off** (specified three-series continuation) | `restore_radio` | **1/5 model-reached PASS** | **1 strict recovery: 11.213 s** (one passing trial) | **0** | [F01 tally](evidence/f01-series/F01-COMBINED-TALLY.md); [F01 ledger](evidence/f01-series/SERIES-LEDGER.json) |
 | Control: healthy network | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 | Control: misleading status text | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 | **Site-only app server down** (owned local 503 stub) | report | **1/3 correct-report PASS** (two ABORTs counted) | n/a (report, no recovery) | **0** | [Site-only tally](evidence/siteonly-series/SITEONLY-COMBINED-TALLY.md); [ledger](evidence/siteonly-series/SERIES-LEDGER.json) |
 
-Not in the table yet: F05 wrong gateway not run. Receipts for this pending case will be added only once its ledger is committed in this repo.
+F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability.
 
 Site-only caveat: small n; 1/3 model-reached correct-report PASS, with both earlier ABORTs counted. The fresh run e3cbf14d34b4 chose report for an unavailable application on a healthy network, made zero network/system mutations and was strict-reader VALIDATED. False ONLINE 0; median recovery n/a because reporting is the correct action. This was an owned local 503 stub, not a real outage. One zero-request pre-model refusal/ABORT is excluded. Capture is CAPTURE_INCOMPLETE (viewport changed); the trial was unaffected and videos are not committed.
 
@@ -292,6 +295,27 @@ PY
 
 Expected: continuation 1/5, one strict recovery 11.213 s, all listed 1/6, false ONLINE 0, and four listed pre-model exclusions.
 
+**Recompute the final F05 result** (no model or network):
+
+```sh
+python3 - <<'PY'
+import json
+import statistics
+from pathlib import Path
+value = json.loads(Path("evidence/f05-series/SERIES-LEDGER.json").read_text())
+trials = [row for row in value["attempts"] if row["model_reached"] is True]
+passed = [row for row in trials if row["outcome"] == "PASS"]
+excluded = [row for row in value["attempts"] if row["excluded_from_denominator"]]
+assert len(passed) == len(trials) == 2
+assert len(excluded) == 6 and value["summary"]["target_model_reached"] == 5
+assert all(row["strict_reader_verdict"] == "VALIDATED" for row in passed)
+assert sum(row["false_online"] for row in trials) == 0
+median = statistics.median(row["recovery_seconds"] for row in passed)
+print(f"F05 final: {len(passed)}/{len(trials)} model-reached PASS; median {median:.4f} s; false ONLINE 0")
+print("Target 5; only 2 reached. Six pre-model ABORTs excluded; small n.")
+PY
+```
+
 **Recompute the site-only correct-report result** (no model or network):
 
 ```sh
@@ -349,9 +373,10 @@ Demo video (owner upload pending): VIDEO_URL_PLACEHOLDER. Verify the actual fina
 
 ## Honest caveats
 
-- Live coverage includes F04 DNS, F06 proxy, F01 radio-off, the owned site-only stub and healthy/misleading-status controls.
+- Live coverage includes F04 DNS, F06 proxy, F05 wrong gateway, F01 radio-off, the owned site-only stub and healthy/misleading-status controls.
   Control safety held, but all six health reports failed the required reason check.
-  F05 wrong gateway was not run. Site-only is 1/3 correct-report PASS on an owned local 503 stub, not a real outage; two ABORTs stay counted.
+  F05 is final at 2/2 model-reached PASS; target 5 was not met and small n limits the result. Site-only is 1/3 correct-report PASS on an owned local 503 stub, not a real outage; two ABORTs stay counted.
+- F05 caveat: small n. The target was 5; only 2 trials reached the model. Both selected restore_gateway and were strict-reader VALIDATED (13.941 s and 12.178 s). Trial 3 and five earlier pre-model ABORTs are disclosed and excluded. The series is final with no continuation; two successes do not establish general field reliability.
 - Site-only capture is CAPTURE_INCOMPLETE; trial unaffected, videos not committed. Small n; one pre-model stop excluded; no recovery time claimed.
 - F01 caveat: small n; radio-off is the hardest measured live repair segment. The specified three-series continuation is 1/5 (one PASS, one FAIL, three ABORTs); all listed series are 1/6 after including an earlier model-reached ABORT. Four pre-model refusals/aborts are excluded and listed in the tally.
 - Ten passes on one fault class show the loop works on real hardware; they do not

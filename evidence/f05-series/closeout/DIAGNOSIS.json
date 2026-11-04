@@ -1,0 +1,112 @@
+{
+  "at": "2026-11-04T09:51:44.220327-06:00",
+  "cause_limit": "The rejected inventory and offending destination/gateway/interface/flags were not retained, only stdout hashes. The preserved fault snapshot precedes that change. The exact new or changed route cannot be reconstructed from a hash.",
+  "cleanup_error": "f05_exact_route_restore_unproven",
+  "continuation": "Not built or staged. A pre-injection wait does not address an observed change after the first accepted fault readback. No supported narrow fix can be selected without identifying the rejected route.",
+  "counting": {
+    "counted_model_reached": 2,
+    "counted_passes": 2,
+    "current_series_aborts": 1,
+    "prior_uncounted_pre_model_aborts": 5,
+    "remaining_model_reached_trials": 3,
+    "target_model_reached": 5,
+    "trial_3_excluded_from_denominator": true,
+    "trial_3_model_requests": 0
+  },
+  "current_handback": {
+    "admission_reconciled": false,
+    "current_route_count": 32,
+    "dhcp_dictionary_exact": true,
+    "exact_semantic_diff_empty": true,
+    "global_default_exact": true,
+    "historical_60_second_restore_proven": false,
+    "historical_root_state": "restore_failed",
+    "native_changed_fields": [],
+    "observed_at": 1793807411.542979,
+    "protected_oob_exact": true,
+    "repair_performed": false,
+    "retirement_record_present": false,
+    "route_extra": [],
+    "route_missing": [],
+    "saved_route_count": 32,
+    "scoped_default_exact": true,
+    "semantic_diff": [],
+    "snapshot_id": "c992d1e4084b1ac2ed350f8d3f1428bed5f86721126119767e3b3c0dd773990f",
+    "watchdog_service_loaded": true,
+    "watchdog_state": "not running"
+  },
+  "evidence_sha256": {
+    "PRIVATE_HOME/projects/meta-hackathon/f05-v7d-mhbuild15-20261104/READONLY-EXACT-HANDBACK-v2.json": "482ab292a5e3aee1ec4ee5d2b4049311df5b306c35212225db115c04bac505ac",
+    "PRIVATE_HOME/projects/meta-hackathon/f05-v7d-mhbuild15-20261104/READONLY-EXACT-HANDBACK.json": "5b52fa8d3b5023b008076c523d61cbe5a49e45f855dc9ad1777f89e16832fad6",
+    "PRIVATE_HOME/projects/meta-hackathon/f05-v7d-mhbuild15-20261104/READONLY-ROUTE-LOGS-v2.json": "4b1708f28c81271b64317398ca72e510b7b1eb8cb674b95e1394fd14a213fe4c",
+    "PRIVATE_HOME/projects/meta-hackathon/f05-v7d-mhbuild15-20261104/READONLY-V7D-AUDIT.json": "d05677ef23589ed1b0a3842facc6b7de3be52cf0579eafaf160024fd03e50bba",
+    "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/ATTEMPT-RESULT.json": "dd70adbbb7c9d2ed6b05822e89cc2e1bab53350b929391a6c29203003fc66af7",
+    "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/OPERATOR-VIDEO.json": "f3c0d917807269aa29016039c04c84a3676c98019f58ef9787cb52def6cc701d",
+    "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/STRICT-RESULT.json": "5687af40f5e8b80831cb70b3e8896f8a17cdd746519a839a39d15d0b97cb8b63",
+    "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/operator-video-001.mov": "1dfc58ff28b0dcd188d03c008544c0c71a42f06afb7fb4ca62a613ca9655e415",
+    "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/operator-video-002.mov": "6e20f6060f33309f1780e6ffc97f484cf926a8144f522a8cda15a4da2cdca3be",
+    "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/runtime/21f5d24f0824/cleanup-failure.json": "7e39bb6a5ba1cdd1d08f50f79136bb7f6306d1fc7df6877246010bcb6786be39",
+    "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/runtime/21f5d24f0824/failure.json": "68bf1a0290aefa6be171299a8d6a53d417ed8276c5e700a9e8df06a25a2668b1",
+    "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/runtime/reduced-result.json": "a42269eaef22c93b787f28f4951de2493c0caedcc5e79e113bcf5023a0c5ac82",
+    "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/terminal.typescript": "e6cc72dd95e4a621aa1c94a3f21bba1191d938194aade624c93d77cb348d89ba"
+  },
+  "failing_phase": "second effect-route readback after successful mutation and first fault capture",
+  "fast_tier": false,
+  "fault_id": "F05",
+  "fault_side_inventory_stdout_digest": "ca9766148b8099799c99725106fa3d7a423fb7b74eafde8acc18557301bc2f6b",
+  "final_cleanup_inventory_stdout_digest": "d525fd888b21bc7bfc4e9858663100a64e35a99e7a30117b283b65ebe5e4557b",
+  "known_error": "f05_unowned_route_change",
+  "later_cleanup_refusal": "top10_failed_restore_requires_operator",
+  "launches": 0,
+  "learning": "Do not discard a computed refusal diagnosis. Preserve the actual rejected route delta alongside its hash; distinguish later healthy equality from a historically verified bounded handback.",
+  "log_signal": "configd reported Process router ARP failure: en0 at 09:35:03.084635 CT, before the rejected 09:35:04.1635299 inventory. Subsequent DHCP messages named en7. These logs do not identify the offending route or prove an en0 DHCP renewal.",
+  "model_calls": 0,
+  "network_setting_writes": 0,
+  "next_required_capability": "Persist the complete private route inventories and exact offending-row diff at each admission, effect, and restoration check; identify the transition without weakening ownership or exact restoration. Any later continuation must bind the two retained passes, run only three remaining model-reached trials, and independently reconcile the terminal failed root state and its own watchdog.",
+  "proven_sequence": [
+    {
+      "event_index": 122,
+      "fact": "owned en0 documentation parent added, exit 0"
+    },
+    {
+      "event_index": 127,
+      "fact": "captured global en0 gateway changed, exit 0"
+    },
+    {
+      "event_index": 130,
+      "fact": "immediate owned-route check accepted capture"
+    },
+    {
+      "event_index": 152,
+      "fact": "retained fault snapshot has 33 routes and recomputes a valid wrong-gateway fault proof"
+    },
+    {
+      "event_index": 160,
+      "fact": "later route inventory changed and at least one new or changed route failed the ownership predicate"
+    },
+    {
+      "event_index": 165,
+      "fact": "controller cleanup restored original global gateway, exit 0"
+    },
+    {
+      "event_index": 171,
+      "fact": "controller cleanup removed only its owned documentation parent, exit 0"
+    },
+    {
+      "event_index": 175,
+      "fact": "immediate full route inventory did not equal the saved inventory; restore_failed persisted"
+    },
+    {
+      "event_index": 177,
+      "fact": "further automatic restoration correctly refused the terminal failed state"
+    }
+  ],
+  "rejected_inventory_stdout_digest": "be118e7076cb09086ef1ab8a98f965648396251dbb3981cf075862575d151591",
+  "repairs": 0,
+  "run_id": "21f5d24f0824",
+  "schema": "f05-v7d-diagnosis-v1",
+  "series_id": "cd4fea26e41a",
+  "snapshot_id": "c992d1e4084b1ac2ed350f8d3f1428bed5f86721126119767e3b3c0dd773990f",
+  "source_go_sha256": "698f3fda3a0d3ad7a69ffc4df42ad4768eddbff6c096e8a49da242b0b4908eae",
+  "status": "BLOCKED_CAUSE_NOT_PROVEN"
+}

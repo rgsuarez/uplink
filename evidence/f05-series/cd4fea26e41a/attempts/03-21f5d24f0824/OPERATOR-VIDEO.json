@@ -1,0 +1,45 @@
+{
+  "clip_seconds": 30,
+  "continuous": false,
+  "finished_at": 1793806551.636214,
+  "host": "operator-Mac",
+  "method": "finite screencapture clips; natural completion; no audio",
+  "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/operator-video-001.mov",
+  "reason": "TimeoutExpired:capture_dependency_failed",
+  "requested_stop_at": 1793806551.6361952,
+  "run_id": "21f5d24f0824",
+  "schema": "uplink-operator-video-v2",
+  "segments": [
+    {
+      "bytes": 309319,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793806479.7606668,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0,
+      "index": 1,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/operator-video-001.mov",
+      "sha256": "1dfc58ff28b0dcd188d03c008544c0c71a42f06afb7fb4ca62a613ca9655e415",
+      "started_at": 1793806447.141494
+    },
+    {
+      "bytes": 700485,
+      "exit_code": 0,
+      "finalized": true,
+      "finished_at": 1793806510.612878,
+      "foreground_at_end": true,
+      "foreground_at_start": true,
+      "gap_before_seconds": 0.6270511150360107,
+      "index": 2,
+      "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-cd4fea26e41a/attempts/03-21f5d24f0824/operator-video-002.mov",
+      "sha256": "6e20f6060f33309f1780e6ffc97f484cf926a8144f522a8cda15a4da2cdca3be",
+      "started_at": 1793806480.387718
+    }
+  ],
+  "sha256": "1dfc58ff28b0dcd188d03c008544c0c71a42f06afb7fb4ca62a613ca9655e415",
+  "started_at": 1793806447.0372212,
+  "status": "CAPTURE_INCOMPLETE",
+  "trial_blocking": false,
+  "viewport_rule": "front Terminal id/title/bounds at clip boundaries; no interim occlusion guarantee"
+}

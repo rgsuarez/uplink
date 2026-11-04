@@ -1,0 +1,7 @@
+{
+  "failed_phase": "inject",
+  "missing_fault_measurement": true,
+  "positive_evidence_fabricated": false,
+  "reason": "recording_fault_measurement_not_produced",
+  "runtime_reason": "Refused"
+}

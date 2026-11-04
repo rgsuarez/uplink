@@ -1,0 +1,16 @@
+# F05 branchout ledger 372d7304785e
+
+State: STOPPED.
+PASS / model-reached: 0/0.
+F05 only. Historical F04 and all other cases are excluded.
+
+Prior uncounted refusal: {"attempt_result_sha256": "a2b7721bad2576e6d015de6958d0c0fe0e6fc34ede731a276252eeda1c46f8ce", "excluded_from_denominator": true, "model_reached": false, "model_requests": 0, "outcome": "ABORT", "prereg_sha256": "08a0473782e7a361ba4d4952e2fe8c0ad17efcb6758d2cc894fad363b7fac221", "reason": "pre-model fault-effect proof refusal with failed initial cleanup; later baseline restored and run closed", "run_id": "eb5066f07b6b", "series_id": "46b49c0793cc", "source": "PRIVATE_HOME/uplink-branchout-runs/f05-series-46b49c0793cc/attempts/01-eb5066f07b6b"}
+
+Video: {"run_id": "bd4685c92ffc", "segments": [{"bytes": 8936192, "exit_code": 0, "finalized": true, "finished_at": 1793753767.374723, "gap_before_seconds": 0, "index": 1, "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-372d7304785e/attempts/01-bd4685c92ffc/operator-video-001.mov", "sha256": "560132da95a4dbe91c03ba749a20eb8209c8b66f937be859a9fb3ea41cef2210", "started_at": 1793753736.8683362}, {"bytes": 14053384, "exit_code": 0, "finalized": true, "finished_at": 1793753798.378784, "gap_before_seconds": 0.0005588531494140625, "index": 2, "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-372d7304785e/attempts/01-bd4685c92ffc/operator-video-002.mov", "sha256": "a1ee4e829ac4d4a8fd60821301dbf3462efefcb41b6d4409f8a9e60ab5bf1483", "started_at": 1793753767.3752818}, {"bytes": 20962311, "exit_code": 0, "finalized": true, "finished_at": 1793753829.3533728, "gap_before_seconds": 0.00042819976806640625, "index": 3, "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-372d7304785e/attempts/01-bd4685c92ffc/operator-video-003.mov", "sha256": "eccc7e07c2e73c75537193acaa131614aef3c4039405f229bb12d5d0e40aca50", "started_at": 1793753798.3792121}, {"bytes": 22285407, "exit_code": 0, "finalized": true, "finished_at": 1793753860.301569, "gap_before_seconds": 0.0017552375793457031, "index": 4, "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-372d7304785e/attempts/01-bd4685c92ffc/operator-video-004.mov", "sha256": "2472e491278f71aadca0373c1842cdd60e0d7043d63098ac50c0445fddd0bc65", "started_at": 1793753829.355128}], "status": "RECORDED"}
+
+| Index | Run ID | Outcome | Model requests | Action chosen | Recovery s | False ONLINE | Strict reader | Recording path | Recording SHA-256 | Result SHA-256 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | bd4685c92ffc | ABORT | 0 |  | unknown | 0 | REFUSED | PRIVATE_HOME/uplink-branchout-runs/f05-series-372d7304785e/attempts/01-bd4685c92ffc/terminal.typescript | 55e84b1f803e6bdf18dc21439defe8ec656db2c0f3a545eb037249995fcec850 | ffbc9a0663da4dddb3edc1018c3e5b5b581a001635152f4db118588662a6c027 |
+
+Denominator complete: True.
+False ONLINE complete: True.

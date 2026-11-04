@@ -1,0 +1,230 @@
+{
+  "capture_complete": true,
+  "events": [
+    {
+      "at": 1793746828.037676,
+      "event": "recording_session_started",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "kind": "real_recorded_base_trial"
+      }
+    },
+    {
+      "at": 1793746841.74846,
+      "event": "warmup_completed",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "complete": true,
+        "request_count": 3
+      }
+    },
+    {
+      "at": 1793746852.633544,
+      "event": "resource_headroom_admitted",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "passed": true
+      }
+    },
+    {
+      "at": 1793746852.733928,
+      "event": "intent.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "kind": "uplink-bench-reduced-v1"
+      }
+    },
+    {
+      "at": 1793746852.734155,
+      "event": "authority.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "kind": "AMANDA-GO-BRANCHOUT-F05-ATTEMPT-v1"
+      }
+    },
+    {
+      "at": 1793746852.734358,
+      "event": "authority-binding.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {}
+    },
+    {
+      "at": 1793746852.734519,
+      "event": "reservation-state-initial.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {}
+    },
+    {
+      "at": 1793746857.735584,
+      "event": "reservation-request-sent.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {}
+    },
+    {
+      "at": 1793746858.356611,
+      "event": "reservation-confirmed.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {}
+    },
+    {
+      "at": 1793746858.3572428,
+      "event": "reservation.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "kind": "uplink-bench-reduced-v1",
+        "lifecycle": "reserved"
+      }
+    },
+    {
+      "at": 1793746858.3578298,
+      "event": "preflight-oob.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "consecutive_successes": 3,
+        "failures": 0,
+        "kind": "TOP10-RELAY-OOB-v1",
+        "passed": true
+      }
+    },
+    {
+      "at": 1793746865.443166,
+      "event": "preflight.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "base_verified": true
+      }
+    },
+    {
+      "at": 1793746865.444026,
+      "event": "intent.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {}
+    },
+    {
+      "at": 1793746872.405477,
+      "event": "preflight.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "base_verified": true
+      }
+    },
+    {
+      "at": 1793746874.494004,
+      "event": "prepare.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "lifecycle": "snapshotted"
+      }
+    },
+    {
+      "at": 1793746875.459598,
+      "event": "arm.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "evidence_kind": "lab_wifi",
+        "lifecycle": "armed"
+      }
+    },
+    {
+      "at": 1793746877.2946188,
+      "event": "failure.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {}
+    },
+    {
+      "at": 1793746877.295527,
+      "event": "oob-qualification.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "consecutive_successes": 3,
+        "failures": 0,
+        "kind": "TOP10-RELAY-OOB-v1",
+        "passed": true
+      }
+    },
+    {
+      "at": 1793746887.986079,
+      "event": "cleanup-failure.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {}
+    },
+    {
+      "at": 1793746887.987583,
+      "event": "receipt.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "cleanup_verified": false,
+        "evidence_kind": "BASE",
+        "false_online": 0,
+        "kind": "uplink-bench-reduced-v1",
+        "model_requests": 0,
+        "outcome": "failed",
+        "synthetic_policy_requests": 0
+      }
+    },
+    {
+      "at": 1793746887.9881861,
+      "event": "slot-timing.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {}
+    },
+    {
+      "at": 1793746932.6853209,
+      "event": "handback-oob.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "consecutive_successes": 3,
+        "failures": 0,
+        "kind": "TOP10-RELAY-OOB-v1",
+        "passed": true
+      }
+    },
+    {
+      "at": 1793746933.3397372,
+      "event": "handback-resources.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "base_verified": true
+      }
+    },
+    {
+      "at": 1793746933.8506691,
+      "event": "failure.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {}
+    },
+    {
+      "at": 1793746934.381788,
+      "event": "stop.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "kind": "uplink-bench-reduced-v1",
+        "lifecycle": "stopped"
+      }
+    },
+    {
+      "at": 1793746934.382169,
+      "event": "reduced-result.json",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "complete": false,
+        "kind": "uplink-bench-reduced-v1"
+      }
+    },
+    {
+      "at": 1793746934.382581,
+      "event": "recording_session_finished",
+      "run_id": "eb5066f07b6b",
+      "summary": {
+        "complete": true
+      }
+    }
+  ],
+  "exit_code": 0,
+  "finished_at": 1793746934.382581,
+  "format": "macos-script-r-v1",
+  "path": "PRIVATE_HOME/uplink-branchout-runs/f05-series-46b49c0793cc/attempts/01-eb5066f07b6b/terminal.typescript",
+  "sha256": "123b3954a772f9780005400ef392abff49dda71ac7ccee96447c257a8c82cd6a",
+  "started_at": 1793746828.037676
+}

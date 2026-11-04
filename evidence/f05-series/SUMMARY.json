@@ -1,0 +1,22 @@
+{
+  "all_listed_attempts": 8,
+  "continuation_prepared": false,
+  "false_online": 0,
+  "fast_tier": false,
+  "final": true,
+  "final_series_id": "cd4fea26e41a",
+  "final_series_pre_model_aborts": 1,
+  "median_recovery_seconds": 13.0595,
+  "model": "BASE Meta Muse Glimmer 30B, unmodified open weights",
+  "model_reached": 2,
+  "new_trials": 0,
+  "passes": 2,
+  "passes_over_model_reached": "2/2",
+  "pre_model_aborts_excluded": 6,
+  "prior_pre_model_aborts": 5,
+  "series_state": "STOPPED",
+  "series_stop_reason": "ABORT",
+  "shortfall": 3,
+  "target_model_reached": 5,
+  "target_reached": false
+}
