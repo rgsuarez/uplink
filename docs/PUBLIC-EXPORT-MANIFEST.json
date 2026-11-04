@@ -52,7 +52,7 @@
     },
     {
       "candidate_path": "DEMO-SCRIPT.md",
-      "candidate_sha256": "2f13623222edded8fb0a822b72a54cd9471151c5b7e55a20841dd37ec89aebaf",
+      "candidate_sha256": "9db3ee737efa8fd0052f4f01bcf05c73f08e49594337241c4591285d5ecc38d3",
       "changed": true,
       "source_commit": "952dbf59048c51999fe6fd46d29efc89e1b7e8db",
       "source_sha256": "9cae1f75737a9976b6af0efcc44d81e99bd408f08a10753908a61fdffcf5bea4"
@@ -97,7 +97,7 @@
     },
     {
       "candidate_path": "README.md",
-      "candidate_sha256": "9a8e0b22c48c857f458fc9e0d12e7e74beedae040b545623c367624549dc84a2",
+      "candidate_sha256": "8cf055800ef52678e127f17c76f5335e146d6fbec47c8b438cb2af7e51ff536a",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "README.md",
@@ -184,7 +184,7 @@
     },
     {
       "candidate_path": "SUBMISSION-CHECKLIST.md",
-      "candidate_sha256": "c8371fc3f8ce515b2311e0eb39b1578cf6260f691f80b9ff243536575fd240bc",
+      "candidate_sha256": "3c9c915c3006b65ce37e186799e666eabf8a5edca3d39f42c160951909d1ae44",
       "changed": true,
       "source_commit": "c739e9c97b18f45241cf630fd303662933fdee20",
       "source_path": "SUBMISSION-CHECKLIST.md",
@@ -5916,7 +5916,7 @@
   "generated_files": [
     {
       "path": "PUBLIC-EXPORT-NOTES.md",
-      "sha256": "b1722fcf7a5898ac230fdc5f034c4cdad73c1c90be4d9c966f7933e72ed03478"
+      "sha256": "ec918aff3d07492841b464e5a53c2eccccb35364b4b2e03b94c68d04d7a91839"
     },
     {
       "path": "RUN-LOG-GLIMMER.md",
@@ -5977,6 +5977,24 @@
     {
       "path": "evidence/f01-series/F01-EVIDENCE-MANIFEST.json",
       "sha256": "40016262265a351d08a862e40070eae0ea0e5e3ae298fdaeb2c3cd0ab31263bc"
+    },
+    {
+      "path": "evidence/siteonly-series/SERIES-LEDGER.json",
+      "scope": "Public-safe site-only projection; source hashes are in evidence/siteonly-series/SITEONLY-EVIDENCE-MANIFEST.json.",
+      "sha256": "35c12d119610fd38084acceeefafd23f2479093c83b4134eef858a4afa0f6823",
+      "source_commit": "5562b1a99bf0fcdaf6d6c93d9a99a3084ba113b7"
+    },
+    {
+      "path": "evidence/siteonly-series/SITEONLY-COMBINED-TALLY.md",
+      "scope": "Public-safe site-only projection; source hashes are in evidence/siteonly-series/SITEONLY-EVIDENCE-MANIFEST.json.",
+      "sha256": "109cd10c5d13d192f9380b215fd84b42d1ae6405297c64bc5d3cc5b0206f63c7",
+      "source_commit": "5562b1a99bf0fcdaf6d6c93d9a99a3084ba113b7"
+    },
+    {
+      "path": "evidence/siteonly-series/SITEONLY-EVIDENCE-MANIFEST.json",
+      "scope": "Public-safe site-only projection; source hashes are in evidence/siteonly-series/SITEONLY-EVIDENCE-MANIFEST.json.",
+      "sha256": "d14710d9b704eea7fa794b32a0ddc60edd0f1e463c26737eaa4bf688232cffc8",
+      "source_commit": "5562b1a99bf0fcdaf6d6c93d9a99a3084ba113b7"
     }
   ],
   "hash_meaning": "Historical source hashes identify measured private inputs. Public derivative hashes identify this CPU candidate and do not regrade historical results.",
@@ -5994,7 +6012,7 @@
     }
   },
   "public_release_inventory": {
-    "file_count": 984,
+    "file_count": 987,
     "result_top10_classification": "First-party historical abort report; exact Apache-2.0 rule and source commit recorded in licenses/manifest.json.",
     "scope": "Every tracked and non-ignored candidate file; no filename exclusions."
   },
@@ -6267,6 +6285,34 @@
   },
   "runtime_qualified": true,
   "scope_note": "This manifest does not hash itself.",
+  "siteonly_evidence_sync": {
+    "capture_status": "CAPTURE_INCOMPLETE",
+    "capture_trial_blocking": false,
+    "cumulative": {
+      "attempts": 4,
+      "false_online": 0,
+      "median_recovery_seconds": null,
+      "metric": "correct_report_not_recovery",
+      "model_reached": 3,
+      "model_reached_aborts": 2,
+      "passes": 1,
+      "pre_model_exclusions": 1
+    },
+    "final_series_id": "f9f29057920d",
+    "fresh_network_mutations": 0,
+    "fresh_strict_reader_verdict": "VALIDATED",
+    "fresh_system_mutations": 0,
+    "fresh_trial": "e3cbf14d34b4",
+    "public_files": [
+      "evidence/siteonly-series/SERIES-LEDGER.json",
+      "evidence/siteonly-series/SITEONLY-COMBINED-TALLY.md",
+      "evidence/siteonly-series/SITEONLY-EVIDENCE-MANIFEST.json"
+    ],
+    "scope": "Correct report on an owned local 503 stub, not a real outage or recovery. Raw runtime, approval and video files omitted. No new model call or trial.",
+    "source_commit": "5562b1a99bf0fcdaf6d6c93d9a99a3084ba113b7",
+    "state": "COMPLETED",
+    "stop_reason": "THREE_MODEL_REACHED"
+  },
   "source_commit": "c3e699db77bbe02d85f97417d3599feb5d857515",
   "submission_sync": {
     "evidence_files_added": 19,

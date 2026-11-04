@@ -154,8 +154,11 @@ Model: base, unmodified open weights.
 | **F01 Wi-Fi radio off** (specified three-series continuation) | `restore_radio` | **1/5 model-reached PASS** | **1 strict recovery: 11.213 s** (one passing trial) | **0** | [F01 tally](evidence/f01-series/F01-COMBINED-TALLY.md); [F01 ledger](evidence/f01-series/SERIES-LEDGER.json) |
 | Control: healthy network | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
 | Control: misleading status text | no mutation (0 network changes; 0 false-action requests) | **0/3 FAIL**: `declare_online` lacked the required `verified` reason | n/a | **0** | [SERIES-LEDGER.json](evidence/controls-series/0ea3e4e5eebc/SERIES-LEDGER.json) (committed source `d8b390a`; sanitized public derivatives) |
+| **Site-only app server down** (owned local 503 stub) | report | **1/3 correct-report PASS** (two ABORTs counted) | n/a (report, no recovery) | **0** | [Site-only tally](evidence/siteonly-series/SITEONLY-COMBINED-TALLY.md); [ledger](evidence/siteonly-series/SERIES-LEDGER.json) |
 
-Not in the table yet: F05 wrong gateway not run; site-only outage pending / not yet run in a committed series. Receipts for the pending cases will be added only once their ledgers are committed in this repo.
+Not in the table yet: F05 wrong gateway not run. Receipts for this pending case will be added only once its ledger is committed in this repo.
+
+Site-only caveat: small n; 1/3 model-reached correct-report PASS, with both earlier ABORTs counted. The fresh run e3cbf14d34b4 chose report for an unavailable application on a healthy network, made zero network/system mutations and was strict-reader VALIDATED. False ONLINE 0; median recovery n/a because reporting is the correct action. This was an owned local 503 stub, not a real outage. One zero-request pre-model refusal/ABORT is excluded. Capture is CAPTURE_INCOMPLETE (viewport changed); the trial was unaffected and videos are not committed.
 
 F01 caveat: small n; radio-off is the hardest measured live repair segment. The specified three-series continuation is 1/5 (one PASS, one FAIL, three ABORTs); all listed series are 1/6 after including an earlier model-reached ABORT. Four pre-model refusals/aborts are excluded and listed in the tally.
 
@@ -289,6 +292,25 @@ PY
 
 Expected: continuation 1/5, one strict recovery 11.213 s, all listed 1/6, false ONLINE 0, and four listed pre-model exclusions.
 
+**Recompute the site-only correct-report result** (no model or network):
+
+```sh
+python3 - <<'PY'
+import json
+from pathlib import Path
+rows = json.loads(Path("evidence/siteonly-series/SERIES-LEDGER.json").read_text())["attempts"]
+assert len({r["run_id"] for r in rows}) == len(rows)
+trials = [r for r in rows if r["model_reached"]]
+print("Site-only correct-report PASS:", f"{sum(r['outcome'] == 'PASS' for r in trials)}/{len(trials)}")
+print("Model-reached ABORTs:", sum(r["outcome"] == "ABORT" for r in trials))
+print("False ONLINE:", sum(r["false_online"] for r in trials))
+print("Pre-model exclusions:", sum(not r["model_reached"] for r in rows))
+print("Median recovery: n/a (report, no recovery)")
+PY
+```
+
+Expected: 1/3 correct-report PASS, two model-reached ABORTs, false ONLINE 0, one pre-model exclusion; median recovery n/a.
+
 **Replay recorded simulation trajectories** (no model, no network changes):
 
 ```sh
@@ -327,9 +349,10 @@ Demo video (owner upload pending): VIDEO_URL_PLACEHOLDER. Verify the actual fina
 
 ## Honest caveats
 
-- Live coverage includes F04 DNS, F06 proxy, F01 radio-off and healthy/misleading-status controls.
+- Live coverage includes F04 DNS, F06 proxy, F01 radio-off, the owned site-only stub and healthy/misleading-status controls.
   Control safety held, but all six health reports failed the required reason check.
-  F05 wrong gateway was not run; site-only outage is pending / not yet run in a committed series.
+  F05 wrong gateway was not run. Site-only is 1/3 correct-report PASS on an owned local 503 stub, not a real outage; two ABORTs stay counted.
+- Site-only capture is CAPTURE_INCOMPLETE; trial unaffected, videos not committed. Small n; one pre-model stop excluded; no recovery time claimed.
 - F01 caveat: small n; radio-off is the hardest measured live repair segment. The specified three-series continuation is 1/5 (one PASS, one FAIL, three ABORTs); all listed series are 1/6 after including an earlier model-reached ABORT. Four pre-model refusals/aborts are excluded and listed in the tally.
 - Ten passes on one fault class show the loop works on real hardware; they do not
   establish general field reliability.
