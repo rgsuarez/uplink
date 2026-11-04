@@ -380,7 +380,7 @@ with an out-of-band link; it is not part of the quick reproduction.
 
 ## Demo video
 
-Demo video (2:52): https://youtu.be/MwG44-hKuqQ
+Demo video (2:52): https://youtu.be/U51B1DIKgYs
 
 Narration: synthetic AI voice, OpenAI gpt-audio voice 'marin' via OpenRouter (text-to-speech). It is not Richard's voice; no human voiceover was recorded. Used only for the demo video; Uplink makes no TTS or non-Meta model calls at runtime.
 
